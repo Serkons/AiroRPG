@@ -4361,6 +4361,90 @@ orb.adjust {
   if (%battle.type = dragonhunt) { set %base.redorbs $round($calc(%base.redorbs * 1.50),0) }
 }
 
+RandNow {
+  var %from = $1, %to = $2, %range = $calc(%to - %from + 1)
+  return $calc($base($right($sha1($int($calc($ctime / $3)) $4),13),16,10) % %range + %from)
+}
+
+RandNow2 {
+  var %from1 = $1, %to1 = $2, %range1 = $calc(%to1 - %from1 + 1)
+  var %from2 = $3, %to2 = $4, %range2 = $calc(%to2 - %from2 + 1)
+  var %period = $5, %seed = $6, %hash = $sha1($int($calc($ctime / %period)) %seed)
+  var %from3 = $calc($base($left(%hash,13),16,10) % %range1 + %from1)
+  var %to3 = $calc($base($mid(%hash,14,13),16,10) % %range2 + %from2)
+  if (%from3 > %to3) var %from3 = %to3, %to3 = $v1
+  var %range3 = $calc(%to3 - %from3 + 1)
+  return $calc($base($mid(%hash,27,13),16,10) % %range3 + %from3)
+}
+
+generate_values {
+  set %dark->ness %darkness.turns
+  set %cur.turn %current.turn
+  set %rarity $calc(%dark->ness - %cur.turn)
+  set %diff $calc(%dark->ness - %rarity)
+  set %gerade 6.11.16.21.26
+  set %m 0.25
+  if (%diff isin %gerade) && (%diff <= %dark->ness) {
+    inc %m %rarity
+  }
+  ;set %varchance2 $rand(1,100)
+  if (%rarity isnum 1-5) { set %varchance2a $rand(26,50) }
+  if (%rarity isnum 6-10) { set %varchance2a $rand(13,25) }
+  if (%rarity isnum 11-16) { set %varchance2a $rand(1,12) }
+  if (%varchance2 <= 50) && (%varchance2 >= 26) || (%varchance2a <= 50) && (%varchance2a >= 26)  {
+    set %ahp $round($calc(%eq-hp + $randnow2(1, $rand(1,3), 1,$rand(3,5), 1) * $get.level(%nick) / %m),0)
+    set %atp $round($calc(%eq-tp + $randnow2(1, $rand(1,3), 1,$rand(3,5), 1) * $get.level(%nick) / %m),0)
+    set %adef $round($calc(%eq-def + $randnow2(1, $rand(1,5), 1,$rand(5,10), 1) * $get.level(%nick) / %m),0)
+    set %aint $round($calc(%eq-int + $randnow2(1, $rand(1,6), 1,$rand(6,11), 1) * $get.level(%nick) / %m),0)
+    set %astr $round($calc(%eq-str + $randnow2(1, $rand(1,7), 1,$rand(7,12), 1) * $get.level(%nick) / %m),0)
+    set %aspd $round($calc(%eq-spd + $randnow2(1,$rand(1,8), 1,$rand(8,13), 1) * $get.level(%nick) / %m),0)
+
+    ;;;;select 3 Random Augments and set it
+
+    set %current.aug $numtok(%augs,46)
+    var %x 3
+    while (%x >= 1) {
+      %augments = $addtok(%augments,$gettok(%augs,$rand(1,%current.aug), 46), 46)
+      dec %x
+    }
+  }
+
+  if (%varchance2 <= 25) && (%varchance2 >= 13) || (%varchance2a <= 25) && (%varchance2a >= 13)  {
+    set %ahp $round($calc(%eq-hp + $randnow2(1, $rand(1,7), 1,$rand(7,15), 1) * $get.level(%nick) / %m),0)
+    set %atp $round($calc(%eq-tp + $randnow2(1, $rand(1,7), 1,$rand(7,15), 1) * $get.level(%nick) / %m),0)
+    set %adef $round($calc(%eq-def + $randnow2(1, $rand(1,7), 1,$rand(7,12), 1) * $get.level(%nick) / %m),0)
+    set %aint $round($calc(%eq-int + $randnow2(1, $rand(1,8), 1,$rand(8,14), 1) * $get.level(%nick) / %m),0)
+    set %astr $round($calc(%eq-str + $randnow2(1, $rand(1,9), 1,$rand(9,16), 1) * $get.level(%nick) / %m),0)
+    set %aspd $round($calc(%eq-spd + $randnow2(1,$rand(1,10), 1,$rand(8,18), 1) * $get.level(%nick) / %m),0)
+
+    ;;;;select 4 Random Augments and set it
+
+    set %current.aug $numtok(%augs,46)
+    var %x 4
+    while (%x >= 1) {
+      %augments = $addtok(%augments,$gettok(%augs,$rand(1,%current.aug), 46), 46)
+      dec %x
+    }
+  } 
+  if (%varchance2 <= 12) && (%varchance2 >= 1) || (%varchance2a <= 12) && (%varchance2a >= 1)  {
+    set %ahp $round($calc(%eq-hp + $randnow2(1, $rand(1,10), 1,$rand(17,30), 1) * $get.level(%nick) * %m),0)
+    set %atp $round($calc(%eq-tp + $randnow2(1, $rand(1,10), 1,$rand(18,30), 1) * $get.level(%nick) * %m),0)
+    set %adef $round($calc(%eq-def + $randnow2(1, $rand(1,10), 1,$rand(17,27), 1) * $get.level(%nick) * %m),0)
+    set %aint $round($calc(%eq-int + $randnow2(1, $rand(1,11), 1,$rand(18,29), 1) * $get.level(%nick) * %m),0)
+    set %astr $round($calc(%eq-str + $randnow2(1, $rand(1,12), 1,$rand(19,31), 1) * $get.level(%nick) * %m),0)
+    set %aspd $round($calc(%eq-spd + $randnow2(1,$rand(1,13), 1,$rand(18,34), 1) * $get.level(%nick) * %m),0)
+
+    ;;;;select 3 Random Augments and set it
+
+    set %current.aug $numtok(%augs,46)
+    var %x 5
+    while (%x >= 1) {
+      %augments = $addtok(%augments,$gettok(%augs,$rand(1,%current.aug), 46), 46)
+      dec %x
+    }
+  }
+}
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Adds allied notes
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
