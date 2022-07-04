@@ -1,0 +1,21 @@
+﻿-> HP = Health Points (If this drops to 0, you are incapacitated and the fight ends)
+-> TP = Technique Point (If this drops to 0, you can no longer perform a technique)
+-> Ignitions Gauge = stays at 0 and can be bought and increases after each battle
+is required for boosts
+-> Level = Your level calculated by the 4 attributes (Str, Def, Int, Spd)
+-> Armor Level = The level of your equipment
+-> Armor Protection = What percentage of incoming damage you block with armor
+-> Status = Your Status (There are numerous status effects not listed here)
+You can find them here; https://game-igame--rpg-de.translate.goog/docu/index.php?title=Status_Effekte&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+-> RoyalGuard Meter = Accumulated damage from the RoyalGuard skill. Can through the
+the skill "JustRelease" can be released
+-> Capacity Points = From a winning streak of 100, 1 point is awarded for each win.
+-> Enhancement Points = When the capacity points reach 10000, 1 point is credited. These can be spent on additional extensions.
+-> LoginPoints = These points can be spent on trust NPCs
+-> Strength = Your strength is calculated for the /me normalattack command
+-> Defence = Your defense is how much damage you can defend against.
+-> Inteligence = This determines how much damage you deal with techniques but also block. Is calculated in addition to the defense to defend.
+-> Speed = The speed determines the turn order in the battle order
+Everything else is currently equipped equipment.
+
+

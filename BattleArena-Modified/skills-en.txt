@@ -1,0 +1,13 @@
+﻿We simplified it for newbies up to level 5 you can pay for skills and techniques with RedOrbs.
+Still, here is something important to note:
+4Only the techniques for the currently equipped weapon are displayed
+You can read about the effects of the individual skills here:
+https://game-igame--rpg-de.translate.goog/docu/index.php?title=Skills&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+How do we buy skills and techniques?
+1. Run the following commands: 7!ishop list skills or 7!ishop list techs
+2. Decide on a skill or technique.
+3. Kaufe den Skill oder die Technik durch folgende befehle:
+1,1----->7!ishop buy skill skillname - for a Skill
+1,1----->7!ishop buy Tech TechName  - for a technique
+In the penultimate part we deal with "Choosing the Right Style" So now write:
+7!tut-en-styles

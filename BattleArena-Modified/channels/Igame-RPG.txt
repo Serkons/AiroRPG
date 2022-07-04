@@ -1,0 +1,18 @@
+game.igame-rpg.de Thu Mar 31 18:27:44 2022
+#quizz 3 [+ntr] Ein Quizzscript von Moxon mit vielen Funktionen - !qhelp liefert hilfe. - Quelle:https://www.tclarchive.org/view.php?id=509 
+#Russian-Roulette 3 [+ntr] Russisches Roulette mit Statistik funktion. Original: https://www.tclarchive.org/search.php?str=Russian-Roulette&cb1=t&cb2=a&cb3=d&sub.x=0&sub.y=0 - Wir nutzen: Dopeydwergs Version
+#Be-Acro 3 [+ntr] Ein Spiel um ein Acronym zu erraten - A Game to Guess an acro - Orginalscript can be found here: https://www.tclarchive.org/view.php?id=615
+#Opers 7 [+mntirP] Adminchannel und Netzwerkchannel.
+#Werwolf 2 [+ntr] Das Werwolfspiel von Skizzerz Quelle: https://github.com/lykoss/lykos - Orginal Wiki: https://werewolf.chat/Main_Page - zu 90% Eingedeutscht von Zenturion - Dokumentation: https://game.igame-rpg.de/docu/index.php?title=Werwolf 
+#ctc 3 [+ntr] Errate den Code den der Bot vorgibt dieser kann eine Zahlenkobi aus 6 Zahlen sein z.B: 048327 - Zum starten !ctc eingeben für die richtige Zahlenkombi !code Zahl. Quelle: https://www.tclarchive.org/view.php?id=911
+#Support 3 [+ntrA] Hauptchannel dieses Netzwerkes und Support Raum. Bitte fragen stelllen und auf antwort warten. - Main channel of the network and support channel. You can ask here but must wait for answer. DONT SPAM
+#Hunt&Fish 3 [+ntr] Ein Lustiges kleines Spiel wo es ums Angeln und Fischen geht. Quelle: https://www.tclarchive.org/search.php?str=Hunt&cb1=t&cb2=a&cb3=d&sub.x=0&sub.y=0 - Von Nerfbendr
+#AiroRPG 4 [+ntrRP] Ein Action RPG mit Loot und vielem Mehr. Englische Sprache und Deutscher Dokumentation. Link: https://game.igame-rpg.de/docu/index.php?title=AiroRPG - News: Neuer Statuseffect "mini" - Siehe History: https://game.igame-rpg.de/docu/index.php?title=Version_4.1 | [Current Auction: Purple-Belt]
+#IgameRPG 0  
+#Hangman 3 [+ntr] Ein wunderschönes Galgenraten mit Englishen Sätzen etc, Deutsche folgen noch. Quelle: https://www.tclarchive.org/search.php?str=hangman&cb1=t&cb2=a&cb3=d&sub.x=0&sub.y=0
+#WSI 3 [+ntr] Wer Sagte was? (Who Said It?) ist ein Spiel der Psychologie und des Bluffen, das von drei oder mehr Personen gespielt wird. Ratet mal, wer was gesagt hat, aber vermeidet es, selbst erraten zu werden. Quelle: https://www.tclarchive.org/view.php?id=1133 
+#TexasHoldem 3 [+ntr] TexasHoldem als Virtuelles Textspiel wer hier die Regeln und Spielweise kennt kann es hier Spielen zu beginn schreibe !holdem- Quelle: https://www.tclarchive.org/search.php?str=holdem&cb1=t&cb2=a&cb3=d&sub.x=0&sub.y=0
+#Bdice 3 [+ntr] Dice Roll Scrpt - Würfel Mathe Spiel - Quelle: https://www.tclarchive.org/search.php?str=bdice&cb1=t&cb2=a&cb3=d&sub.x=0&sub.y=0
+#BogusTrivia 3 [+ntr] Ein erweitertes Quizzspiel und Script - Quelle: https://www.tclarchive.org/view.php?id=1373
+#HighLow 3 [+ntr] Ein lustiges Ratespiel. Du sagst dem Bot er soll eine Zufallszahl ausssuchen und deine Aufgabe ist es diese zu erraten. 
+#UnoColor 3 [+ntr] Ein echt Geniales Uno Spiel in Textform Deutsche übersetzung von Spiritx - Quelle: https://www.tclarchive.org/search.php?str=uno&cb1=t&cb2=a&cb3=d&sub.x=0&sub.y=0 - Zum Starten !uno Eingeben

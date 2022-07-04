@@ -1,0 +1,18 @@
+﻿Der Erste Kampf ist der Beginn deiner Reise und das Ende diese Tutorials.
+Du solltest nun Grundwissen über das Spiel haben und bei den ersten runden keine Probleme mehr haben.
+Bedenke das Verlieren keine Schande ist du wirst dennoch belohnt für deine mühen.
+Aufgeregt? Keine Sorge alles wird gut verlaufen sofern alles im Tutorial richtig gemacht hast.
+Fangen wir an indem ich dir die notwendigen Kampfbefehle nenne:
+Detailiert wird es hier beschrieben: https://game.igame-rpg.de/docu/index.php?title=Kampfinformationen_und_Befehle
++ 7/me normalattack monstername = Monster mit Normalenangriff Angreifen
++ 7/me used techname on monstername = Monster mit Technik Angreifen
++ 7/me goes ignition/boost = Aktiviert eine Ignition oder einen Boost
++ 7/me reverts from (ignition) = Einen Boost beenden
++ 7/me sings (songname) = Ein Lied Spielen (songname)
++ 7!used (item) on (target) = Einen Gegenstand auf (target) anwenden
++ 7/me tauts (monster) = Ein Monster Verspotten
++ 7!skillname = Einen Skill Anwenden.
+Ich wünsche dir nun Viel glück bei deinem Ersten Kampf und deinen ersten Sieg.
+Solltest du noch fragen haben so kannst du hier nachlesen welche möglichkeiten du noch hast:
+https://game.igame-rpg.de/docu/index.php?title=AiroRPG
+Und nun viel Glück bei deinem Ersten Kampf hole dir den Erfolg und beende das Tutorial.

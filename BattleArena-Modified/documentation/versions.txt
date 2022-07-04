@@ -1,0 +1,1807 @@
+Battle Arena Bot VERSIONS
+=========================
+
+1.0 - First version.
+- Added the automated battle system.
+- Added all of the weapon, technique, skill, and item databases.
+- Added all of the monsters, bosses and NPCs.
+- Added all of the taunts and weapon attack description texts.
+
+1.1
+- Added the ability to exchange black orbs for red orbs in the shop.  Use !shop list orbs and !shop buy orbs
+- Added the "Shadow Copy" skill.  This skill will allow players to create a shadow clone that will help them in battle.
+- Added the "Utsusemi" skill.  This skill will create 2 shadows that will absorb all types of attacks.
+- Added the ability for bosses to get a small boost from the winning streak.
+- Added the ability for npcs to get a small boost from the winning streak.
+- Added the command !skill desc skillname desc  so that you can set custom skill descriptions.
+- Changed the winning streak boost formula slightly.
+- Fixed a bug with the boosts in which it was reading the base stats instead of the current stats.
+- Fixed a major bug in which passwords weren't being written right, making it impossible to change your password. 
+  Thanks to AuXFire of Hawkee for catching that one.
+
+1.2
+- Added the ability for the bot to use commas in the orb totals to make the numbers a little easier to read.
+- Added critical hits.  There's a 4% total chance that a critical hit will happen on a normal melee attack.
+- Added a shop level cap.  It's currently set to 25.
+- Added the StealPower type technique. This technique will steal the stats of its target and add it to the user.
+- Added the Final Getsuga type boost. This boost will give you a massive boost to stats but at the end of the battle
+  your character will be reset to level 1 stats and no skills.  You lose all techs except DoublePunch and all weapons
+  except your Fists. You get to keep your items and you get 5% of your total spent orbs back.
+- Added the "FieldMedic" passive skill. This skill will increase the amount of health healing items will heal by 5*level.
+- Added the "Impetus" passive skill. This skill will increase the chance of a critical hit by 1% each level.
+- Added the "Steal" active skill. This skill will allow you to attempt to steal an item or some orbs from a monster/boss.
+- Added the "BloodPact" passive skill. This skill is necessary to use the Summon type items.
+- Added the Summon type items to the bot. These items, when used by someone who has the BloodPact skill, will summon an 
+  ally to help fight.  You do not need to use the item on anyone, just !use (item name)
+- Added a bonus to HandToHand weapons that is based on the level of your fists weapon.
+- Added the ability for monsters/bosses/npcs to be strong and weak against weapon types.  In [weapons] you can list
+  weaknesses as "weakness=" followed by a list of weapon types.  For strengths, use "strong=" with weapon types.
+- Added the "Blood Moon" event. It's a special battlefield event that has a 5% chance of occuring and will affect
+  various skills, items and techs.
+- Added a cap to how many monsters can join a battle. It is currently set to 10.
+- Added a cap to how many players can join a battle. It is currently set to 10.
+- Added new monsters
+- Added new bosses
+- Added new NPCs
+- Added new weapons
+- Added a new bot owner command: *equips*.  Use it like: Iyouboushi equips Rebellion
+- Added a new bot owner command: *taunt*.  Use it like: Iyouboushi taunts Monster
+- Added a new bot owner command: *flees the battle.  Use it like: Iyouboushi flees the battle
+- Added a winning streak record counter in battlestats.dat
+- Added two new taunt effects.
+- Added several player styles. Simlar to DMC3, players can now choose a style and it will level by killing monsters.
+  Styles can be seen with !styles and can be changed with !style change (style name).  You can only change styles outside
+  of battle.
+- Added new styles to the shop.  Use !shop list styles to list and !shop buy styles (style name) to buy.
+- Added the ability for multiple bot owners. To do it, open system.dat and find the bot.owner= line and add the names
+  separated by periods. For example:  bot.owner=Iyouboushi.Smz.YourNameHere
+- Added the ability to purchase multiple items from the shop with one command. To do so, just add an amount at the end of the
+  command (example:  !shop buy items name #  where # is the amount you want with one purchase.) It doesn't work with styles
+  and new weapons but should work for everything else. 
+- Added a command so that you can flee from battle: !flee or !run away both work. If all players have run or are dead the
+  battle will end.
+- Added the ability for food to increase the current style equipped. For the stat just put "style".
+- Changed the "Curse Night" chance.  It's now 7%, down from 10%.
+- Changed the formula slightly for the weapon/tech damage. Higher levels into the weapon/tech now give a bigger damage bonus.
+- Changed the bonus slightly for elemental weaknesses with magic.  It received a slight nerf.
+- Changed the formula for monster HP for the first 20 wins. Now the combined shop level of players affects the boost.
+- Changed the powers of various techniques to try and balance things a little better.
+- Changed the HP amount of clones. It's a lower amount when a player isn't using the Doppelganger style.
+- Changed the ClearMind skill so that it goes up to 3 levels max.
+- Changed the placement of the magic effect line to after the damage line rather than before the tech description.
+- Changed it so zombies take extra damage with both light and fire weapons/techs.
+- Changed the zombie status so that there's a small regen during that status. It will overwrite normal regen until the status
+  wears off.
+- Changed the !start bat bot owner command so that bot owners can start boss/monster/orbfountain battles.
+  Use !start bat monster  or  !start bat boss  or !start bat orbfountain   or you can use !start bat  to do random
+- Changed the Regen formula and gave it a boost on higher levels of the skill.
+- Fixed a bug in which TP would be taken even if you used a technique on a dead target.
+- Fixed a bug in which orb fountain battles wouldn't give bonus orbs upon defeat of targets.
+- Fixed a bug with the suicide type techs where there was a chance of the wrong name being displayed as who lost his/her/its life.
+- Fixed a bug in which certain encoded passwords wouldn't work with the !id and !quick id commands.
+- Fixed a bug in which certain skills showed the wrong command/name when it wasn't ready to be used again.
+- Fixed a bug with +TP items not working correctly with Sugitekai.
+- Fixed a bug with Utsusemi in which it would still work even if you didn't have shihei.
+- Fixed a bug with !new char that let players get free orbs by using the command over and over.
+- Fixed a displaying bug with !bat list.
+- Fixed the user level for the bot owner command "!zap"  now only bot owners can use it.
+- Fixed the status message so that it finally shows a different message if the target is 100% immune to the status.
+- Fixed a bug in which NPCs wouldn't be cursed on a Curse Night.
+
+1.3
+- Added the "translation.dat" file that contains most of the bot messages.  You can edit this file to do translations or
+  to just change the way various messages read. Open it in notepad.
+- Added the active skill "Analysis".  This skill lets you analyze a monster.  Increased levels of the skill gives you more
+  information about the monster.  To use it, after purchasing it, use !analyze monstername  You can only analyze monsters
+  that are in the current battle.
+- Added the active skill "Cover" -- this skill will allow a user to jump in front of an ally to take damage for him/her.
+- Added the passive skill "Zen" -- this skill will increase the amount of TP you get back per turn by 5*skill level.
+- Added the passive skill "Haggling" -- This skill will increase the amount of orbs you get for selling items by 20*skill level
+  EXCEPT in cases where the amount you'd get from haggling is more than the actual cost of the item (i.e. a potion).  
+  In that case you just get the original item price back, or up to 500 orbs back if it goes over 500.
+- Added the passive skill "WeaponBash" -- This skill will give a chance of inflicting the 'stun' status effect to a target
+  with each melee hit. Note, if the target is immune to stun it will never take effect.
+- Added a new item type: ShopReset. This item type will allow you to lower your current shop level by an amount. The
+  "DiscountCard" has been added as an example item. 250,000 orbs and will lower it by 10 points.
+- Added a new item type: Revive with a GoldOrb as an example item.  If you use the item on someone (or yourself) in battle
+  they will receive the "revive" status.  If that person dies in the same battle, they will be revived automatically 
+  with 1/2 max hp.
+- Added an anti-cheat system for players using monster weapons/techniques. Attacks/Techs done with monster weapons will be
+  0-5 damage max if the person using them isn't a monster or a NPC.
+- Added the ability for techs to change which base stat is used for damage. You can add a stat= with the stat you want
+  to use in the tech file.  For example:  stat=str  or stat=spd     By default it's int.
+- Added the Heal-AOE type. This type will heal all allies on the battlefield. This tech type can't be used on enemies.
+- Added the ability to sell items back to the shop. Use !shop sell item (item name) (amount) to sell them back.
+- Added the ability for monsters/bosses to be "staggered" -- if they sustain enough damage they'll collapse and will 
+  be unable to move for a round.  They can only be staggered once per battle. In the [info] section of a monster/boss you can
+  add CanStagger=yes  then add StaggerAmount=$rand(#,#)   where # is the amount of hp you want the range to be. Stagger will
+  activate when damage exceeds the random amount picked from the range.
+- Added the Quicksilver style. This still allows players to use the !quicksilver command that will freeze everyone except the
+  user in time. Players can use the !quicksilver command in battle as many times as style's level. The effect basically gives
+  players a free Sugitekai.
+- Added the ability for monsters to ignore the darkness/rage mode system.  In [info] you can put RageMode=ignore  if you 
+  want them to not get the darkness/rage mode bonus. 
+- Added the ability for monsters to be able to absorb certain elements from techniques.  In the [Element] section of the 
+  monster bot owners can put Heal= followed by the elements it'll heal with.  For example:  Heal=Fire.Dark
+- Added the ability for bot owners to toggle the automated battle system on/off.  Use !toggle automated battle system   
+  Note that if a battle is currently in progress it won't take effect until the battle is over.
+- Added the ability for bot owners to toggle the AI system on/off. Use !toggle ai system  Note, it won't stop the charm status 
+  from automatically taking effect. 
+- Added the ability for monsters to use certain select skills in battle.
+- Added accessories to the bot! Once you get one you can use !wear (accessory name) to put it on and 
+  !remove (accessory name) if you want to remove it.
+- Added two AI types for monsters. They are: Defender and Berserker.  Defender type monsters won't attack at all during 
+  battle and Berserker type monsters may attack their own allies at random. You can change it  in [info] ai_type=         
+  Leave it blank if you want monsters to act as normal.
+- Added the beginning of an achievement system.
+- Added the max shop level in the system.dat.  Bot owners can now change it to whatever they want. By default it's 25.
+- Added a new boss type fight: Doppelganger.  It's a rare, 5% chance, event that instead of summoning a normal boss, players
+  will have to fight evil copies of themselves. Bot owners can disable it in the system.dat by setting EnableDoppenganger 
+  to false.
+- Added new monsters
+- Added new bosses
+- Added new summons
+- Added new NPCs
+- Changed the way the monster/boss/npc lists are generated to hopefully make them more random and to prevent a future bug.
+- Changed the prices of several skills/weapon upgrades/techs/items.
+- Changed the max amount of damage of suicide techs that can be done by players to 500.  This should prevent someone with
+  hundreds of thousands of hp one-shotting every monster/boss in the game.
+- Changed the maximum number of times a target can be successfully stolen from to 2.
+- Changed the maximum amount of HP you can buy from the shop. The default is 2500.  After you hit the max you won't be able
+  to get any more. Bot owners can change the max in the system.dat.
+- Changed the maximum amount of TP you can buy from the shop. The default is 500.  After you hit the max you won't be able
+  to get any more. Bot owners can change the max in the system.dat.
+- Changed the maximum amount of style points you can accumulate in one battle to 5000.
+- Changed the location of the skill cooldown times into the skills.db. Bot Owners can now edit that file to edit skill reuse times
+- Changed the way boss drops works so that they can have multiple drops. The bot will still only pick one drop, but now you can
+  make it random.
+- Changed it so if multiple bosses enter the battle, all of their drops should be in the pool rather than just the
+  most recent boss to join.
+- Changed the damage formula on poison.  Instead of doing random 5-10 damage a turn (which is nothing when players 
+  have HP over 1000), it now does a percentage of a target's max HP.  The "Heavily Poisoned" status does even more than 
+  normal poison.
+- Changed the next turn timer so that it's only 3 minutes instead of 5.
+- Changed the damage formula slightly for 4 hit and 5 hit attacks.
+- Changed the code so that boss battles may spawn normal monsters as well when the winning streak is greater than 50.
+- Changed the BloodPact skill so that it goes up to level 10. Higher levels of the skill will increase the stats of the summon
+  by 25% (plus a random 1-5% at random) each level.
+- Changed OrbHunter so that bot owners can place the amount they want the skill to increase orbs by.  In skills.db you can put in
+  Amount=  under [OrbHunter].  Default is now 15*skill level.
+- Changed styles so that players can change their style in battle now at the cost of a turn.
+- Fixed a bug in which the zombie regeneration wasn't wearing off at the end of battle.
+- Fixed a bug with the Amnesia status type.
+- Fixed a bug with !rdesc
+- Fixed a bug in which the "Swordmaster" skill wasn't giving any bonus to the melee damage.
+- Fixed a bug with Steal in which stolen items weren't being added right
+- Fixed a bug in which the description wasn't being shown properly for +TP items.
+- Fixed the bot so that it will correctly give the right access level to the entire bot owner list when the bot is first turned on.
+- Fixed a bug in which occasionally the style level wasn't leveling properly.  Sometimes it would jump by +2 or +3, other times
+  it would be reset to level 1. 
+- Fixed a bug that was letting players purchase monster weapons.
+- Fixed a bug in which fleeing would cause the bot to break in a one vs one battle against an orb fountain.
+- Fixed a bug in which you could use consumable items with the !use command and the item would be decreased from your inventory.
+- Fixed a bug in which MightyStrike could be used continuously without a cooldown.
+- Fixed a bug where if something was weak to lightning it would also take double damage for light element as well.
+- Fixed a bug with Fullbring when used on +TP items.
+- Fixed a bug in which monsters killed by AOEs were giving double the style points that it should have.
+
+1.4
+- Added bow type weapons.
+- Added the passive skill Vogue.  This skill will increase the amount of style XP you get at the end of a battle by your
+  current skill level.
+- Added the active skill Aggressor.  This skill will increase your strength by a percent of your defense based on the 
+  level that you have in the skill, up to 100% of your def.  Afterwards it will reduce your def down to 5.
+- Added the active skill Defender.  This skill will increase your defense by a percent of your strength based on the 
+  level that you have in the skill, up to 100% of your str.  Afterwards it will reduce your str down to 5.
+- Added the active skill HolyAura. This skill will extend the amount of time you have to fight before darkness occurs 
+  by (skill level) minute(s).
+- Added the passive skill Archery. This skill will increase damage done with a bow.
+- Added the passive skill Alchemy. This skills is needed to craft items.
+- Added the monster-only skill: cocoon evolve. If manually set in the monster's file, the monster can use this skill to
+  enter a protective state for a few turns and re-emerge as a stronger monster.
+- Added a way to force monsters and bosses to not show up til certain winning streaks. In [info] bot owners can put a
+  Streak=#  where the # is the minimum winning streak that the monster/boss will show up. Ex: Streak=50
+- Added a way to force monsters and bosses to stop appearing after a certain # of wins. In [info] bot owners can put a
+  StreakMax=# where # is the last winning streak # the monster will appear.
+- Added a random chance for "surprise attacks".  Like other RPGs, it just means monsters will attack first.
+- Added basic PvP combat. A person with bot owner access must initiate the PVP battle (it won't happen randomly).
+  There are no rewards for PVP.  The command is: !start bat PVP
+- Added the ability for monsters to flee from the battle at random IF the CanFlee=true flag is set in [info]
+  There's a 60% chance that the monster will successfully flee.
+- Added a one hour timer for orb battles. After one hour the battle will end.
+- Added the "gem" item type. Their only use is to sell.
+- Added the "Special=gemconvert" flag for weapons. If this is set in the weapon then enemies killed with the weapon will turn into
+  gems and given to the person who killed them. Right now the only weapon that has this flag is the JewelSword.
+- Added treasure chests. There's a random chance at the end of battles after the 25th winning streak for a chest to appear.
+  Chests can only be unlocked with the correct colored key. Chests will disappear after 45 seconds. 
+- Added a way to save and restore winning streaks. Think of it sort of like a quick save in RPGs. The commands are:
+  !save battle streak to save the streak, !reload battle streak  to reload, and !view battle save  to see what's saved.
+  Note: You can't save a streak that's lower than your previous save, you can't reload during a positive winning streak, and 
+  once you load the current save you have will be reset.
+- Added keys. Keys are dropped by monsters randomly after the 15th win on the winning streak. The person who gets the key is
+  random, but the person has to be alive at the end of battle to be considered. To use the key just use !use KeyName on Chest
+- Added a !logout command. Using it will remove your access level and de-voice you.
+- Added the Mugger's-Belt accessory. When a character wears this accessory and uses the !steal skill, it will inflict damage
+  in addition to trying to steal from the target.
+- Added a 5 minute warning to darkness/rage.  This also means all rage timers just got extended by 5 minutes, giving players 
+  more time.
+- Added a give command so that players can trade items/accessories. The command is /me gives # <item> to <person>
+  Example: /me gives 1 senzu to Iyouboushi
+  You can only trade items, not orbs.
+- Added the start of a crafting system. You can use !view-info alchemy list  to get a list of items you can craft. Then you can
+  use !view-info alchemy (item) to get the list of ingredients and gems needed to actually craft the item. To actually craft an
+  item use !craft (item)
+- Added a new special boss fight: Monster Warmachine.  In this type the bot will generate a warmachine based on the current 
+  battle streak.
+- Added the ability to sell techniques. !shop sell tech <technique> <# of levels you want to sell>
+- Added a "Defense Down" status effect.  While under this effect, a target's def against attacks will be divided by 4.
+- Added an "Ethereal" status effect. While under this effect, normal melee and non-magic techniques will not harm the target.
+  Right now it can only be set manually on monsters.
+- Added a new event in which techniques are locked, forcing players to use either items or melee.  It has a 5% chance of occuring.
+- Added new monsters
+- Added new bosses
+- Changed the way the utsusemi/royalguard/manawall blocked messages are displayed. They're shown after the attack desc now, not
+  before it. This actually saves a line being pushed to the channel.
+- Changed the way status types are inflicted upon a target. Much cleaner code and now any type of tech or weapon can inflict a 
+  status.  Just add a StatusType=(status type) to the weapon/tech.  The Type=Status is now defunct, and it should be set as 
+  Single or AOE.
+- Changed the way the red orb rewards are listed so that it now shows what each person gets based on his/her skills/accessories
+  rather than simply showing just the base amount that everyone gets.
+- Changed the formula for how monsters get boosted when generated. 
+- Changed the way !bat list lists information slightly.  It also adds colors to the list of people in battle.
+- Changed the !items command so that items are now in different colors based on what type they are.
+- Changed the cap on styles to level 10. After level 10 they will stop gaining xp.
+- Changed the end-of-battle message so that it shows how many times in a row the heroes have won/lost.
+- Changed Bloodpact to make the summons stronger based on the stats of the summoner and increased the max of the skill to 20.
+- Fixed a bug in which AOE Heals were subtracting the target's def from the amount when it shouldn't have.
+- Fixed the ability for a charmed player to use a FinalGetsuga type boost, thus resetting the player at the end of battle against
+  his/her will.
+- Fixed a bug with !clear battle stats
+- Fixed a minor bug in which the "<person> peforms a 4-hit" and "performs a 5-hit" attack message wasn't showing.
+- Fixed a bug in which weaponbash was ignoring a target's stun resistance.
+- Fixed a bug with the bot not resuming battles if it gets disconnected in the middle of one.
+- Fixed a bug in which the cover skill was blocking heal and AOE heal type techs.
+- Fixed a bug with !regen
+- Fixed a bug in which NPCs using clones would cause the battle to continue on after all monsters were killed.
+- Fixed a bug in which BloodPact wasn't affecting the summons like it should.
+- Fixed a bug in which if defender type AI monsters were to go first in battle they would cause a few errors.
+- Fixed a bug in which "random" status effects weren't actually being applied.
+- Fixed a potential exploit in which players could log into their clones and control them.
+- Fixed a potential exploit in which players could log into their evil doppelganger bosses and control them.
+- Fixed it so the bot will reset a person's access level to 1 if they change nicks.
+- Fixed it so you can't even attempt to log into an npc or monster's file
+- Fixed a bug in which certain weapon abilities could be used with the wrong weapon.
+- Fixed a bug with Kikouheni in which it wasn't displaying the weather change in the channel.
+- Fixed a bug in which discount cards could occasionally set a player's shop level to less than 1.
+- Fixed a bug in which the "STOP" status effect wasn't being cleared on players at the end of battle.
+- Fixed the virus status effect so that it will actually do something now.
+- Fixed a serious bug in which techs could be spammed multiple times on a person's turn.
+- Fixed a bug with poison. It should be working properly now.
+
+1.5 
+- Added a check so that people can only create a certain # of characters max. This only works if the bot can look up 
+  IP addresses and people have logged into their characters with this feature on (so that it stores the IPs).  
+  The max # of chars allowed is in system.dat and can be changed to the bot owner's liking.
+- Added the ability for monsters and clones to change their weapons in the middle of battle before attacking.
+  Neither can change to glyphs if they aren't already equipped when the clone/doppelganger is created. Note that regular
+  monsters and bosses have a higher rate of changing their weapons vs both types of doppelgangers.
+- Added the active skill Provoke -- Will cause a monster you use it on to attack you its next round instead of another target.
+- Added the active skill Disarm -- Will attempt to disarm a target back to their base fists. 
+- Added the active skill "WeaponLock" -- Will consume Sokubaku to lock a target's weapon in place for a # of turns.
+- Added the resistance skill "Resist-Petrify"  -- right now it only goes to 20.  Like other resists, 
+  it decreases the chance that petrify will work on you.
+- Added a HurtEthereal=true/false flag to weapons. When set to true, that weapon can hurt ethereal monsters. Right now
+  only the Vampire_Killer whip is set to true.
+- Added a "Strength Down" status effect.  While under this effect, a target's str will be divided by 4 on attacks.
+- Added the "Weapon Locked" status effect. While under this effect, a target cannot change weapons.
+- Added the "Petrify" status effect. When petrified, a target will lose a turn.
+- Added the ability for the bot owner to set how long the idle timer is in system.dat.  Look for TimeForIdle=
+  The time needs to be set in seconds, not minutes. 180 seconds (3 min) is the default
+- Added a warning to the "Final Getsuga" type boosts in the !view-info section for them to better let players know the after
+  effects of using one.
+- Added an effect to Trickster in which there's a chance that the user can dodge an attack. The odds are level of trickster %.
+  The max is 10% (level 10 Trickster).
+- Added the command !battle hp -- This command can only be used in battle and will display the HP status of all allies. 
+- Added the !scoreboard command. This command can only be used when there's 3 or more players in the game. It will rank the
+  top 3 players based on a number of factors (including stats, orbs, chests opened, etc).
+- Added the !score command. This command will show players their individual scores.
+- Added a new flag in system.dat that bot owners can toggle manually.  It's called ShowOrbsCmdInChannel=true/false   
+  If true, the !orbs command will display the person's orb total in channel.  If set false, it will send it to the person 
+  in a private message. 
+- Added a bonus effect to using a weapon that a user has a mastery maxed in: Parrying. If a player's mastery for the 
+  weapon equipped is 100 or greater, there's a small chance that the person will parry a melee attack using that weapon.
+  Using the style Weapon Master will help the odds of parrying an attack, but a person still needs 100 mastery first.
+- Added a notification to the player style leveling up so players know when their style levels.
+- Added the ability for multiple waves of monsters. The higher the winning streak, the bigger the chance that there will be
+  more than one wave of monsters to arrive. Battles with multiple waves will have a higher max orb reward limit.
+- Added the ability for monsters to spawn other monsters/bosses upon death. In [Info] add SpawnAfterDeath=nameofmonster
+- Added a gauntlet mode. Bot admins can use !start bat gauntlet to begin the gauntlet. The gauntlet ends when the players
+  are defeated.
+- Added the ability for players to increase the difficulty of battles if they want. Players can use !view difficulty to see their
+  current difficulty level and !save difficulty #  to set it. The # can be 0 or any number greater than 0. 
+- Added the bot admin command: !leveladjust #  This will set the overall level adjust to battles. Unlike difficulty, it affects 
+  everyone at all times.  Can use !leveladjust by itself to see the current level it's set at.
+- Added Axe and Dagger weapons for players.
+- Added new monsters
+- Added new bosses
+- Added new NPCs
+- Changed the !shop list skills command so that you can tell it which type of skill you want to see only. They are:
+  !shop list skills active/passive/resists
+- Changed doppelgangers around so that they can't use the Final Getsuga type boosts.
+- Changed the Doppelganger style so that it now has various uses against clones and evil doppelgangers.
+- Changed it so monster's weapon levels will be increased if the file setting is lower than the streak.
+- Changed the formula for magic damage slightly.
+- Changed the formula for 4-hit and 5-hit weapons slightly.
+- Changed the code to try and reduce the odds of monsters one-shotting players on turn #1. 
+- Changed !stats so that you can now use it on other players to see what their stats are.  It cannot be used on NPCs 
+  or Monsters (you need the skill Analysis for that).  Just use it as !stats for your own and !stats person to look
+  up the other person.
+- Changed it so bosses will no longer appear below streak #10.
+- Changed /me gives so that you don't HAVE to specify a number if you only want to give 1 of an item.
+- Changed a few things in the way monsters are boosted if they're added before players join the battle.
+- Changed Elemental Seal so that it affects all targets on an AOE magic attack instead of only the first target.
+- Changed the penalty for spamming the same tech/attack over so that it's much harsher. It's possible to drop style
+  ranks now (just like in Devil May Cry).
+- Fixed a bug with ClearStatus type items (i.e. the Tonic).
+- Fixed a major security flaw.
+- Fixed a bug in which DARK type spells weren't being enhanced by GLOOMY type weather.
+- Fixed a bug in which the WIZARDRY passive skill wasn't working right due to a mispelling. There's a temporary fix in the bot
+  that will be removed in 1.6. Have one battle end before characters buy any more into the wizardry skill to fix it.
+- Fixed a bug with the Aztec-GoldCoin accessory and gave its absorb effect a bit of a boost.
+- Fixed a bug in which it was possible to cover a non-existent character, thus causing errors that would freeze the bot.
+- Fixed a bug with AOEs being used on players in PVP in which it would hit the user and miss some other players.
+- Fixed the skill list so hopefully lines won't be cut off/not display everything.
+- Fixed a bug in which players could purchase more HP and TP than would be allowed by the maximum set limit.
+- Fixed a bug in which players could purchase invalid techniques if they didn't spell them right.
+- Fixed a bug in which sometimes all of an item would be consumed when used.
+- Fixed a bug with mana wall not working right when a non-heal magic tech would heal a target.
+- Fixed a bug in which it would say a clone disappeared when in fact it should have been a summon when the summon's owner died.
+- Fixed a bug with utsusemi in which the wrong name was being shown when the player didn't have enough shihei.
+- Fixed a bug with the Fool's-Tablet accessory.
+
+2.0
+- Added the Augment system. Use the command !augment by itself to see the augments you have equipped. To add augments to a 
+  weapon use: !augment add (weapon) (rune)  To remove an augment: !augment remove (weapon)   To see the current strength
+  of augments that are in effect, use !augment strength   The strength only shows based on current armor/weapons.
+- Added "Runes" to the items list. Runes are used to augment weapons with special effects. Use !runes to see which runes you own.
+- Added boss drops to evil doppelgangers and warmachines. The drops will be random based on various items in items.db.
+- Added silver chests and silver keys.
+- Added purple chests and purple keys.
+- Added Renkei (Skillchains). If two techniques that qualify (non-magic) are done to a target, it will activate a renkei that
+  will deal additional damage to a target.
+- Added a new stat: Ignition Gauge.  You can see your current ignition gauge by using !ig or !ignition gauge.  You can buy it
+  in the shop with !buy stats IG #  Unlike hp/tp, buying them won't full the gauge to full. Ignition Gauge fills by +1 when you
+  are in a winning battle or when you are killed by a monster.
+- Added Ignitions! Ignitions are stronger boosts that you purchase in the shop via black orbs. They consume IgnitionGauge to
+  use and to maintain during battle. Each Ignition has its own special effect and augment bonus that happens when you activate
+  the ignition.
+- Added the /me reverts from (Ignition Name) command.  Use this if you want to turn the Ignition off manually before 
+  your IG runs out.
+- Added the passive skill: TreasureHunter.  This skill will increase the odds of better colored chests when a chest is generated,
+  and the odds of getting a random item at the end of battle if the monsters have one to give. This skill is cumulative with
+  everyone who has it but in order to take effect, the players must be alive at the end of battle.
+- Added the passive skill: BackGuard.  This skill will decrease the odds of monsters going first in battle. It's cumulative 
+  with everyone who has it and is in battle.
+- Added the active skill: Konzen-Ittai. This skill, when activated, will allow you to perform a self-Renkei with a non-magic, 
+  non-AOE, technique.
+- Added the active skill: Seal Break. This skill, when used, will consume Hankai and attempt to break the Melee-Only ancient
+  seal that prevents players and monsters from using techniques that battle.
+- Added the active skill: Magic Mirror. This skill, when used, will consume a MirrorShard and give the user the Reflect status.
+- Added the active skill: Gamble. This skill, when used, will consume 1000 red orbs to summon a slot machine that will do
+  something random.
+- Added the active skill: ThirdEye. This skill, when used, will allow the user to dodge 1-2 attacks.
+- Added the active skill: Scavenge. This skill, when used, will allow a player to try to dig something up out of the battlefield's
+  ground. The items that are possible in the battlefields are set by the bot owner in battlefields.lst. Players can use this skill
+  one time per battle, successfully or not. Each level in this skill increases the odds of finding an item.
+- Added the active skill: Just Release. This skill, when used, will convert damage blocked via Royal Guard into an attack on
+  a target. The amount of damage done is (skill level)% * blocked damage. After use, the blocked meter will be reset to 0.
+  You can see how much you have stored in !stats.
+- Added the monster-only skill: Magic Shift. When used, this skill will randomize what element a monster is strong/weak to and 
+  healed by.
+- Added the monster-only skill: DemonPortal. When used, this skill will allow a monster to create a Demon Portal monster.
+  On the portal's turn, it will generate another monster onto the battlefield provided there's less than 5 monsters on the field.
+  It will only stop when the portal is dead. Monsters with DemonPortal skill can also heal the portal.
+- Added the monster-only skill: MonsterConsume. When used, a monster will eat/kill another monster and gain 40% of its stats
+- Added the monster-only skill: MonsterSummon. When set right, a monster with this skill can summon a monster into the battle.
+  Unlike BloodPact, it can be done multiple times. See Legion in the \bosses\ folder to see how to set it up right.
+- Added a new command to clear descriptions you've set: !clear desc (name)  (remove the ()).  For example: 
+  !clear desc character   or  !clear desc mightystrike 
+- Added new achievements
+- Added a new item type: IgnitionGauge.  This type will restore some of a player's IgnitionGauge. 
+  The "IgnitionStar" is an example item but can only be found in chests.
+- Added a new item: DunceCap. This item is crafted only. When used it will attempt to inflict IntDown on a target.
+- Added a new item type: Snatch.  This item type will allow the user to attempt to grab a monster and use it as a shield (makes
+  the monster cover the user).  The odds of it working depend on the level and speed of both user and target.
+- Added a new item: Grappling_Hook, type snatch.
+- Added the "bored" status. When inflicted upon a target, the target will miss a few turns.
+- Added the "confused" status. When inflicted upon a target, the target will randomly attack opponents including his/her own
+  allies.
+- Added the "reflect" status. If someone casts a spell on someone who has this status, the spell will bounce back and hit the
+  caster. Curing spells ignore the reflect status though if they heal.
+- Added the "protect" status. When on, it cuts melee attacks down by half.
+- Added the "shell" status. When on, it cuts magic damage down by half.
+- Added the "resist-"element statuses. When on, it removes the ability for the magic effects (such as burning, shocked, frozen)
+  from working.  If the resistances are applied via a buff technique, such as BarFire, it will also give a +30% resistance to
+  the element.
+- Added a new special boss fight: Demon Wall.  In this type the bot will generate a demon wall based on the current 
+  battle streak. This boss fight is also timed; darkness will occur in 5 minutes and it's instant death if darkness triggers.
+- Added a new special boss fight: Elder Dragons.  In this type, the bot will randomly generate a powerful Elder Dragon for
+  the heroes to fight. The name of the dragon is completely random, as is its elemental weaknesses/resists.
+- Added two new battle formulas. Bot Admins can use !toggle Battle Formula to switch between them.  The version 1.0-1.5 formula
+  is now gone. Bot Owners can switch it manually in system.dat [system] BattleDamageFormula=1 or 2  By default, 2 is default.
+- Added a IgnoreDmgCap flag in system.dat.  If set to true then damage will no longer be capped under any formulas. 
+- Added the ability for monsters to be immune to Weapon Lock. Under [Skills] add Resist-Weaponlock=100   Unlike other resists,
+  this one is either all or none.  If it's not 100, then weapon lock will always work.
+- Added the ability for monsters and NPCs (not shadow clones) to use ignitions. In order for a monster/npc to use an ignition
+  they must have 100+ IgnitionGauge under the [battle] section AND must have a valid ignition in [ignitions] (ignitionName=1)
+  Like other techs, it's a random chance that they will use it.
+- Added the ability for players to take the monsters by surprise and go first in battle at random.
+- Added battlefield events! At random, various things may happen at the end of a turn now including healing, damaging or
+  inflicting a status on either everyone, all players, all monsters, or just a random person. Bot owners can disable this
+  in system.dat under [system] EnableBattlefieldEvents=  and bot admins can use !toggle battlefield events
+- Added armor! Basic armor can be found in chests, middle grade armor can be crafted and higher level armor can be found via
+  bosses. To wear armor use: !wear armor name  to remove: !remove armor name. 
+- Added Portal Items. These items, when used, will wipe out the current battle and teleport all players to a special battlefield
+  to face a difficult boss. Winning or losing these battles doesn't affect the current battle streak.
+- Added portal items to the shop. use !shop list portal and !shop buy portal (item) (amount).  Portal items are not bought with
+  red orbs, but rather via BeastmenSeals and KindredSeals.
+- Added the ability for regular monsters to drop items to the most stylish person. It's a 30% chance, if a monster in the
+  battle has a drops=item in their [info] section.
+- Added a random chance that a double turn will occur without Sugitekai.
+- Added Allied Notes. You can see your own allied notes with: !allied notes  and other people with !allied notes Person 
+  Allied Notes can be used to purchase things in the shop (use !shop list alliednotes)
+- Added the ability for battles to end in a draw if all the monsters and players are dead at the same time.
+- Added the ability for bot admins to enable a Double Currency Event.  While this event is on, red orbs will be doubled.  
+  Bot admins can enable and disable it using !toggle bonus event 
+- Added the ability for monsters and npcs to use bloodpact. However, their summon has to be set manually and it's a good idea
+  to set a description (else it will be displayed wrong).  To set the summon in [Skills] put Summon=name  The name must be a
+  summon that exists in the \summons\ folder.  To set the description: [descriptions] bloodpact=desc here
+  Look at the Yagudo_Summoner monster for an example.
+- Added a new style: CounterStance.  This style will enhance the odds of countering melee attacks done against you. Higher levels
+  obviously increases the odds. This style also gives access to the !perfect counter skill that can be used one time per battle
+  to ensure one 100% melee counter.
+- Added the ability for melee attacks to be countered. When this happens, the person who attacks will end up taking damage.
+- Added an !achievements command so you can see which achievements you have unlocked. Can also use it to check other people:
+  !achievements person
+- Added a !clear achievement command for bot admins. It's !clear achievement person nameofachievement  
+- Added a new command: !total deaths person   This command will show how many times a monster/boss/player has been defeated
+  in battle.  Unfortunately, it only starts counting bosses and monsters after this update has been applied, so it won't show 
+  you how many times those have been beaten prior to this update. Players it will, though, as that's been in the bot for a while.
+- Added a new command: !deathboard <monster/boss>  It basically generates a scoreboard based on the monster's or boss' total
+  deaths.
+- Added the ability for techs and weapons to inflict a status type upon its user. Right now it's a 100% chance. To add it, 
+  add SelfStatus=statustype in the tech/weapon.
+- Added the ability for monsters to attempt to grab players and use them as shields if they have snatch=1 set in their [skills]
+- Added the ability for monsters to have "natural armor" -- Think of it as a shield that has to be broken before the monsters 
+  can take damage. Look at the boss Cerberus to see how it's done.
+- Added the ability for weapons and techniques to ignore some or all of a target's defense. In techniques.db and weapons.db
+  under the name of the tech/weapon, put IgnoreDefense= and the value can be 0 to 100  0 means none, 100 means 100% 
+  of def is ignored. 
+- Added an IgnoreDrain=true/false flag for monsters, bosses and npcs. When set to true, stuff like Drain Samba and techs
+  that normally give back some of the damage in HP won't activate on the target.
+- Added the ability for techniques to have multiple hits (like weapons). Use hits= in the [tech] name in techniques.db.
+  Unlike weapons, techniques can go up to 8 total hits.
+- Added the Biome option to monsters.  In [info] you can put Biome=  and the list has to be valid battlefield types or
+  left blank.  If set, the monster will only have a chance to show up if the battlefield matches one of the biomes in the
+  list.  You can set multiples like so: Biome=river.beach.desert
+- Added the spells Protect and Shell to almost every wand/staff. These spells will bestow the buff Protect or Shell upon
+  the target. 
+- Added the ability for monsters to drop green, white and orange orbs upon dying. These small temporary orbs will restore
+  some hp, tp or ignition gauge to the person who kills the monster. Note that using AOEs to kill the monsters will result
+  in no orbs being dropped. They only drop on melee and single-target techs.
+- Added healing caps on healing spells. Bot admins can set them in techniques.db, [healing spell name] MaxAmount=
+  If left blank the max amount is 2000+(total amount done /100) 
+- Added the ability for monsters, npcs and bosses to "learn" immunities to technique names.  In their files under 
+  [monster] put TechLearn=true to make it active.  What it does is make it so if someone uses a tech on the target 
+  with this set to true, the next time the same tech is used on the target it will be counted as immunity/null damage 
+  (essentially only allowing the tech to work once against the target).
+- Added a simplistic Conquest system. As players and monsters battle, the bot will keep track of points. At the end of 5 days
+  the bot will tally up and see who has majority control over the world. When players have majority control they will receive
+  an orb bonus based on the amount of points they had earned during that conquest period (up to 1000 orbs per battle). Players
+  can use !conquest info to see how the conquest is going and how many hours are left before it tallies.
+- Changed the zombie regen to scale a bit better so that lower streaks won't have 100+ hp regenerated.
+- Changed the way red orbs are rewarded so that lower streaks have a much lower max orbs and higher streaks can actually give
+  more than 100%. 
+- Changed the key and chest drop rates.
+- Changed the shop so that there's a cap on the old-style boosts. Players can now only own 500 levels into them.
+- Changed the "First round protection" code so that it should also protect players from being one-shotted on monsters from a
+  new wave.
+- Changed the way the bot does the status effects to try and make it show them in the channel better and to block players from
+  being able to control their actions until all of the status effects have been displayed (to prevent various bugs).
+- Changed the damage amount that magic special effects (burning, drowning, shocked, etc) do to targets. It's now increased to
+  5% of maximum HP of the target.
+- Changed the Melee-Only type battles so that they no longer appear during boss battles.
+- Changed the way status effects work so that multiple status effects may be used at a time on techs/weapons/items. Just
+  be sure to add them like this: status.status.status  (note the . inbetween the status effects)
+- Changed AOEs so that if the person who initiated the AOE dies at any point during the AOE, the AOE itself will stop cold.
+- Changed the bot so that seasonal monsters don't need to be copied manually over. In order for the bot to load them during the
+  correct month, set this: streak=-1000  and month=01 or month=02 or month=03, etc under [info].  See Robot_Santa or
+  Gobbles for an example.
+- Changed Quicksilver so that it can't be used multiple times in a row. There has to be at least 1 turn between uses.
+- Changed the way the bot gets the items inside the chests. Now bot owners have more control over it. See chests.lst for the
+  lists and the ability to edit them.
+- Changed !items so that the keys are no longer listed there. Use !keys to see the keys you have.
+- Changed the Final Getsuga type boost so that while it's on EVERY AUGMENT will be on at the same time.
+- Changed the !items code so that it clears out items that the player has 0 of in their files.
+- Changed the curse night and melee-only events so that they won't occur below streak 50.
+- Changed the orb reward code so that people who flee from battle will not receive the OrbHunter or Accessory orb bonuses.
+- Changed the clear_battle alias code a little to try and make it slightly faster and better at clearing out monsters/npcs and
+  bad files
+- Changed the !scoreboard command to show a varying amount of top players depending on how many players are in the game. It will
+  now show the top 3, the top 5, or the top 10.
+- Changed !status and the turn status line to show some of the skills active on the person.
+- Changed many of the basic character commands (such as !hp, !tp, !items, !skills, etc) to work in private message as well
+  as the channel. Now if you use those commands in a private message, the message will be displayed privately to you. If you
+  use them in the channel, it will be as it was before and show the message in the channel.
+- Changed the Steal skill so that it now loads the steal pools from steal.lst. It is now possible for individual monsters/bosses
+  to drop different things, rather than every monster or boss sharing from a global pool.
+- Changed how the resistances/weaknesses/immunities/heals to elements, weapons and techs work in the files.  Now there's a 
+  [modifiers] section.  Setting the element/weapon/tech to 0 means the monster is completely immune to it.  Setting it to 
+  100 means they will take normal damage from it.  Anything above 100 is a weakness, anything below 100 is a resistance. Remember 
+  that it's in percent, so 125 = 125% damage from it.
+- Changed items so that they will now hurt targets that are under the ethereal status.
+- Changed the code slightly for the shop so that other VIP membership card-like accessories could be created and used 
+  (instead of mine only).
+- Fixed a bug in which selling a technique might result in 0 orbs back.
+- Fixed a bug in which cover would activate when a monster used taunt on a covered target.
+- Fixed an issue where setting a high difficulty would still result in low level monsters on lower streaks. Now it summons the
+  correct level monsters.
+- Fixed an issue with magic effect deaths in which they wouldn't check for the revive status or for the spawn after death function
+- Fixed a bug with chests that gave orbs. It would write a red=orbs orbs orbs line or black=orbs orbs orbs line in the 
+  player's item_amount section.  That should be fixed now.
+- Fixed a bug with the GIVE command in which a misspelled name would cause an error that would stop the bot in its tracks.
+- Fixed a bug with the GIVE command in which giving more than one item would cause the receiver to only receive 1 of the item
+  and the rest would be lost.
+- Fixed a bug with the GIVE Command in which it wouldn't display an error message correctly if fractions of an item was used.
+- Fixed a bug in which players could exploit the bot using descriptions.
+- Fixed a bug in which the healing items weren't checking for max hp correctly, thus allowing you to heal someone who didn't
+  need it.
+- Fixed a bug with the mugger's belt accessory in which it wasn't calculating damage correctly.
+- Fixed the !view-info display for weapons if the weapon has multiple hits.
+- Fixed an issue where using a tonic would remove a weapon tech boost if someone had it on.
+
+2.1
+- Added the REFORGE command. Using !reforge weapon  a player can get a random augment on the weapon. The cost is
+  2x the weapon's black orb cost and 1 RepairHammer. The augment is completely random and will overwrite any current augments.
+- Added the active skill: BloodSpirit. This skill works like BloodBoost only instead of STR it gives INT.
+- Added the passive skill: DivineBlessing. This skill reduces the chance of a curse night from happening. It's a cumulative
+  effect (muchlike BackGuard).
+- Added the ability to see the total number of deaths of monsters and bosses. Use !deathboard monster/boss total
+- Added the ability to see how many conquest points the leading party (monsters or heroes) has by using !conquest points
+- Added the ability to control your shadow clones. First, you must be using the Doppelganger style or else they'll still
+  control themselves. Next, when it's the clone's turn, use !shadow (command [tech/skill name]) (target) to do it. commands are:
+  taunt, attack, tech, skill.  For example: !shadow tech inferno bee
+- Added a !view-info style (style)  command to display information on the various styles.
+- Added new valid battlefield limitations to the bot.
+- Added the ability to set a custom max orb limit for gauntlet battles. In system.dat under [system] put MaxGauntletOrbReward=
+  By default the maxGauntletOrbReward is set to 50,000 (this is before the bonus from the level of gauntlet is calculated).
+- Added a new skill type: Killer Traits. These skills will increase melee damage against a specific monster type by 1% each level
+- Added a new method in the bot that checks to see how many battles were empty/not played. If it's greater than a set number, 
+  the bot will automatically reset the streak to 0. The amount of battles before this happens can be set in system.dat.
+- Added dragonballs to the game. Dragonballs can be randomly found only by winning boss battles. When all 7 are collected
+  the dragon Shenron will grant a powerful bonus to the next ten active battles.
+- Added the command !dragonballs that will tell you the status of the dragonball hunt or if Shenron's Wish is active.
+- Added the command: !misc info (person)  that will show misc statistical info on yourself or other characters.
+- Added black keys and black chests
+- Added the ability for any techs performed using a weapon that can hurt ethereal monsters to also hurt ethreal monsters. Prior
+  to this, only magic techs would hurt them or players would need the augment.
+- Added the ability for bot owners to adjust the time of chests before they're destroyed. In system.dat under [system] there's
+  now ChestTime=   the time is in seconds and the default is 45.
+- Added Ignition Techs. These are special techs that can only be used while an ignition is on. They are not tied to any weapon
+  but still consume TP like a normal tech.
+- Added two special Anniversary monsters that will only show up in July to help celebrate the anniversary of the bot's creation.
+- Added a way for monsters/bosses to be immune to Quicksilver. In [info] put IgnoreQuicksilver=true 
+- Added a new negative status effect: removeboost. If used on someone who is ignition boosted, it will knock the target out
+  of that boost. It does not work on FinalGetsuga or weapon boosts. 
+- Changed the active skill Third Eye so that it only works on physical attacks. It also now has its own dodge message.
+- Changed the chance of certain monsters building a demon portal from 35% down to 25%.
+- Changed the AbsorbIG Augment so that it's weaker on players and stronger on monsters.
+- Changed Just Release so that shadow copies cannot use it.
+- Changed alchemy/crafting so that crafted items can require more than one of the same ingredient.  Glass, for example, now
+  takes 5 sand to craft.
+- Changed a little bit of code in the control.mrc to help improve things. Thanks to Andrio
+- Changed Shadow Clones so that they only change weapons when their owners do.
+- Changed the Hurt Ethereal rune so that techniques done with the weapon that has this rune on will now hurt ethereal monsters.
+- Changed food and shop lowering items to work in battle without consuming a turn. As a note, if you use food while a battle is
+  ongoing you won't see the stat increases til AFTER the battle has ended.  This is for everyone, not just people in the battle.
+- Changed the way the 'ancient melee-only seal' thing works so that it's based on battlefields now, rather than a random chance.
+- Changed the way Conquest Points are calculated. There is no longer a penalty for having more than one player in battle. However
+  the overall amount of points has been slightly nerfed.
+- Changed the way the scoreboard is generated so that the scores are a little more reasonable. Bot Admins can toggle between the
+  old and new methods by using !toggle scoreboard type
+- Changed the !save battle streak command so that it can be used once an hour, down from once every 2 hours.
+- Changed the !reload battle streak command so that it will work on a winning streak as long as it's 10 or under.
+- Changed the amount of conquest points players lose if the battle was lost on the first turn.
+- Changed portal items so that they won't work during gauntlets and boss battles.
+- Changed a lot of code to make it much more efficient.  The bot should be faster now when clearing out files.
+- Changed the way the bot builds many of the lists to display to the channel.  I've restructured a lot of things (notice 
+  many new .lst files). Weather.lst is now defunct, its function has been moved into battlefields.db.  The list of chest items
+  are now in the chest_(color).lst file rather than a single chests.lst file.
+- Changed golden chests to remove black orbs from them. This is because bot-generated bosses can use golden chests as their 
+  drop pools and if it were to pick a black orb it wouldn't be added right.
+- Changed Demon Walls so that they're based on turns rather than a timer. The default is that after 
+  the 10th turn the players will lose (i.e. beginning of turn 11).
+- Changed the healing type techniques so that they will not heal demon_portals (it will just heal 0 damage).
+- Changed the AI code slightly to try and avoid the "Error: is not currently in this battle!" message.
+- Changed the formula for the regen skill so that it's now: ((max hp * skill level %) / 2) 
+- Fixed an issue with the wrong password counter not being reset sometimes after logging in.
+- Fixed an issue in which cure-status type items (such as tonic) would not cure confuse and would actually make it worse.
+- Fixed a bug that Raiden found in which new characters wouldn't be able to equip armor.
+- Fixed a bug in which monster snatch descriptions weren't being displayed.
+- Fixed a bug in which the demon portal's idle description wasn't being displayed.
+- Fixed a bug with the error messages in !view-info
+- Fixed a bug in which the total deaths of monsters/bosses were being increased by 2 if killed by an AOE.
+- Fixed a bug in which battles with monster summons could potentially freeze and never end.
+- Fixed a bug in which bot admins would sometimes be unable to force a character to create a shadow clone using the 'does' command.
+- Fixed a bug in which the "has no skills" message wouldn't display when a character had no skills.
+- Fixed a bug in which DCC battles would potentially freeze if a key is rewarded.
+- Fixed a bug with the shop in which it was possible to increase your shop level without actually getting anything in return.
+- Fixed a bug in which the !view-info command wasn't showing status types on techs.
+- Fixed a potential issue with evil doppelgangers and the auto-revive augment in which they could also gain that status effect.
+- Fixed a bug with !status in which certain skills weren't being displayed correctly when they were active.
+- Fixed a few typos.
+- Fixed a bug with the error message with !enter
+- Fixed a bug with the OK message for setting descriptions when setting a description in DCC mode.
+- Fixed a bug in which sometimes using a single hit tech after a multi-hit tech would cause some errors.
+- Fixed a bug in which anyone could use any ignition as long as he/she had the IG for it even if he/she didn't purchase it.
+- Fixed a bug in which capped healing amounts were not working right.
+- Fixed a bug in which an error message didn't display if someone attempted to snatch a boss.
+
+2.2
+- Added mimics! The default chance is 5% and only takes effect at streak 50 or above. When a mimic happens it will start a battle
+  with the mimic as a special type of monster. Bot admins can change the % by using !mimic chance # where # is 1-100
+- Added a new special boss fight: Bandits.  In this type, the bot will randomly generate a random group of bandits for the
+  heroes to fight. 
+- Added the ability for item names to be used as modifiers on monsters. Like weapons/elements, 0 is null, 100 is normal, under
+  100 is strength, over 100 is weakness.
+- Added En- buffs to the pixi wand. These buffs will enchant melee attacks with the ability to do the extra magical damage (burning,
+  drowning, etc). Like the magic version, the player must be more than 20 levels. Only one En- element can be on at a time.
+  En-spells also give a boost to melee damage if the target is weak to the en-spell element.
+- Added the ability for the bot to retally the number of total battles, making it more accurate.
+- Added a new accessory type (IncreaseTreasureOdds) that increases the odds of getting better colored chests.
+- Added two new stat increase types: BlackOrbs and RedOrbs. They increase the orb amounts when used.
+- Added a new tech type: ClearStatusNegative  When used on a target it will remove most negative status effects. It will not
+  remove charm from a target or any of the magic effects (burning, frozen, etc). Added Esuna as an example.
+- Added a new tech type: ClearStatusPositive  When used on a target it will remove most positive status effects. It will not
+  remove boosts or auto-revive. Added Dispel as an example.
+- Added the ability for monsters to change the current battlefield. To make it happen, in [skills] add:
+  ChangeBattlefield=1  and ChangeBattlefield.battlefields=battlefield1.battlefield2.etc   and ChangeBattlefield.chance=
+  where the # you supply will be the percent of it happening. If no chance is provided, 15% is used as default.
+- Added mechs! You can purchase a mech for 1000 Allied Notes using !shop mech buy   For a list of all commands please
+  read the MECH section in the player's guide.
+- Added the ability to turn off taunting for monsters and npcs. Under [info] put CanTaunt=true/false   If it's not there it's 
+  assumed to be true.
+- Added the ability to have custom taunts for various monsters/npcs/bosses. Under [info] put TauntFile=  where the file that
+  the taunts are located in.  For example: [info] TauntFile=taunts_Vergil.txt  
+- Added a monster only skill: RepairNaturalArmor.  This skill will allow a monster to restore all of its natural armor after
+  it has been depleted to 0.  Keep in mind it will restore all of it to max when the skill is used.
+- Added a new bot admin command: !main folder cleanup   Use this to clean the main bot folder. It'll remove .lst, .txt and .db files
+- Added a new battle type: Save the President.  In this battle, heroes must defeat monsters while protecting the Allied Forces
+  President. If the president dies the battle will be over and the heroes will lose. This type of battle does not affect the streak.
+- Added a check to the bot for old characters. Characters that have not been logged into after 6 months will be removed.
+  The files will be moved to the zapped folder in case bot owners need to restore them.
+- Added a flag for items to make them only available if players won the previous conquest period. In items.db add 
+  ConquestItem=true to any item you want to only show up that way. Assumed to be false if missing.
+- Added the !conquest record command. It will show you the total number of conquest tallies and who has won them.
+- Added the ability for techniques to have Pre and Post scripts that can run. This should not be done unless you know what
+  you're doing. Add them as Prescript= and Postscript=   You can have one and not the other, both, or none at all.
+  Some notes: $1 = the attacker, $2 = the tech name, $3 = the target; Use $display.system.message(MESSAGE HERE,battle) 
+  to display a message to make it work right in both DCC mode and IRC mode. (don't use any commas in the message itself 
+  though or it'll cause the message to be cut off)
+- Added an automated 1 vs 1 AI battle type.  Bot admins can start it by using !startbat ai or the bot can be set to do this 
+  type of battle automatically by toggling it via !toggle automated ai battle but note that players cannot join this type of 
+  battle so it should only be set to automatically do this if no one wants to play but you still want battles to happen 
+  (it won't affect the streak). 
+- Added the ability to exchange allied notes for $$double dollars and vice versa. Use !exchange alliednotes/doubledollars #
+  to convert to the opposite currency.  It's 1 note for $$2 or $$2 for 1 note
+- Added the ability to bet on the outcome of 1vs1 battles. Use !bet npc # or !bet monster # to place a bet.
+- Added the ability for bot owners to change the number of phantom betters that place bets on the 1vs1 battles. In system.dat
+  under [system] put PhantomBetters=#  the # has to be greater than 3.  Note that a huge number will bog down your machine.
+- Added the active skill Formless Strike.  Using this skill will consume 50% of your TP but will allow you to hurt ethereal
+  monsters without the augment or special weapon.
+- Added the PinkBow accessory.  This accessory will add +50% resistance against all status effects (except curse on curse 
+  night of course).  It's basically like a lite version of the Ribbon.
+- Added an accessorytypes.lst to the \lst\ folder.  It isn't used for anything in the bot, but it does give a list of 
+  valid accessory types for bot owners who want to create their own accessories.  Of course you can always look in 
+  items.db for examples on how to do most of the types.
+- Added "All" as a valid status target for ignitions.
+- Added new NPCs
+- Changed the double turn chance for monsters to give them a 1-5% better chance of getting one.
+- Changed the shop for weapons to show the weapon category in red while the weapons themselves remain blue. Makes it easier to read.
+- Changed the clear_battle alias to only run when there's been an actual battle. 
+- Changed certain skills to reset after every 15 waves in the gauntlet.
+- Changed Blood Boost to work on a percent amount instead of a fixed amount. The base is (skill level * 2)% of the user's str.
+- Changed Blood Spirit to work on a percent amount instead of a fixed amount. The base is (skill level * 2)% of the user's int.
+- Changed the cooldown timers on Blood Boost and Blood Spirit
+- Changed view-info on ignitions to show the ignition techs.
+- Changed how the AI system works. I've recoded a lot of it. It should be better about picking skills, techs, ignitions/etc that
+  it can actually use (i.e. has enough tp or ig for, etc).
+- Changed the AI so that it can only use BloodBoost and BloodSpirit once.
+- Changed how the bot determines which boss battle type to choose. It's much cleaner now.
+- Changed how the bot reads .lst, .txt, and .db files. They're in their own folders now.
+- Changed !startbat so that on boss types you can activate the special boss battles. !startbat boss <special type>
+  Valid types are: normal, bandits, doppelganger, warmachine, demonwall, elderdragon
+- Changed a few things in translation.dat to make it read better.
+- Changed parry and dodge so that a target cannot perform those actions while stunned or paralyzed.
+- Changed !achievements to show how many achievements have been acquired vs how many there are total.
+- Changed the chance of multiple waves happening (lowered it at higher streaks)
+- Changed curse nights and surprise attacks so that they cannot happen twice in a row.
+- Changed the ElementalDefense type accessories so that the amount they block can be changed in items.db under Amount=
+  The amount is a percent, so .50 = 50% damage blocked.
+- Changed the Steal Power tech so that it's possible to dodge or block it (utsusemi works now)
+- Changed the Steal Power tech to add a cap amount based on the current streak level.  The higher the streak, the higher 
+  the amount is that the user can absorb from a target.
+- Changed the BlockAllStatus type accessories (ribbon and pinkbow) so that bot owners can give the accessory an 
+  amount to block.  The amount is a direct amount (so Amount=100 means it's +100%)
+- Changed the code for how the bot checks for accessories to make it much better.  It's more like augments now.
+- Changed the way the bot looks for skills to read from .lst files
+- Changed the cost on certain items and seals.
+- Fixed a bug in which battlefield regen events wouldn't work right if the target had no regen skill.
+- Fixed a bug in which ignitions were unable to be used if the user had more than one.
+- Fixed a bug in which certain monster-generated bosses were giving the wrong drops.
+- Fixed a bug with the FillYourDarkSoulWithLight achievement
+- Fixed a bug in which using a spell on a target that is healed by the element would still activate the status effect (burning/etc)
+- Fixed a bug in which certain techs would ignore a cover target.
+- Fixed a bug in which AOEs wouldn't be "learned" if techLearn=true in a monster/npc/boss
+- Fixed a bug in which intdown wasn't clearing after battles.
+- Fixed a bug in which healing techs would mess up if a two+ hit tech was absorbed the round prior.
+- Fixed a bug in which the Prism-Specs accessory was no longer working.
+- Fixed a bug with the backguard skill that was preventing it from working correctly.
+- Fixed an issue with the shop in which killer traits were being cut off if you didn't have any purchased
+- Fixed several minor issues thanks to MSLDev
+
+2.3
+- Added the active skill: Retaliation. This skill will guarantee the next melee attack against you will be countered 
+  but will make you go last in battle while it's on.
+- Added the active skill: True Strike. This skill makes it so your next attack cannot be countered, dodged or parried. 
+  This skill will not allow your attacks to hit through shadows, royal guard or mana wall. 
+- Added the passive skill: Hatchetman. This skill will increase damage done while using an axe.
+- Added the passive skill: Harvester. This skill will increase damage done while using scythes.
+- Added the passive skill: Whipster. This skill will increase damage done while using whips.
+- Added the passive skill: SleightOfHand. This skill will increase damage done while using daggers.
+- Added a new special boss fight: Pirates.  In this type, the bot will randomly generate a random group of pirates for the
+  heroes to fight. This special boss fight will only happen on streaks 100-1000.
+- Added a new AI type: Healer.  Monsters/NPCs/Bosses set to this type will do nothing but heal every round.
+- Added a !gems command to show you the gems you have.
+- Added a !seals command to show you the seals you have.
+- Added the ability for monsters and bosses to be covered by other monsters and bosses.  In [info] 
+  put Guardian=monstername   While the "guardian" is alive, the monster will take 0 damage from items, techs and melee.  
+- Added the user command: !bot admin list  to see a list of current bot admins.
+- Added the admin command: !bot admin list/add/remove (name)  This will allow bot admins to be added or removed from the list.
+- Added the automated auction house. Commands: !auction info, !auction bid #, and !auction winners [#]
+- Added a small Allied Notes bonus to victories on streak 2000+
+- Added moon phases! The moon cycle changes from Full Moon -> New Moon -> Crescent Moon -> Quarter Moon -> Gibbous Moon -> repeat
+  ** Note that battlefields.db has been updated with the moon information and needs to be updated to work correctly.
+- Added the !count command. Use this to count how many of an item or armor you have. Useful for checking on armor amounts as
+  the bot won't show these totals normally.
+- Added the ability for normal monsters to only show up during certain moon phases.  Under [info] put 
+  moonphase=Full Moon or Crescent Moon or Gibbous Moon or New Moon or Quarter Moon or Blood Moon. Can only use one. This does 
+  not work on boss monsters.
+- Added a bot admin command: !CustomTitle Add <person> <custom title> without the <> of course.  This adds a custom title to
+  a player. The custom title only shows up when the person uses !id and when seen via !look.  It doesn't affect anything else.
+- Added a bot admin command: !CustomTitle Remove <person> <custom title>   Removes a custom title.
+- Added a !recipe search <ingredient> command. Using this command you can search with an ingredient to see what uses it.
+- Added the bot admin command: !toggle DiscountCard Message.  This command will toggle the bot to show or not show the 
+  discount card type item use message. 
+- Added the ability for the bot to throttle battles in that players will have to wait a round out before entering the next battle.
+  This is turned off by default.
+- Added a bot admin command: !toggle battle throttle   Turns the battle throttle function on/off.
+- Added a new special boss battle that only appears during December.
+- Added the ability for monsters to have a defense against the Just Release skill. In [info] you can put JustReleaseDefense=
+  The value is a percent of Just Release blocked.  100 means it will do 0 damage, while 1 is 1% blocked, 50 is 50% blocked, etc.
+- Added the ability to sell armor. !shop sell armor armorname
+- Added a !sell item/armor/accessories (itemname) (amount)  command. 
+- Added the ability for techs to get stronger the more they're used.  For every 500 uses the player will gain +1 to his/her
+  technique, up to 1000. This is the only way to get past the 500 capped amount currently.
+- Added the ability to craft more than one of an item. Use !alchemy item #  or !craft item # where # is the total number 
+  of the item you want. 
+- Added the ability to add new elemental messages that appear after using spells. They're in \txts\ in elementalmsg_<element>.txt
+- Added a !npc status command to check the status of Santa and his elves. In 2.4 this command will be redone completely
+- Added a !moon command to show the current moon phase.
+- Changed the Darkness timer to run based on turns rather than an mIRC timer.
+- Changed the Holy Aura skill to work with the new darkness system. It will stop darkness (and the demonwall) for skill level turns
+- Changed !bat list to add a line to show how many turns you have til darkness overcomes the battlefield.
+- Changed some of the alias files around to make a new bossaliases.als file
+- Changed accessories so that they can have multiple types just like augments.
+- Changed all of the skills to work based on turns rather than mIRC timers.
+- Changed Speed so that it'll show how much speed is gained.
+- Changed the way that battlefield damage is calculated so that the winning streak has a bigger effect on the amount done.
+- Changed !view-info for skills to show your current level out of max possible and the base # of turns between uses.
+- Changed the orb adjust function slightly so that when Shenron's Wish is on it will give more bonus orbs.
+- Changed the mimic chance to 0 for portal battles.
+- Changed !items to not show the gem list any more.  Use !gems instead.
+- Changed counter attacks so that if a player counters a monster he/she will receive some style points.
+- Changed the requirement to get the Vash's coat to be a little more reasonable (but still hard to get).
+- Changed the allied notes reward for saving the allied president (it now depends on what winning streak # it is).
+- Changed the way that Blood Moons happen.  It now has a chance of replacing a New Moon in the moon cycle.
+- Changed Resist-Petrify to allow up to 50% protection against that status.
+- Changed !add and !take commands to allow bot admins to add/remove armor to people.
+- Changed !add and !take commands to allow bot admins to add/remove ignitions to people
+- Changed the shop to show how many orbs you have left after buying something.
+- Changed dodge so that a target cannot dodge while petrified.
+- Changed the Haggling skill to work on a percent of the sell price now, rather than a straight amount.
+- Changed the way the bot handles selling. All the items now have a SellPrice line for the starting selling price.
+- Changed negative stat items to not work on anyone except yourself or monsters to prevent someone spamming them on others.
+- Changed the way accessory amounts are listed in the items.db.  It's now  AccessoryType.Amount=   
+  Example: IncreasedMelee.Amount=.005   I had to change it like this to make it work with multiple accessory types.  
+- Changed the discount card item message to not show by default. Bot admins can toggle it on if people want to see it.
+- Changed the darkness timer to reset when a portal item is used.
+- Changed the amount of royal guard meter players will get when darkness falls to 0.
+- Changed the amount of royal guard meter players will get if it's over 4000 damage to 4000 + (10% of total damage)
+- Changed the amount of red orbs players that flee get at the end of battle (lowered them).
+- Changed the gauntlet to scale in difficulty at a much faster pace.
+- Changed !battle stats to add some color to certain numbers to make them stand out more and to add a line 
+  to list commands for conquest and dragonball info.
+- Changed the way AOE damage is done after the first hit 
+- Changed the battle formula #2 so that speed has less of an effect on the level difference.
+- Changed the way battle formula 2 works.
+- Fixed !view-info so that it shows the description for snatch type items (such as the grappling_hook)
+- Fixed !view-info style so that it works again.
+- Fixed !view-info style when used on WeaponMaster (was previously missing a description)
+- Fixed a bug that was preventing chests from working correctly.
+- Fixed a bug in which using certain items without specifying a target would consume the item without doing anything.
+- Fixed a bug in which certain monster-generated bosses were giving the wrong drops. [Again]
+- Fixed a bug with crafting.
+- Fixed a bug in which killing monster's summons could potentially end the battle.
+- Fixed a major bug in which performing actions too quickly could cause the bot to stop and not end battles.
+- Fixed a bug with the gamble skill if a person wins an item.
+- Fixed a bug in which if an AOE heal is used on someone with a mech everyone in the AOE would not be healed.
+- Fixed a bug with the weather not being set on battlefields that aren't in battlefields.db when a mimic happens.
+- Fixed a bug in which it was possible to use Quicksilver when it wasn't your turn
+- Fixed a bug in which six-hit attacks weren't showing correctly
+- Fixed a bug when players try to give accessories that are still equipped
+- Fixed a bug with !augments being cut off if a player has too many augments on too many weapons.
+- Fixed a bug in which the bot was no longer setting the gauntlet record if players were surpassing it.
+- Fixed a bug in which AOE damage was doing way more damage than it should have after the first hit.
+- Fixed an issue with !shop list styles
+- Fixed an issue with !view-info where you could look at items as the wrong type and it would display the wrong information.
+- Fixed an issue where if someone used the shadow copy skill with a snatched target it could potentially lead to many errors.
+- Fixed an issue with error messages not being in color for certain skills.
+- Fixed an issue where the crafting list wasn't showing all of the armors that can be crafted.
+- Fixed an issue of the Suzaku'sSune-Ate being set as 'head' instead of 'feet' in equipment.db
+- Fixed an issue with the WizardPetasos+2 not having the EnhanceBloodSpirit augment.
+- Fixed an issue where TantraHose+2 was uncraftable.
+- Fixed an issue in items.db in which StoneOfWieldance was the wrong name and it should have been JewelOfWieldance
+- Fixed an issue with the bot picking a weather type from the wrong battlefield on certain boss battles
+- Fixed an issue in which a player with a capped tech could still see it in the shop.
+- Fixed an issue of the bot showing the "(monster) is immune to quicksilver" message even if the monster was dead.
+- Fixed an issue with darkness not doing the correct damage.
+- Fixed an issue with ShinryuVersus having the wrong item name in its drop pool
+- Fixed an issue in which a player could cover him/herself.
+- Fixed an issue in which if a player tried to cover a monster the error message wouldn't appear.
+- Fixed an issue when monsters tried to use skills while confused.
+- Fixed an issue of a missing error message when skills were used while confused.
+- Fixed an issue of being able to see monsters' levels for monsters that weren't in battle.
+- Fixed an issue with ClearNegativeStatus type techs removing ignitions when it's not supposed to.
+- Fixed some translation.dat issues.
+- Fixed !weather to work correctly now.
+
+2.3.1
+- Changed the way Curse Chance works to try to make Divine Blessing work better.
+- Changed the old character check to not remove bot admins to prevent security holes.
+- Changed !id to show a message if the character is not found
+- Changed AbsorbIG to only work on the first hit for AOEs
+- Fixed an issue of the multi-hit message showing on every hit in AOE techniques
+- Fixed an issue of not being able to use items even after a no-item limitation battle ended until the next battle began
+
+2.4
+- Added the ability for armor to have a minimum level requirement. In the armor you can put LevelRequirement= 
+- Added the ability to allow players to let other players control their characters. The commands are:
+  !access add player - Adds a player to the access list.
+  !access remove player - Removes a player from the access list.
+  !access list  - Lists who can control the character.
+  To actually control the character, use the same commands as the bot admin commands, such as: name attacks target
+  or name does skillname   ** This does not change anything with bot admins. They can still control everything 
+  like they did prior.  This also does not work in DCC mode due to the way DCC mode works.
+- Added a Mimic Ring accessory. It's craftable using a Treasure Ring and a Mimic Core.
+- Added a new item type ("Special Items")
+- Added the ability for techs and weapons to destroy more than 1 Utsusemi Shadow. In the tech or weapon put
+  DestroyShadows=  with the number of shadows that will be destroyed in addition to the default 1.
+- Added a bot admin command: !clear portal usage <character>   Will clear the target character's total portal usage for the day
+- Added the ability for monsters to use Quicksilver one time per battle. In [skills] put Quicksilver=1
+- Added the ability for monsters and npcs to always have regen on. In [status] put auto-regen=yes
+- Added the ability for items and armor to have an "exclusive" flag. Exclusive items cannot be traded between characters/players.
+  In the item/armor put exclusive=yes
+- Added the "IgnoreQuickSilver" accessory and augment type.
+- Added the command !portal usage  -- will tell you how many portal uses you have left for the day.
+- Added the ability for shop NPCs to be kidnapped from certain boss battles.  If kidnapped their items in the shop will be
+  unavailable for purchase until they have been rescued.
+- Added !clear battle save as a way for players to clear their battle streak save.
+- Added sizes to weapons. You can see the size of the weapon in !view-info
+- Added a damage modifier in which size of the weapon vs monster size plays a part. 
+  Small weapons are +40% damage against small monsters, neutral against medium monsters and -40% damage on large monsters.
+  Medium weapons are +40% damage on medium monsters, neutral against small monsters and -30% damage on large monsters.
+  Large weapons are +40% damage on large monsters, neutral on medium monsters and -40% damage on small monsters.
+- Added a flag for monsters and bosses where they won't show up during 'save the president' type battles. In [info] put
+  IgnorePresident=true   
+- Added the ability for the bot to generate an HTML file with the stats of every player.  This is done when the !scoreboard
+  command is used. This feature can be turned on/off via the bot admin command !toggle scoreboard html
+  The HTML file is generated in the main bot folder.
+- Added a new boss battle type: Crystal Shadow Warrior.  This battle will require thinking outside the box to win.
+- Added the "counteronly" AI type for monsters. These monsters will counter all melee attacks and take no damage from tech
+  and items.  It is recommended this type only be set with the HurtByTaunt flag, else they cannot be defeated.
+- Added the HurtByTaunt=true/false flag for [info]. If set to true, taunts will deal damage when used against the monster.
+- Added the HealByTaunt=true/false flag for [info]. If set to true, taunts will heal damage when used against the monster.
+- Added the "techonly" AI type for monsters. These monsters will do nothing but use techniques. If it's cursed
+  the monster should just taunt until the curse is over.
+- Added the IgnoreShadows=true flag for weapons and techniques.  In the weapon or technique just add the flag and it will
+  ignore utsusemi shadows.
+- Added the ability for defender AI type monsters to show a description each round. In [descriptions] DefenderAI=desc here
+  Note, that it won't show the monster's name in this description.  You can use %real.name for the monster's name. 
+  If you want the monster's name to be bold use $chr(2) $+ %real.name $+ $chr(2) description here
+- Added the ability for monsters to have custom death messages. In [descriptions] put DeathMessage=message here.
+  You don't need to add the monster's name at the start of the message as the bot will add that automatically.
+- Changed portal items so that only 8 per character can be used per day. It resets at midnight (time zone of the bot).
+- Changed the way the bot does a few timers to try to prevent an error in mIRC from killing the game.
+- Changed the first round protection so that it includes the Allied Forces President.
+- Changed !count to work in a query message/private.
+- Changed the GIVES command to no longer allow exclusive items to be traded.
+- Changed !techs to show techs in a maroon color if you don't have enough TP to perform that technique.
+- Changed the shop for listing techs to show techs in a maroon if you don't have enough base TP to use the tech if purchased.
+- Changed !reload battle streak to not clear the streak from the player's file.
+- Changed !save battle streak to not allow players to save streaks that are greater than 50 levels higher than their levels.
+- Changed the way the !speed skill works slightly. If it gives more than 10,000 speed the formula is changed to be 10k+1% of spd
+- Changed !reforge to not work inside battles
+- Changed the way red orbs are rewarded to people whose levels are way lower than the current battle streak.
+  If the streak is 1000+ levels higher than the current level, the orbs are nerfed down to 1.5% of the orb total.
+  If the streak is 500-1000 levels it's nerfed down to 2% of the orb total.
+  If the streak is 100-500 levels higher it's 4.5% of the orb total.  Players leveled above or within 100 have no penalty.
+- Changed the battle list to show monsters/players who have fled in red to help identify them.
+- Changed some code to hopefully make it so the bot can be run in folders that have spaces in them. I'd still recommend the
+  bot be run in a non-space folder (such as C:\BattleArena\) but it shouldn't come to a grinding halt any more if you don't.
+- Changed the !new char command a bit to make it slightly more efficient and hopefully stop it from randomly stopping 
+  if it encounters a bad file.
+- Changed ignitions so that they can have multiple status effects happen per ignition now.
+- Changed the way elemental resists are displayed in the status line to help save space.
+- Fixed the "Save the President" battle types so that ignored captures will actually be counted correctly now.
+- Fixed an issue with EstoqueurGantherots+1 and +2 so that they can actually be worn now.
+- Fixed an issue in which the WeaponLock skill timer was not resetting after each battle.
+- Fixed an issue where mimics could spawn on portal battles.
+- Fixed an issue of the augment strength list being cut off if a player had too many augments
+- Fixed an issue with staggering monsters.
+- Fixed an issue where players could absorb more IG than a monster had with the AbsorbIG augment.
+- Fixed an issue in which healer and portal type monsters can counter melee attacks.
+- Fixed an issue in which clones wouldn't die if the owner died via magic effect or poison. 
+- Fixed an issue where battlefield limitations can appear on winning streaks less than 10.
+- Fixed countless mistakes in monster and boss files.
+- Fixed more issues of weapon lists being cut off.
+- Fixed an error with weapon boosts.
+- Fixed a bug with certain ignitions not reverting properly when the user runs out of IG.
+- Fixed a bug with monsters using techs on players that are being covered by the same monster.
+- Removed the HumanoidTyphoon achievement entirely.
+
+2.5
+- Added a "defenseup" check and status.
+- Added the ability to make melee hits into AOEs.  In weapons.db add target=aoe to the weapon you want to be AOE.
+- Added an "ImmuneToMagic" flag that can be set to true if you want a monster/npc to be completely immune to magic. 
+  It goes in [info]
+- Added a new special boss fight: Wall of Flesh.  In this type the bot will generate a wall of flesh based on the current 
+  battle streak. This boss fight is similar to the Demon Wall and the battle will end in a loss if 16 turns pass.
+- Added a new AI type: TauntOnly.  As it suggests, anything with this ai type will do nothing but taunt.
+- Added a new active skill: Lockpicking.  This skill allows anyone who has it, and has the lockpick item, to attempt to
+  unlock a chest without needing the correct key.  
+- Added a new passive skill: DualWield. This skill will allow a player to equip two weapons and use techniques from either
+  of the weapons without needing to switch. For melee attacks, the # of hits for the attack will be both weapon's # of hits
+  combined. Use !equip left weaponname and !equip right weaponname
+- Added "Players Must Die" mode. Inspired by Dante Must Die mode in DMC, this mode makes monsters harder and makes it so
+  players will not restore full hp/tp at the end of battle.  
+- Added a new bot admin command: !toggle mode playersmustdie    This will toggle PMD mode on/off
+- Added the bot admin command: !toggle Bot Colors   This command will turn the colors on and off.
+- Added the bot admin command playername wears armor/accessory name -- Use this command to force a player to 
+  equip armor or accessories
+- Added the bot admin command: playername removes armor/accessory name   -- Use this command to force a player 
+  to unequip armor or accessories
+- Added instruments and songsheets to the Bard merchant.
+- Added "singing"-- use /me sings <name of song here>  to use a song in battle.  Each song has a different effect in battle.
+  Each song also requires a certain instrument to perform.
+- Added !view-info song <songname>  that will give information on a particular song.
+- Added the ability for monsters to sing songs. In [skills] put singing=1  and then [songs] list the songs you want them to have
+- Added the ability for monsters to be "inactive" until they're hit. While inactive they do not need to be defeated in order
+  for the battle to end. To make this happen, [battle] status=inactive
+- Added a new player style: Beasmaster.  While using this style, players will be able to control their summons manually. 
+  The commands are the same as if they were trying to control a linked player (such as summonname attacks target)
+- Added shields! To use them, players need the DualWield skill. The shop command is !shop list shields and !shop buy shield name
+  Note that shields are sold by an NPC merchant and if the merchant is not there or kidnapped then shields will be unavailable.
+- Added two new flags for weapons: CanCounter and CanShieldReflect.  canCounter can be set to false if you don't want a melee
+  attack from that weapon to ever be countered. If CanShieldReflect is set to true then the attack will always be countered 
+  if the target is using a shield. Think Deku Scrubs from Zelda.
+- Added the Shield Merchant NPC. 
+- Added the Traveling Merchant NPC. He'll show up every month for 5 days of the month: from the 15th to the 20th. He sells
+  two accessories a month (one accessory is static, the other changes every month).
+- Added the Wheel Master NPC. Unlike the other NPCs, he starts off kidnapped and does not have any requirements to be 
+  rescued/come to the Allied Forces HQ.   Once he's saved, you can use the !wheel help and !wheel spin commands.
+- Added the Wheel Minigame.  It needs the Wheel Master in the Allied Forces HQ to be played.  Default cost is 500 red orbs and
+  can be played once per 24 hours.
+- Added the Gardener NPC. Once he's been rescued from monsters players will have access to the garden.
+- Added the Allied Forces HQ Garden. Use !garden help, !garden plant itemname, and !garden status to interact with it.
+  The Gardener NPC must be rescued in order to use the garden.
+- Added new portal items/battles.
+- Added the "Time of Day" to the bot.  The bot will cycle through morning->noon->evening->night at 2 battles per time.
+- Added the monster flag TimeOfDay=  where you can choose what times of day you want the monsters to show up. It goes
+  in [info]
+- Added the command !time to show you the current time of day and the # of what day it is.
+- Added code for the bot to keep track of the number of days that the heroes have been fighting. 
+  Remember that the "day" it is is based on the cycle of morning to morning (every 8 battles by default).
+- Added a new system.dat flag: AllowColors=true/false.  If set to false, the bot will strip the colors from the messages
+  it sends out.  It's set to true by default.
+- Added the ability for monsters and bosses to have DeathConditions. The mon/boss will only die if the right type of
+  attack is used to kill them, otherwise they will be revived.  In [info] put DeathConditions=  valid list is:
+  melee, magic, tech, item, renkei, status, magiceffect  You can list multiple by putting a period inbetween 
+  such as: melee.magic.status    Leave this blank if you want the mon/boss to die from any type of attack.
+- Added the ability for npcs/monsters/bosses to have custom revive descriptions. [descriptions] revive=
+  Don't add the name of the person in this line as the bot will add it automatically.  
+- Added a new botType option in system.dat: TWITCH.  Using botType=TWITCH will cause all private messages to be sent
+  to the channel as Twitch does not support notify or msg.  As such, there's a chance that the bot might be kicked for
+  flooding. Use at your own risk.  Note that the !id command is NOT needed for characters in this mode.
+- Added a new flag in system.dat for TWITCH mode: TwitchDelayTime. Using this it's possible to adjust how slowly the bot
+  spits out messages while in TWITCH mode. The default is 2 seconds.
+- Added !add person DoubleDollars #  - Bot admins can use this to give doubledollars to a player.
+- Added !take person DoubleDollars #  - Bot admins can use this to remove doubledollars from a player.
+- Added a player level command: !level sync #   Using this command, players can adjust their levels to any level under
+  what they are currently.  The level sync will wear off at the end of the next battle.
+- Changed the way passwords behave. Now they are hashes rather than encodes.  In order for this to work, the bot must
+  be running version 6.3 or higher (the old version, 6.16 will still use encode for anyone who doesn't want to upgrade).
+- Changed the Auto Next so that it will boot anyone who misses 3 turns in a single battle out of the battle (sets them
+  as if they fled the battle).
+- Changed Lost Souls and Orb Fountains to explode once darkness hits.
+- Changed !styles to allow the viewing of other player's styles (such as !styles Iyouboushi)
+- Changed !view-info tech to show the stat modifier of techs.
+- Changed NPCs to not show up during boss battles
+- Changed the code for !weapons to be a little more efficient.
+- Changed the code for !shop list weapons to be a little more efficient.
+- Changed the max conquest points for players and monsters to be 6000.
+- Changed all of the Creed +2 armor to have the EnhanceBlocking augment.
+- Changed the AI code for healer type AI.  They will no longer try to use a healing tech on a zombiefied character.
+  If there are no valid targets that aren't zombiefied, it will use a tech on itself.  Note this won't stop AOE techs.
+- Changed battlefields so that there's a 40% chance that the weather will randomly change.
+- Changed Kikouheni so that it now adds the "weatherlock" condition to the battlefield. This means the battlefield won't
+  change weather on its own any more.
+- Changed how the bot pulls the drop list for monsters/bosses to read from a drops.db file.  If the drop list is missing
+  or empty in drops.db, it will attempt to read the drop list in the actual monster/boss .char file.
+- Changed the !bat list battle order list to put monsters/characters/npcs that are still alive in bold.
+- Changed how red orbs in chests works. Now if the player level is above the streak level there will be a bonus applied to
+  the amount of orbs determined by the current streak level. If the player level is below the streak, the bonus won't be
+  applied at all.
+- Changed the Guardian monsters to allow multiple targets that have to be killed in order to hurt the target.
+  [Info] Guardian=   Can add multiple with periods inbetween:  Monster1.Monster2.Monster3
+- Changed the level difference a player can be to a target and still have the magic effect work. It used to be 20, now it's
+  50 on non-portal battles and 25 for portal battles.
+- Changed !id on TWITCH mode so that you don't need a password to receive bot access. Again, this only works on TWITCH mode.
+- Changed the poison status effect so that it will turn off the sleep status effect if both are on the same person
+- Fixed a bug with !speed
+- Fixed a bug in which Spoony the Bard could not be kidnapped.
+- Fixed a bug in which techs done with weapons obtained via special items would do the wrong amount of damage.
+- Fixed a bug where a target that dies and is revived and dies again will count as 2 deaths instead of 1 on the scoreboard.
+- Fixed a bug in which players could control other players even if the access wasn't set to do so. 
+- Fixed an issue where weapons that have 0 cost (i.e. can't buy) are showing up in the shop
+- Fixed an issue with chests being able to be opened multiple times if the bot is lagging.
+- Fixed an issue where dead cover targets will still be shown being tossed by monsters.
+- Fixed an issue with the shop where sometimes the skills would not be displayed correctly. 
+- Fixed an issue in which !npc status would display in the channel when used in a private message instead of private.
+- Fixed an issue where doing 0 damage should no longer be able to stagger an enemy
+- Fixed an issue where a target could be staggered even if the target was dodging/blocking/parrying/etc 
+- Fixed an issue where targets protected by a guardian could still be hurt by magic effect damage
+- Fixed an issue where it was possible to do actions while blinded/stunned/other turn-skipping statuses
+- Fixed a potential issue with AI battles in which two healing types could be in battle together, thus never ending.
+
+3.0
+- Added the bot admin command: !display players and !display zapped   Using this the bot will generate a full list
+  of all active or zapped players and display it to the bot admin who used the command. The !display zapped command
+  will also generate a zapped.html file that bot owners can upload if they choose.
+- Added the bot admin command: !unzap   If the bot admin knows the zapped file name, it is now possible to restore it.
+  For example, if the file is Iyouboushi_a4kf88 you would use !unzap Iyouboushi_a4kf88
+- Added the bot admin command: !password reset playername  -- This will reset the player's password and send the player
+  what the new password is (so use it when the player is online). The bot admin will NOT see the new password. 
+- Added the bot admin command: !toggle SpiritOfTheHero -- This will toggle Spirit of the Hero on and off.
+- Added the bot admin command: !toggle battle messages  -- This will toggle between old and new battle announce messages
+- Added the bot admin command: !toggle bot bold  -- Will turn bold on/off for the bot
+- Added the bot admin command: !time to enter # -- where # is the number of seconds for the !enter period
+- Added the bot admin command: !toggle personalDifficulty  -- Will turn !save difficulty on/off.
+- Added a CanDodge=true/false flag to techniques. If set to false, it will be impossible to dodge the technique.
+- Added a new flag in system.dat: EnableDNSCheck=true/false   This will allow the bot to attempt to get the host names
+  of players. This is necessary to use the player limit.  If disabled the bot won't attempt to use it
+  and players can have as many characters as they want.
+- Added a new flag in system.dat: showCustomBattleMessages=true/false  If set to true the bot will display the new
+  battle starting messages for orb fountains and bosses. If set to false it will show the old one.
+- Added a new system.dat setting: ShowDeleteEcho  When set to =true  the bot will show every time it erases a .char file
+  Useful for debugging if something is going amiss.
+- Added a new system.dat setting: AllowBold=true/false  If set to false the bot won't show bold
+- Added a new system.dat setting: EnableGremlins=true/false  If set to false the gremlin special boss battle won't happen
+- Added a new system.dat flag: TimeBetweenSave=3600  In seconds, this is how long players have to wait to use !save battle streak
+- Added a new system.dat flag: TimeBetweenSaveReload=1200  In seconds, this is how long players have to wait to use
+  !reload battle streak
+- Added a new system.dat flag: RedChestBase=$rand(150,700)  This is the base amount of red orbs that will appear in red chests
+- Added a new system.dat flag: WheelGameTime=43200 In seconds, this is how long players have to wait to use !wheel spin 
+- Added a new system.dat flag: EnableFoodOnOthers=  If set to false +stat (food) items can only be used on the owner
+- Added a new system.dat flag: AllowPersonalDifficulty=true  If set to false players will no longer be able to use 
+  !save difficulty
+- Added a new system.dat section: [PlayerLevelCaps]  In this section bot owners can set the level caps players have when
+  fighting in certain battles. If a player's level is above the cap it will be synced down
+- Added a new system.dat section: [MonsterLevelCaps] In this section bot owners can set the level caps certain bosses
+  have when fighting in battles. If a monster's level is above the cap it will be synced down.
+- Added a new special boss battle type: Gremlins.  
+- Added Capacity and Enhancement Points. 10,000 Capacity Points will equal 1 Enhancement Point. Players gain capacity 
+  points by being in battles that are higher than streak 100. Note that the player level has to be within 10 of 
+  the streak in order to gain capacity points. After streak 500, the amount is 500+(10% of streak level)
+- Added the Enhancement Point shop. Use !shop list enhancements and !shop buy enhancements itemtobuy
+- Added the ability for styles to have augments. In playerstyles.db under [augments] you can add/remove/change them.
+- Added a new active enhancing point skill: Stoneskin. This skill will allow players to gain a natural armor in battle.
+  The amount it will absorb is (10 + level)% of int up to 3000. It will wear off at the end of battle if not broken.
+- Added a new active enhancing point skill: TabulaRasa. This skill will attempt to inflict a target with amensia.
+  The chance of success is 40 + (skill level) %
+- Added a new passive enhancing point skill: SpoilSeeker. This skill will increase the odds of players getting a spoil
+  after killing a monster by 2% each level.
+- Added a new passive enhancing point skill: Demolitions. This skill will enhance bomb attack items (such as
+  dynamite, holy hand grenade, bomb fragment) by 4% per skill level, up to 40% max.
+- Added the active skill: Warp. This skill will allow the player to warp the next battle to a specific battlefield for
+  2,000 red orbs.  This skill can only be used outside of battle and cannot be used to warp to portal battlefields.
+- Added the ability for monsters and npcs to be able to use battle items. In [info] put CanUseItems=true and then in
+  [Item_Amount] put the item name and how many of the item the user has.
+- Added a new item type: Trust.  The Trust item type will summon an NPC ally to fight alongside you. Note that 
+  Trusts can only be used if you are solo in the battle. They are not consumed like normal items.
+- Added NPC Trusts to the shop. Use !shop list trusts  and !shop buy trusts itemname 
+- Added a new timer to try to prevent bot stalling.
+- Added a new NPC type: PayToAttack.  In [info] put ai_type=PayToAttack   This type will only attack if the player has
+  given him/her some orbs. 
+- Added Login Points. Now logging in once a day will give the player 10 points. 
+- Added the !loginpoints command to allow you to see your, and others, login points.
+- Added a !dcc command that will attempt to initiate a DCC chat, courtesy of Andrio. Only useful if the bot is in DCC mode.
+- Added the missing skills to dccchat.mrc
+- Added the presidentnames.lst file.  The bot will now pick a random name for the allied forces president each time 
+  he/she is killed by monsters after a failed president battle.
+- Added the ability for the bot to check [augments] for armor names (outside a mech) and mech weapons/cores 
+  (when inside a mech).  I'm adding this mostly for NPCs/monsters/bosses, as players can't augment those things 
+  without the bot owner doing it manually.
+- Added a new Shop NPC: Syrup the Potion Witch.  Upon arriving at the HQ, she will unlock the Potion Effect shop.
+  Use !shop list potioneffect or !shop buy potioneffect effectname
+- Added a new Shop NPC: Setzer the Gambler. Upon arriving at the HQ players can use the !chouhan mini game.
+  !chouhan #amount odd/even   Use !chouhan help  for more information
+- Added Potion Effects. These are special bonuses that players can purchase from Syurp. They will be applied during
+  or after the next battle for the player who has the effect on.
+- Added the ability to sell weapons back to the shop. Use !shop sell weapon weaponname -- You will receive 1/2 of the 
+  original cost back except for blueprint weapons in which you will receive a flat 5 black orbs back.
+- Added a new battle type: Defend the Outpost. In this type, players will have to survive 5 waves of monsters
+  to successfully defend an outpost.
+- Added a new battle type: Assault. In this type players will have to defeat monsters in order to capture an enemy outpost.
+- Added influence to monsters and allied forces. This is only used to determine when the new battle types occur.
+- Added the Spirit of the Hero buff. If players enter a streak that is too far out of their level range the bot will
+  automatically adjust their level and hp at the cost of their orb reward at the end of the battle.
+- Added the ability for portal items to have their own custom darkness turn amount. In the item put DarknessTurns=#
+- Added a new battlefield limitation: no-trusts. When set, trust items cannot be used on that battlefield. If a trust or NPC
+  was in the battle before using a portal item that has that limitation then the trust/npc will be killed.
+- Added a new battlefield limitation: no-summons. When set summon items cannot be used on that battlefield.
+- Added a new battlefield limitation: no-npcs. When set, npcs cannot appear during that battle.
+- Added a new battlefield limitation: no-quicksilve. When set, players cannot use !quicksilver
+- Added a new battlefield limitation: no-fleeing. When set, players cannot flee from the battlefield
+- Added spoils.db.  This is where the bot will determine the spoils drops.  drops.db will be for the stylish drop.
+- Changed the !augment commands to work in private or channel. 
+- Changed the !augment list command to allow for more augments to be shown if more than 30 weapons have augments.
+- Changed the portal battles so that they have a level cap. Any player that is above the cap will be lowered to the cap.
+- Changed the shop to allow players to view and buy techniques that are on the left-hand weapon.
+- Changed the drops in the bot so that players who land a finishing blow on a monster will have a chance of obtaining a
+  drop (spoil) from that monster if it has one available. The default chance is 40% and can be increased with SpoilSeeker.
+- Changed the !armor code to display armor that you can't wear in red, +1 armor is in the darker blue and 
+  +2 armor is in the bright blue to help make it stand out.
+- Changed the lockpicking skill to be 3% per level, up from 2%.
+- Changed Evil Doppelgangers so that they are generated correctly if the user is level synced.
+- Changed chests so that red chests can never spawn mimics.
+- Changed the GIVES command so that players can now give red orbs to certain NPCs.  The command is /me gives # orbs to name
+  Note it only works on certain NPCs that require red orbs to take action in battle.
+- Changed the GIVES command so that players can only given items and orbs on their turn while in battle. Outside of battle
+  they can still do it whenever.
+- Changed the way the bot picks NPCs so that they can now have streak minimums/maximums like monsters and bosses.
+- Changed the Inactive type monsters/npcs so that they can have a custom description for when they become active.
+  In [descriptions] put Awaken= and the desc (don't add the name to the beginning).
+- Changed the scoreboard.html to include the level of the player
+- Changed the drunk status to last 2 rounds
+- Changed the GIVES message to hopefully show grammatically correct lines when giving items that end in y (such as ruby).
+  Note you still have to use the item name that's in the bot (ex. ruby not rubies) when using the command.
+- Changed the way the bot handles negative status effects on targets. If the player is fighting solo most will only last
+  1 turn.  The status effect turn amounts can now be found in battlealiases.als under the alias status.effects.turns
+- Changed the way the bot does all of the status timers to make it consistent and work correctly with the other status changes
+- Changed the modifier checks so that they will also check for the name of the weapon in addition to the rest
+- Changed the way the bot displays damage in that resisted damage will show in purple while enhanced damage will be in orange
+- Changed the way the bot displays the "battle open" message to better help the players understand what type of battle is next
+- Changed the chance of a rescue allied president battle to 25% and lowered the streak from 100 to 20. 
+  This is because the battle can only happen if the NPC is kidnapped and isn't true random like it used to be.
+- Changed how the allied forces president is generated slightly (stat-wise)
+- Changed the chance of certain special boss types of occurring by a small amount.
+- Changed the way the bot boosts portal monsters, hopefully keeping them closer to the synced levels
+- Changed the way the bot does the stats for monsters, npcs and summons upon summoning to the battlefield.
+- Changed the way the HP for monsters/summons/NPCs/bosses are boosted at the start of battle
+- Changed demon portals so that monsters spawning out of them will be slightly less than the battle streak.
+- Changed the special bosses to be have capped battles and different streak levels than in previous versions
+- Changed the auser of the bot owner (the first person in the bot admin list) to be 100 instead of 50
+- Changed techniques so that multiple elements may be checked via a tech's modifier adjust
+- Changed the in between battle and battle open messages to use the mIRC identifier $duration
+- Changed the bot to use version.ver for the bot and system.dat versions.
+- Changed $return_winningstreak to work correctly with portal battles
+- Changed the way conquest points work so that it's clearer and more understandable. 
+- Changed orb fountain battles on streaks 50+ so that there's a 30% chance that monsters will attempt to defend it.
+- Changed the skills BloodBoost and BloodSpirit to cost (3 *skill level)% hp to perform
+- Changed !save battle streak to only work on winning streaks 11+.  Anything below cannot be saved.
+- Changed the amount that the Fullbring skill does. Level of fullbring and the streak # now play a part in boosting the amount.
+- Changed the way the StealPower tech type works slightly. Instead of absoring all of the stats, it's now a $log of the stats.
+- Changed the way the bot generates the [status effects] list for display. It is now possible to edit them in translation.dat
+- Changed the max amount of TP that monsters/npcs/summons can have to 500.
+- Changed !use so that you can use !use itemname  by itself if you want to use the item on yourself. 
+- Changed the way the bot figures out the favorite to win the AI vs AI battle to also include 
+  Metal Defense and the Monster Summon skill in its calculation.
+- Changed the way the bot determines the next battle type so that orb fountains and bosses cannot happen back to back
+  except where a boss battle happens before a guaranteed boss battle level
+- Changed the lockpicking skill to no longer work on red chests.
+- Changed the amount of damage that is done if the same technique or attack is used back to back. It now encourages players
+  to swap weapons or mix up their attacks.
+- Changed the way players purchase stats so that one single stat cannot be raised to obscene levels above the rest. While
+  they don't have to be raised completely equally, they have to be within a certain amount of one another.
+- Changed !score so that it will update without needing to use !scoreboard first.
+- Changed and updated every portal boss to have a level cap
+- Changed PVP mode to disable Shadow Clones, Spirit of the Hero, and Quicksilver
+- Changed the code to allow partial target name matches on attacks and techs. Example, can now use /me attacks orb to
+  attack an orb_fountain monster.  Or /me attacks man for the Maniac monster.
+- Changed the % with the counterstance style to 2%, up from 1%, per level.
+- Fixed an issue with songs showing resists on targets who shouldn't be affected by the song to begin with.
+- Fixed an issue with counter attacks showing the wrong pronouns sometimes.
+- Fixed an issue with lost souls appearing in gauntlet battles.
+- Fixed an issue where instruments could be used with !use
+- Fixed an issue with the mech shop so that cores and weapons that cost 0 won't show up for purchase.
+- Fixed an issue with the snatch error message showing the wrong name
+- Fixed an issue with monsters being unable to take action while charmed.
+- Fixed an issue with techniques doing too much damage when a player was level synced.
+- Fixed an issue in which Ghost Turkey could show up in other months besides November
+- Fixed an issue with !view-info style doppelganger getting cut off
+- Fixed an issue with the bot not checking left-handed weapons for augments
+- Fixed an issue where a techonly monster could counter a melee attack
+- Fixed an issue with !look in private messages that wouldn't show dual weapons
+- Fixed an issue where shadow clones could use scavenge or steal
+- Fixed an issue that allowed players to sell accessories they were still wearing
+- Fixed an AI vs AI issue where occasionally the bot wouldn't recognize that an NPC had any techs even if he/she does.
+- Fixed several issues with being able to buy items you shouldn't be able to 
+- Fixed a bug with !augment list that would say players had no augments even if they did.
+- Fixed a bug with !fullbring when used with +TP items.
+- Fixed a bug in which Inactive monsters would attack even while inactive if they went first in battle
+- Fixed a bug with the drunk status effect
+- Fixed a bug with !augments list not showing in private even if the command was used in private
+- Fixed a bug with !augment strength
+- Fixed a bug with !unequip armor
+- Fixed a bug with shadow clones attacking their owners in PVP mode
+- Fixed a bug with shadow clones attacking themselves in PVP mode
+- Fixed a bug with items occasionally not showing damage correctly 
+- Fixed a bug in which players could trade armor they were still wearing
+- Fixed a bug in which players could bid on an auction house item without any allied notes
+- Fixed a bug that would cause an infinite loop if there was only 1 NPC in the \npcs\ folder.
+- Fixed a bug with !access remove that wasn't actually removing the player from the list.
+- Fixed multiple typos and errors found in weapons.db/items.db/techniques.db (courtesy of Andrio)
+- Fixed an exploit where player difficulty could be used on early streaks for easy orbs
+- Removed the following monsters: Final_Guard, Prime_Vise, Excenmille, NajaSalaheem, Wind-UpShantotto
+- Removed the following NPCs: Nauthima
+- Removed the following bosses: Adlanna, Eldora, EldoraAdlanna, NauthimaTiranadel, RuneFencer_Nauthima
+- Removed Battle Formulas 1 & 2. The bot now only has 1 battle formula
+- Removed the !toggle battle formula bot admin command
+- Removed the bot setting the user levels of bot owner/admins upon starting to prevent a security hole
+
+3.0.1
+- Fixed a bug in which !steal wasn't allowing items to be stolen
+- Fixed a bug with AIs who were switching weapons even though they were dual-wielding
+- Fixed a bug in which using !bat info before a battle started would cause the battle to end
+- Fixed an issue in which the ignition TwiliPower could be purchased
+
+3.1
+- Added the RngRune that has EnhanceRanged as an augment.
+- Added a new special boss battle type: Dinosaur.
+- Added a new system.dat setting: EnableDinosaurs=true/false  If set to false the dinosaur special boss battle won't happen
+- Added a new system.dat flag: AllowPlayerAccessCmds=true/false  If set to false, players won't be able to control others
+- Added a new system.dat flag: AllowAuctionHouseTopicChange=true/false  If set to true, the auction house will attempt
+  to change the channel's topic on each new auction that comes up.
+- Added the bot admin command: !toggle playerAccessCmnds  -- Will turn player access commands on/off
+- Added the bot admin command: !toggle damage formula -- Will toggle between the damage formulas
+- Added the bot admin command: !force system default check  -- will force the bot to do a system.dat defaults check
+- Added the bot admin command: !toggle auction house topic change -- Will toggle the auction house topic change on/off
+- Added the bot admin command: !motd add messagehere -- Will change the motd
+- Added the bot admin command: !motd remove -- Will remove the motd
+- Added a new item type: IncreaseWeaponLevel.  This item type can be used to increase a player's weapon level up to 500
+- Added the various damage formulas that have been used throughout the bot's history: 1.0, 2.0, 2.5 and 3.0.
+- Added the Dungeon system. 
+- Added the Dragon Hunt system.
+- Added the Bounty system. The game will pick a random boss and if that boss is killed an orb bonus will be applied to
+  the battle.  It will pick a new bounty immediately after the old one has been claimed.
+- Added the Dinosaur special boss battle type
+- Added the Predator special boss battle type
+- Added the Torment battle type. Using Torment Orbs players can enter a 3-wave battle against any enemy in the game.
+  Winning will result in items that can be used to craft high level equipment and items.
+- Added the !Rest command. This command can be used by players on their turn to skip their turn. It does nothing else.
+- Added the !battle style command. This command can be used in battle to see the current style rankings of everyone in
+  the battle. In the event that two peolpe have the same rating it shows them in the order of highest style points.
+- Added the !npc news command. This command will show the players the latest NPC kidnappings and rescues/arrivals
+- Added the !motd command. This command will show the current admin-set message to the player
+- Added a new flag for monsters/npcs/bosses:  IgnoreElementalMessage. It goes in [info]  and if it's set to true 
+  the bot won't show the elemental damage message on the target's turn.
+- Added a new shop NPC: Vinz Clortho the Keymaster   After being rescued he will sell dungeon keys for seals
+- Added dungeon keys to the !keys command
+- Added dungeon keys to the shop. Use !shop list dungeonkeys to list, !shop buy dungeonkeys <name> to buy. Need 
+  the Dungeon Key merchant in order to see and purchase the keys.
+- Added the !dragon list command. Using this will display which dragons have made lairs in the land.
+- Added the !dragon hunt command. Once an hour players can use this command to hunt for a dragon's lair and start a battle
+  if it's been found. This command can only be done outside of battle.
+- Added the !bounty command. It will show the current bounty
+- Added the ability for the bot to track average melee and tech damage done in battles
+- Added the !damageboard <melee/tech> command. Use it to see a ranking of who's doing the most average damage
+- Added the average melee/tech damage to !misc info
+- Added missing elemental monsters.
+- Added two more TP restoring items
+- Added a new augment: EnhanceCrafting.  This augment will increase your crafting success rate by 2
+- Added a new augment: EnhanceDragonHunt. This augment will increase the odds of finding a dragon lair by 5% 
+- Added a new augment: IncreaseIGGainRate. This augment will increase the amount of IG a player gets at the end of battle.
+- Added CandyCorn for monsters to drop during the month of October
+- Added a new Enhancement Point skill: DragonHunter. Will increase odds of finding a dragon's lair by 1% per level
+- Added items to increase weapon levels past 250.
+- Added ClonesCanClone flag for monsters/bosses. If set to true then their shadow clones can make clones themselves (up to 5)
+- Added the Message Of the Day (MOTD) for players to see upon logging in
+- Added a list of current currencies for players to see upon logging in
+- Added the ability for the bot to have dynamic names for certain monster types
+- Added breakable objects to battlefields. There's a 25% chance that one will spawn on certain battlefields. Although they are
+  technically monsters, they don't get turns and only have 1 HP. Just break them to help boost your style.
+- Added a Resting Orb Bonus. For every 1 hour that a player isn't in battle the player will receive +150 orbs to their next
+  battle.
+- Added a new potion effect: Dragonskin
+- Added the ability to sell blueprints and trust items to the store for red orbs
+- Added the singing command to the player access control list
+- Changed the code for techs and items so that you can use ME as a valid target name to target yourself
+- Changed the warmachine boss battle type to no longer spawn additional monsters alongside it
+- Changed the boss "Magus" to "Maou_Magus" to stop an exploit with the trust NPC Magus.
+- Changed the "TechBonus" augment so that it only applies to non-magic techs
+- Changed the code for checking for an item drop so that it's centralized in one spot instead of spread out across multiple.
+- Changed Player Access commands so that players must have logged in within the last week in order to be controlled.
+- Changed PVP battles so that bot admins can specify a level cap for players to enter under. Use !startbat pvp # to set the cap
+- Changed the skill Speed to consume 10-25% of a user's HP based on the skill's level
+- Changed portal items so that they cannot be used if Shenron's Wish is on.
+- Changed the maximum resist-skill that a player can have in a dungeon to 50, down from 100. This does not include accessories.
+- Changed certain boss battles to hopefully give a slightly bigger orb reward
+- Changed certain bosses/monsters/summons/npcs to have the ignore elemental message flag
+- Changed some modifiers on certain monsters/bosses
+- Changed gold chests to remove Big Whoop from them and to read from the black chests for portal items
+- Changed ignitions to remove str/def/spd down as people were abusing that
+- Changed the technique Torcleaver to not be magic and made its AoE damage and TP cost match the -jaII spells
+- Changed the guardian style to be capped at level 5 in dungeons and portals
+- Changed the streaks you can use a portal item on to 1-20. Anything higher will block portal usage.
+- Changed the elemental weapon to use attack_elemental.txt since they don't technically use staves/wands
+- Changed healing/battle items a little bit
+- Changed elementals to use different techs based on streaks (a minor change)
+- Changed the way the shop displays certain error messages and what it says when you use !shop by itself. 
+- Changed the way summons and clones work when summoned outside of a portal battle. Now they are skipped 
+  on the round they are summoned on and will only take action on the following round.
+- Changed the "Battle open" message to show the current winning/losing battle streak at the end of the line.
+- Changed HP healing items to work on a percent amount of a target's max HP rather than a static value.
+- Changed portal battles so that the allied notes reward is split by the number of people who enter the battle
+- Changed the shop so that the maximum amount play can upgrade a weapon via the shop to is level 250.
+- Changed the armor equip command so that players do not need to !unequip armor before !equip armor 
+  The bot will automatically remove the old armor before wearing the new one.
+- Changed the shop so that shadow portals show up on their own line
+- Changed the max amount of portal items players can use per 24 hours to 10 (up from 8)
+- Changed the AI slightly to try and prevent NPCs from using techs that will heal monsters [based on Andrio's changes]
+- Changed the AI slightly to try and prevent NPCs from using techs that would inflict the same status a monster already has on
+- Changed the code for how the bot generates the deathboards. It should be able to find the bot-generated monsters now
+- Changed the bot so that if the streak is automatically reset to 0 the next battle will be an AI vs AI battle
+- Changed the max amount of enhancement points for HP
+- Changed !npc status to be color-coded. Red means kidnapped, maroon means not found yet and green means at the HQ
+- Changed code so that +1 accessories, weapons and armor all show up in blue. Legendary weapons and armor will show up in orange.
+- Changed code so that Torment reward items (Horadric and crafting) show up in orange in the items list
+- Changed the max level of the skill OrbHunter to 30. However, the base cost from 21+ is 2500 per level instead of 250.
+- Changed the cost of the Orb Bonus potion effect
+- Changed the chance of certain special bosses to occur
+- Changed the orb penalty for Spirit of the Hero to be not as much
+- Changed many lines in translation.dat to be consistent with equipment and weapon colors
+- Changed the minimum AI vs AI payout ratio to .50
+- Changed the AI vs AI information to hopefully be a bit easier/faster to read and added the betting commands to it
+- Changed the style point counter so that it can decay per turn. This is similar to DMC where the style meter decreases.
+- Changed the Battlefield damage to 800 max (up from 500).
+- Changed the AI vs AI open betting time to 60 seconds (up from 30).
+- Fixed a typo that was preventing ignition augments from working right
+- Fixed a typo in !misc info
+- Fixed an issue with !view-info and the pokeball summon item
+- Fixed an issue with %enemy in a provoke skill description not showing the right name
+- Fixed an issue with "Conserve TP" showing up in both status and skill lists.  It should only be in skills now.
+- Fixed an issue where a person who was asleep would still get an extra turn occasionally
+- Fixed an issue with the DTrigger ignition description
+- Fixed an issue with charm not wearing off immediately if the charmer was erased due to multiple wave
+- Fixed an issue with berserker NPCs 
+- Fixed minor issues with the various damage formulas
+- Fixed a potential bug with the monster list
+- Fixed a portal battlefield limitation issue that could be exploited
+- Fixed the "On the Edge" achievement so that it actually gives the Super Potion item correctly
+- Fixed the elemental spell totals in misc info being counted multiple times on AOEs
+- Fixed a bug with orb rewards for players who are far under the streak and not using SotH
+- Fixed a bug in which fists were being calculated wrong for their damage (being counted twice, basically)
+- Fixed a bug in which NPCs who had mechs would try to use them in no-mech battlefield conditions.
+- Fixed a bug with en-spells counting towards the elemental spell totals in misc info when they shouldn't have been
+- Fixed a bug in which the elemental messages for en-spells were not showing upon melee hits
+- Fixed a bug in which npcs and trusts weren't being killed in portals that had no-trust or no-npc set.
+- Fixed a bug with AI vs AI battles when NPCs used shadow copy
+- Fixed a bug with AI vs AI battles in which if the streak was less than 0 it wouldn't work properly
+- Fixed a bug with !flee not counting the number of times fled properly
+- Fixed a bug in which provoked NPCs may try to attack dead targets that have been erased due to multiple waves
+- Fixed a bug in which player clones would die if they were summoned before a no-trust or no-npc portal battle happened
+- Fixed a bug with the enhancement point shop that might prevent certain skills from showing up in the shop
+- Fixed a bug that would prevent the wall of flesh from ever being chosen
+- Fixed a bug with item damage not calculating properly if the modifier was less than 100%
+- Fixed a bug in which the bot was not doing modifiers properly while a player was in a mech
+- Fixed a bug with monsters that spawn other monsters after death
+- Fixed an exploit that allowed players to get around the melee penalty if the same weapon is used twice in a row
+- Removed the elements from NPC weapons
+- Removed attack_Aettir.txt, and attack_ChatoyantStaff.txt as they are no longer needed
+- Removed the Elder Dragon boss battle type
+
+3.2
+- Added the system.dat system flag: MaxIdleTurns. Set to 2 by default, this controls how many turns a player can miss
+  before he/she is kicked out of the battle.
+- Added the "Supply Run" battle type. In this type players need to protect a wagon against a wave of bosses and monsters.
+  Players will be level capped at the current battle streak.  If the wagon dies or all players die, the battle fails.
+- Added new cow monsters
+- Added a new NPC
+- Added a literal "trash" item (it serves no purpose for now)
+- Added new augments.  Specifically, "Hurt" augments that hurt specific monster types 
+  (such as HurtPlant, HurtDemon, HurtUndead, etc).  Each level of the Hurt augment increases damage against that type by 2%
+- Added the ability to turn purple keys into gold keys via crafting
+- Added WonderGuard flag for monsters/bosses. In [info] put WonderGuard=true.  If set to true the boss will not be harmed by
+  anything that isn't in [modifiers] or is set to 0 in that section. 
+- Added the IgnoreBattlefieldDamage flag. If set to true, these monsters will take 0 damage from battlefield events
+- Added legendary armor
+- Added the voucher item system. Using vouchers obtained from portals players will be able to buy armor and weapons
+- Added a new Shop NPC: BountiBox the Goblin.  Upon arriving at the HQ, he will unlock the Gobbie Box.
+  Players can use !gobbie box open to exchange 10 login points for a random item from the box
+- Added a new Shop NPC: Vasu the Jeweler. Upon arriving at the HQ players will be able to unlock a second accessory slot
+- Added a new Shop NPC: King of Cups the Cardian. Upon being saved players will be able to purchase trading cards and 
+  booster sets via !shop list/buy tradingcards
+- Added the "revive" type item that will revive a dead player with half hp. The BottledFairy and PhoenixDown items 
+  have been added as examples.
+- Added the enhancement point skill: Overwhelm. This skill will increase overall damage by 2% per skill level
+- Added the enhancement point item: AccessorySlot2. Buying this will cost 10 enhancement points and will allow 
+  players to equip a second accessory
+- Added the enhancement point battle mod: DailyPortalUsage. Buying this will increase your daily portal usage amount by 1
+- Added the monster only skill: Flying. This skill will cause a monster to take to the skies. A flying monster can
+  only be hurt by ranged weapons and their techniques, magic, and items. Ranged weapons are: bows, guns, rifles and glyphs
+- Added the monster only skill: WeaknessShift. If a monster has this and is hit by a weakness, it will generate a new elemental
+  and weapon type weakness and become resistant to the rest.
+- Added true death techniques. A tech that is type DEATH will instantly kill any target if it hits. The chance to hit
+  is set in the technique information under DeathChance=  Only Utsusemi and WonderGuard can block it 100% of the time.
+- Added a true metal defense flag where no matter what damage will only ever be 1  In [info] put TrueMetalDefense=true
+- Added Trading Card items
+- Added new achievements
+- Added new weapons
+- Added TormentOrb 12-15, 20, 25 and 30 and their recipes
+- Added new dungeons
+- Added the ability for weapons to require ammo to use in melee and tech attacks.  In weapons.db under [weapon] put
+  AmmoRequired=itemname  and AmmoAmountNeeded=#
+- Added the !last seen command. This command will tell you when a player was last seen in the channel
+- Added the !version command. This command will tell you the current bot version
+- Added the !ammo command. This command will display the current ammo you own.
+- Added the !dungeon usage command. It will display if a player is able to start a dungeon key or display the time remaining if not
+- Added a new style: Wrestlemania.  This style will allow players to use !wrestle on a target to do damage and attempt to
+  inflict stun. This style also increases damage done with HandToHand weapons.
+- Added a new accessory type: IncreaseTurnSpeed  This type of accessory increases speed during battle turn generation
+- Added a new accessory type: IncreaseWrestlingDamage  This type of accessory increases !wrestle damage
+- Added a new battle system type: Action Point based. This system will consume action points to perform actions. When
+  action points are empty the turn is over and it moves onto the next. This is not on by default.
+- Added a new bot admin command: !toggle battle system type
+- Added a new bot admin command: !clear dungeon usage -- using this command on a player will allow the player to use
+  a dungeon key immediately
+- Added a new bot admin command: !apl -- Displays the total player's average level in the channel
+- Added a new bot admin command: !toggle first round protection -- Turns First Round Protection on/off
+- Added the terrified status effect. Anyone under this status will lose a turn.
+- Added Elite and SuperElite flags for monsters. Elite=true or SuperElite=true under [monster]  Super/Elite monsters will
+  deal more damage and take less damage from attacks
+- Added information on the special holiday events to when players log in if the event is ongoing.
+- Added Gear Sets that players can set. Creating a gearset will copy the currently equipped armor to a set that 
+  can quickly be re-equipped with one command. The commands are: !gearset set 1-3 to create one, 
+  !gearset equip 1-3 to equip one and !gearset view 1-3 to see what equipment is currently equipped under 
+  the set. It's possible to overwrite equipment sets
+- Added a 50% orb bonus to any player who has less than 10k orbs total (spent + on-hand)
+- Added the !weaponboost desc  command. Use it to set a custom weapon boost description
+- Added the ability for portals to have custom victory/defeat messages that are displayed when the portal is over
+- Added the ability for Spawn After Death to have a custom description displayed before it spawns the monster
+- Changed the max number of access-controlled characters players can enter into a battle. The max is now two per person.
+- Changed the !add command to allow the ability for bot admins to add enhancement points
+- Changed the !take command to allow the ability for bot admins to remove enhancement points and enhancement point skills
+- Changed the shop stat ratio limits (1-50 have a .55 ratio, 50-1000 is .43 and 1000+ is .35)
+- Changed the SSJ ignition
+- Changed portal battles to make it easier for everyone to get a drop from the battle
+- Changed crafting so that there's a 1% chance of doing a critical success in which the amount obtained will be doubled
+- Changed the amount of HP monsters have
+- Changed certain things in the battle formulas
+- Changed utsusemi so that it no longer protects players when darkness hits
+- Changed the amount of style points for the style ranking that are obtained with multi-hits.  
+  Now it's only calculated on the damage done with the first hit.
+- Changed the way the skills keep track of the turn they are used and when they can be used again
+- Changed the original "revive" type item to "AutoRevive"
+- Changed the !equip and !wear accessory commands. Now use: !equip/wear accessory [1 or 2] accessoryname
+- Changed the !unequip and !remove accessory commands. Now use: !unequip/remove accessory [1 or 2] accessoryname
+- Changed capacity points so that they cannot be obtained from dungeons and torments
+- Changed the Torment Orb recipes so that the max number of death's breath ever required is 5 (down from 10)
+- Changed the amount of HP that torment monsters have in torments 10-15
+- Changed the way the bot displays the weather changes so that it's customizeable by bot owners
+- Changed the max level of certain skills for characters that have reset (used Final Getsuga)
+- Changed the leveling rate of techs for characters that have reset (used Final Getsuga)
+- Changed the max level of player styles for characters that have reset (used Final Getsuga) making the maximum 
+  of 11 for those players.
+- Changed !items so that only healing, battle, +stat, summon, shop lower, and songsheet/special items are shown with that
+  command. Everything else has been moved to their own command (which is displayed when !items is used)
+- Changed battles so that a player can only use a clone or a summon, not both at the same time.
+- Changed the amount of max HP a summon will have.  It's now [500*bloodpact level] max. If the HP goes over that it will cap
+  Note that EnhanceBloodpact augment will raise this by 100 * augment strength
+- Changed several blocks of code to clean them up and make it a bit easier to read and modify
+- Changed the way damage modifiers work, slightly. Now it will check both weapons if dual weapons are used.  All attacks
+  will now check the weapon names. Melee attacks will check the weapon's element and type.  Tech attacks will check
+  the tech's name and tech's element.
+- Changed the code for alchemy so that it is now possible to craft weapons directly
+- Changed the code for the auction house so that is is now possible to bid on weapons directly
+- Changed armor so that it no longer adds STR, DEF, INT or SPD to the player's file
+- Changed armor so that it no longer affects a player's level
+- Changed a few things with dragon hunts so channels that have a higher average level will generate dragons faster
+- Changed dragon hunts so that the more dragons are killed the higher level the next dragons will spawn at
+- Changed the shop so that it checks to see if a player's hp/tp is below the max even with the armor bonus
+- Changed the +stat items so that it checks to see if a player's hp/tp is below the max even with the armor bonus
+- Changed TormentReward items (Horadric Cache/Stash) so that players can open more than once at a time, up to 10 total. 
+  To open more than one: !use ITEMNAME # where # is 1 to 10. If the # is greater than the # owned, it defaults back to 1.
+- Changed the amount of capacity points players gain so that the number of achievements obtained will increase the amount.  
+  The amount increased is: # of achievements * 2.  
+- Changed the way the bot determines when it's time to start a new boss battle for higher battle streaks.
+- Changed torment drops so that players will only receive them from torments if they survive the battle
+- Changed AI vs AI battles so that after 100 turns darkness will happen
+- Changed the dragonballs so that Shenron's Wish has to be activated with a command: !dragonballs summon
+- Changed the dynamic naming system slightly 
+- Changed the BloodBoost, BloodSpirit and Speed skills to no longer add stats directly to the player. 
+  Instead they are added when needed for calculations.
+- Changed gold orbs/auto-revive effect so it can only be used three times total per player per battle
+- Changed conquest points so that monsters will gain +3 and players will lose -2 per missed battle opportunity if the
+  total average level of all the players is 1000 or more
+- Changed the maximum amount of conquest points monsters can win off of one battle to 1000 max.
+- Changed !view-info for "random" type items so that it shows a description
+- Changed the !dragon hunt found message to show the dragon's element in the enter-the-battle description
+- Fixed a bug with Stoneskin in the enhancement shop
+- Fixed a bug with the dynamic naming
+- Fixed a bug with AI in dungeons
+- Fixed a bug with clones being able to use items
+- Fixed a bug that was preventing monsters from gaining more HP if more players entered the battle
+- Fixed a bug in which enhancement skills (0 cost) would show up in !shop list skills
+- Fixed a bug where using !misc items multiple times would cause duplicates to show up
+- Fixed a bug where NPCs/trusts could survive no-npc/no-trust battle conditions on uncapped portals
+- Fixed a bug where it was possible to get infinite HP while using an ignition
+- Fixed a bug that was preventing accessories with more than one type working correctly.
+- Fixed a bug with the techonly AI types
+- Fixed a bug with Final Getsuga
+- Fixed a bug where players could perform more than one action if the final monster in the battle was dead
+- Fixed two bugs with the Predator fight
+- Fixed several bugs with the battle formulas and damage caps
+- Fixed an issue where certain battle types could override mimic battles
+- Fixed an issue where portal items were being cut off
+- Fixed an issue with absorb inside of dungeons and torment
+- Fixed an issue with clones being able to use skills multiple times without a cooldown
+- Fixed an issue with the Shrine of Ru'Avitau's weather (had "light" instead of "bright")
+- Fixed an issue where Darksteel Ore could be bought
+- Fixed an issue where barspells were't showing up in the battle status line.
+- Fixed an issue where clones could be revived using revive type items
+- Fixed an issue with searching the Auction House previous winners [thanks to Pentium320 who fixed it]
+- Fixed a potential issue with certain items in the shop being cut off if there's too many
+- Fixed a typo with Shenron's Wish
+- Fixed a description issue with ToxicMelody
+
+4.0
+- Added a new system flag for showing a message when players level up via buying stats in the shop. It is FALSE by default.
+  To toggle it a bot admin needs to use !toggle ShowPlayerLevelUpMsg
+- Added a new system flag: TechCurrency=orbs/coins.  If set to coins it will use Kill Coins rather than red orbs to 
+  purchase techs. Bot admins can toggle it using !toggle Tech Currency  -- Coins are default
+- Added a new system flag: SkillCurrency=orbs/coins.  If set to coins it will use Kill Coins rather than red orbs 
+  to purchase skills. Bot admins can toggle it using !toggle Skill Currency -- Coins are default
+- Added a new system flag: EnableEnmity=true/false  When true it will use the enmity targeting system
+- Added a new bot admin command: !toggle enmity   Use this to toggle it on and off.
+- Added the missing augments and reforged +1 armor
+- Added a protection value to armor.  Armor can now block a % of damage that a player would normally take.
+- Added the !portal dropcheck command [thanks to Pentium320]
+- Added the !monster strength command. This will give you an idea on how soon a besieged battle will begin.
+- Added the !deathboard players command.  This will generate the top players who have died the most in the game.
+- Added the !killboard command. This will generate the top monster killers in the game.
+- Added the !enmity command. This will show who has the highest enmity and is being targeted by monsters.
+- Added a MaxTormentLevel flag in [info] for monsters and bosses. Set to 0 it means the monster won't show up in torments,
+  leaving it empty/null will allow the monster to show up on any level of torment.
+- Added a MinTormentLevel flag in [info] for monsters and bosses. Leaving it empty means the minimum will be 1.
+- Added an IgnoreTorment flag for monsters. If set to true then the monster will be ignored for torment.
+- Added an IgnoreTP flag. If set to true monsters and npcs won't gain any TP when the bot boosts the level
+- Added a new currency: Kill Coins. These accumulate when players kill monsters and finish battles.
+- Added a new player command: !kill coins  -- This will show the player how many kill coins he/she has
+- Added the ability for monsters and npcs to go multiple times on a turn. In [Info] put ActionsPerTurn=# where # is the number
+  of times the monster/npc can go before moving onto the next person's turn
+- Added a new battle type: Besieged. This is a rare battle event where an army of five squadrons of monsters will attack the
+  Allied Forces HQ. It is not recommended to take on this army alone as losing has dire consequences.
+- Added a new item type: GainSkill.  These items will teach players new skills that cannot be bought.
+- Added a new monster/npc skill: CompleteWeaknessShift.  If set to 1 in [skills] the user will randomize weaknesses and resistances
+  to various status effects, weapon types, and elements on EVERY TURN the user gets.
+- Added a new active skill: Desynth.  This skill will break down crafted items back into one of each of their ingredients.
+  This skill can only be learned once Alchemy has been learned.
+- Added a new active skill: CriticalFocus. This skill will increase the critical hit chance to 100% on the next attack.
+- Added a new active skill: ShieldFocus. This skill will make your shield block 100% of the next attack if the attack can be
+  blocked. A shield must be equipped in order to use this skill.
+- Added a new active skill: Barrage. This skill will make your next melee attack done with a ranged weapon (bow, gun or rifle)
+  do +3 more hits than it would normally. The skill only takes effect when damage is done with a ranged weapon.
+- Added a new active skill: DoubleCast. This skill will make your next spell do +1 more hit than it would normally.
+  This skill cannot be purchased and must be learned.
+- Added a new active skill: Invigorate. This skill will instantly restore 200 TP and will not consume your turn.
+  This skill cannot be purchased and must be learned.
+- Added a new active skill: ThrillOfBattle. This skill will instantly restore 600 HP and will not consume your turn. As an added
+  bonus, if you hit max HP while using this skill you will gain +100 HP over your max HP limit.
+- Added a new active skill: Duality. This skill will cause your next non-spell/single target technique to do +1 more hit.
+  This skill cannot be purchased and must be learned.
+- Added a new active skill: ThinAir. This skill will cause your next magic spell to consume 0 TP upon use.
+  This skill cannot be purchased and must be learned.
+- Added a new active skill: LucidDreaming. This skill will instantly cut your current enmity in half.
+  This skill cannot be purchased and must be learned.
+- Added a new active skill: SoftBlows. This skill will cause your next attack to not increase enmity.
+  This skill cannot be purchased and must be learned.
+- Added a new active style skill: Sentinel.  This skill can only be used while using the Guardian style.  Using it with !sentinel
+  will cause your enmity to double and you will gain a +10% armor bonus to the next hit. If you have no armor you will still receive
+  a 10% bonus to reducing damage.
+- Added a new passive skill: DieHard. This skill will give a % of a chance to survive a blow that would otherwise result in
+  death.  This is an enhancement skill. The chance to survive is skill level %.  Upon surviving you will get the same % back in HP.
+- Added a new passive skill: Connoisseur. This skill will give a +5 bonus to food items that add to str, def, int or spd
+- Added a new passive skill: SwiftCast. This skill will increase spell damage by 10%.   This skill cannot be purchased 
+  and must be learned.
+- Added a new passive skill: Tensai. This skill will increase the rate that techs level up when being used. It will be 5x instead of
+  1x. This skill cannot be purchased and must be learned.
+- Added an enmity targeting system option to the game. When this is on the amount of damage that players do to monsters will
+  help determine which player the monsters target.
+- Added a new battle type: Cosmic.  Use CosmicOrbs to enter the Cosmic Battles. This battle type rewards winners with OdinMarks
+- Added a new battle type: Monster Fair.  Use MonsterFairTickets (purchased in the misc shop) to start a battle in the Monster Fair.
+  Monster Fair battles change every single day. Winning a fair battle will reward PrizeTickets which can be exchanged for items.
+- Added the mythic weapon that players can forge and upgrade using OdinMarks.  Use !mythic in-game to see all the commands.
+- Added Allied Forces shop to the game. Use !shop list AlliedForces to see the services provided.
+- Added a key file. Do not modify or remove this file or the bot will not work correctly. 
+- Added Treasure Goblins to the game. Upon killing one in a non cosmic/non torment battle there is a 25% chance that it will 
+  open a portal to the Gobbie Treasure Vault dungeon. This is the only way to access that dungeon.
+- Added new dungeons
+- Added a seasonal dungeon for October. For 1 CandyCorn you can purchase a HayrideTicket to enter Big Boo's Haunted Hayride.
+  This dungeon can only be entered in October and the HayrideTicket will be consumed upon use.
+- Added the ability for ignitions to be upgradeable. In the shop just purchase the ignition again.  Each ignition can be purchased
+  (that is, upgraded) up to 10 times. Each time adds .10 to the stat multiplier. The cost is base black orbs * level upgrading to.
+- Added daily login rewards.  Every time a player logs in they will recieve a certain amount of an item based on a lst file.
+- Added a bonus to red orbs and killcoins to players for the first 24 hours of their character.  New characters will receive a 25%
+  bonus to red orbs and a 50% bonus to killcoins in the first 24 hours.
+- Added a new song.
+- Added a new style: HighRoller.  This style will allow players to use !cardshark trading-cardname target to unleash the power of
+  the trading card (i.e. use a monster's techniques. The technique chosen is random). This style will also let you use !Gamble
+  without equipping it and for 200 orbs instead of 1000. This style also increases damage done with Ranged weapons at level 5.
+  The higher the style's level the higher rarity of cards you can use with Card Shark.
+- Added a new style: TreasureHunter. This style will enhance dagger usage, increase player's chances of receiving spoils, 
+  enhance stealing chance and give players access to !TrickAttack and !SneakAttack. Trick Attack and Sneak Attack both give a
+  guarantee to critical hit as long as the player has the most and least amount of enmity respectively.
+- Added new trading cards
+- Added the ability for monsters, bosses and NPCs to have rotations. These are set blueprints on how they will react each battle.
+  The information on how to set it up is in new_npc.char, new_mon.char and new_boss.char at the bottom of the file. Or see the
+  MetalSlime and BlueSlime files for an example.
+- Added the ability for dungeons to have a Max Player limit.  The dungeon will automatically start if the max number is met.
+  In [Info] put MaxPlayers=#   If # is null or 0 then there is no max.
+- Added limit breaks. Limit breaks are stronger than normal attacks. They must be purchased in the shop. Once purchased each limit
+  requires a certain percent on the limit break meter. Use !limit breaks to see which limits you own and the % of the meter. Use
+  /me limit breaks [targetname] with [limitbreakname] to use a limit break. All limits will reset the meter to 0% no matter how much
+  it needs.
+- Added the ability for Red Orbs and Black Orbs to be used in alchemy.
+- Changed the minimum shop level for players who are 100+.
+- Changed the way multi-hit melee attacks are displayed
+- Changed the way multi-hits are calculated
+- Changed the amount of style points needed to achieve different ranks. It is harder on higher battle levels now.
+- Changed the skill and technique shops to be able to use Kill Coins as their currency to purchase. 
+- Changed SpawnAfterDeath to allow multiple things to spawn 
+- Changed AI vs AI battles so that the battle will end in a draw after 50 turns.
+- Changed active skills so that most of them have to be equipped in order to use in battle. There can only be 5 active skills
+  equipped at a time now. Use !skills equip skillname to equip or !skills remove skillname to remove.
+- Changed dungeons so that they can all be entered alone but they have a recommended party size.
+- Changed dungeons so that if a player enters alone or below the party size trusts and summons can be used.
+- Changed the "food" type items so that more than one stat can be affected. Just put a . between the stats, like str.def.int
+  It is recommended not to use TP or HP in the stat list for multiple stats though due to issues that would arise.
+- Changed the !hp, !tp, and !ig commands so that they can be used on other players. Note that they cannot be used on monsters or npcs.
+- Changed Trickster so that it no longer affects the stealing chance. This has been moved to the TreasureHunter style instead.
+- Changed !view-help skill so that it will show the style skills if a player tries to view them.
+- Changed the MonsterSummon skill so that it can now summon boss monsters (files in \bosses\)
+- Changed the max amount for certain enhancement point upgrades.
+- Changed the amount of stat points it takes to "level up" on levels 101+
+- Changed the dragon hunt dragon generation.  The time it takes to generate a new dragon has changed based on how many
+  "active players" there are in the game at the time of dragon gen check.  A player is considered active if he/she has 
+  logged in within 48 hours. 
+- Changed how often dungeons can be started by players.  It is now 3 hours (down from 24).
+- Fixed a bug where the elite/super elite flags were not being added correctly to dragon hunt dragons
+- Fixed a bug where water dragons were not spawning
+- Fixed a bug where IgnoreGuardian was not working
+- Fixed a bug where auto-regen would not work right with ignitions
+- Fixed a bug where the strength stat of monsters was not being adjusted properly upon monster spawn/copying.
+- Fixed a bug where new characters who don't set their passwords immediately would be unable to log in again.
+- Fixed a bug with status battle type items dealing damage when they shouldn't be.
+- Fixed a bug where it was possible to use dungeon keys that the player did not actually own
+- Fixed a bug where dying from poison would hang the bot.
+- Fixed an issue where +portal usages weren't actually working correctly
+- Fixed an issue with alchemy [thanks to Pentium320]
+- Fixed an issue with +stat items [thanks to Pentium320]
+- Fixed an issue with certain items being shown under the wrong currencies [thanks to Pentium320]
+- Fixed an issue with some color codes causing issues
+- Removed !toggle damage formula  -- The old formulas are still in the bot but I want to focus on one formula for players
+  moving forward.
+
+4.1
+- Added the ability for str, int and def to "level up" on their own as characters play the game. STR will be increased as players
+  use melee attacks, INT with techs and DEF by getting hit by monsters. 10 stat xp = +1 to the stat.
+- Added the "WelcomeBox" item to the game. This item will give a ClothTunic, ClothLeggings and Beginner'sCharm to the user upon opening.
+- Added the Beginner'sCharm accessory to the game. This charm will give bonus style xp, killcoins and red orbs to the player until the
+  player has accumulated 500,000 red orbs total.
+- Added a new room flag for dungeons: RestoreMech.  If set to true, the room will restore a player's mech hp and energy to max.
+- Added the ability for monsters and npcs to use different descriptions for existing techniques. 
+  In [descriptions] put Techname=new description
+- Added Beastmen Tribe Enmity and the ability for Beastmen to summon powerful Primals once their enmity reaches a certain point. 
+  When a primal is summoned a new dungeon key item named PrimalSigil will be available for purchase. Using it will start a short dungeon 
+  that will end with a fight of the primal.
+- Added the SharpShooter style. This style will enhance damage done with ranged weapons (guns, rifles and bows) and will give access to
+  the !Overcharge command that will further enhance damage done with those weapon types.
+- Added the Valor shop to the game. !shop list valor and !shop buy valor item   The valor shop uses ValorMedals as the currency.
+- Added rainbow chests to the game. These chests give roughly the same items as gold chests but will give 2-5 of the item instead of 1.
+- Added the CharacterResetPotion item to the shop. This item will reset a character back to level 1. Players who reset will keep their
+  items and armor. 
+- Added a new active skill: Ricochet. This skill will cause your next single-target gun or rifle technique to be an AOE.
+  This skill cannot be purchased and must be learned.
+- Added a new monster flag: TimesToDefeat.  In [Info] put TimesToDefeat=#  where # is the number of times the monster must be
+  fully defeated before it finally dies.
+- Added the ability for monsters and npcs to use different descriptions for the TimesToDefeat flag. In [Descriptions] put
+  DefeatedMonsterStandsBackUp=description here
+- Added a way to make BattleArena work on Discord.  For more information read the readme.txt in the Discord folder.
+- Changed the Tempest tech on Rudra+Agni to be FireTempest to resolve a conflict that has existed for a while.
+- Changed the !mythic upgrade BasePower command to allow for multiple purchases with one command. Use !mythic upgrade BasePower #
+- Fixed an issue with !view-info tech that was showing red orb costs even in kill coin mode.
+- Fixed an issue with the sleep status
+- Removed the "FinalGetsuga" and "Merlin'sFinalSpell" techniques from the game.  The CharacterResetPotion has replaced them.
+
++:::::::::::::::::::::::::::::::::::::
+Some Stuff that added by me (Serkons)
+:::::::::::::::::::::::::::::::::::::
+- A new item type has been added: Infected. This type should be consumed with caution when used in battle.
+These items have a 25% chance of healing, a 45% chance of dealing damage, and anything above that can turn you into a zombie or poison you. The current one that does this is: ZombieBrain. Others will follow.
+- A new type of boss fight has been added: ZombieKings Army Here the players have to face off against a zombie king and his henchmen. This fight appears on a win streak of over 80+
+- Added a new special boss fight: Protect The Powercrystal. During this event, a crystal is created that is attacked by monsters and bosses and must be defended. The loss of this battle is not exactly positive. 40% of the time the spies report the state of the crystal if it has a critical value before the event begins.
+- New command: @create mon <nameofmonster> This allows players to create their own monsters/bosses/npcs without having much programming knowledge. Instructions in English are included in the game itself
+- Added the !go command. So that you can force the start of the game and no longer have to wait for others.
+- Added !heal command. This only works in PMD mode and serves as a healing.
+So you use !heal num (so num is the amount of hp you want to heal)
+- New item added: ZombieBrain
+- New Monsters added
+- New Bosses Added
+- New Dungeon Added: Rakna-Kadaki
+- A new skill was added "Taming" With this active skill by entering the !taming <monstername> there is now a 10% chance of taming this monster if it has less than 30% of the maximum life points.
+This skill requires an item called "EmptyPokeball". If successful, a PoweredPokeball is created with the monster's stats
+- Added new item "PokeData-Clear" With this item it is possible to clear the data of the Powered Pokeball in order to tame a new monster.
+- Added new ItemType "Taiming". These items can be used to level up the Pokemon's stats please use as follows !using Itemnmame
+- Added new skill "ThrowPoke" This skill uses the PoweredPokeball to summon the monster stored in it. Command is !throwpoke
+- Added new command "!tameItems". This command lists the items needed to level up the Pokemon. If you own these
+- Added IncreaseLimitGauge option for power boosts. When set, a limit can increase a user's gauge by an amount specified in the power boost via LimitGaugeIncrease
+- Added Bonus Chest Event. After 15 minutes an event will be announced in which you can open one of the 3 chests to get the content. - Write !chest <num> where num is the number of the chest.
+- New message when a fight is won The KillCoins that you earn are now also reported
+- New: "Procedural Armor Generation" = At ​​the end of a normal monster fight there is a 25% chance to generate an armor chest that randomly distributes the contents to 1-2 players. (Untested)
+- New: "Normal dungeons are now also generated at 3% in normal fights. These dungeons have a chest room whose contents are distributed to random players.
+- You now also gain a pair of orbs by killing a monster
+- New status effect "bleed". Some kind of bleeding status
+- New Untested Event: "Protect the HQ-Generator". To Start the Event you must collect Some parts of Materials you need screws and metal plates if you have some you can type !repairHQ. If the Generator is fully repaired the event starts.
+
+:::::::::::::::::::::::::::::::::::::::::::::
+Stuff that was changed by (Serkons)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+- Changed the damage message for Normal Attacks and Technique Attacks to send the monster's remaining HP.
+- Changed the message at the start of a battle to show what items can be found on the battlefield when using Scavenge.
+- The actual TurnMessage was populated with some information eg. Level, Attributes, Armor, Owned Techs and Drops
+- When generating the monsters, it is now checked whether there is a SuperElite or Armored in the name and these monsters randomly receive natural armor, which makes them difficult to defeat.
+- Added a procendural value to the healthbar. Makes taming monsters easier.
+- !mystats has been changed to show Pokemon stats as well.
+- Changed technique '''SkullBreaker''', '''Skullbreaker''' now does a Direct Critical Hit if the target was previously Stunned by the attacker. only the attacker can direct crit hit the target no others. Well Others can crit hit them with other skills
+- Changed weather information and battlefield information during battle.
+- The turn message now also shows the dungeon room if you are in one
+- Drops now appear even if the monster is killed with a 25% chance
+- Multiple objects in a battlefield are now generated.
+
+;;;;;;;;;;;;;;;;;;;;
+fixes by (Serkos)
+;;;;;;;;;;;;;;;;;;;;;;
+
+- Fixed a minor bug where the execution of the skill ''!throwpoke''' didn't transition to the next turn. The reason was that I 2) forgot to define 2 variables.

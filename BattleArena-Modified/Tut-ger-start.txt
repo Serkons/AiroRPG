@@ -1,0 +1,5 @@
+AiroRPG ist ein strategisches textbasiertes RPG wo du als Spieler die Mächte der Dunkelheit aufhalten kannst.
+Eine ausführliche Dokumentation findest du hier: https://game.igame-rpg.de/docu/index.php?title=AiroRPG
+In diesem Ingame Tutorial behandeln wir nur das notwendigste.
+Beginnen wir also mit der Charaktererstellung.
+Um diese zu starten, schreibe nun 4(7!tut-ger-char4)

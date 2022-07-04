@@ -1,0 +1,1246 @@
+==============================================
+Valid Augments are:
+For a full list of valid augments, open
+augments.lst and look through the list
+(just be sure not to change anything in that
+list)
+
+Valid Effect Types are:
+None, Status, IncreaseLimitGauge
+
+Valid Status Targets are:
+  Enemy, Self, Allies, All
+
+------
+For IncreaseLimitGauge you will need to add
+LimitGaugeIncrease=# where # is the amount
+of limit gauge to increase.  Also important
+to note that this will only work on the
+user.
+-----
+
+
+
+-----
+If you add a new ignition, make sure you put
+the ignition's name in ignitions.lst or else
+nothing will be able to see/use it.
+
+------
+It is now possible to add code for the bot
+to run upon using the ignition.  Use:
+
+AdditionalCode=code goes here
+==============================================
+
+[Overdrive]
+Name=Overdrive
+hp=1.1
+Str=1.3
+def=1.1
+int=1.1
+spd=1.5
+Augment=MeleeBonus
+Effect=Status
+IgnitionTrigger=5
+IgnitionConsume=1
+Cost=10
+Desc=$+ 's body glows a firey red as $gender($1) body bulges with a new-found power. The battlefield explodes into flames, setting all of %real.name $+ 's enemies on fire!
+StatusTarget=enemy
+StatusType=Burning
+
+[Benediction]
+Name=Benediction
+hp=1.2
+Str=1.1
+def=1.1
+int=1.4
+spd=1.1
+Augment=CuringBonus
+Effect=Status
+IgnitionTrigger=7
+IgnitionConsume=2
+Cost=15
+Techs=CuragaII
+Desc=$+ 's body begins to glow a bright light as a giant golden halo appears above $gender2($1) $+ . White wings made of a holy energy float behind %real.name $+ .  
+StatusTarget=Self
+StatusType=revive
+
+[Manafont]
+Name=Manafont
+hp=1.1
+Str=1.1
+def=1.1
+int=1.5
+spd=1.1
+Augment=MagicBonus
+Effect=Status
+IgnitionTrigger=7
+IgnitionConsume=2
+Cost=15
+Techs=UltimaII.KaustraII
+Desc=$+ 's body begins to glow a with a dark and ancient energy. The battlefield seems to lose all light as %real.name gains black robes and a straw hat that hides $gender($1) face. %real.name feels as though $gender($1) spells will do more damage now and all allies of %real.name feel that their next techniques will consume no TP.
+StatusTarget=Allies
+StatusType=ConserveTP
+
+[Karakuri]
+Name=Karakuri
+hp=1.1
+Str=1.1
+def=1.1
+int=1.1
+spd=2.5
+Augment=EnhanceDodge
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=5
+Cost=20
+Techs=DoubleBackstab
+Desc=$+ 's body feels light as a feather as $gender($1) speed is enhanced. %real.name also feels as though $gender3($1) could dodge attacks more easily now!
+
+[Zombieboost]
+Name=Zombieboost
+hp=2
+Str=1.0
+def=1.0
+int=1.0
+spd=1.0
+Effect=Status
+IgnitionTrigger=25
+IgnitionConsume=25
+Cost=60
+StatusTarget=allies
+StatusType=HPRegenerating
+Desc=Consumes some Zombiebrains to transform into a Giant Zombie it has More Hp by consumed Brains. 25x Zombiebrains you get a Hp Modifier of 2.5 lower than 25 also 1.0.
+AdditionalCode=writeini $char($1) status Auto-Regen on | writeini $char($1) skills Regen 40
+
+[Skydance]
+Name=Skydance
+hp=1.1
+Str=1.4
+def=1.2
+int=1.0
+spd=1.2
+Augment=AdditionalHit
+Effect=Status
+IgnitionTrigger=15
+IgnitionConsume=5
+Cost=20
+Techs=TrillionStabs
+Desc=$+ 's clothes become a bright neon color as it seems to suck in all color, leaving a black and white battleground. A great force rips through all enemies, flinging them into the air leaving them helpelessly staggered. 
+StatusTarget=enemy
+StatusType=Staggered
+
+[Sentinel]
+Name=Sentinel
+hp=1.6
+Str=1.0
+def=1.8
+int=1.0
+spd=1.0
+Augment=UtsusemiBonus
+Effect=Status
+IgnitionTrigger=15
+IgnitionConsume=5
+Cost=20
+Techs=Chivalry
+Desc=$+ 's body is covered with a magical silver armor that helps deflect damage.
+
+[LastResort]
+Name=LastResort
+hp=1.5
+Str=1.7
+def=.5
+int=1.0
+spd=1.0
+Augment=Drain
+Effect=Status
+IgnitionTrigger=15
+IgnitionConsume=5
+Cost=20
+Techs=BloodBath
+Desc=unleashes an unholy blood magic upon $gender($1) weapon.  The magic consumes part of %real.name $+ 's defense but increases $gender($1) strength and adds the drain status to any of $gender($1) weapons.
+
+[SSJ]
+Name=SSJ
+hp=2
+Str=2
+def=1.8
+int=1.9
+spd=2.4
+Augment=TechBonus.MeleeBonus.EnhanceZen.RenkeiBonus.EnhanceBloodBoost
+Effect=Status
+IgnitionTrigger=20
+IgnitionConsume=25
+Cost=60
+StatusTarget=allies
+StatusType=TPRegenerating
+Techs=Chou_Kamehameha
+Desc=begins to channel an ancient power begins to channel an ancient power meant for another race. $gender($1) energy flares around $gender($1) body, then swirls all around $gender2($1) into a cone in the shape of $gender($1) body, which then turns into $gender($1) aura. The aura is flashing very brightly and violently at the moment. %real.name $+ 's body overloads as energy flares out like wild fire and $gender($1) hair turns gold and $gender($1) eyes green.
+
+[GlyphUnion]
+Name=Glyph Union
+hp=1.5
+Str=1.3
+def=1.8
+int=2
+spd=1.3
+Augment=MagicBonus.TechBonus.RenkeiBonus
+IgnitionTrigger=15
+IgnitionConsume=10
+Cost=$iif($readini($char($1), weapons, Glyphs) >= 500 || $readini($char($1), weapons, Glyphs+1) >= 500, 45, 0)
+Techs=Evanescere.Universitas.UnionSecare.UnionCulter.Tellus.Saturnus.Venus
+Desc=unleashes the full power of the Glyphs, gaining new attacks and extra power.
+
+[DevilTriggerII]
+Name=Devil Trigger
+hp=1.5
+Str=2
+def=1.3
+int=1.3
+spd=2
+Augment=MeleeBonus.TechBonus.RenkeiBonus
+IgnitionTrigger=15
+IgnitionConsume=10
+Cost=$iif($readini($char($1), weapons, Yamato+1) >= 500, 75, 0)
+Techs=JudgementCutEnd
+Desc=channels the power of the blade, gaining a power increase as $gender($1) body morphs into a demonic form.
+
+[UltraInstinct]
+Name=Ultra Instinct
+hp=4.5
+Str=3.5
+def=3.5
+int=3.5
+spd=3.5
+Augment=TechBonus.MeleeBonus.UtsusemiBonus.EnhanceZen.RenkeiBonus.EnhanceBloodBoost.EnhanceDodge.EnhanceParry.EnhanceBlocking
+Effect=Status
+IgnitionTrigger=20
+IgnitionConsume=50
+Cost=$iif($get.level($1) < 4500, 0, $iif($readini($char($1), Ignitions, UltraInstinct) = $null, 3000, 400))
+StatusTarget=Self
+StatusType=$iif($readini($char($1), Ignitions, UltraInstinct) = 10, Invincible, DefenseUp)
+Techs=
+Desc=lets go of conscious thought and suddenly surges with the ultimate power said to be impossible for mortals to achieve. %real.name $+ 's hair turns white and a rainbow aura flares around $gender($1) body. %real.name has unlocked the power of Ultra Instinct--at least for a short while.
+
+==========================
+NPC/Monster/Boss Ignitions
+==========================
+
+[DTrigger]
+Name=Devil Trigger
+hp=1.3
+Str=1.3
+def=1.2
+int=1.0
+spd=1.2
+Augment=AdditionalHit
+Effect=Status
+IgnitionTrigger=15
+IgnitionConsume=5
+Cost=0
+Desc=$+ 's body begins to morph and grow horns as %real.name screams.  After a few seconds %real.name has become a full-fledged demon.
+
+[ElvenGoddessMight]
+Name=ElvenGoddessMight
+Hp=1
+Str=1.5
+Def=1.5
+Int=1.5
+Spd=1.5
+Augment=MeleeBonus.RenkeiBonus.TechBonus.EnhanceSword.EnhanceCriticalHits.EnhanceZen.EnhanceDoubleTurnChance.IgnoreDefense.AdditionalHit
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=channels the power of a previous goddess, gaining a mighty strength while also increasing melee and technique power. Additionally, the battlefield gains a white glow, causing all of %real.name $+ 's enemies to feel slower!
+StatusTarget=enemy
+StatusType=Slow
+AdditionalCode=writeini $char($1) weapons equipped Silver_Goddess_Sword | writeini $char($1) weapons Black_Goddess_Staff 0 | writeini $char($1) weapons SilverSwords 0
+
+[ElvenGoddessMagic]
+Name=ElvenGoddessMagic
+Hp=1
+Str=1.5
+Def=1.5
+Int=1.5
+Spd=1.5
+Augment=MagicBonus.EnhanceZen.EnhanceStaff.EnhanceCriticalHits.EnhanceDoubleTurnChance.IgnoreDefense.AdditionalHit
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=AerogaV
+Desc=channels the power of a previous goddess as %real.name $+ 's body glows with red and blue energy. %real.name gains a large increase to $gender($1) spells, along with other increases. %real.name $+ 's next technique will consume no TP.
+StatusTarget=Self
+StatusType=ConserveTP
+AdditionalCode=writeini $char($1) weapons equipped Black_Goddess_Staff | writeini $char($1) weapons Silver_Goddess_Sword 0 | writeini $char($1) weapons SilverSwords 0
+
+[WiseReflection]
+Name=WiseReflection
+HP=1
+Str=1.1
+Def=1.1
+Int=1.1
+Spd=1.1
+Augment=MeleeBonus.TechBonus.EnhanceSword.RenkeiBonus
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=narrows her eyes at everyone as a silver aura appears around herself. "Let's see how you shall fare against a fraction of my goddess power."
+StatusTarget=enemy
+StatusType=Slow
+
+[AtlantianPower]
+Name=AtlantianPower
+HP=1.3
+Str=2
+Def=1.3
+Int=1.8
+Spd=2
+Augment=MeleeBonus.TechBonus.EnhanceFists.RenkeiBonus.EnhanceDoubleTurnChance.IgnoreGuardian.IgnoreDefense
+Effect=Status
+IgnitionTrigger=50
+IgnitionConsume=20
+Cost=0
+Techs=AtlantianAbsorb
+Desc=laughs madly as he floats up onto the air. The sky grows darker as he starts to unleash an ancient power. "To think that I must be forced to use my true power!" he shouts to the heroes below as his skin begins to turn blue and his hair black. "Behold, the true power of Atlantis and its ability to protect the one who can rightly wield it!"
+StatusTarget=Self
+StatusType=Invincible
+
+[OkiroBenihime]
+Name=OkiroBenihime
+hp=2
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus
+Techs=NakeBenihime.ShibariBenihime.HiasobiBenihimeJuzutsunagi
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=says "Okiro, Benhime!" as his cane sword turns into a zanpakutou with a straight blade and a unique handle.
+
+[CromwellApproval]
+Name=CromwellApproval
+HP=3
+str=3
+def=3
+int=3
+spd=3
+Augment=MeleeBonus.TechBonus.EnhanceDodge.EnhanceParry.EnhanceCounter
+Techs=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=smirks and says "Releasing control art restriction to level one." The surrounding area gains a dark red shade as Alucard now wears a dark red leather straight jacket, longer black hair, and is almost at his full power. Alucard then proceeds to laugh.
+
+[SSJ1]
+Name=SSJ
+hp=2
+Str=1.8
+def=1.8
+int=1.9
+spd=2.4
+Augment=TechBonus.MeleeBonus.EnhanceZen.RenkeiBonus.EnhanceBloodBoost
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+StatusTarget=allies
+StatusType=TPRegenerating
+Techs=ChouKamehameha
+Desc=begin to channel an ancient power begins to channel an ancient power meant for another race. $gender($1) energy flares around $gender($1) body, then swirls all around $gender2($1) into a cone in the shape of $gender($1) body, which then turns into $gender($1) aura. The aura is flashing very brightly and violently at the moment. %real.name $+ 's body overloads as energy flares out like wild fire and $gender($1) hair turns gold and $gender($1) eyes green.
+
+[SSJBlue]
+Name=SSJBlue
+HP=1.2
+Str=8
+Def=8
+Int=8
+Spd=10
+Augment=TechBonus.MeleeBonus.EnhanceZen.RenkeiBonus.EnhanceBloodBoost
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+StatusTarget=allies
+StatusType=TPRegenerating
+Techs=God_Kamehameha
+Desc=realizes Super Saiya-jin just wont be enough. So as $gender($1) anger heightens, $gender($1) breathing getting heavy, $gender3($1) screams out with all the anger built inside $gender2($1) $+ . $gender($1) aura stops completely, and there is no sign of power. Suddenly electricity swirls around $gender2($1) violently. It then changes into a vibrant, electric blue aura with a subtle yellow glow, $gender($1) hair and eyes also changing to blue.
+
+[MegaCharizardX]
+Name=MegaCharizardX
+hp=1.3
+Str=1.8
+def=1.8
+int=1.4
+spd=1.4
+Augment=TechBonus.MeleeBonus.EnhanceZen
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=Blast_Burn
+Desc=is covered in a bright light which fades after a moment. Charizard is now more fit and has black and blue coloring, the rest of the body taking on more of a dragon style. It also now breaths blue flames along with the tail flame changing to blue.
+AdditionalCode=writeini $char($1) ignitions MegaCharizardX 0
+
+[MegaCharizardY]
+Name=MegaCharizardY
+hp=1.3
+Str=1.4
+def=1.4
+int=1.8
+spd=1.8
+Augment=MagicBonus.EnhanceZen
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=Blast_Burn
+Desc=is covered in a bright light which fades after a moment. Charizard is now more sleek and expansive, while retaining the normal color bur gaining white pupils. It has larger fangs, small wings on the wrists, while the larger wings take on a more ragged appearance.
+AdditionalCode=writeini $char($1) ignitions MegaCharizardY 0
+
+[MegaBlastoise]
+Name=MegaBlastoise
+hp=1.5
+Str=1.4
+def=1.8
+int=1.8
+spd=1.4
+Augment=TechBonus.MeleeBonus.EnhanceZen.RenkeiBonus
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=Hydro_Cannon
+Desc=is covered in a bright light which fades after a moment. Blastoise is now a bit larger, and has a bigger cannon on its back, along a shell on the arms that has their own water cannon.
+AdditionalCode=writeini $char($1) ignitions MegaBlastoise 0
+
+[MegaRayquaza]
+Name=MegaRayquaza
+hp=1.6
+Str=1.8
+def=1.8
+int=1.8
+spd=1.8
+Augment=TechBonus.MeleeBonus.EnhanceZen.RenkeiBonus.MagicBonus
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=Hyper_Beam
+Desc=is covered in a bright light which fades after a moment. Rayquaza now has a longer body, and its fins and horns are longer, almost blade-like with gold color on the edges. It also has several golden tendrils and orbs along the body.
+AdditionalCode=writeini $char($1) ignitions MegaRayquaza 0
+
+[Sui-FengShikai]
+Name=Shikai
+hp=1.2
+Str=1.5
+Def=1.5
+Int=1.5
+Spd=1.5
+Augment=MeleeBonus.TechBonus.IgnoreMetalDefense.EnhanceCriticalHits.IgnoreGuardian
+Techs=NigekiKessatsu
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=grips Suzumebachi with both hands and says, "Sting all enemies to death, Suzumebachi!" The zanpakutou changes to a gold and black gauntlet on %user $+ 's right arm and a stinger-like blade on the right middle finger.
+AdditionalCode=writeini $char($1) status ignition.on off | writeini $char($1) ignitions Sui-FengBankai 1 | writeini $char($1) ignitions Sui-FengShikai 0 | writeini $char($1) ignitions Shunkou-Wind 0
+
+[Sui-FengBankai]
+Name=Bankai
+hp=1.5
+Str=2
+Def=2
+Int=2
+Spd=1
+Augment=TechBonus.EnhanceCriticalHits.IgnoreMetalDefense.IgnoreGuardian
+Techs=JakuhouRaikouben
+IgnitionTrigger=10
+IgnitionConsume=20
+Cost=0
+Desc=shouts out "Bankai!" as a pillar of reiatsu explodes around %user before fading. %user now has a golden missile launcher covering the right arm and extends long enough to have a face shield on the shoulder.
+
+[Shunkou-Wind]
+Name=Shunkou
+HP=1.2
+Str=1.5
+Def=1.5
+Int=1.5
+Spd=1.5
+Augment=MeleeBonus.EnhanceDodge.TechBonus.IgnoreMetalDefense.EnhanceZen.IgnoreGuardian
+Techs=MukyuuShunkou
+IgnitionTrigger=10
+IgnitionConsume=5
+Cost=0
+Desc=shouts out "Shunkou!" as wind energy surrounds %user $+ 's body to greatly increase %user $+ 's strength.
+AdditionalCode=writeini $char($1) ignitions Sui-FengShikai 0
+
+[Shunkou-Lightning]
+Name=Shunkou
+hp=1.5
+Str=1.7
+def=1.7
+int=1.7
+spd=1.7
+Augment=MeleeBonus.EnhanceDodge.TechBonus.IgnoreMetalDefense.EnhanceZen.IgnoreGuardian
+Techs=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=shouts out "Shunkou!" as lightning covers %user $+ 's back and upper shoulders, which then take on the form of wings.
+
+[Shunkou-Fire]
+Name=Shunkou
+hp=1.5
+Str=1.7
+def=1.7
+int=1.7
+spd=1.7
+Augment=MeleeBonus.EnhanceDodge.TechBonus.IgnoreMetalDefense.EnhanceZen.IgnoreGuardian
+Techs=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=shouts out "Shunkou!" as fire reiatsu covers %user $+ 's back and upper shoulders, which then take on the form of wings.
+
+[YamamotoShikai]
+Name=Shikai
+HP=1.2
+Str=2
+Def=2
+Int=2
+Spd=2
+Augment=TechBonus.EnhanceKatana.EnhanceCriticalHits
+Techs=Taimatsu.EnnetsuJigoku
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=unsheathes the zanpakutou and says, "Reduce all creation to ash, Ryuujin Jakka!" An extreme release of reiatsu explodes around %user which takes the form of fire.
+AdditionalCode=writeini $char($1) status ignition.on off | writeini $char($1) ignitions YamamotoBankai 1 | writeini $char($1) ignitions YamamotoShikai 0
+
+[YamamotoBankai]
+Name=Bankai
+HP=1.5
+Str=1.8
+Def=1.8
+Int=1.8
+Spd=1.8
+Augment=TechBonus.EnhanceKatana.EnhanceCriticalHits.EnhanceZen.IgnoreMetalDefense.IgnoreDefense.IgnoreGuardian
+Techs=ZankaNoTachi:East.ZankaNoTachi:North
+IgnitionTrigger=10
+IgnitionConsume=20
+Cost=0
+Desc=shouts "Bankai!" as Ryuujin Jakka takes the form of an ancient katana, scorched by fire. "Zanka no Tachi," %user says as an intense heat covers the battlefield, setting everyone, including himself and allies, on fire.
+StatusTarget=All
+StatusType=Burning
+Effect=Status
+
+[RukiaShikai]
+Name=Shikai
+Hp=1.3
+Str=1.5
+Def=1.5
+Int=1.5
+Spd=1.5
+Augment=TechBonus.EnhanceKatana.EnhanceZen.MagicBonus
+Techs=SomeNoMai:Tsukishiro.TsugiNoMai:Hakuren.SanNoMai:Shirafune.Juhaku
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=holds the zanpakutou upside down and says, "Dance, Sode no Shirayuki!" The zanpakutou turns white, gains a longer hilt, and a long white ribbon expands from the pommel of the zanpakutou.
+AdditionalCode=writeini $char($1) status ignition.on off | writeini $char($1) ignitions RukiaBankai 1 | writeini $char($1) ignitions RukiaShikai 0
+
+[RukiaBankai]
+Name=Bankai
+HP=1.3
+Str=1.5
+Def=1.5
+Int=1.5
+Spd=1.5
+Augment=TechBonus.EnhanceKatana.EnhanceCriticalHits.EnhanceZen.IgnoreMetalDefense.IgnoreDefense.IgnoreGuardian
+Techs=HakkanoTogame
+IgnitionTrigger=10
+IgnitionConsume=20
+Cost=0
+Desc=holds Sode no Shirayuki to the side, aimed at the battlefield and shouts out "Bankai, Hakka no Togame!" %user now wears an ankle lengthed white kimono with lined patterns. The temperature around the battlefield begins to lower as %user turns pure white and the blade of Sode no Shirayuki changes into ice.
+StatusTarget=All
+StatusType=Frozen
+Effect=Status
+
+[KaienShikai]
+Name=Shikai
+Hp=1.5
+Str=1.8
+Def=1.8
+Int=1.8
+Spd=1.8
+Augment=Techbonus.EnhanceKatana.EnhanceZen.MagicBonus
+Techs=NejibanaWaterDance.NejibanaWaterBlast
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=begins to spin the zanpakutou around and says "Surge the waters and heavens, Nejibana!" as the zanapkutou takes on the form of a light blue tridant with a drill shape on the end as water covers the battlefield.
+StatusTarget=enemy
+StatusType=Drowning
+Effect=Status
+
+[RedDragoon]
+Name=RedDragoon
+HP=1.5
+Str=2
+Def=2
+Int=2
+Spd=2
+Augment=TechBonus.MagicBonus.MeleeBonus
+Techs=FlameShot.FinalBurst.Explosion
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=begins to gather power. A moment later, Dart's red armor takes a fancier look and covers his body. He also gains two large wings on his back as well.
+AdditionalCode=writeini $char($1) modifiers Fire 0 | writeini $char($1) limitbreaks Red-EyedDragon 1
+
+[DarkDragoon]
+Name=DarkDragoon
+HP=1.5
+Str=2.5
+Def=2.5
+Int=2.5
+Spd=2.5
+Augment=TechBonus.MagicBonus.MeleeBonus
+Techs=AstralDrain.DeathDimension.Demon'sGate
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=is covered in dark energy. As the energy fades, Rose is now wearing dark purple and red armor that covers her body. She also gains to large wings on her back as well.
+AdditionalCode=writeini $char($1) modifiers Dark 0 | writeini $char($1) limitbreaks DarkDragon 1
+
+[ExcalijuProc]
+Name=ExcalijuProc
+hp=1.5
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.IgnoreGuardian.IgnoreMetalDefense.EnhanceDoubleTurnChance.HurtEthereal.IgnoreDefense.AdditionalHit.EnhanceDoubleTurnChance.EnhanceSword.EnhanceWeaponBash
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=TrillionStabs
+Desc=kills a nearby zombie and green sparkles appear around %user $+ , granting a massive power increase. %user then looks at the battlefield and shouts out "Old Man Willakers!" as he rushes towards the monsters!
+
+[KomamuraShikai]
+Name=Shikai
+hp=1.5
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.EnhanceCriticalHits.EnhanceKatana
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=TenkenSword.TenkenFist
+Desc=shouts out "Roar, Tenken!" though it appears nothing has happened. Suddenly a ghostly sword appears for a moment before vanishing.
+AdditionalCode=writeini $char($1) status ignition.on off | writeini $char($1) ignitions KomamuraBankai 1 | writeini $char($1) ignitions KomamuraShikai 0
+
+[KomamuraBankai]
+Name=Bankai
+hp=2
+Str=1.5
+def=1.5
+int=1.5
+spd=1
+Augment=MeleeBonus.TechBonus.EnhanceCriticalHits.EnhanceKatana.IgnoreDefense.IgnoreGuardian.IgnoreMetalDefense
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=TengenSword.TengenSwordSwipe
+Desc=holds his zanpakutou back behind a bit and shouts, "Bankai! Kokujou Tengen Myou'ou!!" A massive being covered in armor appears behind Komamaura and wields an massive sword, which mimics Komamura's movements and attacks.
+
+[EchidnaDragonForm]
+Name=Echidna Dragon Form
+HP=1.1
+Str=1.2
+Def=1.2
+Int=1.2
+Spd=2
+Augment=MeleeBonus.EnhanceDodge.TechBonus.IgnoreMetalDefense.EnhanceZen.IgnoreGuardian
+IgnitionTrigger=10
+IgnitionConsume=20
+Cost=0
+Desc=laughs as her body transforms into a large green plant-looking dragon. She begins to fly around the arena, ready to strike.
+StatusTarget=Self
+StatusType=ConserveTP
+
+[Red_Dragon]
+Name=RedDragon
+hp=1.5
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.EnhanceCriticalHits
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=Red_DragonBurst
+Desc=gains a very serious expression and stares at the battlefield. %users then shouts out, "You better run away while you can!" as a red aura explodes around %user $+ !
+
+[TensaZangetsu]
+Name=TensaSangetsu
+hp=1.3
+Str=1.5
+def=1.5
+int=1.5
+spd=1.5
+Augment=MeleeBonus.TechBonus.EnhanceCriticalHits.EnhanceKatana
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=holds Zangetsu towards the battlefield, placing his left hand on his right arm and shouts out "Bankai!" A large beam of blue energy shoots out towards the battlefield as %user now has a long black jacket on in place of the standard shinigami top and Zangetsu takes the form of a black katana. "Tensa Zangetsu." %user says before quickly moving around the battlefield.
+AdditionalCode=writeini $char($1) status ignition.on off | writeini $char($1) ignitions HollowIchigo 1 | writeini $char($1) ignitions TensaZangetsu 0
+
+[HollowIchigo]
+Name=HollowIchigo
+hp=1.5
+Str=1.5
+def=1.5
+int=1.5
+spd=1.5
+Augment=MeleeBonus.TechBonus.EnhanceCriticalHits.EnhanceKatana
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=DoubleGetsugaTenshou.BlackGetsugaTenshou
+Desc=holds his left hand in front of his face for a moment, before quickly pulling the hand down as a white mask with two large vertical stripes on both sides of the mask. %user $+ 's eyes are also now black and yellow in color.
+
+[Animus]
+Name=Animus
+hp=2
+Str=3
+def=3
+int=3
+spd=3
+Augment=All
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=D-Teneritas.G-Shot.X-Buster
+Desc=closes her eyes for a moment before opening them again. They are now glowing blue as %user activates her true self.
+
+[BlackArmor]
+Name=BlackArmor
+hp=2
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.MagicBonus.RenkeiBonus.EnhanceCriticalHits.EnhanceDodge.IgnoreMetalDefense.EnhanceZen.IgnoreGuardian
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=finds a mysterious capsule with a small 'W' on it. Zero steps inside and his armor changes from red to black, increasing his power.
+
+[DrLightCapsule]
+Name=DrLightCapsule
+hp=2
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.MagicBonus.RenkeiBonus.EnhanceCriticalHits.EnhanceDodge.IgnoreMetalDefense.EnhanceZen.IgnoreGuardian
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=finds a Dr. Light capsule and gains new armor that is white and gold in color, which greatly increases %user $+ 's power.
+
+[SecondBrainForm]
+Name=SecondBrainForm
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=splits open, revealing a heart and eye inside of the brain!
+
+[SecondEyeForm]
+Name=SecondEyeForm
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=spins around for a moment and loses its iris, revealing an open mouth with lots of sharp fangs!
+
+[PlanteraThornMouth]
+Name=PlanteraThornMouth
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=loses its bulb, revealing a mouth full of thorns!
+
+[MetalEyeMouth]
+Name=MetalEyeMouth
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+Techs=CursedInferno
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=spins around for a moment and loses its iris, revealing that it is actually a mechanical mouth with metal fangs!
+
+[MetalEyeLaser]
+Name=MetalEyeLaser
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+Techs=CthulhuEyeLaserBurst
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=spins around for a moment and loses its iris, revealing that it is actually a mechanical eye with a laser cannon!
+
+[SkeletronPrimeSpikes]
+Name=SkeletronPrimeSpikes
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc='s eyes gain a firey glow as metal spikes emerge out from the skull!
+
+[WitchTime]
+Name=WitchTime
+hp=1.3
+Str=1.3
+def=1.3
+int=1.3
+spd=1.3
+Augment=EnhanceDodge.EnhanceCriticalhits.IgnoreGuardian.IgnoreDefense.EnhanceZen
+Effect=Status
+Techs=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=begins to gain a purple glow as her hair becomes long and flowing, with it now missing from the sleeves of her outfit.
+StatusTarget=Enemy
+StatusType=Slow
+AdditionalCode=writeini $char($1) status Auto-Regen on | writeini $char($1) skills Regen 40 | writeini $char($1) techniques Gomorrah $calc(1 + $current.battlestreak)
+
+[UmbranClimax]
+Name=UmbranClimax
+hp=1.5
+Str=1.4
+def=1.4
+int=1.4
+spd=1.4
+Augment=EnhanceDodge.EnhanceCriticalhits.IgnoreGuardian.IgnoreDefense.EnhanceZen
+Effect=Status
+Techs=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Desc=begins to gain a purple glow as her hair becomes long and flowing, with it now missing from the sleeves of her outfit.
+StatusTarget=Enemy
+StatusType=Slow
+AdditionalCode=writeini $char($1) status Auto-Regen on | writeini $char($1) skills Regen 40 | writeini $char($1) techniques Labolas $calc(1 + $current.battlestreak)
+
+[DragonAspect]
+Name=DragonAspect
+hp=1.5
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.RenkeiBonus
+Effect=Status
+Techs=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+StatusTarget=self
+StatusType=Protect.Shell.Resist-Earth.Resist-Fire.Resist-Wind.Resist-Water.Resist-Ice.Resist-Lightning.Resist-Light.Resist-Dark
+Desc=shouts out "MUL QAH DIIV!" and gains the mighty aspect of a dragon. Spectral armor with dragon-like traits also covers %user $+ 's body.
+
+[TwiliPower]
+Name=TwiliPower
+hp=1.5
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.IgnoreGuardian.IgnoreMetalDefense.IgnoreDefense.EnhanceDoubleTurnChance.MagicBonus
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=TwiliTear.TwiliExplosion
+Desc=smirks as she gains a purple glow along with purple Hylian words spinning around herself, also summoning the giant hand in the process. Midna snaps her fingers, the giant hand mimicing the motion and causes dark energy to cover the battlefield, lowering the defense of all enemies.
+StatusTarget=enemy
+StatusType=defensedown
+
+[AesirMight]
+Name=AesirMight
+Hp=1.2
+Str=1.3
+Def=1.3
+Int=1.2
+Spd=1.2
+Augment=MeleeBonus.RenkeiBonus.TechBonus.EnhanceSword.EnhanceKatana.EnhanceHandToHand.EnhanceCriticalHits
+Effect=Status
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=$+ 's body glows a bright white as $gender($1) body bulges with a mighty power, also increasing melee and technique power.
+
+[DragonInstall]
+Name=DragonInstall
+hp=1.2
+Str=2
+def=2
+int=2
+spd=3
+Augment=MeleeBonus.TechBonus.EnhanceSword
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=NapalmDeath
+Desc=goes into a power-up stance and shouts "Dragon Install!" as a black silhouette covers %user before fading a moment later.
+AdditionalCode=writeini $char($1) status Auto-Regen on
+
+[KyKiskeOverdrive]
+Name=KyKiskeOverdrive
+hp=1.2
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.EnhanceSword
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=RisingForce
+Desc=gains a red aura as %user $+ 's power increases!
+
+[ShinGouki]
+Name=ShinGouki
+hp=1.2
+Str=1.2
+def=1.2
+int=1.2
+spd=1.2
+Augment=MeleeBonus.TechBonus.EnhanceZen
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=gains a red aura as %user $+ 's hair turns white and has his power greatly increased.
+AdditionalCode=writeini $char($1) ignitions OniGouki 1 | writeini $char($1) ignitions ShinGouki 0
+
+[SmelterDemonFlame]
+Name=SmelterDemonFlame
+HP=1
+Str=1
+Def=1
+Int=1
+Spd=1
+Effect=Status
+Augment=MagicBonus.TechBonus.EnhanceMelee.EnhanceCriticalHits.EnhanceZen
+Techs=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=engulfs the room in flames as the Smelter Demon gains power.
+StatusTarget=Enemy
+StatusType=Burning
+
+[IronKingFlame]
+Name=IronKingFlame
+HP=1
+Str=1
+Def=1
+Int=1
+Spd=1
+Effect=Status
+Augment=MagicBonus.TechBonus.EnhanceMelee.EnhanceCriticalHits.EnhanceZen
+Techs=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc=roars loudly as the molten iron shoots up and lands on the battlefield, the Iron King gaining power as well.
+StatusTarget=Enemy
+StatusType=Burning
+
+[OniGouki]
+Name=OniGouki
+hp=1.3
+Str=1.7
+def=1.7
+int=1.7
+spd=1.7
+Augment=MeleeBonus.TechBonus.EnhanceZen
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=gains a red aura as %user $+ 's hair turns white and now resembles a blue oni, along with gaining vast power by becoming one with the Satsui no Hadou entirely.
+
+[ObitoSharingan]
+Name=ObitoSharingan
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=MeleeBonus.TechBonus.EnhanceZen.EnhanceHandToHand.EnhanceCriticalHits
+Effect=Status
+Techs=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc='s eyes gain three tomoe in a pinwheel style as %user activates the Sharingan, gaining a slight bit of power.
+StatusTarget=Enemy
+StatusType=Slow
+AdditionalCode=writeini $char($1) status ignition.on off | writeini $char($1) ignitions ObitoMangekyouSharingan 1 | writeini $char($1) ignitions ObitoSharingan 0
+
+[ObitoMangekyouSharingan]
+Name=ObitoMangekyouSharingan
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=MeleeBonus.TechBonus.EnhanceZen.EnhanceHandToHand.EnhanceCriticalHits
+Effect=Status
+Techs=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc='s eyes gain a design that is three stretched triangles evenly spaced around the pupil that each curve at the top around the eye to form a circle, making it similar to a pinwheel. At the same time, Obito uses the other part of Kamui to give himself intangibility for a short time.
+StatusTarget=Self
+StatusType=Invincible
+AdditionalCode=
+
+[MadaraJinchuuriki]
+Name=MadaraJinchuuriki
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=MeleeBonus.TechBonus.EnhanceZen.EnhanceHandToHand.EnhanceCriticalHits
+Techs=
+IgnitionTrigger=0
+IgnitionConsume=0
+Cost=0
+Desc='s hair and skin goes pale and now wears a full-bodied black garment with black pants, gloves, and boots, over which he wears a flowing white robe. He also gains the Rinne Sharingan as a third eye, that has a ripple-like pattern which spreads over the eyeball, with red sclerae and irides, containing a pattern of nine tomoe.
+
+[WinterKnightMantle]
+Name=Winter Knight Mantle
+hp=2
+Str=2
+def=3
+int=3
+spd=2
+Augment=MagicBonus.MeleeBonus.EnhanceZen
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+StatusTarget=Self
+StatusType=DefenseUp
+Desc=channels the power of the Winter Knight, increasing the power of ice magic, strength, stamina, while also adjusting the threshold for pain to be nonexistent.
+
+[Murcielago]
+Name=Murcielago
+hp=2
+Str=2
+def=2
+int=2
+spd=5
+Augment=TechBonus.MeleeBonus.EnhanceZen.EnhanceDagger.EnhanceGun
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=grins as a black silhouette covers her, leaving only white for the lenses on the glasses and a large smile.
+
+[ArmigerUnleashed]
+Name=Armiger Unleashed
+hp=2
+Str=6
+def=6
+int=6
+spd=6
+Augment=All
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=activates the Power of Kings, as thirteen white crystal weapons float around Noctis for a moment before vanishing, granting increased power!
+StatusTarget=Self
+StatusType=Invincible
+
+[Superbolide]
+Name=Superbolide
+hp=1
+Str=5
+def=5
+int=5
+spd=5
+Augment=EnhanceSword.EnhanceRanged.TechBonus.EnhanceParry.MeleeBonus
+IgnitionTrigger=10
+IgnitionConsume=20
+Cost=0
+Techs=
+Desc=aims the gunblade into the air and fires a burst of aether energy. The energy creates a barrier which absorbs attacks for a short time while boosting attack power.
+StatusTarget=Self
+StatusType=Invincible
+
+[QuickRecipeh_Perfect]
+Name=Quick Recipeh Perfect
+hp=5
+Str=6
+def=6
+int=6
+spd=6
+Augment=All
+IgnitionTrigger=5
+IgnitionConsume=5
+Cost=0
+Techs=
+Desc=summons a portable cooking station and begins to cook in the middle of battle. After the cooking is finished, Ignis takes a bite out of the food and laughs in delight while holding out the dish. It seems it turned out perfect!
+StatusTarget=Self
+StatusType=Invincible
+
+[QuickRecipeh_Great]
+Name=Quick Recipeh Great
+hp=3
+Str=3
+def=3
+int=3
+spd=3
+Augment=TechBonus.MeleeBonus.UtsusemiBonus.EnhanceZen.RenkeiBonus.EnhanceBloodBoost.EnhanceDodge.EnhanceParry.EnhanceBlocking
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=summons a portable cooking station and begins to cook in the middle of battle. After the cooking is finished, Ignis takes a bite out of the food and clenches his fist in excitement. It seems the food turned out great!
+
+[QuickRecipeh_Bad]
+Name=Quick Recipeh Bad
+hp=1
+Str=1.2
+def=1.2
+int=1.2
+spd=1.2
+Augment=MeleeBonus.TechBonus
+IgnitionTrigger=15
+IgnitionConsume=15
+Cost=0
+Techs=
+Desc=summons a portable cooking station and begins to cook in the middle of battle. After the cooking is finished, Ignis takes a bite out of the food and sighs while shaking his head. It seems the food turned out bad!
+
+[QuickRecipeh_Terrible]
+Name=Quick Recipeh Terrible
+hp=0.5
+Str=0.5
+def=0.5
+int=0.5
+spd=0.5
+Augment=
+IgnitionTrigger=20
+IgnitionConsume=20
+Cost=0
+Techs=
+Desc=summons a portable cooking station and begins to cook in the middle of battle. After the cooking is finished, Ignis takes a bite out of the food and hunches over while coughing. It seems the food gave him food poisoning!
+StatusTarget=Self
+StatusType=Poison
+
+[ThisIsWillow]
+Name=This is Willow
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=vanishes before all light fades from the battlefield. After a moment, he returns but now with a strange black mask covering his face which has a silver design on the front of the mask, along with black attire and a long black coat. He looks at the battlefield and then laughs in a strange voice!
+
+[ThisIsItchweeed]
+Name=This is Itchweeed
+hp=1
+Str=1
+def=1
+int=1
+spd=1
+Augment=
+IgnitionTrigger=10
+IgnitionConsume=10
+Cost=0
+Techs=
+Desc=vanishes before all light fades from the battlefield. After a moment, he returns but now with a a black and purple jester hat and yellow goggles with black lenses covering his eyes. He then picks up a weed eater and begins to laugh like a maniac!
+
+[Ame-no-Murakumo]
+Name=Ame no Murakumo
+hp=1.5
+Str=1.2
+Def=1
+Int=1
+Spd=1
+Augment=
+Ignitiontrigger=1
+IgnitionConsume=50
+Cost=0
+Techs=
+Desc=vanishes from the battlefield.  After a moment the heroes hear "WILD AND PURE AND FOREVER FREE!" before they notice that Susano has become even larger.  The dome cracks and he towers over everything.  His blade is now the size of a skyscraper.  
+
+[BloodFury]
+Name=BloodFury
+Cost=0
+hp=1.5
+Str=2
+def=2
+int=2
+spd=2
+Augment=MeleeBonus.TechBonus.EnhanceSword.EnhanceRanged
+IgnitionTrigger=10
+IgnitionConsume=10
+Desc=yells out, giving into the blood rage as a red aura covers Rayne as the wristblades glow red and extend in length!
+AdditionalCode=writeini $char($1) techniques BloodStorm 1000

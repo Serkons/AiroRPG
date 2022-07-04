@@ -1,0 +1,7 @@
+﻿The character here is a virtual nickname that you need to play here.
+Note that the upcoming messages can only reach you if your main nick is registered with NickServ.
+If you haven't already done so, follow this guide: https://game-igame--rpg-de.translate.goog/docu/index.php?title=Start-_und_Charakterbefehle&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+To create your character now, only one command is needed. Everything else will be explained to you later. So write now 4(7!create char4), to register your account at AiroRPG.
+You will now be contacted privately with some data, please note the password there.
+After that you can jump to the next step, the password change.
+That's why you write 4(7!tut-en-pass4)

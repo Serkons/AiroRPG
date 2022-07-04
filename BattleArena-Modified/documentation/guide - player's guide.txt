@@ -1,0 +1,31 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Battle Arena Bot
+Programmed by James "Iyouboushi" (Iyouboushi@gmail.com)
+FREEWARE!
+https://github.com/Iyouboushi/mIRC-BattleArena
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+PLAYER'S GUIDE
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Hello and welcome!  If you're reading this then you're probably interested in the Battle Arena bot. You may have noticed that there is a !help command built into the bot but this game has grown to such size that the help command is just not enough any more.  
+
+ _______________________________________________________________________
+/                                                                       \
+|                          GAME OVERVIEW                                |
+\_______________________________________________________________________/
+
+Battle Arena is an mIRC game created by James “Iyouboushi” of irc.esper.net. In this game you create a character to kill monsters and bosses to gain orbs and new weapons/skills/techniques. It's similar to Devil May Cry, as that's really the inspiration, but it includes more than just DMC monsters/bosses/weapons/items. The whole purpose was to make an mIRC game that is completely automated in terms of the battle system.
+
+In Battle Arena players join the battle when the bot announces an open battle. After a few minutes, it will generate monsters/bosses and have them join the battle and the battle will start. When it’s a monster’s or boss’ turn, they will automatically do their things. When it’s the player’s turn, there’s a few commands you can do (attack with a weapon, attack with a technique, do a skill, use an item). If the player idles for too long the bot will force their turn and skip over them. This is done so that someone can’t disappear for an hour and cause the battle to drag on forever.
+
+There’s a bunch of weapons that can be bought and each weapon has a few techniques attached to them. You buy weapons using black orbs when you obtain via winning boss fights and being alive at the end of one. You purchase items, techniques, and other assorted things using red orbs. There's also “Allied Notes” which is a type of special currency that can be used to purchase additional items and mechs.
+
+That’s really the gist of the game.
+
+ _______________________________________________________________________
+/                                                                       \
+|                             HELP ME!!                                 |
+\_______________________________________________________________________/
+
+The game has a full wiki with all the information you will ever need to play and to create new content.  Please visit the wiki at:
+
+https://github.com/Iyouboushi/mIRC-BattleArena/wiki

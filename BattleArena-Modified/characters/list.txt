@@ -1,0 +1,6 @@
+[Arrow]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 5000)
+SellPrice=250
+Desc=A common arrow for use by bows.
+Exclusive=yes

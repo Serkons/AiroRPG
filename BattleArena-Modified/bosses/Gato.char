@@ -1,0 +1,286 @@
+[BaseStats]
+Hp=$iif($return_playersinbattle > 1, 2500, 1500)
+Tp=30
+Str=50
+Def=50
+Int=50
+Spd=50
+IgnitionGauge=2
+Name=Gato
+
+
+[Battle]
+Hp=2500
+Tp=30
+Str=50
+Def=50
+Int=50
+Spd=50
+IgnitionGauge=0
+Status=alive
+
+
+[Rage]
+RageBar=0
+RageCountDown=0
+
+
+[Descriptions]
+Char=is a large robot with cat ears and is holding a microphone.
+Rage=screams in rage 
+BossQuote=They call me Gato. I have metal joints. Beat me up and earn 15 Silver Points!
+DeathMessage=raises the microphone and says: I lost, you won! Here's 15 points. Now Wasn't that fun!?
+
+
+[Stuff]
+RedOrbs=0
+BlackOrbs=1
+ShopLevel=1.0
+Drops=
+
+[Info]
+Flag=monster
+Gender=its
+Gender2=its
+password=battlearena
+passhurt=0
+LastSeen=N/a
+LastIP=N/a
+Created=N/a
+CanTaunt=false
+Streak=-1000
+JustReleaseDefense=100
+BossLevel=9
+IgnoreElementalMessage=true
+;=======================================
+; These are optional flags you can set:
+;========================================
+; STAGGER:  do you want the monster to be able to be staggered after being hurt for a certain # of damage? 
+; CanStagger=yes/no  
+; StaggerAmount=$rand(#,#)   
+; 
+; IGNORE RAGEMODE
+; RageMode=ignore 
+;
+; IGNORE QUICKSILVER
+; IgnoreQuicksilver=true/false 
+;
+; AI TYPE: berserkers will attack their own allies, defenders won't get a turn. healers only heal, 
+; counteronly will counter melee/take 0 damage from everything else, and techonly only uses techs. Leave blank for normal.
+; ai_type=
+;
+; STREAK MIN/MAX: Streak= for the minimum streak it takes for the monster to show up. StreakMax= for max.
+; Streak=
+; StreakMax=
+;
+; FLEEING: Do you want monsters to be able to flee the battle?
+; CanFlee=true/false
+;
+; SPAWNING ANOTHER MONSTER UPON DEATH: If set, when this monster is killed, it'll summon another one that's set.
+; SpawnAfterDeath=nameofmonster
+;
+; BOSS LEVELS are used for bosses that are summoned via portal items. You can make them harder or easier by setting a level.
+; BossLevel=
+; 
+; IGNORE DRAIN is true or false. If set to true, stuff like drainsamba won't work.
+; IgnoreDrain=true/false
+;
+; BIOME is for if you want the boss to only appear under certain battlefields. You can list multiple with periods inbetween.
+; Biome=
+;
+; MOONPHASE is for if you want the monster to only appear during a certain moon phase. You can only list one.
+; Valid list is: Full Moon or Crescent Moon or Gibbous Moon or New Moon or Quarter Moon or Blood Moon  (with the spaces)
+; Moonphase=
+;
+; TIMEOFDAY is for if you want the monster to only appear during certain times of days (game time, not real life)
+; Valid list is: Morning, Noon, Evening and Night.
+; TimeOfDay=
+;
+; Can the monster taunt?   Assumed to be true if blank.
+; CANTAUNT=true/false
+;
+; TAUNTFILE is an optional taunt file if you want your boss to have unique taunts.  If blank it will use the default taunts.txt
+; TAUNTFILE=
+;
+; GUARDIAN is a monster that covers the boss. While the monster is alive the boss will take no damage from items/techs/attacks
+; Guardian=
+;
+; JUSTRELEASEDEFENSE is to block "Just Release" the # is a percent of the damage blocked. 0 = no block, 100 = 100% blocked
+; JustReleaseDefense=
+;
+; HURTBYTAUNT is a special flag. If set to true, taunts done against this boss will deal damage.
+; HurtByTaunt=true/false
+;
+; HEALBYTAUNT is a special flag. If set to true, taunts done against this boss will heal damage. 
+; HealByTaunt=true/false
+;
+; Does the monster appear in President battles? True=yes/False=no
+; IgnorePresident=
+;
+; IMMUNETOMAGIC= is to determine if a boss is completely immune to magic or not. True/false.
+; ImmuneToMagic=true/false
+;
+; DEATHCONDITIONS= if you want the boss to only only if a certain action is performed, you can set it here. Not set by default.
+; Valid conditions are: melee, magic, tech, item, renkei, status, magiceffect
+; You can list multiple by putting a period inbetween such as: melee.magic.status 
+; If the boss is killed by something that isn't the death condition, it'll be revived until killed with the condition.
+; DeathConditions=
+
+[monster]
+; Type is the type of monster it is. 
+type=Android
+
+; TechLearn is a special flag where if it's hit by a tech, it will become immune to that tech for the rest of the battle.
+; Change it to "true" to turn it on.
+TechLearn=false
+
+; Size is the size of the monster. Small/Medium/Large
+size=Large
+
+[Status]
+Poison=no
+HeavyPoison=no
+Regenerating=no
+Blind=no
+Frozen=no
+Shock=no
+Burning=no
+Drowning=no
+Earth-quake=no
+Heavy-Poison=no
+silence=no
+intimidated=no
+weight=no
+poison-heavy=no
+virus=no
+virus.timer=1
+charmed=no
+charmer=noonethatIknowlol
+charm.timer=1
+amnesia=no
+paralysis=no
+amnesia.timer=1
+paralysis.timer=1
+tornado=no
+drunk=no
+drunk.timer=1
+zombie=no
+slow=no
+sleep=no
+stun=no
+MPRegenerating=no
+
+[Weapons]
+Equipped=GatoFists
+GatoFists=10
+
+
+[Skills]
+MartialArts=100
+Zen=5
+Resist-Charm=100
+Resist-Poison=100
+Resist-Zombie=100
+Resist-Intimidate=100
+Resist-Amnesia=100
+Resist-Blind=100
+Resist-Slow=100
+Resist-Stop=100
+Resist-Paralysis=100
+Resist-confuse=100
+Resist-Drunk=100
+Resist-Weaponlock=100
+Resist-Stun=100
+Resist-Sleep=100
+Resist-Petrify=60
+Resist-Stun=30
+
+[Techniques]
+DoublePunch=10
+BoxingGlove=10
+
+
+[Item_Amount]
+
+
+[Styles]
+Equipped=Guardian
+Guardian=10
+
+[modifiers]
+; This section controls how much resistance/weakness this monster has the elements and weapon types.
+; 100 = it does 100% normal damage. Over 100 = weakness, under 100 = resistance. 0 = immune.
+Heal=none
+Earth=80
+Fire=80
+Wind=80
+Water=80
+Ice=80
+Lightning=120
+Light=80
+Dark=80
+HandToHand=80
+Whip=80
+Sword=80
+Gun=80
+Rifle=80
+Katana=80
+Wand=80
+Spear=80
+Scythe=80
+Glyph=80
+GreatSword=80
+Bow=80
+Axe=80
+Dagger=80
+Mace=80
+Stave=80
+EnergyBlaster=120
+Crissaegrim=50
+Valmanway=50
+Naturaleza=60
+AsuranFists=45
+VictorySmite=45
+ShinjinSpiral=45
+MillionStab=45
+VorpalBlade=45
+DeathBlossom=45
+SwiftBlade=45
+ChantDuCygne=45
+Requiescat=45
+Resolution=45
+Guillotine=45
+Insurgency=45
+Pentathrust=45
+Drakesbane=45
+Stardiver=45
+PyrrhicKleos=45
+Evisceration=45
+DancingEdge=45
+Ultima=45
+Kaustra=45
+Ashes=45
+Dismay=45
+ThousandCuts=45
+Tachi:Shoha=50
+Tachi:Rana=50
+Rainstorm=45
+SpinningAttack=45
+TornadoKick=45
+CircularChain=45
+CircleBlade=45
+SonicThrust=45
+ApexArrow=45
+UrielBlade=45
+FellCleave=45
+AeolianEdge=45
+Twin_Slice=45
+LightningStrike=45
+BladeBeamII=45
+TrillionStabs=45
+DoubleBackstab=45
+Chou_Kamehameha=45
+BloodBath=45
+UltimaII=45
+KaustraII=45
+Chivalry=45

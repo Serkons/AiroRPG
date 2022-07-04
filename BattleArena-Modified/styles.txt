@@ -1,0 +1,10 @@
+Kampfstyles verleihen dir im Kampf selbst zusätzliche Boni und können jederzeit Gewechselt werden.
+Sie Besitzen ein MaxLevel und Erfahrung die das Level erhöhen können bis Max Level 10.
+Am Anfang hat jeder Spieler 3 Styles Trickster, Guardian und Weaponmaster.
+Was diese Styles und andere bewirken kann man hier nachlesen:
+https://game.igame-rpg.de/docu/index.php?title=Spieler_Styles
+Wechseln oder Kaufen eines neuen Styles (Bezahlbar mit BlackOrbs)
+7 1. Zum wechseln des Styles schreibe !mystyle change stylename
+7 2.Zum kaufen eines Styles schreibe erst !ishop list styles und dann !ishop buy style stylename
+Jetzt solltes du mit den Grundlegenden ausgerüstet sein bereit für den Letzten Teil?
+Dann Schreibe 7!tut-ger-kampf

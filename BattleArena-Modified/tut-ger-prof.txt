@@ -1,0 +1,23 @@
+-> HP = Lebenspunkte (Sinkt dies auf 0 wirst du für kampfunfähig erklärt und der Kampf endet)
+-> TP = Technikpunkt (Sinkt dies auf 0 kannst du keine Technik mehr ausführen)
+-> Ignitions Gauge = bleibt bei 0 und kann gekauft werden erhöht sich nach jedem kampf und 
+wird für Boots benötigt
+-> Level = Dein Level berechnet durch die 4 Attribute (Str, Def, Int, Spd)
+-> Armor Level = Das Level deiner Ausrüstung
+-> Armor Protection = Wieviel prozent des Eingehenden Schadens du durch die Rüstung abwehrst
+-> Status = Dein Status (Es gibt Zahlreiche Statuseffecte die hier nicht aufgelistet werden)
+Du findest sie hier; https://game.igame-rpg.de/docu/index.php?title=Status_Effekte
+-> RoyalGuard Meter = Der Gesammelte Schaden durch den Skill RoyalGuard. Kann durch den
+den Skill "JustRelease" freigesetzt werden
+-> Capacity Points = Ab Siegesserie 100 wird nach jeden Sieg 1 Punkt vergeben.
+-> Enhancement Points = Wenn die Capacity Points denn Wert 10000 ereichen wird 1 Punkt gutgeschrieben
+Diese können für Zusatzerweiterungen ausgegeben werden
+-> LoginPoints = Diese Punkte können für Vertrauens NPCs ausgegeben werden
+-> Strength = Deine Stärke wird für den Befehl /me normalattack berechnet
+-> Defence = Deine Verteidigung gibt an wieviel schaden du verteidigen kannst
+-> Inteligence = Dies bestimmt wieviel schaden du mit Techniken austeilst aber auch abwehrst.
+wird zusätzlich zur Defence dazuberechnet um zu Verteidigen.
+-> Speed = Die Schnelligkeit bestimmt die Zugreihenfolge im Battle Order
+Alles Andere ist die Momentan angelegte Ausrüstung.
+
+

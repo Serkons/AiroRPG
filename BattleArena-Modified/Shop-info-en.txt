@@ -1,0 +1,14 @@
+﻿Every time you should buy something in the shop are excluded7(Items and weapons as well as styles, limit breaks)
+So the price will increase this is determined by the shop level. So every time you update your weapon or
+If you increase the character values, the price increases slightly.
+This means that if you buy the value Str for the 1st time and your shop level is level 1.0, it will cost a little more for the 2nd purchase.
+So if we now want to increase character values such as HP STR DEF INT SPD IG, how do we proceed:
+1. We need the price list of the values we want to increase, so we write 7!ishop list stats
+2. If we now want to have +50 more HP permanently, we write 7!ishop buy stats HP.
+3. If everything went well, the credit will be deducted and the shop level increased
+4. We can also write a number after the following command: 7!ishop buy stats HP 5
+This means that we permanently bought 250 life points.
+5. We can do the same with the other values, you can decide here.
+But always remember to monitor your balance.
+Next I want to tell you something about the weapons and techniques
+So write 7!tut-en-w-t

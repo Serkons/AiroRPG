@@ -1,0 +1,8 @@
+﻿Der Charakter ist hier ein virtueller Nickname, den du benötigst, um hier zu spielen.
+Beachte das die kommenden Nachrichten nur dich erreichen können, wenn dein Haupt Nick bei NickServ registriert ist.
+Falls dies noch nicht gemacht wurde, folge dieser Anleitung: https://game.igame-rpg.de/docu/index.php?title=Start-_und_Charakterbefehle
+Um jetzt deinen Charakter zu erstellen, ist nur ein Befehl nötig. Alles andere wird dir dann noch erklärt.
+Schreibe also nun 4(7!create char4), um deinen Account bei AiroRPG zu registrieren. 
+Du wirst nun Privat angeschrieben, mit einigen Daten bitte merke dir dort das stehende Passwort.
+Danach kannst du zum nächsten schritt springen, der Passwortänderung.
+Dazu schreibst du 4(7!tut-ger-pass4)

@@ -1,0 +1,226 @@
+[BaseStats]
+Hp=9000
+Tp=500
+Str=50
+Def=50
+Int=50
+Spd=50
+Name=Dark Magician
+
+
+[Battle]
+Hp=9000
+Tp=500
+Str=50
+Def=50
+Int=50
+Spd=50
+LimitBreakPercent=50
+Status=alive
+
+
+[Rage]
+RageBar=0
+RageCountDown=0
+
+
+[Descriptions]
+Hused=1
+Dused=1
+Char=is a powerful mage that wears purple robes. He carries a green staff in his hand. The signature card of Yugi Mutou.
+Rage=a dark aura appears around %user $+ !
+
+
+[Stuff]
+RedOrbs=0
+BlackOrbs=1
+ShopLevel=1
+RedOrbsSpent=0
+BlackOrbsSpent=0
+
+
+[Info]
+Gender=his
+Gender2=him
+password=dbzrpg
+passhurt=0
+LastSeen=N/a
+LastIP=N/a
+Created=Fri Jun 22 19:56:53 2012
+Flag=NPC
+CanTaunt=false
+IgnoreQuickSilver=true
+ActionsPerTurn=1
+BattleStats=IgnoreHP
+SkipDoubleTurns=true
+
+
+[Status]
+Poison=no
+HeavyPoison=no
+Regenerating=no
+Blind=no
+Frozen=no
+Shock=no
+Burning=no
+Drowning=no
+Earth-quake=no
+Heavy-Poison=no
+silence=no
+intimidated=no
+weight=no
+poison-heavy=no
+virus=no
+virus.timer=1
+charmed=no
+charmer=noOneThatIKnow
+charm.timer=1
+amnesia=no
+paralysis=no
+amnesia.timer=1
+paralysis.timer=1
+tornado=no
+drunk=no
+drunk.timer=1
+zombie=no
+slow=no
+sleep=no
+stun=no
+MPRegenerating=no
+boosted=no
+freezing=no
+curse=no
+poison.timer=1
+KiRegenerating=no
+curse.timer=1
+slow.timer=1
+zombie.timer=1
+
+
+[Weapons]
+Equipped=BlackMagic
+BlackMagic=500
+
+
+[Skills]
+Zen=5
+ClearMind=3
+MartialArts=100
+Wizardry=100
+WeaponBash=1
+Impetus=20
+DesperateBlows=1
+SwiftCast=1
+Duality=1
+DoubleCast=1
+perfectdefense.on=on
+Resist-Amnesia=100
+Resist-Blind=100
+Resist-Charm=100
+Resist-Confuse=100
+Resist-Curse=100
+Resist-Disarm=100
+Resist-Drunk=100
+Resist-Intimidate=100
+Resist-Paralysis=100
+Resist-Petrify=100
+Resist-Poison=100
+Resist-Silence=100
+Resist-Sleep=100
+Resist-Slow=100
+Resist-Stop=100
+Resist-Stun=100
+Resist-Terrified=100
+Resist-Weaponlock=100
+Resist-Zombie=100
+DieHard=30
+
+
+[Techniques]
+BlackMagicAttack=500
+ThousandKnives=500
+Dark=$iif($current.battlestreak isnum 0-99, 500, 0)
+DarkII=$iif($current.battlestreak isnum 100-199, 500, 0)
+DarkIII=$iif($current.battlestreak isnum 200-399, 500, 0)
+Darkness=$iif($current.battlestreak isnum 400-499, 500, 0)
+DarknessII=$iif($current.battlestreak isnum 500-599, 500, 0)
+DarknessIII=$iif($current.battlestreak !isnum 0-599, 500, 0)
+Darkra=$iif($current.battlestreak isnum 0-299, 500, 0)
+DarkraII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Fire=$iif($current.battlestreak isnum 0-99, 500, 0)
+FireII=$iif($current.battlestreak isnum 100-299, 500, 0)
+FireIII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Firaja=$iif($current.battlestreak isnum 0-299, 500, 0)
+FirajaII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Ice=$iif($current.battlestreak isnum 0-99, 500, 0)
+IceII=$iif($current.battlestreak isnum 100-299, 500, 0)
+IceIII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Blizzaja=$iif($current.battlestreak isnum 0-299, 500, 0)
+BlizzajaII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Thunder=$iif($current.battlestreak isnum 0-99, 500, 0)
+ThunderII=$iif($current.battlestreak isnum 100-299, 500, 0)
+ThunderIII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Thundaja=$iif($current.battlestreak isnum 0-299, 500, 0)
+ThundajaII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Water=$iif($current.battlestreak isnum 0-99, 500, 0)
+WaterII=$iif($current.battlestreak isnum 100-299, 500, 0)
+WaterIII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Waterja=$iif($current.battlestreak isnum 0-299, 500, 0)
+WaterjaII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Aero=$iif($current.battlestreak isnum 0-99, 500, 0)
+AeroII=$iif($current.battlestreak isnum 100-299, 500, 0)
+AeroIII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+Aeroja=$iif($current.battlestreak isnum 0-299, 500, 0)
+AerojaII=$iif($current.battlestreak !isnum 0-299, 500, 0)
+
+
+[Item_Amount]
+
+
+[Augments]
+BlackMagic=HurtEthereal.MeleeBonus.TechBonus.RenkeiBonus.MagicBonus
+
+
+[Styles]
+Equipped=SpellMaster
+SpellMaster=5
+
+
+[LimitBreaks]
+BlackMagicAttackII=1
+
+[modifiers]
+Heal=none
+Earth=90
+Fire=90
+Wind=90
+Water=90
+Ice=90
+Lightning=90
+Light=90
+Dark=0
+HandToHand=110
+Whip=110
+Sword=110
+Gun=110
+Rifle=110
+Katana=110
+Wand=110
+Spear=110
+Scythe=110
+Glyph=110
+GreatSword=110
+Bow=110
+Axe=100
+Dagger=110
+Mace=110
+Stave=110
+EnergyBlaster=110
+Lightsaber=110
+Hammer=110
+Bat=110
++Fire=90
++Ice=90
++Wind=90
++Water=90
++Dark=0

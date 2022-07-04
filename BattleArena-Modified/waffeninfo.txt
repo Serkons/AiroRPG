@@ -1,0 +1,14 @@
+Waffen und Techniken in diesem Spiel sind sehr wichtig du solltest wenn es möglich ist mehrere besitzen.
+Warum? Weil es Monster gibt die gegen bestimmte arten von Waffen und Techniken auf immun sein können.
+Waffen werden mittels BlackOrbs 1x gekauft und können dann durch RedOrbs aufgelevelt werden bis Level 250.
+Danach könne sie mittels Gegenstände bis zu einem MaxLevel von 500 hochgestuft werden.
+Zum Kaufen von Waffen werden BlackOrbs benötigt die man durch Bosskämpf als Belohnung erhält.
+Techniken werden mittels KillCoins durch das Besiegen von Monstern gekauft und können auch bis Level 500 hochgestuft werden.
+Willst du eine Technik zu einer Waffe kaufen so muss die Waffe zuvor ausgerüstet werden.
+Kaufen wir nun die erste Waffe und rüsten sie aus, Wie gehen wir vor:
+1. Wir rufen die Waffenliste des IngameShops auf durch eingabe von 7!ishop list weapons
+2. Die Zahl in den () ist der Preis der BlackOrbs.
+3. Nun Schauen wir wieviele wir davon wir haben durch eingabe von 7!balance
+4. Haben wir uns für eine Waffe entschieden so kaufen wir diese durch eingabe von 7!ishop buy weapon waffenname
+5. Nun können wir diese mittels 7!arm weaponname ausrüsten.
+Im Nächsten Schritt erfährst du etwas über Skills schreibe dazu 7!tut-ger-skills

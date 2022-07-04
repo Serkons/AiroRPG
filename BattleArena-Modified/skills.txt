@@ -1,0 +1,13 @@
+Wir haben es für neulinge etwas Vereinfacht bis zu Level 5 kannst du Skills und Techniken mit RedOrbs bezahlen.
+Dennoch ist hier etwas wichtiges zu beachten:
+4Es Werden nur die Techniken angezeigt für die Aktuell ausgerüstete Waffe
+Was für Auswirkungen die einzelnen Skills haben kannst du hier nachlesen:
+https://game.igame-rpg.de/docu/index.php?title=Skills
+Wie kaufen wir Skills und Techniken?
+1. Führe folgende befehle aus: 7!ishop list skills oder 7!ishop list techs
+2. Entscheide dich für einen Skill oder eine Technik.
+3. Kaufe den Skill oder die Technik durch folgende befehle:
+1,1----->7!ishop buy skill skillname - Für einen Skill
+1,1----->7!ishop buy Tech TechName  - Für eine Technik
+Im Vorletzten Teil behandeln wir die "Wahl des Richtigen Styles" Schreibe also jetzt:
+7!tut-ger-styles

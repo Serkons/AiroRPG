@@ -1,0 +1,55 @@
+[Info]
+Name=The Cave of Rakna-Kadaki
+Rooms=8
+PlayersNeeded=1
+PlayersRecommended=3
+Level=200
+FinalRoom=7
+StartBattleDesc=In the far desert of Whang Shi Tong, a large locked cave is found where the terrible giant spider Rakna Kadaki resides. Can the heroes save this monster from the destroying of the Whang Shi Tong library?
+ClearDungeonDesc=* The group has protected the Whang Shi Tong library from RakNa Kadaki. This knowledge in this book realm must continue to exist.. [Clear time: %total.battle.duration $+ ]
+DungeonFail=* Unfortunately, the group failed to protect the Whang Shi Tong book series from Rakna Kadaki. This giant spider tears up the series of books into pieces. Years go by and it is rebuilt in the hope that Rakna Kadaki can be stopped again.
+
+; Starting room is always 0, after successfully clearing a room it will be  room#+1 automatically
+[0]
+Desc=The group begins the journey into the rakna realm and opens the gate to the cave. In the first room you can prepare before going to the next section of the cave.
+Battlefield=Kadaki Entrance
+
+
+[1]
+Desc=When the first section of the cave was discovered, the heroes noticed sticky webs on the walls and large holes from which poisonous spiders emerged. Can the heroes make it to the next room?
+Battlefield=Kadaki Entrance
+Monsters=Toxic_arachnide.Toxic_arachnide.Toxic_arachnide
+
+[2]
+Desc=When you enter the next section, it gets very hot because fiery spiders cavort around here.
+Battlefield=Kadaki Fire Cave
+Monsters=Fire_Arachnide.Fire_Arachnide.Fire_Arachnide
+
+[3]
+Desc=The journey continues to the Frosty Caves section here it gets cold and you should be careful because some spiders don't like visitors here.
+Battlefield=Kadaki Ice Cave
+Monsters=Ice_Arachnide.Ice_Arachnide.Ice_Arachnide.
+
+
+[4]
+Desc=Now it goes down over a ladder to the next section there is a room to relax before you continue.
+RestoreRoom=true
+Battlefield=Kadaki Ice Cave
+
+[5]
+Desc=Let's go to the next cave from this one hears strange noises what our heroes will probably find here?
+Monsters=Toxic_Arachnide.Fire_Arachnide.Sup_Arachnide
+Battlefield=Kadaki Ice Cave
+
+[6]
+Desc=At the next section you can hear a loud grunt considering that you are very close to Rakna Kadaki. Be careful of the Sup Arachnids
+Battlefield=Kadaki Champer
+Monsters=Sup_Arachnide.Sup_Arachnide.Fire_Arachnide.Ice_Arachnide
+
+
+[7]
+Desc=When the last cave is entered, Rakna Kadaki is angry waiting to take revenge. She says, "You shouldn't have killed my children, now you're going to pay for it."
+Battlefield=Rakna Kadaki Cave
+Monsters=Rakna-Kadaki.Sup_Arachnide.Sup_Arachnide
+bossroom=true
+

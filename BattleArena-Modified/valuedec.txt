@@ -1,0 +1,20 @@
+4var1 stands for the Cost and must replaced by a number
+4var2 stands for the Type of the weapon and must replaced by the following: 7 axe, bat, bow, buzzsaw, chainsaw, dagger, energyblaster, glyph, greatsword, gun, hammer, handtohand, katana, lightsaber, mace, nunchucku, rifle, scythe, spear, stave, sword, wand, whip
+4var3 stands for the Info it will shown when someone uses 7!info weapon name and must replaced by an text with _ as spaces it will be converted
+4var4 stands for the Abilities These are the Technicques of the Weapon. And must set up
+4var5 stands for the Element Element is the elemental property of the weapon. Set to none if you don't want the weapon to have any. Valid elements: earth, fire, ice, lightning, water, wind, none if you want "none" replace it with none
+4var6 stands for the Hits The Hits of the weapon when using melee attacks. you must replace ist by a numer or a range by $rand(num1,num2
+4var7 stands for the BasePower and is the Starting damage value of the Weapon and must be setted up. 
+4var8 stands for the Upgrade and must not set for monsterweapons you must replace this with 0
+4var9 stands for the IgnoreDefense and must be setted up by a number. 0-100 because 100=100% so it will ignore the complete defense of the target.
+4var10 stands for the HurtEthereal and must replace by true or false. If set false (or the value is missing), the weapon will go through an Ethereal monster doing 0 damage. This flag will also apply to techs if it is set.
+4var11 stands for the 2Handed and must replace by true or false if you want that weapon is 2 handed
+4var12 stands for the EnergyCost and must replace with 0 if the weapon should not be a mech weapon
+4var13 stands for the CanShieldReflect  and must replace with true or false. If True then the attack will always be countered.
+4var14 stands for the CanCounter and must replace with true or false. If True there's a small chance that the attack can be countered by the target.
+4var15 stands for the SpecialWeapon and must replace with true or false. If set to true the cost of the weapon can be 0 without flagging the anti-cheat system
+4var16 stands for the LinkedWeapon and must replace with the weapon you will linked to be stronger
+4var17 stands for the AmmoRequired and must replace with yes or no if you want that the weapon has an ammo
+4var18 stands for the AmmoAmountNeeded and must replace with a number of ammo needed
+4var19 stands for the Legendary and must replace with yes or no. If the weapon is legendary or not. All this does is make the weapon name be in yellow/gold text so that it stands out in the player weapon list
+4var20 stands for the MinLevel and must replace with a number for the level

@@ -1,0 +1,7 @@
+12::[TechPoints]::
+2TechPoints is similar to ManaPoints in other games.  TechPoints is used for your techniques.  When you perform techniques it will consume TechPoints.  When it's your turn in battle you will receive some TechPoints back if you've used any.
+12::[How do I check my TechPoints?]::
+2Syntax: 12!TechPoints
+2This command will display how much TechPoints you have in the format of current / max
+12::[How do I increase my TP?]::
+2You may purchase TechPoints upgrades in the shop in exchange for red orbs.

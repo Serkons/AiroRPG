@@ -1,0 +1,5 @@
+﻿AiroRPG is a strategic text-based RPG where you as a player can stop the forces of darkness.
+You can find detailed documentation here: https://game-igame--rpg-de.translate.goog/docu/index.php?title=AiroRPG&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+In this ingame tutorial we only cover the essentials.
+So let's start with character creation.
+To start this, write now4(7!tut-en-char4)

@@ -1,0 +1,18 @@
+﻿The first battle is the beginning of your journey and the end of these tutorials.
+You should now have a basic knowledge of the game and have no problems with the first rounds.
+Remember that losing is not a shame, you will still be rewarded for your efforts.
+Upset? Don't worry everything will go well if you did everything correctly in the tutorial.
+Let's start by giving you the necessary combat commands:
+It is described in detail here: https://game-igame--rpg-de.translate.goog/docu/index.php?title=Kampfinformationen_und_Befehle&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
++ 7/me normalattack monstername = Attack monsters with normal attack
++ 7/me used techname on monstername = Attack monsters with Technique
++ 7/me goes ignition/boost = Activates an ignition or a boost
++ 7/me reverts from (ignition) = End a boost
++ 7/me sings (songname) = Play a song (songname)
++ 7!used (item) on (target) = Apply an item to (target).
++ 7/me tauts (monster) = Taunting a monster
++ 7!skillname = Apply a skill.
+I wish you good luck in your first fight and your first victory.
+If you have any questions, you can read about the options here:
+https://game-igame--rpg-de.translate.goog/docu/index.php?title=AiroRPG&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+And now good luck in your first fight get the achievement and complete the tutorial.

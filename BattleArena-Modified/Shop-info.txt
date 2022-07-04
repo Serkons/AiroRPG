@@ -1,0 +1,14 @@
+﻿Jedesmal wenn du im Shop etwas kaufen solltest ausgeschlossen sind 7(Items und Waffen sowie Styles, LimitBreaks)
+So wird sich der Preis erhöhen dies wird durch das Shoplevel bestimmt. Jedesmal wenn du also ein Update deiner Waffe oder
+die Charakterwerte erhöhst so erhöht sich etwas der Preis.
+Das Heist wenn du zum 1. male den Wert Str kaufst und dein Shoplevel ist level 1.0 so wird dies beim 2. kauf etwas mehr kosten.
+Wollen wir also nun die Charakterwerte wie HP STR DEF INT SPD IG erhöhen wie gehen wir also vor:
+1. Wir brauch die Preisliste der Werte die wir erhöhen wollen, wir schreiben also 7!ishop list stats
+2. Wollen wir jetzt Permanent +50 mehr HP haben so schreiben wir 7!ishop buy stats HP.
+3. Hat alles geklappt wird uns Guthaben abgezogen und das Shoplevel erhöht
+4. Wir können auch eine Zahl hinter folgenden Befehl schreiben: 7!ishop buy stats HP 5
+Dies bedeute das wir permanent 250 Lebenspunkte gekauft haben.
+5. Das gleiche können wir mit den Anderen werten machen hierbei darfst du entscheiden.
+Beachte aber immer dein Guthaben zu überwachen.
+Als nächstes will ich dir etwas über die Waffen und Technicken erzählen
+Schreibe also 7!tut-ger-w-t

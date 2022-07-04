@@ -1,0 +1,14 @@
+﻿Weapons and techniques are very important in this game, you should own several if possible.
+Why? Because there are monsters that can be immune to certain types of weapons and techniques.
+Weapons are bought once with BlackOrbs and can then be leveled up with RedOrbs up to level 250.
+After that, she can be leveled up to a max level of 500 using items.
+To buy weapons you need BlackOrbs, which you get as a reward from boss fights.
+Techniques are purchased using KillCoins by defeating monsters and can also be leveled up to level 500.
+If you want to buy a technique for a weapon, the weapon must first be equipped.
+Now let's buy the first weapon and equip it, How do we proceed:
+1. We call up the weapon list of the ingame shop by entering 7!ishop list weapons
+2. The number in the () is the price of the BlackOrbs.
+3. Now let's see how many of these we have by typing 7!balance
+4. Once we have decided on a weapon, we buy it by entering 7!ishop buy weapon weaponname
+5. Now we can do this by means of 7!arm weaponname to equip.
+In the next step you will learn something about skills so write 7!tut-en-skills

@@ -1,0 +1,6151 @@
+﻿[Items]
+; The gems line is necessary here for the convertogem augment and ability to work right.
+Gems=Zircon.Topaz.Emerald.Ruby.Diamond.Sapphire.Opal.Onyx
+; Keys are used to open chests. They cannot be bought in stores.  This line needs to stay here for the bot to work.
+Keys=BlueKey.BrownKey.RedKey.OrangeKey.GreenKey.GoldKey.BrownKey.SilverKey.PurpleKey.BlackKey.RainbowKey
+
+[ZombieBrain]
+Type=infected
+Target=single
+Amount=15
+Desc=Consumes a infected Zombiebrain that was not good gets damage from the infected Zombiebrain
+Cost=0
+SellPrice=30
+
+[BitterBerry]
+Type=CureStatus
+Target=single
+Desc=eats a bitter berry to clear the status effects
+Cost=0
+SellPrice=30
+
+[BurntSaltyMap]
+type=dungeon
+cost=0
+sellprice=5000
+Desc=A partially burnt map that reveals the location of Pirate's Cove (Hard)
+Dungeon=pirate's_cove_hm
+exclusive=yes
+
+[PokeData-Str]
+Type=taming
+Amount=5
+Target=str
+Desc=Uses this data to train $readini($char($1), Taming_Monster, Name) $+ 's strength
+Cost=0
+SellPrice=100
+
+[PokeData-Clear]
+Type=tamingClear
+Desc=This Item can Be used to release a pokemon to catch another one
+Cost=0
+SellPrice=100
+
+[PokeData-Def]
+Type=taming
+Amount=5
+Target=Def
+Desc=Uses this data to train $readini($char($1), Taming_Monster, Name) $+ 's Defense
+Cost=0
+SellPrice=100
+
+[PokeData-Int]
+Type=taming
+Amount=5
+Target=Int
+Desc=Uses this data to train $readini($char($1), Taming_Monster, Name) $+ 's Inteligence
+Cost=0
+SellPrice=100
+
+[PokeData-Spd]
+Type=taming
+Amount=5
+Target=spd
+Desc=Uses this data to train $readini($char($1), Taming_Monster, Name) $+ 's Speed
+Cost=0
+SellPrice=100
+
+[PokeData-HP]
+Type=taming
+Amount=50
+Target=HP
+Desc=Uses this data to train $readini($char($1), Taming_Monster, Name) $+ 's Health
+Cost=0
+SellPrice=100
+
+[PokeData-TP]
+Type=taming
+Amount=50
+Target=TP
+Desc=Uses this data to train $readini($char($1), Taming_Monster, Name) $+ 's TechPoints
+Cost=0
+SellPrice=100
+
+[CorruptedTamTaraKey]
+type=dungeon
+cost=100
+currency=BeastmenSeal
+sellprice=1500
+Desc=An ancient key used to unlock the dungeon Tam-Tara Deepcroft (Hard)
+Dungeon=Tam-Tara_hm
+exclusive=yes
+
+[CorruptedHaukkeManorKey]
+type=dungeon
+cost=100
+currency=KindredSeal
+sellprice=1500
+Desc=An old dusty key used to access Haukke Manor (Hard)
+Dungeon=Haukke_Manor_hm
+exclusive=yes
+
+[Potion]
+Type=heal
+Target=Single
+Amount=3
+Desc=pulls out a potion bottle and hands it to %enemy $+ , who drinks it down.  Ahh! Refreshing!
+Cost=30
+SellPrice=15
+FullbringLevel=1
+FullbringTarget=AOE
+FullbringAmount=50
+Fullbringdesc=draws out the soul from the potion.  The potion's soul is drawn towards everyone and gives off a small light that heals everyone.
+
+[MetalPlate]
+Type=Misc
+Desc=A rusty metal plate can be used to repair electrical equipment.
+Cost=0
+SellPrice=50
+Currency=AlliedNotes
+
+[Screw]
+Type=Misc
+Desc=A screw! could be useful.
+Cost=0
+SellPrice=5
+Currency=AlliedNotes
+
+[OxygenTank]
+Type=misc
+Desc=A tank of oxygen created by $readini(shopnpcs.dat, NPCNames, Engineer) for those who want to venture to the moon. 
+Cost=10000
+SellPrice=500
+Exclusive=yes
+ShopNPC=Engineer
+Currency=AlliedNotes
+
+[EmptyPokeBall]
+Type=misc
+Desc=is an Empty Pokeball with no electric data from a monster. Used for the Skill !taming
+Cost=100
+Sellprice=800
+Currency=AlliedNotes
+
+[PoweredPokeBall]
+Type=misc
+Desc=is an a PoweredPokeball with electric data of a $readini($char($1), Taming_Monster, Name) ......
+Cost=0
+Sellprice=800
+Currency=AlliedNotes
+
+[RocketFuel]
+Type=misc
+Desc=A cannister of rocket fuel created by $readini(shopnpcs.dat, NPCNames, Engineer) for those who want to venture to the moon. It is used to power the Lunar Whale ship.
+Cost=10000
+SellPrice=500
+Exclusive=yes
+ShopNPC=Engineer
+Currency=AlliedNotes
+
+[CandyCorn]
+Type=heal
+Target=single
+Amount=4
+Desc=pulls out a handful of candy corn and hands it to %enemy $+ , who eats it.  Mmmmm! Tastes like Halloween!
+Cost=0
+SellPrice=50
+
+[VitalStar]
+Type=heal
+Target=Single
+Amount=10
+Desc=pulls out a strange green star and tosses it at %enemy $+ .  The star is absorbed and a sense of healing overcomes $gender2($2) $+ .
+Cost=150
+SellPrice=40
+FullbringLevel=1
+FullbringTarget=AOE
+FullbringAmount=75
+Fullbringdesc=draws out the soul from the vital star.  The vital star's soul is drawn to all allies on the battlefield, healing them all.
+
+[X-Potion]
+Type=heal
+ShopNPC=HealingMerchant
+Target=Single
+Amount=15
+Desc=pulls out an X-potion bottle and hands it to %enemy $+ , who drinks it down.  Ahh! Refreshing!
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 300, 3000)
+SellPrice=100
+FullbringLevel=2
+FullbringTarget=AOE
+FullbringAmount=150
+Fullbringdesc=draws out the soul from the potion.  The potion's soul is drawn towards everyone and gives off a small light that heals everyone.
+
+[RootBeer]
+Type=$iif($2 = LeChuck, heal, damage)
+Target=Single
+Amount=20
+Desc=pulls out a bottle of fizzy rootbeer and hands it to %enemy $+ , who drinks it down. Teehee. Bubbly.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 500, 5000)
+SellPrice=30
+FullbringLevel=3
+FullbringTarget=AOE
+FullbringAmount=250
+Fullbringdesc=draws out the soul from the rootbeer.  The soul is drawn towards everyone and gives off a small light that heals everyone.
+
+[Senzu]
+Type=heal
+ShopNPC=HealingMerchant
+Target=Single
+Amount=30
+Desc=pulls out a small green bean and tosses it at %enemy $+ .  After eating it, $gender3($2) feels a surge of health return.
+Cost=$iif($readini(garden.dat, gardenstats, level) <= 3, 1500, 1000)
+SellPrice=400
+FullbringLevel=4
+FullbringTarget=AOE
+FullbringAmount=500
+Fullbringdesc=draws out the soul from the senzu bean.  The battlefield is covered with a soothing light, healing all allies.
+
+[SuperPotion]
+Type=heal
+ShopNPC=HealingMerchant
+Target=Single
+Amount=40
+Desc=pulls out bottle of red liquid labeled "Super Potion" and hands it to %enemy $+ , who drinks it down.  Ahh! Refreshing!
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1500, 15000)
+SellPrice=750
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=750
+Fullbringdesc=draws out the soul from the potion.  The potion's soul is drawn towards everyone and gives off a bright light that heals everyone.
+ConquestItem=true
+
+[MegaPotion]
+Type=heal
+ShopNPC=TravelMerchant
+Target=Single
+Amount=50
+Desc=pulls out bottle of liquid made with blood labeled "Mega Potion" and hands it to %enemy $+ , who drinks it down.  Ahh! Refreshing!
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2000, 20000)
+SellPrice=750
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=1500
+Fullbringdesc=draws out the soul from the potion.  The potion's soul is drawn towards everyone and gives off a bright light that heals everyone.
+ConquestItem=true
+
+[Bruce'sJuice]
+Type=heal
+Target=Single
+Amount=100
+Desc=pulls out a refreshing bottle of Bruce "Old Man" Willaker's juice and drinks it.  Ahhhhhhh, the most refreshing juice in the world.
+Cost=0
+SellPrice=3000
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=2000
+Fullbringdesc=draws out the soul from a bottle of Bruce "Old Man" Willaker's juice.  The juice's soul is drawn towards everyone and gives off a bright light that heals everyone.
+Currency=none
+
+[CandyCane]
+Type=heal
+Target=Single
+Amount=40
+ShopNPC=Santa
+Desc=pulls out a small red and white candy cane and hands it to %enemy who eats it. Cruncy! 
+Cost=$iif($readini(shopnpcs.dat, NPCStatus, Santa) = true, 1750, 0)
+SellPrice=200
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=1500
+Fullbringdesc=draws out the soul from the candy cane.  The soul is drawn over to everyone and gives off a bright red and green colored light that heals everyone
+Currency=none
+
+[DustyWing]
+Type=tp
+Target=Single
+Amount=30
+Desc=pulls out a white feather and hands it to %enemy $+ .  The feather is absorbed into %enemy $+ 's body.  %enemy feels $gender2($4) TP being restored.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 100, 1000)
+SellPrice=40
+FullbringLevel=1
+FullbringTarget=AOE
+FullbringAmount=15
+Fullbringdesc=draws out the soul from the Dusty Wing.  A large white wing shoots up into the sky and explodes into golden light that covers all allies on the battlefield.  Everyone feels their TP being restored.
+
+[Ether]
+Type=tp
+ShopNPC=HealingMerchant
+Target=Single
+Amount=60
+Desc=pulls out a bottle of white liquid and hands it to %enemy $+ .  After drinking it, %enemy feels $gender2($4) TP being restored.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 250, 2500)
+SellPrice=100
+FullbringLevel=2
+FullbringTarget=AOE
+FullbringAmount=30
+Fullbringdesc=draws out the soul from the Ether.  A light white rain begins to rain down upon everyone and everyone feels their TP being restored.
+
+[Mid-Ether]
+Type=tp
+ShopNPC=HealingMerchant
+Target=Single
+Amount=120
+Desc=pulls out a bottle of white liquid and hands it to %enemy $+ .  After drinking it, %enemy feels $gender2($4) TP being restored.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 500, 5000)
+SellPrice=200
+FullbringLevel=3
+FullbringTarget=AOE
+FullbringAmount=60
+Fullbringdesc=draws out the soul from the Ether.  A light white rain begins to rain down upon everyone and everyone feels their TP being restored.
+ConquestItem=true
+
+[Hi-Ether]
+Type=tp
+ShopNPC=HealingMerchant
+Target=Single
+Amount=160
+Desc=pulls out a bottle of white liquid and hands it to %enemy $+ .  After drinking it, %enemy feels $gender2($4) TP being restored.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 750, 7500)
+SellPrice=350
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=80
+Fullbringdesc=draws out the soul from the Ether.  A light white rain begins to rain down upon everyone and everyone feels their TP being restored.
+ConquestItem=true
+
+[Super-Ether]
+Type=tp
+ShopNPC=HealingMerchant
+Target=Single
+Amount=320
+Desc=pulls out a bottle of white liquid and hands it to %enemy $+ .  After drinking it, %enemy feels $gender2($4) TP being restored.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1500, 15000)
+SellPrice=750
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the Ether.  A light white rain begins to rain down upon everyone and everyone feels their TP being restored.
+ConquestItem=true
+
+[Tonic]
+Type=CureStatus
+ShopNPC=HealingMerchant
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1000, 5000)
+SellPrice=320
+Desc=pulls out a small bottle of bubbling tonic and hands it to %enemy who drinks it.  After a few seconds, %enemy feels $gender($4) body being restored from most status effects.
+
+[BoxOfTissues]
+Type=CureStatus
+Cost=0
+SellPrice=100
+Desc=pulls out a small box of tissues and hands it to %enemy who uses them. Strangely, %enemy feels $gender($4) body being restored from most status effects.  A good tissue makes everything all better!
+
+[XmasStar]
+Type=IgnitionGauge
+Target=single
+Amount=10
+SellPrice=800
+Cost=$iif($readini(shopnpcs.dat, events, SavedElves) >= 10, 1000, 0)
+Desc=pulls out a green, red and gold colored star and tosses it at %enemy $+ .  The star is absorbed and a sense of power overcomes $gender2($4) $+ .
+ShopNPC=Santa
+
+[IgnitionStar]
+Type=IgnitionGauge
+Target=single
+Amount=20
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 4000, 30000)
+SellPrice=1000
+Desc=pulls out a strange purple star and tosses it at %enemy $+ .  The star is absorbed and a sense of power overcomes $gender2($4) $+ .
+ShopNPC=HealingMerchant
+
+[LargeIgnitionStar]
+Type=IgnitionGauge
+Target=single
+Amount=50
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 7000, 50000)
+SellPrice=1500
+Desc=pulls out a strange purple star and tosses it at %enemy $+ .  The star is absorbed and a sense of power overcomes $gender2($4) $+ .
+ShopNPC=HealingMerchant
+ConquestItem=true
+
+[GoldOrb]
+Type=AutoRevive
+ShopNPC=HealingMerchant
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 3000, 10000)
+SellPrice=1000
+Desc=pulls out a small, pulsing, gold orb and holds it up to %enemy $+ ! %enemy is covered by a bright golden light as the gold orb floats above %real.name $+ 's head and becomes a halo.  %enemy will be automatically revived upon death.
+
+[BottledFairy]
+Type=Revive
+ShopNPC=HealingMerchant
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 15000)
+SellPrice=2000
+Desc=pulls out a bottled fairy and opens it. After a moment the fairy flies out and into %enemy $+ . A bright light shines down from above and envelops %enemy and after a moment %enemy is brought back to life.
+ReviveAmount=.35
+
+[PhoenixDown]
+Type=Revive
+ShopNPC=HealingMerchant
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 7000, 20000)
+SellPrice=2000
+Desc=holds up a small feather from a phoenix over %enemy $+ . A bright light shines down from above and envelops %enemy and after a moment %enemy is brought back to life.
+ReviveAmount=.50
+
+[Holy_Water]
+Type=Damage
+Target=Single
+Amount=200
+Desc=takes out a vial of Holy Water and tosses it on %enemy
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 200, 2000)
+SellPrice=100
+Element=light
+FullbringLevel=2
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the holy water.  The sky turns black and a rain made of holy water falls down upon all targets.  This is.. HYDRO STORM!
+ShopNPC=BattleMerchant
+
+[Red_Fang]
+Type=Damage
+Target=Single
+Amount=200
+Desc=takes out a small glowing red fang and slashes %enemy with it.  The fang snaps and explodes with fire energy.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 200, 2000)
+SellPrice=100
+Element=fire
+FullbringLevel=2
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the red fang.  The soul glows a bright red and then explodes into a firestorm over all enemies on the battlefield.
+
+[Blue_Fang]
+Type=Damage
+Target=Single
+Amount=200
+Desc=takes out a small glowing blue fang and slashes %enemy with it.  The fang snaps and explodes with ice energy.
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 200, 2000)
+SellPrice=100
+Element=ice
+FullbringLevel=2
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the red fang.  The soul glows a bright red and then explodes into a firestorm over all enemies on the battlefield.
+
+[Thunder_Orb]
+Type=Damage
+Target=Single
+Amount=200
+Desc=takes out a small glowing purple orb and throws it at %enemy $+ 's feet.  The orb shatters and lightning shoots out of it and slams into %enemy $+ !
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 200, 2000)
+SellPrice=100
+Element=lightning
+FullbringLevel=2
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the thunder orb.  The sky goes black and a lightning storm erupts on the battlefield, shocking all enemies!
+
+[Dark-Matter]
+Type=Damage
+Target=single
+Amount=500
+Desc=takes out a strange cube that is pure black in color and hurls it at %enemy $+ , which makes a large explosion of dark energy upon contact.
+Cost=0
+Sellprice=0
+Element=None
+
+[Stop_Watch]
+Type=Status
+Target=Single
+StatusType=stop
+Amount=10
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 150, 1500)
+SellPrice=50
+Desc=takes out a small stop watch and activates it before handing it to %enemy $+ .  The stop watch glows blue and %enemy begins to feel time slow down.
+FullbringLevel=3
+FullbringTarget=AOE
+Fullbringdesc=draws out the soul from the stop watch.  A giant stop watch appears on the battlefield and slowly stops.  All the enemies on the battlefield begin to feel as though time has stopped for them.
+FullbringAmount=5
+ShopNPC=BattleMerchant
+
+[Hour_Glass]
+Type=Status
+Target=Single
+StatusType=slow
+Amount=10
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 200, 2000)
+SellPrice=50
+Desc=takes out a small hour glass and flips it before handing it to %enemy $+ .  The hour glass glows green and %enemy begins to feel slow.
+FullbringLevel=3
+FullbringTarget=AOE
+Fullbringdesc=draws out the soul from the hour glass.  It floats into the sky and then rains down upon all targets, making them all feel slowed.
+FullbringAmount=5
+ShopNPC=BattleMerchant
+
+[Angon]
+Type=Status
+ShopNPC=TravelMerchant
+Target=Single
+StatusType=defensedown
+Amount=200
+SellPrice=50
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2000, 8000)
+Desc=takes out a large lance that is glowing red and throws it at %enemy $+ .  After being hit, %enemy starts to feel as though $gender($2) defense has been weakened.
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the angon.  The soul splits into large javalins that slam into all of the enemies on the battlefield.
+
+[SlimeOil]
+Type=Status
+Target=Single
+StatusType=Heavy
+Amount=200
+Cost=0
+SellPrice=1000
+Desc=takes out the oil from a defeated slime and tosses it onto %enemy $+ ! The sticky oil begins to weigh %enemy down.
+Currency=AlliedNotes
+
+[RottingMeat]
+type=Status
+Target=Single
+Amount=300
+Desc=pulls out a slab of brown, smelly, rotting meat. Ugh, who would ever eat this?  Well, $set_chr_name($2) %real.name is forced to eat it and feels sick to $gender($2) stomach.  This isn't helpful at all! %real.name feels sick.
+StatusType=poison
+SellPrice=2000
+Cost=0
+
+[PoisonPotion]
+type=Status
+Target=Single
+Amount=200
+Desc=takes out a small potion that contains a mild poison and hurls it at %enemy in an attempt to cause poison.
+StatusType=poison
+SellPrice=500
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 6000)
+ShopNPC=BattleMerchant
+
+[SauceAmpulla]
+Type=Status
+ShopNPC=TravelMerchant
+Target=Single
+StatusType=strengthdown
+Amount=200
+SellPrice=50
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2000, 8000)
+Desc=takes out a small flask that has a strange bubbling liquid inside and throws it at %enemy $+ .  After being hit by the exploding flask, %enemy starts to feel as though $gender($2) strength has been weakened.
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=draws out the soul from the ampulla.  The soul splits into several copies of itself and floats over all the targets on the battlefield before falling down upon them all at once. 
+
+[DunceCap]
+Type=Status
+ShopNPC=TravelMerchant
+Target=Single
+StatusType=intdown
+Amount=200
+SellPrice=50
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2000, 8000)
+Desc=takes out a large glowing pointed hat and quickly runs over to %enemy and sits the hat upon $gender($2) head.  After wearing the hat, $gender3($2) doesn't feel so smart any more.. 
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=100
+Fullbringdesc=takes out a large glowing pointed hat and draws out its soul.  The hat splits into multiple copies that land upon all the targets on the battlefield before fading away.
+
+[Fire_Flower]
+Type=Damage
+Target=Single
+Amount=400
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 400, 4000)
+SellPrice=200
+Desc=takes out a small fire flower from the Mushroom Kingdom.  It gets absorbed by %user which allows %user to shoot fireballs at %enemy for a moment before the power wears off.
+Element=fire
+FullbringLevel=3
+FullbringTarget=AOE
+FullbringAmount=200
+Fullbringdesc=draws out the soul from the fire flower.  The soul glows a bright red and then explodes several large fireballs that hit all targets on the battlefield.
+ShopNPC=BattleMerchant
+
+[Ice_Coin]
+Type=Damage
+Target=Single
+Amount=400
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 400, 4000)
+SellPrice=200
+Desc=takes out a small blue coin and flips it at %enemy $+ .  The coin hits and covers %enemy with ice.  
+Element=ice
+FullbringLevel=3
+FullbringTarget=AOE
+FullbringAmount=200
+Fullbringdesc=draws out the soul from the ice coin.  The soul glows a bright blue and then explodes, causing ice to rain down on all targets on the battlefield.
+ShopNPC=BattleMerchant
+
+[Wind_Vane]
+Type=Damage
+Target=Single
+Amount=400
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 400, 4000)
+SellPrice=200
+Desc=takes out a small green wind vein and spins it at %enemy $+ .  A powerful gust of wind slices %enemy $+ !  
+Element=wind
+FullbringLevel=3
+FullbringTarget=AOE
+FullbringAmount=200
+Fullbringdesc=draws out the soul from the wind vane.  The soul glows a bright green and then explodes, causing a small tornado to appear on the battlefield and damage all of %user $+ 's targets.
+ShopNPC=BattleMerchant
+
+[Love_Potion]
+Type=Status
+Target=Single
+StatusType=charm
+Amount=100
+Cost=0
+SellPrice=5000
+Desc=takes out a pink glowing potion and tosses it to %enemy who decides to drink it. Hey, why not?  When life gives you a glowing pink potion, you drink it! %enemy begins to feel a bit enamored with %user $+ !
+
+[Eggnog]
+Type=Status
+Target=Single
+StatusType=drunk
+Amount=50
+Cost=0
+SellPrice=5000
+Desc=takes out a smelly bottle of thick white liquid and hands it over to %enemy who drinks it. Hey, why not? %enemy begins to feel a bit tipsy from the substance!
+
+[BombFlower]
+Type=Damage
+ShopNPC=TravelMerchant
+Target=Single
+Amount=300
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 3000, 7000)
+SellPrice=50
+Desc=takes out a small bomb that came from a weird flower and tosses it at %enemy causing a small explosion.
+Element=fire
+FullbringLevel=4
+FullbringTarget=AOE
+FullbringAmount=150
+Fullbringdesc=draws out the soul from the bomb flower.  The soul floats over the battlefield and then glows a bright red before violently exploding, causing damage to all targets.
+ConquestItem=false
+IgnoreMetalDefense=true
+Bomb=true
+
+[Dynamite]
+Type=Damage
+Target=Single
+Amount=500
+Cost=0
+SellPrice=1000
+Desc=takes out a small stick of dynamite and tosses it at %enemy causing a massive explosion.
+Element=fire
+FullbringLevel=4
+FullbringTarget=AOE
+FullbringAmount=250
+Fullbringdesc=draws out the soul from the stick of dynamite.  The soul floats over the battlefield and then glows a bright red before violently exploding, causing damage to all targets.
+ConquestItem=true
+IgnoreMetalDefense=true
+Bomb=true
+
+[BombFragment]
+Type=Damage
+Target=Single
+Amount=2500
+Cost=0
+SellPrice=1500
+Desc=takes out a piece of a bomb and throws it at %enemy which causes a massive explosion.
+Element=fire
+FullbringLevel=4
+FullbringTarget=AOE
+FullbringAmount=1750
+Fullbringdesc=draws out the soul from the bomb fragment.  The soul floats over the battlefield and then glows a bright red before violently exploding, causing damage to all targets.
+ConquestItem=true
+IgnoreMetalDefense=true
+Bomb=true
+
+[HolyHandGrenade]
+Type=Damage
+Target=Single
+Amount=4000
+SellPrice=2000
+Desc=takes out a holy hand grenade.  An angelic voice is heard from above. First shalt thou take out the Holy Pin. Then, shalt thou count to three, no more, no less. Three shalt be the number thou shalt count, and the number of the counting shall be three.  After doing so, %user tosses the grenade at %enemy which causes a small nuclear explosion. 
+Cost=0
+Element=light
+IgnoreMetalDefense=true
+Bomb=true
+
+[XmasGrenade]
+Type=Damage
+Target=Single
+Amount=1500
+SellPrice=500
+Desc=takes out a Candy-Cane colored grande and lobs it at %enemy which causes an explosion followed by some Christmas-colored fireworks. 
+Cost=$iif($readini(shopnpcs.dat, events, SavedElves) >= 50, 1500, 0)
+Element=ice
+IgnoreMetalDefense=true
+Bomb=true
+
+[Grappling_Hook]
+Type=Snatch
+Target=Single
+Amount=1
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 500, 3000)
+SellPrice=200
+Desc=takes out a grappling hook and swings it around %enemy $+ . After %enemy is hooked, %real.name begins to pull in an attempt to drag %enemy over to $gender2($1) to use as a protective shield.
+ShopNPC=BattleMerchant
+
+[C4]
+Type=Damage
+Target=Single
+Amount=600
+Cost=0
+SellPrice=2500
+Desc=places some C4 on a random area of the battlefield and waits. Once %enemy is close enough, %user activates the C4 from a distance, causing an explosion!
+Element=fire
+IgnoreMetalDefense=true
+Bomb=true
+
+[Flash_Grenade]
+Type=Status
+Target=Single
+StatusType=Blind
+Amount=1
+Cost=0
+SellPrice=2500
+Desc=pulls out a grenade, pulls the pin and hurls it at %enemy $+ . A few second later, it explodes with a bright flash, blinding %enemy $+ !
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=1
+Fullbringdesc=draws out the soul from the flash grenade.  The soul floats over the battlefield and then glows a bright white, blinding all targets.
+
+[Coffee]
+Type=Status
+Target=Single
+StatusType=speedup
+Amount=0
+Cost=0
+SellPrice=5000
+Desc=takes out a cup of thick black liquid and hands it over to %enemy who drinks it. Hey, why not? %enemy begins to feel a bit hyper from the substance!
+
+[FlyingDraught]
+Type=Status
+Target=Single
+StatusType=flying
+Amount=0
+Cost=0
+SellPrice=1000
+Desc=takes out a bottle of bubbling cloudy blue liquid and hands it to %enemy who drinks it. Suddenly %enemy feels light as air and begins flying!
+
+[Shuriken]
+Type=Damage
+Target=Single
+Amount=700
+Desc=pulls out a shuriken with a three point blade and hurls it at %enemy $+ !
+FullbringLevel=3
+FullbringTarget=AOE
+FullbringAmount=350
+Fullbringdesc=draws out the soul from the shuriken, creating several clones. %real.name then hurls the shurikens at the battlefield!
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 3000, 9000)
+SellPrice=1000
+Element=None
+ShopNPC=BattleMerchant
+Exclusive=yes
+
+[FumaShuriken]
+Type=Damage
+Target=Single
+Amount=900
+Desc=pulls out a shuriken with a four point blade and hurls it at %enemy $+ !
+FullbringLevel=4
+FullbringTarget=AOE
+FullbringAmount=450
+Fullbringdesc=draws out the soul from the shuriken, creating several clones. %real.name then hurls the shurikens at the battlefield!
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 12000)
+SellPrice=1500
+Element=None
+ShopNPC=BattleMerchant
+Exclusive=yes
+ConquestItem=true
+
+[KogaShuriken]
+Type=Damage
+Target=Single
+Amount=1500
+Desc=pulls out a shuriken with a six point blade and hurls it at %enemy $+ !
+FullbringLevel=5
+FullbringTarget=AOE
+FullbringAmount=750
+Fullbringdesc=draws out the soul from the shuriken, creating several clones. %real.name then hurls the shurikens at the battlefield!
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 7000, 15000)
+SellPrice=2000
+Element=None
+ShopNPC=BattleMerchant
+Exclusive=yes
+ConquestItem=true
+
+[PotRoast]
+Type=food
+Target=str
+Amount=10
+Desc=pulls out a large pot roast and hands it to %enemy $+ , who munches down.  Mmmm, yummy!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[Ramen]
+Type=food
+Target=def
+Amount=10
+Desc=pulls out a bowl of ramen and hands it to %enemy $+ , who munches down. Slurrrp!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[Cavier]
+Type=food
+Target=int
+Amount=10
+Desc=pulls out a small amount of cavier and hands it to %enemy $+ , who eats it slowly.  I say!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[Pizza]
+Type=food
+Target=hp
+Amount=20
+Desc=pulls out a slice of pizza and hands it to %enemy $+ , who munches it down.  Cowabunga!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[BisonDollar]
+Type=food
+Target=tp
+Amount=10
+Desc=pulls out a Bison Dollar and hands it to %enemy who exchanges it for a small TP enhancement.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[DragonMeat]
+Type=food
+Target=str
+Amount=10
+Desc=pulls out a piece of dragon meat and hands it to %enemy $+ , who cooks it and then munches down.  Mmmm, yummy!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[CerberusMeat]
+Type=food
+Target=str
+Amount=10
+Desc=pulls out a piece of Cerberus meat and hands it to %enemy $+ , who cooks it and eats it.  Dude, you just ate some of a three-headed dog!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[WereMeat]
+Type=food
+Target=str
+Amount=15
+Desc=pulls out a piece of meat from a werewolf and hands it to %enemy $+ , who cooks it and eats it. Mmm! It's howling good!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+
+[AlphaWereMeat]
+Type=food
+Target=str
+Amount=25
+Desc=pulls out a piece of meat from an alpha werewolf and hands it to %enemy $+ , who cooks it and eats it. Mmm! This meat is so good it makes you want to transform into a howling maniac! 
+Cost=0
+SellPrice=5000
+Exclusive=yes
+
+[TurkeyLeg]
+Type=food
+Target=str
+Amount=10
+Desc=pulls out a turkey leg meat and hands it to %enemy $+ , who cooks it and eats it. Mmm! Gobble gobble indeed!
+Cost=0
+SellPrice=4000
+Exclusive=yes
+
+[CaptainCrunchy]
+type=food
+Target=def
+Amount=1
+Desc=pours a bowl of Captain Crunchy bootleg cereal for %enemy $+ , who eats it.  CRUNCH CRUNCH CRUNCH!  Mmmm! Nothing like a bowl of cereal to toughen you up.
+Cost=0
+SellPrice=100
+Exclusive=yes
+
+[SuperMushroom]
+Type=food
+Target=hp
+Amount=20
+Desc=pulls out a Super Mushroom from the Mushroom Kingdom and hands it to %enemy $+ , who munches it down.  $2 does not grow bigger, but instead gains more endurance.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[FireDragonWine]
+Type=food
+Target=def
+Amount=10
+Desc= pulls out a bottle of alcohol labeled "Fire Dragon Wine" and hands it to %enemy $+ , who drinks the entire bottle. After a moment of intense pain and nausea, $2 feels that $gender($2) defense has increased! 
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[Ambrosia]
+Type=food
+Target=style
+Amount=30
+Desc=takes out a potion bottle with a golden liquid inside and hands it to %enemy who drinks it. After a moment of warmth feeling, $2 feels more stylish!
+Cost=0
+SellPrice=5000
+
+[FoieGras]
+Type=Food
+Target=spd
+Amount=10
+Desc=pulls out a a plate of foie gras and hands it to %enemy $+ , who then eats it. Uh... let's say it's an aquired taste...
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[KnowledgeSource]
+Type=Food
+Target=int
+Amount=10
+Desc=pulls out a book of knowledge and hands it to %enemy $+ , who then reads it and feels a little smarter!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[SoulPainting]
+Type=food
+Target=int
+Amount=10
+Desc=pulls out a painting drawn by Brauner and hands it to %enemy $+ , who studies it. Indeed. Quite.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[FishAndChips]
+Type=food
+Target=int
+Amount=10
+Desc=pulls out a basket of fish and chips and hands it to %enemy $+ , who eats it slowly.  Quite! Indeed!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[BloodyHeart]
+type=food
+Target=hp
+Amount=100
+Desc=pulls out a bleeding heart and looks at it. People really eat this? Well..uhh..maybe. $set_chr_name($2) %real.name ends up eating it and feels sick for doing so.... but..at least %real.name gains some max HP for it.
+SellPrice=5000
+Exclusive=yes
+Cost=0
+
+[Slurm]
+Type=food
+Target=style
+Amount=15
+Desc=takes out a small can of Slurm and opens it before handing it to %enemy who drinks it. After a moment, $set_chr_name($2) %real.name feels like going out and partying like Slurms McKenzie! Whimmy wham wham wozzle!
+Cost=0
+SellPrice=2000
+
+[SilverApple]
+Type=food
+Target=style
+Amount=10
+Desc=pulls out a small silver apple and hands it to %enemy who eats it. Woah, a silver apple? That's pretty cool, right? Stylish!
+Cost=0
+SellPrice=2000
+
+[Rum]
+Type=food
+Target=style
+Amount=10
+Desc=pulls out a bottle of rum and hands it to %enemy who chugs it down. Arrr! Pirates be stylish, matey!
+Cost=0
+SellPrice=2000
+
+[DefenseSource]
+Type=Food
+Target=def
+Amount=10
+Desc=pulls out a book of defense and hands it to %enemy $+ , who then reads it and feels a little stronger!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[PowerSource]
+Type=Food
+Target=str
+Amount=10
+Desc=pulls out a book of power and hands it to %enemy $+ , who then reads it and feels a little more powerful!
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[Herring]
+Type=food
+Target=spd
+Amount=10
+Desc=takes out a herring and hands it to %enemy $+ , who then stares at it. $set_chr_name($2) $+ %real.name then cooks and eats it, though $gender3($2) then feels an urge to chop down the mightiest tree in the forest...
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[BagOfGold]
+Type=food
+target=stohlenorbs
+Amount=$iif($readini($char($1), Stuff, StolenOrbs) >= 1, $readini($char($1), Stuff, StolenOrbs), 0)
+Desc=Opens the goblin's pocket and finds the stolen money. It contained of $readini($char($1), Stuff, StolenOrbs) orbs
+Cost=0
+SellPrice=0
+
+[BloodScroll]
+Type=food
+Target=redorbs
+Amount=$rand(500,1000)
+Desc=takes out an ancient blood-colored scroll and hands it to %enemy who then reads it. The scroll begins to dissolve into red orbs that swirl around %enemy before being absorbed.
+Cost=0
+SellPrice=50
+Exclusive=yes
+
+[BurntScroll]
+Type=food
+Target=blackorbs
+Amount=$rand(1,2)
+Desc=takes out an ancient burnt scroll and hands it to %enemy who then reads it. The scroll begins to dissolve into a black mist that swirls around %enemy before being absorbed.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[TreasureMap]
+Type=food
+Target=killcoins
+Amount=$rand(5,20)
+Desc=takes out old pirate map and hands it to %enemy who then uses it to discover a chest containing some kill coins. Yarr!
+Cost=0
+SellPrice=50
+Exclusive=yes
+
+[PiggyBank]
+Type=food
+Target=killcoins
+Amount=$rand(30,100)
+Desc=takes out a shiny pink piggy bank and hands it to %enemy who then smashes it open to discover some kill coins inside. Yippee!
+Cost=0
+SellPrice=50
+Exclusive=yes
+
+[BookOfSkulls]
+Type=Food
+Target=int
+Amount=10
+Desc=takes out a black book covered in skulls and reads it.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+
+[GreenMutagen]
+Type=GiveEnhancementPoint
+Amount=2
+Desc=takes out a strange vial of green liquid and uses it on %enemy and can feel that there is an increase to their enhancement points!
+Cost=0
+SellPrice=1
+Exclusive=yes
+
+[MonsterElixerA]
+Type=Food
+Target=str.def
+Amount=50
+Desc=takes out a bubbling red potion and drinks it. A surge of energy flows through %enemy $+ 's body!
+Cost=0
+SellPrice=5000
+Exlusive=yes
+
+[MonsterElixerB]
+Type=Food
+Target=int.spd
+Amount=50
+Desc=takes out a bubbling purple potion and drinks it. A surge of energy flows through %enemy $+ 's body!
+Cost=0
+SellPrice=5000
+Exlusive=yes
+
+[Pirate'sPlunder]
+type=random
+ItemDesc=This small treasure chest contains an item that the pirates were hiding on Pirate's Cove
+Desc=pulls out a small treasure chest and opens it to discover %random.item.amount $+ x %random.item.name inside!  Arrr!
+SellPrice=2000
+Cost=0
+ItemList=items_pirate'splunder.lst
+exclusive=yes
+
+[GobbieSpoil]
+type=random
+ItemDesc=This small treasure bag contains an item from the Gobbie Treasure Vault. Use it to discover what's inside!
+Desc=pulls out a small treasure bag and opens it to discover %random.item.amount $+ x %random.item.name inside!  Score!
+SellPrice=2000
+Cost=0
+ItemList=items_gobbiespoil.lst
+exclusive=yes
+
+[BronzeBoosterSet]
+type=random
+ItemDesc=This small envelope contains one trading card with rarity of * to **
+Desc=pulls out a small brown-colored envelope and opens it to reveal %random.item.amount $+ x  $+ %random.item.name $+  inside!
+SellPrice=1
+Cost=1000
+ItemList=items_boosterpack.lst
+exclusive=yes
+currency=AlliedNotes
+
+[Present]
+Type=random
+ItemDesc=A small wrapped present that can contain a huge variety of items inside.
+Desc=pulls out a present and hands it to %enemy $+ , who opens it and finds %random.item.amount $+ x %random.item.name inside! Merry XMas!
+SellPrice=7000
+Cost=$iif($readini(shopnpcs.dat, events, SavedElves) >= 100, 200000, 0)
+ShopNPC=Santa
+
+[AnniGift]
+Type=random
+ItemDesc=A bright colored present used to celebrate the creation of the bot's creation. It can contain a huge variety of items inside.
+Desc=pulls out a bright colored present and hands it to %enemy $+ , who opens it and finds %random.item.amount $+ x %random.item.name inside!  A firework shoots up and explodes above the heroes. Happy $calc($right($adate, 4) - 2012) year anniversary celebration of the bot's creation!
+Cost=0
+SellPrice=9000
+
+[HoradricCache]
+Type=TormentReward
+ItemDesc=A glowing box that can contain a random number of horadric items inside
+Desc=pulls out a small glowing box which opens and reveals %random.item.amount $iif(%random.item.amount > 1, %random.item.name $+ s, %random.item.name) inside!
+Cost=0
+SellPrice=1
+Exclusive=yes
+ItemsInside=$rand(1,10)
+TormentReward=true
+
+[HoradricStash]
+Type=TormentReward
+ItemDesc=A glowing box that can contain a random number of horadric items inside
+Desc=pulls out a small glowing box which opens and reveals %random.item.amount $iif(%random.item.amount > 1, %random.item.name $+ s, %random.item.name) inside!
+Cost=0
+SellPrice=1
+Exclusive=yes
+ItemsInside=$rand(150,250)
+TormentReward=true
+
+[Bronze-trimmedSack]
+type=random
+ItemDesc=This small bag with bronze trimming contains a random item discovered from the Lost Tower of the Ancients.
+Desc=pulls out a small bronze-trimmed sack and opens it to discover %random.item.amount $+ x %random.item.name inside! 
+SellPrice=2000
+Cost=0
+ItemList=items_bronzesack.lst
+exclusive=yes
+
+[Silver-trimmedSack]
+type=random
+ItemDesc=This small bag with silver trimming contains a random item discovered from the Lost Tower of the Ancients.
+Desc=pulls out a small silver-trimmed sack and opens it to discover %random.item.amount $+ x %random.item.name inside! 
+SellPrice=2000
+Cost=0
+ItemList=items_silversack.lst
+exclusive=yes
+
+[Gold-trimmedSack]
+type=random
+ItemDesc=This small bag with gold trimming contains a random item discovered from the Lost Tower of the Ancients.
+Desc=pulls out a small gold-trimmed sack and opens it to discover %random.item.amount $+ x %random.item.name inside! 
+SellPrice=2000
+Cost=0
+ItemList=items_goldsack.lst
+exclusive=yes
+
+[AlliedLockBox]
+type=random
+ItemDesc=A treasure chest given to you as a reward for your service.  What's inside?  Open it to find out.
+Desc=pulls out a small treasure chest and opens it to discover %random.item.amount $+ x %random.item.name inside!
+SellPrice=5000
+Cost=0
+ItemList=items_alliedlockbox.lst
+exclusive=yes
+
+[SpookyTreatBag]
+Type=random
+ItemDesc=A special treat bag that was left behind from a giant pumpkin demon. What's inside? Only one way to find out.
+Desc=opens the spooky treat bag and discovers 2x Jack-o-Lanterns $+ $chr(44) 1x CodexOfBooetics and 10x CandyCorn inside!
+SellPrice=1
+Cost=0
+ItemList=items_treatbag.lst
+exclusive=yes
+AllItems=true
+
+[WelcomeBox]
+type=random
+ItemDesc=A special box for all new players of the game. Open it to receive your items.
+Desc=opens the welcome box and discovers 1x ClothTunic $+ $chr(44) 1x ClothLeggings1x EmptyPokeball1x PokeData-Clear and 1x Beginner'sCharm inside! Don't forget to use !info to look up more information on these items!
+Sellprice=0
+Cost=0
+ItemList=items_welcomebox.lst
+exclusive=yes
+AllItems=true
+
+[Shihei]
+Type=consume
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 500, 3000)
+SellPrice=20
+Skill=Utsusemi
+
+[Sokubaku]
+type=consume
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 100, 1000)
+SellPrice=20
+Skill=WeaponLock
+ShopNPC=BattleMerchant
+
+[Hankai]
+type=consume
+cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 400, 2000)
+SellPrice=100
+Skill=SealBreak
+ShopNPC=BattleMerchant
+
+[MirrorShard]
+type=consume
+cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2000, 6000)
+SellPrice=200
+Skill=MagicMirror
+ShopNPC=BattleMerchant
+
+[Lockpick]
+type=consume
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 300, 3000)
+SellPrice=50
+Skill=Lockpicking
+ShopNPC=BattleMerchant
+
+[DarkMagicianCard]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Dark_Magician
+SummonName=Dark Magician
+
+[BusterBladerCard]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Buster_Blader
+SummonName=Buster Blader
+
+[BlueEyesCard]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Blue_eyes
+SummonName=Blue Eyes White Dragon
+
+[FishOilBroth]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=2000
+Summon=Courier_Carrie
+SummonName=Courier Carrie
+
+[ElvishMedallian]
+Type=summon
+Cost=0
+SellPrice=2000
+Summon=Lirarian
+SummonName=Lirarian
+Exclusive=yes
+
+[ElvishCrystal]
+Type=summon
+Cost=0
+SellPrice=2000
+Summon=Lirarian
+SummonName=Lirarian
+Exclusive=yes
+
+[AlexanderMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Alexander
+SummonName=Alexander
+ShopNPC=BattleMerchant
+
+[BahamutMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 7500, 15000)
+SellPrice=1000
+Summon=Bahamut
+SummonName=Bahamut
+ShopNPC=BattleMerchant
+
+[BahamutZeroMateria]
+Type=summon
+Cost=0
+SellPrice=2000
+Summon=BahamutZero
+SummonName=Bahamut Zero
+Exclusive=yes
+
+[CarbuncleMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Carbuncle
+SummonName=Carbuncle
+ShopNPC=BattleMerchant
+
+[SolomonRing]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Doomtrain
+SummonName=Doomtrain
+ShopNPC=BattleMerchant
+
+[LuckyBroth]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Falcorr
+SummonName=Faithful Falcorr
+ShopNPC=BattleMerchant
+
+[FenrirMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Fenrir
+SummonName=Fenrir
+ShopNPC=BattleMerchant
+
+[GarudaMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Garuda
+SummonName=Garuda
+ShopNPC=BattleMerchant
+
+[IfritMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Ifrit
+SummonName=Ifrit
+ShopNPC=BattleMerchant
+
+[LeviathanMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Leviathan
+SummonName=Leviathan
+ShopNPC=BattleMerchant
+
+[RamuhMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Ramuh
+SummonName=Ramuh
+ShopNPC=BattleMerchant
+
+[ShivaMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Shiva
+SummonName=Shiva
+ShopNPC=BattleMerchant
+
+[TitanMateria]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 5000, 10000)
+SellPrice=1000
+Summon=Titan
+SummonName=Titan
+ShopNPC=BattleMerchant
+
+[GuardContract]
+Type=summon
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1000, 5000)
+SellPrice=100
+Summon=Yojimbo
+SummonName=Yojimbo
+
+[Pokeball]
+Type=summon
+Cost=10000
+SellPrice=2000
+Summon=$read -l $+ $rand(1, $lines($lstfile(pokemon.lst))) $lstfile(pokemon.lst)
+SummonName=$readini($summon(%summon.name), basestats, name)
+Desc=pulls out a Pokeball and tosses it at the battlefield, floating in the air for a moment. The Pokeball then opens up, a bright light emerging from it, which summons...
+RandomSummon=true
+
+[Zircon]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small zircon.
+Currency=AlliedNotes
+
+[Topaz]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small topaz.
+Currency=AlliedNotes
+
+[Sapphire]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small sapphire.
+Currency=AlliedNotes
+
+[Onyx]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small black onyx.
+Currency=AlliedNotes
+
+[Opal]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small white opal.
+Currency=AlliedNotes
+
+[Emerald]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small green emerald.
+Currency=AlliedNotes
+
+[Ruby]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A small red ruby.
+Currency=AlliedNotes
+
+[Diamond]
+Type=gem
+Cost=100
+SellPrice=50
+Desc=A bright white diamond.
+Currency=AlliedNotes
+ConquestItem=true
+
+[DragonDiamond]
+Type=gem
+Cost=0
+SellPrice=10000
+Desc=A glowing white diamond that was created by an ancient dragon.
+Currency=none
+ConquestItem=false
+
+[BlueKey]
+Type=key
+Unlocks=blue
+Cost=0
+SellPrice=50
+Desc=A small blue key. It will unlock blue-colored chests.
+
+[RedKey]
+Type=key
+Unlocks=red
+Cost=0
+SellPrice=50
+Desc=A small red key. It will unlock red-colored chests.
+
+[OrangeKey]
+Type=key
+Unlocks=orange
+Cost=0
+SellPrice=50
+Desc=A small orange key. It will unlock orange-colored chests.
+
+[GreenKey]
+Type=key
+Unlocks=green
+Cost=0
+SellPrice=50
+Desc=A small green key. It will unlock green-colored chests.
+
+[GoldKey]
+Type=key
+Unlocks=gold
+Cost=0
+SellPrice=200
+Desc=A small gold key. It will unlock gold-colored chests.
+
+[BrownKey]
+Type=key
+Unlocks=brown
+Cost=0
+SellPrice=80
+Desc=A small brown key. It will unlock brown-colored chests.
+
+[SilverKey]
+Type=key
+Unlocks=silver
+Cost=0
+SellPrice=100
+Desc=A small silver key. It will unlock silver-colored chests.
+
+[PurpleKey]
+Type=key
+Unlocks=purple
+Cost=0
+SellPrice=150
+Desc=A small purple key. It will unlock purple-colored chests.
+
+[BlackKey]
+Type=key
+Unlocks=black
+Cost=0
+SellPrice=100
+Desc=A small black key. It will unlock black-colored chests.
+
+[RainbowKey]
+Type=key
+Unlocks=rainbow
+Cost=0
+SellPrice=100
+Desc=A small rainbow-colored key. It will unlock rainbow chests.
+
+[XmasDiscountCard]
+Type=shopreset
+Target=Single
+Amount=5.0
+Desc=pulls out a special Christmas Discount Card and gives it to %enemy who shows it to the shop clerk.  "Oh wow! You've met Santa! That's awesome! Of course you can have a discount!"  Score!
+Cost=$iif($readini(shopnpcs.dat, events, SavedElves) >= 20, 45000, 0)
+SellPrice=$iif($shopnpc.present.check(DiscountCardMerchant) = true, 4500, 0)
+ShopNPC=Santa
+Exclusive=yes
+
+[MiniDiscountCard]
+Type=shopreset
+Target=Single
+Amount=5.0
+Desc=pulls out a Mini Discount Card and gives it to %enemy who shows it to the shop clerk.  "Oh, you're eligible for a small discount here."
+Cost=60000
+SellPrice=5000
+Exclusive=yes
+ShopNPC=DiscountCardMerchant
+
+[DiscountCard]
+Type=shopreset
+Target=Single
+Amount=10.0
+Desc=pulls out a Discount Card and gives it to %enemy who shows it to the shop clerk.  "Ah yes, indeed, part of of our..secret club."  Score!
+Cost=100000
+SellPrice=5000
+Exclusive=yes
+ShopNPC=DiscountCardMerchant
+
+[Beedle'sDiscountCard]
+Type=shopreset
+Target=Single
+Amount=15.0
+Desc=pulls out a special membership card obtained from the traveling merchant and gives it to %enemy who shows it to the shop clerk.  "No way! You have a membership card from HIM? Of course you get a discount!"
+Cost=140000
+SellPrice=5000
+Exclusive=yes
+ShopNPC=TravelMerchant
+
+[BronzeDiscountCard]
+Type=shopreset
+Target=Single
+Amount=15.0
+Desc=pulls out a bronze Discount Card and gives it to %enemy who shows it to the shop clerk.  "Oh, a bronze member? Not too bad.  Here's your discount!"
+Cost=160000
+ConquestItem=true
+SellPrice=5000
+Exclusive=yes
+ShopNPC=DiscountCardMerchant
+
+[SilverDiscountCard]
+Type=shopreset
+Target=Single
+Amount=20.0
+Desc=pulls out a shiny silver Discount Card and gives it to %enemy who shows it to the shop clerk.  "Woah! A silver member? Well of course you get a discount!"
+Cost=200000
+ConquestItem=true
+SellPrice=5000
+Exclusive=yes
+ShopNPC=DiscountCardMerchant
+
+[UltraDiscountCard]
+Type=shopreset
+Target=Single
+Amount=30.0
+Desc=pulls out a shiny gold Ultra Discount Card and gives it to %enemy who shows it to the shop clerk.  "Woah! No way! You know the president of the shop? Why yes, of course, please!  Here's a hefty discount for you!" 
+Cost=300000
+ConquestItem=true
+SellPrice=5000
+Exclusive=yes
+ShopNPC=DiscountCardMerchant
+
+[BigWhoop]
+Type=trust
+NPC=Guybrush
+Exclusive=yes
+SellPrice=100
+Cost=0
+
+[StarCoin]
+type=trust
+NPC=Mario
+Exclusive=yes
+SellPrice=10
+Cost=10
+SummonDesc=$get_chr_name(%trust.npc) pops out of a large green warp pipe and goes "IT'S-A-ME! MARIO!"  before collecting the Star Coin and preparing for battle!
+
+[BelmontMedallian]
+type=Trust
+NPC=Simon_Belmont
+Exclusive=yes
+Sellprice=10
+Cost=10
+
+[GlazedDonut]
+type=Trust
+NPC=Vash
+Exclusive=yes
+SellPrice=10
+Cost=20
+
+[PowerPellet]
+Type=trust
+NPC=Pac-Man
+Exclusive=yes
+SellPrice=10
+Cost=20
+
+[S-MartNameTag]
+type=trust
+NPC=AshWilliams
+Exclusive=yes
+SellPrice=10
+Cost=20
+
+[ShinigamiBadge]
+Type=trust
+NPC=Ichigo
+Exclusive=yes
+SellPrice=10
+Cost=50
+
+[ProudSoulNecklace]
+type=trust
+NPC=Dante
+Exclusive=yes
+SellPrice=10
+Cost=50
+
+[GoddessCrystal]
+type=trust
+NPC=Fi
+Exclusive=yes
+SellPrice=10
+Cost=$iif($readini($char($1), weapons, MasterSword) >= 1, 10, 0)
+SummonDesc=$get_chr_name(%trust.npc) pops out of $get_chr_name($1) $+ 's Master Sword and floats in the air.  "Master, I calculate an $rand(80,89) $+ $chr(37) chance of success"
+
+[Strawberry_Lollipop]
+Type=trust
+NPC=Bayonetta
+SummonDesc=$get_chr_name($1) takes out a strawberry-flavored lollipop. Before $get_chr_name($1) can do anything else, the lollipop gets taken out of $get_chr_name($1) $+ 's hand. $get_chr_name($1) looks over and sees a tall woman holding the lollipop. Bayonetta: "Oh, very well. I have nothing better to do, so I'll help you out."
+Exclusive=yes
+SellPrice=0
+Cost=500
+
+[Codec]
+Type=Trust
+NPC=Solid_Snake
+SummonDesc=$get_chr_name($1) kneels down and places $gender($1) first two fingers onto the right ear. $get_chr_name($1) contacts the number 141.12. A moment later, $get_chr_name($1) sees a cardbox suddenly lifted from the ground and thrown to the side.
+Exclusive=yes
+Sellprice=0
+Cost=100
+
+[BlackRock]
+Type=Trust
+NPC=Magus
+SummonDesc=$get_chr_name($1) takes out a strange black rock and studies it. $get_chr_name($1) suddenly looks up and sees a tall man with long purple hair, long ears, and weas a red cape over his armor and clothing. The man also carries a large scythe in hand as well. Magus: "Very well, I will fight with you. Just stay out of my way."
+Exclusive=yes
+Sellprice=0
+Cost=100
+
+[StrangeCoconut]
+Type=trust
+NPC=FrenchTaunter
+SummonDesc=$get_chr_name($1) takes two of the halves and bangs them together, imitating the sound of a horse galloping. Suddenly, the French Taunter appears next to $get_chr_name($1) $+ !
+Exclusive=yes
+SellPrice=100
+Cost=100
+
+[ChozoMedallion]
+Type=trust
+NPC=Samus
+SellPrice=1000
+Cost=0
+Exclusive=yes
+
+[StrangePizza]
+Type=Trust
+NPC=$gettok(Leonardo.Raphael.Donatello.Michelangelo, $rand(1,4), 46)
+SummonDesc=$get_chr_name($1) takes out a $read($lstfile(TMNTPizza.lst)) box and sets it on a table. Almost immediately, a random ninja turtle at a height of around five feet shows up to get the pizza! Cowabunga!
+Exclusive=yes
+SellPrice=100
+Cost=$iif($readini($char($1), dungeons, The_Technodrome) == true, 100, 0)
+
+[Beginner'sCharm]
+type=accessory
+AccessoryType=Stylish.IncreaseKillCoins.IncreaseRedOrbs
+Cost=0
+Desc=A special charm for beginners. This charm will increase red orbs, kill coins and stylish xp until you have obtained 500,000 red orbs.  $iif($return.totalorbs($1) <= 500000, You still have $calc(500000 - $return.totalorbs($1)) red orbs before this charm stops working, This charm is no longer working) 
+Stylish.Amount=$iif($return.totalorbs($1) <= 500000, 1, 0)
+IncreaseKillCoins.Amount=$iif($return.totalorbs($1) <= 500000, .05, 0)
+IncreaseRedOrbs.Amount=$iif($return.totalorbs($1) <= 500000, .05, 0)
+SellPrice=0
+
+[Jungle-Medallion]
+Type=accessory
+AccessoryType=IncreaseCriticalHits.IncreaseMeleeDamage.BlockAllStatus
+Cost=0
+Desc=A Medallian infused with the power of the Jungle Demons. This Medallion will increase critical hits by 15%, increase melee damage based on the number of on-hand red orbs you have and reduce the chance of status effects from happening by 50%. 
+SellPrice=2000
+IncreaseCriticalHits.Amount=15
+IncreaseMeleeDamage.Amount=.005
+BlockAllStatus.Amount=50
+
+[Eye-Patch]
+type=accessory
+AccessoryType=Stylish.IncreaseSwordDamage.IncreaseGunDamage
+cost=0
+Desc=A pirate eye-patch with a skull and cross bones on it. How cool! Wearing this accessory will increase your +style points by 1 as well as increase gun and sword damage by 10%.
+SellPrice=2000
+IncreaseSwordDamage.amount=.10
+IncreaseGunDamage.amount=.10
+Stylish.amount=1
+
+[Hourglass-Necklace]
+Type=accessory
+AccessoryType=IgnoreQuickSilver
+Cost=0
+Desc=A necklace with the power to ignore Quicksilver.
+SellPrice=2000
+
+[Dragonball-Radar]
+type=accessory
+AccessoryType=IncreaseDBChance
+Cost=0
+Desc=A small green radar that helps locate dragon balls.
+; The amount on this accessory is a direct + amount to the chance of finding a dragon ball at the end of battle.
+IncreaseDBChance.Amount=25
+SellPrice=1000
+
+[Roshi's-Glasses]
+Type=accessory
+AccessoryType=Stylish
+Cost=80000
+Desc=The crazy stylish glasses of Kamesennin
+; The amount on this type of accessory is a direct + amount to the style xp at the end of battle.
+Stylish.Amount=2
+SellPrice=2000
+ShopNPC=TravelMerchant
+
+[Roshi's-Glasses+1]
+Type=accessory
+AccessoryType=Stylish
+Cost=0
+Desc=The crazy stylish glasses of Kamesennin, now even more stylish than before!
+; The amount on this type of accessory is a direct + amount to the style xp at the end of battle.
+Stylish.Amount=5
+SellPrice=5000
+
+[Wizard's-Amulet]
+Type=accessory
+AccessoryType=IncreaseSpellDamage
+Cost=$iif($left($adate,2) = 01, 20000, 0)
+Desc=A shiny metal amulet imbuded with the power of ancient wizards.  This accessory will increase the power of your spells.
+IncreaseSpellDamage.Amount=.07
+SellPrice=2000
+ShopNPC=TravelMerchant
+
+[Wizard's-Amulet+1]
+Type=accessory
+AccessoryType=IncreaseSpellDamage
+Cost=0
+Desc=A shiny metal amulet imbuded with the power of ancient wizards.  Now even more powerful! This accessory will increase the power of your spells.
+IncreaseSpellDamage.Amount=.10
+SellPrice=2000
+
+[Cultist-Rosary]
+type=accessory
+AccessoryType=IncreaseSpellDamage
+Cost=0
+Desc=A rosary from the cultists of Tam-Tara Deepcroft. This accessory will increase the power of your spells.
+IncreaseSpellDamage.Amount=.11
+SellPrice=2000
+Exclusive=yes
+
+[Cultist-Rosary+1]
+type=accessory
+AccessoryType=IncreaseSpellDamage
+Cost=0
+Desc=An upgraded rosary originally from the cultists of Tam-Tara Deepcroft. This accessory will increase the power of your spells.
+IncreaseSpellDamage.Amount=.121
+SellPrice=2000
+Exclusive=yes
+
+[Aetherial-Earrings]
+Type=accessory
+AccessoryType=IncreaseMagic
+Cost=0
+Desc=A glowing set of earrings previously worn by Lady Amandine. This accessory will increase the power of magic.
+IncreaseMagic.Amount=.47
+Exclusive=yes
+
+[Aetherial-Earrings+1]
+Type=accessory
+AccessoryType=IncreaseMagic
+Cost=0
+Desc=A glowing set of earrings previously worn by Lady Amandine. This accessory will increase the power of magic.
+IncreaseMagic.Amount=.49
+Exclusive=yes
+
+[Forbidden-Earrings]
+Type=accessory
+AccessoryType=IncreaseMagic
+Cost=0
+Desc=The ancient and forbidden earrings of Ogama. This accessory will increase the power of magic.
+IncreaseMagic.Amount=.51
+Exclusive=yes
+
+[Forbidden-Earrings+1]
+Type=accessory
+AccessoryType=IncreaseMagic
+Cost=0
+Desc=A reforged version of the forbidden earrings of Ogama. This accessory will increase the power of magic.
+IncreaseMagic.Amount=.60
+Exclusive=yes
+Legendary=true
+
+[Forbidden-Earrings+2]
+Type=accessory
+AccessoryType=IncreaseMagic
+Cost=0
+Desc=The strongest version of the forbidden earrings of Ogama. These have been reforged twice. This accessory will increase the power of magic.
+IncreaseMagic.Amount=.70
+Exclusive=yes
+Legendary=true
+
+[Aetherial-Ring]
+Type=accessory
+AccessoryType=IncreaseMeleeDamage
+Cost=0
+Desc=A glowing ring previously worn by Lady Amandine. This accessory will increase the power of melee attacks based on the number of red orbs on hand.
+SellPrice=2000
+Exclusive=yes
+IncreaseMeleeDamage.Amount=.010
+; The max +damage will be 1000, which means at .010 amount it would require 100,000 red orbs on hand to do that damage.
+
+[Forbidden-Ring]
+Type=accessory
+AccessoryType=IncreaseMeleeDamage
+Cost=0
+Desc=A glowing ring long forgotten from the Tomb of Terror. This accessory will increase the power of melee attacks based on the number of red orbs on hand.
+SellPrice=2000
+exclusive=yes
+IncreaseMeleeDamage.Amount=.050
+; The max +damage will be 1000, which means at .050 amount it would require 50,000 red orbs on hand to do that damage.
+
+[Blessed-Ankh]
+Type=accessory
+AccessoryType=IncreaseHealing
+Cost=$iif($left($adate,2) = 12, 20000, 0)
+Desc=A small ankh that has been blessed by priests.  This accessory will increase the potentcy of healing.
+; .20 = 20% increase in how much healing does.  Keep in mind the value is in percent.. so if you change it to 20 then it'll be 2000%
+IncreaseHealing.Amount=.20
+SellPrice=2000
+ShopNPC=TravelMerchant
+
+[Wizard's-Ankh]
+Type=accessory
+AccessoryType=IncreaseHealing.IncreaseSpellDamage
+Cost=0
+Desc=The combination of a Wizard's Amulet and a Blessed Ankh, this is a necklace that will increase the potentcy of healing and the power of your spells.
+IncreaseHealing.Amount=.20
+IncreaseSpellDamage.Amount=.07
+SellPrice=5000
+
+[Bling-Ring]
+type=accessory
+AccessoryType=IncreaseKillCoins
+Cost=0
+Desc=A small ring that helps discover more Kill Coins from enemies.
+; .10 = 10% more coins.  If the reward is 1000 you'll get +100
+IncreaseKillCoins.Amount=.10
+SellPrice=1500
+
+[Blood-Ring]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=$iif($left($adate,2) = 10, 30000, 0)
+Desc=A small ring with a small blood-red stone in it.  This accessory will increase the amount of orbs you gain at the end of battles.
+; .10 = 10% more orbs.  if the reward is 1000 you'll get +100.
+IncreaseRedOrbs.Amount=.10
+SellPrice=1500
+ShopNPC=TravelMerchant
+
+[Blood-Pendant]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A small ring with a small blood-red stone in it.  This accessory will increase the amount of orbs you gain at the end of battles.
+; .15 = 15% more orbs.  if the reward is 1000 you'll get +150.
+IncreaseRedOrbs.Amount=.15
+SellPrice=2000
+
+[OniGauntlet]
+type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A gauntlet designed by the ancient Oni tribe. It has the ability to increase the amount of orbs you gain at the end of battles.  With enough Orb Crystals it is possible to upgrade.
+; .10 = 10% more orbs.  if the reward is 1000 you'll get +100.
+IncreaseRedOrbs.Amount=.10
+SellPrice=5000
+
+[OniGauntlet+1]
+type=accessory
+AccessoryType=IncreaseRedOrbs.IncreaseKatanaDamage
+Cost=0
+Desc=A gauntlet designed by the ancient Oni tribe. It has the ability to increase the amount of orbs you gain at the end of battles and enhances damage done  with Katana weapons.  With enough Orb Crystals it is possible to upgrade further.
+; .15 = 15% more orbs.  if the reward is 1000 you'll get +150.
+IncreaseRedOrbs.Amount=.15
+IncreaseKatanaDamage.Amount=.10
+SellPrice=5000
+
+[OniGauntlet+2]
+type=accessory
+AccessoryType=IncreaseRedOrbs.IncreaseKatanaDamage.IncreaseMagic
+Cost=0
+Desc=A gauntlet designed by the ancient Oni tribe. It has the ability to increase the amount of orbs you gain at the end of battles and enhances damage done  with Katana weapons and magic.
+; .20 = 20% more orbs.  if the reward is 1000 you'll get +200.
+IncreaseRedOrbs.Amount=.20
+IncreaseKatanaDamage.Amount=.15
+IncreaseMagic=.15
+Legendary=true
+SellPrice=5000
+
+[Blood-Crown]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A golden crown with a bright red gem sitting in the middle.  This accessory will increase the amount of orbs you gain at the end of battles.
+; .20 = 20% more orbs.  if the reward is 1000 you'll get +200.
+IncreaseRedOrbs.Amount=.20
+SellPrice=5000
+
+[Blood-Crown+1]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A golden crown with a bright red gem sitting in the middle.  This accessory will increase the amount of orbs you gain at the end of battles.
+; .22 = 22% more orbs.  if the reward is 1000 you'll get +220.
+IncreaseRedOrbs.Amount=.22
+SellPrice=5000
+
+[Forbidden-Crown]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A black crown with a bright red gem sitting in the middle.  This accessory will increase the amount of orbs you gain at the end of battles.
+; .30= 30% more orbs.  if the reward is 1000 you'll get +300.
+IncreaseRedOrbs.Amount=.30
+SellPrice=5000
+Exclusive=yes
+
+[Forbidden-Crown+1]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A black crown with a bright red gem sitting in the middle. It has been reforged to be more powerful. This accessory will increase the amount of orbs you gain at the end of battles.
+; .45= 45% more orbs.  if the reward is 1000 you'll get +450.
+IncreaseRedOrbs.Amount=.45
+SellPrice=5000
+Exclusive=yes
+Legendary=true
+
+[Forbidden-Crown+2]
+Type=accessory
+AccessoryType=IncreaseRedOrbs
+Cost=0
+Desc=A black crown with a bright red gem sitting in the middle. It has been reforged twice to be more powerful. This accessory will increase the amount of orbs you gain at the end of battles.
+; .60= 60% more orbs.  if the reward is 1000 you'll get +600.
+IncreaseRedOrbs.Amount=.60
+SellPrice=5000
+Exclusive=yes
+Legendary=true
+
+[Purple-Belt]
+Type=accessory
+Cost=$iif($left($adate,2) = 03, 30000, 0)
+AccessoryType=IncreaseH2HDamage
+Desc=A cloth belt that proves you're on the path to becoming a martial arts master!  This accessory will increase the power of hand to hand attacks.
+IncreaseH2HDamage.Amount=.10
+SellPrice=500
+ShopNPC=TravelMerchant
+
+[Brown-Belt]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseH2HDamage
+Desc=A cloth belt that proves you're almost finished with your training as a martial arts master master!  This accessory will increase the power of hand to hand attacks.
+IncreaseH2HDamage.Amount=.20
+SellPrice=1000
+
+[Black-Belt]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseH2HDamage
+Desc=A cloth belt that proves you're a real hand to hand master!  This accessory will increase the power of hand to hand attacks.
+IncreaseH2HDamage.Amount=.30
+SellPrice=2000
+
+[Red-Belt]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseH2HDamage
+Desc=A cloth belt that proves you've gone way beyond the level of a black belt! This accessory will increase the power of hand to hand attacks.
+IncreaseH2HDamage.Amount=.50
+SellPrice=5000
+
+[Dragon-Belt]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseH2HDamage
+Desc=A cloth belt that proves you've gone way beyond the level of even the red belt! This accessory will increase the power of hand to hand attacks.
+IncreaseH2HDamage.Amount=.80
+SellPrice=5000
+
+[Miser-Ring]
+Type=accessory
+Cost=$iif($left($adate,2) = 04, 80000, 0)
+AccessoryType=IncreaseMeleeDamage
+Desc=A reddish gold ring that increases melee damage based on how many $readini(system.dat, system, currency) you currently have on hand.
+IncreaseMeleeDamage.Amount=.005
+; The miser-ring's max +damage will be 1000, which means at .005 amount it would require 200,000 red orbs on hand to do that damage.
+SellPrice=2000
+ShopNPC=TravelMerchant
+
+[Thief-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseSteal
+Desc=A tiny ring that increases the chance of successfully stealing from a target.
+IncreaseSteal.Amount=5
+; The amount is the +#% that it will increase the stealing chance.  Set this number to 100 if you want it to be 100% chance while wearing this ring.
+SellPrice=2000
+
+[Mugger's-Belt]
+Type=accessory
+Cost=0
+AccessoryType=Mug
+Desc=A belt that changes the standard Steal command into Mug. If you wear this accessory you will deal melee damage to the target in addition to stealing from it.
+SellPrice=2000
+
+[Fool's-Tablet]
+Type=accessory
+Cost=$iif($left($adate,2) = 05, 30000, 0)
+AccessoryType=IncreaseMeleeAddPoison
+Desc=A stone tablet that poisons the user but gives an increase to melee damage.  Note: the poison can not be cured and will not wear off inside battle.
+IncreaseMeleeAddPoison.Amount=.30
+SellPrice=500
+ShopNPC=TravelMerchant
+
+[Osiris-Charm]
+Type=accessory
+AccessoryType=AutoRegen
+Cost=0
+Desc=A small ancient charm infused with the power of Osiris. This charm will allow you to have the regeneration skill on automatically.
+SellPrice=2000
+Exclusive=yes
+AutoRegen.Amount=1
+
+[Dr'sMask]
+Type=accessory
+Cost=0
+AccessoryType=BlockAllStatus
+Desc=A white mask that goes over your face to help prevent status effects.  It's only about 25% effective.  Note this does not work on curse on a curse night.
+; The amount is added to the target's current resistance amount.  It's a direct amount so 100 = +100%
+BlockAllStatus.Amount=25
+SellPrice=5000
+
+[PinkBow]
+Type=accessory
+Cost=$iif($left($adate,2) = 02, 75000, 0)
+AccessoryType=BlockAllStatus
+Desc=A pretty pink bown said to have been worn by a powerful princess. While wearing this accessory you will have +50% protection against all status effects EXCEPT for curse under a Curse Night.
+; The amount is added to the target's current resistance amount.  It's a direct amount.  50 = +50%
+BlockAllStatus.Amount=50
+SellPrice=1000
+ShopNPC=TravelMerchant
+
+[Ribbon]
+Type=accessory
+Cost=0
+AccessoryType=BlockAllStatus
+Desc=A pretty pink ribbon said to have been worn by a goddess. While wearing this accessory you will become immune to all status effects EXCEPT for curse under a Curse Night.
+; The amount is added to the target's current resistance amount.  It's a direct amount so 100 = +100%
+BlockAllStatus.Amount=100
+SellPrice=5000
+
+[Aztec-Goldcoin]
+Type=accessory
+Cost=0
+AccessoryType=CurseAddDrain
+Desc=A shiny piece of cursed Aztec Gold. While equipped, this coin will inflict the curse status but will add a +HP Absorb to every melee attack.  The person equipped with this accessory will remain at 0 tp each turn even if items or skills are used.
+SellPrice=1000
+
+[AztecGoldcoin]
+Type=accessory
+Cost=0
+AccessoryType=CurseAddDrain
+Desc=A shiny piece of cursed Aztec Gold. While equipped, this coin will inflict the curse status but will add a +HP Absorb to every melee attack.  The person equipped with this accessory will remain at 0 tp each turn even if items or skills are used.
+SellPrice=1000
+
+[Mayan-Charm]
+Type=accessory
+AccessoryType=IncreaseCriticalHits.BlockAllStatus
+Cost=0
+Desc=A small ancient Mayan charm infused with the power of the ancient ones. This charm will increase critical hits by 5% and reduce the chance of status effects from happening by 10%. 
+SellPrice=2000
+IncreaseCriticalHits.Amount=5
+BlockAllStatus.Amount=10
+
+[Kan-ra-Charm]
+Type=accessory
+AccessoryType=IncreaseCriticalHits.BlockAllStatus
+Cost=0
+Desc=A small ancient charm infused with the power of Kan-ra. This charm will increase critical hits by 7% and reduce the chance of status effects from happening by 6%. 
+SellPrice=2000
+Exclusive=yes
+IncreaseCriticalHits.Amount=7
+BlockAllStatus.Amount=6
+
+[Lucky-Rabbit'sFoot]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseCriticalHits
+Desc=A lucky rabbit's foot that enhances the chance for critical hits.
+IncreaseCriticalHits.Amount=10
+SellPrice=2000
+
+[4leaf-clover]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseCriticalHits
+Desc=A lucky 4 leaf clover that enhances the chance for critical hits.
+IncreaseCriticalHits.Amount=15
+SellPrice=3000
+
+[VIP-MemberCard]
+Type=accessory
+Cost=0
+AccessoryType=ReduceShopLevel
+Desc=A special VIP membership card to the shop. While wearing this accessory all purchases will be -1 shop level.  Note, your shop level cannot drop below 1 even while wearing this accessory and your shop level will continue to rise as it would normally.
+ReduceShopLevel.Amount=1
+SellPrice=5000
+
+[VIP-MemberCard+1]
+Type=accessory
+Cost=0
+AccessoryType=ReduceShopLevel
+Desc=A special VIP membership card to the shop. While wearing this accessory all purchases will be -2 shop level.  Note, your shop level cannot drop below 1 even while wearing this accessory and your shop level will continue to rise as it would normally.
+ReduceShopLevel.Amount=2
+SellPrice=5000
+Legendary=true
+Exclusive=yes
+
+[Spear-Pin]
+Type=accessory
+Cost=$iif($left($adate,2) = 06, 30000, 0)
+AccessoryType=IncreaseSpearDamage
+Desc=A small pin that is shaped like a spear. This accessory will increase melee damage done with a spear weapon.
+IncreaseSpearDamage.Amount=.30
+SellPrice=3000
+ShopNPC=TravelMerchant
+
+[Prism-Specs]
+Type=accessory
+Cost=0
+AccessoryType=ElementalDefense
+Desc=A special pair of sunglasses that enhances the elemental defense of anyone who wears it. This accessory will cut elemental damage done by half, but will also do the same to healing.
+ElementalDefense.Amount=.50
+SellPrice=3000
+
+[Treasure-Ring]
+Type=accessory
+Cost=$iif($left($adate,2) = 07, 80000, 0)
+AccessoryType=IncreaseTreasureOdds
+Desc=A ring that has the shape of a chest on it. Wearing this accessory will increase the odds of receiving better treasure chests by 3%
+IncreaseTreasureOdds.Amount=3
+SellPrice=3000
+ShopNPC=TravelMerchant
+
+[Mimic-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseMimicOdds
+Desc=A ring that has the shape of an angry chest on it. Wearing this accessory will increase the odds of a mimic showing up when opening chests by 3%
+IncreaseMimicOdds.Amount=3
+SellPrice=3000
+
+[Engine-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseMechEngineLevel
+Desc=A ring that will help increase mech engine efficiency by 0.5% when worn.
+IncreaseMechEngineLevel.Amount=0.5
+SellPrice=3000
+
+[Shield-Ring]
+Type=accessory
+Cost=$iif($left($adate,2) = 08, 70000, 0)
+AccessoryType=EnhanceBlocking
+Desc=A ring with a shield on it that will enhance your chances of blocking with a shield.
+EnhanceBlocking.Amount=3
+SellPrice=5000
+ShopNPC=TravelMerchant
+
+[Sword-Pin]
+Type=accessory
+Cost=$iif($left($adate,2) = 09, 30000, 0)
+AccessoryType=IncreaseSwordDamage
+Desc=A small pin that is shaped like a sword. This accessory will increase melee damage done with a sword weapon.
+IncreaseSwordDamage.Amount=.30
+SellPrice=3000
+ShopNPC=TravelMerchant
+
+[Hero'sMedal]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseCriticalHits
+Desc=An accessory for a hero. Gives a large increase to critical hits only when wielding the Mastermune.
+IncreaseCriticalHits.Amount=$iif($readini($char($1), weapons, Mastermune) >= 1, 50, 0)
+SellPrice=10000
+Exclusive=yes
+
+[Axe-Pin]
+Type=accessory
+Cost=$iif($left($adate,2) = 11, 30000, 0)
+AccessoryType=IncreaseAxeDamage
+Desc=A small pin that is shaped like an axe. This accessory will increase melee damage done with an axe weapon.
+IncreaseAxeDamage.Amount=.30
+SellPrice=3000
+ShopNPC=TravelMerchant
+
+[PendantOfPower]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseSwordDamage
+Desc=A bright red pendant that is said to enhance a wearer's ability to fight with a sword. This accessory will increase melee damage done with a sword weapon.
+IncreaseSwordDamage.Amount=.35
+SellPrice=3000
+
+[PendantOfWisdom]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseMagic
+Desc=A bright blue pendant that is said to enhance a wearer's spell power. This accessory will increase damage done with magic.
+IncreaseMagic.Amount=.35
+SellPrice=3000
+
+[PendantOfCourage]
+Type=accessory
+Cost=0
+AccessoryType=EnhanceBlocking
+Desc=A bright green pendant that is said to enhance a wearer's ability to stand up to an enemy and block more often with a shield. This accessory will increase the odds of blocking an attack while using a shield.
+EnhanceBlocking.Amount=2
+SellPrice=3000
+
+[DragonCharm]
+Type=accessory
+Cost=0
+AccessoryType=EnhanceDragonHunt
+Desc=A magical charm that has been created to help heroes find the lairs of dragons.  Wearing this charm while undergoing a dragon hunt will increase the chance of finding a lair by 20%
+SellPrice=2000
+EnhanceDragonHunt.Amount=20
+
+[Friendship-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseTrustFriendship
+Desc=A flowery ring that shows that the friendship between an NPC and player.
+SellPrice=1000
+IncreaseTrustFriendship.Amount=1
+
+[Sonic-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseTurnSpeed
+Desc=You just GOTTA GO FAST when you wear this ring! This ring increases your speed on turn generation
+SellPrice=1000
+; This accessory type uses %.  50% means it increases your speed by 50% during turn generation. Thus 100 speed becomes 150 speed.
+IncreaseTurnSpeed.amount=50
+
+[WorldHeavyweight-Belt]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseWrestlingDamage
+Desc=THE CHAMP IS HERE! Increase your wrestling damage and show them why you're on top!  Wearing this belt increases your wrestling damage by 10%
+SellPrice=1000
+; This accessory will increase wrestling damage by a %
+IncreaseWrestlingDamage.amount=10
+
+[Spinner_Belt]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseWrestlingDamage
+Desc=A version of the heavyweight title which has a spinner in the center, designed by John Cena.
+SellPrice=30000
+IncreaseWrestlingDamage.amount=50
+
+[Hero's_Medal]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseCriticalHits
+Desc=An accessory for a true hero.
+IncreaseCriticalHits.Amount=$iif($readini($char($1), weapons, MasamuneII) >= 1, 90, 0)
+SellPrice=3000
+
+[TeruTeruBozu]
+type=accessory
+cost=0
+AccessoryType=IncreaseRedOrbs.Stylish.IncreaseHealing
+Desc=A little traditional handmade doll made of cloth. Traditionally farmers would hang these outside their windows by a string to  ward off the rain. Hang this little guy off your weapon to bring you more happiness.
+IncreaseRedOrbs.Amount=.18
+IncreaseHealing.Amount=.10
+Stylish.Amount=4
+SellPrice=5000
+Exclusive=yes
+
+[Train-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseMechEngineLevel.IncreaseWrestlingDamage
+Desc=A ring that will help increase mech engine efficiency by 0.3% when worn as well as increase wrestling damage by 25%
+IncreaseMechEngineLevel.Amount=0.3
+IncreaseWrestlingDamage.amount=25
+SellPrice=5000
+Exclusive=yes
+
+[Valor-Ring]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseCriticalHits.ElementalDefense.EnhanceBlocking.IncreaseIGGain
+Desc=A glowing ring that will increase critical hit chance, enhance blocking %, increase elemental defense and increase the amount of IG gained.
+IncreaseCriticalHits.Amount=20
+ElementalDefense.Amount=.50
+IncreaseIGGainRate.Amount=10
+EnhanceBlocking.Amount=2
+SellPrice=5000
+; This version of the ValorRing will be deleted later.  Renaming it to Valor-Ring to keep in line with the other rings.
+; Only keeping this copy for now in case someone has already crafted it.
+
+[ValorRing]
+Type=accessory
+Cost=0
+AccessoryType=IncreaseCriticalHits.ElementalDefense.EnhanceBlocking.IncreaseIGGain
+Desc=A glowing ring that will increase critical hit chance, enhance blocking %, increase elemental defense and increase the amount of IG gained.
+IncreaseCriticalHits.Amount=20
+ElementalDefense.Amount=.50
+IncreaseIGGainRate.Amount=10
+EnhanceBlocking.Amount=2
+SellPrice=5000
+
+[OrbCrystal]
+type=misc
+Cost=0
+Sell=500
+Desc=A crystal made purely out of red orbs.  It glows red.
+
+[WeaponCrystal]
+type=misc
+Cost=0
+Sell=500
+Desc=A crystal made purely out of black orbs. It gives off a dark glow.
+
+[Death'sBreath]
+Type=misc
+Cost=0
+SellPrice=1
+Desc=A bottle of vile white liquid that smells like anguish and death. Combining this item with a gold key will result in a torment orb.
+
+[IceMod]
+Type=misc
+Cost=0
+SellPrice=1
+Desc=An item which can be combined with the Samurai Edge blueprint to add the ice element.
+Exclusive=yes
+
+[FireMod]
+Type=misc
+Cost=0
+SellPrice=1
+Desc=An item which can be combined with the Samurai Edge blueprint to add the fire element.
+Exclusive=yes
+
+[ElectricMod]
+Type=misc
+Cost=0
+SellPrice=1
+Desc=An item which can be combined with the Samurai Edge blueprint to add the lightning element.
+Exclusive=yes
+
+[ExplosionMod]
+Type=misc
+Cost=0
+SellPrice=1
+Desc=An item which can be combined with the Samurai Edge blueprint to allow area of effect melee.
+Exclusive=yes
+
+[Trash]
+Type=misc
+Cost=0
+SellPrice=1
+Desc=a piece of trash
+
+[Seed]
+Type=misc
+Cost=0
+SellPrice=10
+Desc=A seed from a sapling.
+GardenXP=10
+GardenType=seed
+
+[DekuSeed]
+Type=misc
+Cost=0
+SellPrice=10
+Desc=A seed from a deku scrub.
+GardenXP=30
+GardenType=seed
+
+[Rose]
+Type=misc
+Cost=0
+SellPrice=50
+Desc=A red rose.
+GardenXP=75
+GardenType=flower
+
+[Tulip]
+Type=misc
+Cost=2000
+SellPrice=50
+Desc=A pink tulip
+GardenXP=50
+GardenType=flower
+Currency=AlliedNotes
+
+[SmallCarrot]
+Type=misc
+Cost=0
+SellPrice=50
+Desc=a tiny carrot that is not suitable for cooking. Just sell it.
+
+[PoringGoop]
+type=misc
+Cost=0
+SellPrice=50
+Desc=The remains of a poring not suitable for crafting. Sell it.
+
+[BeetleShell]
+Type=misc
+Cost=0
+SellPrice=10
+Desc=A shell from a beetle
+
+[SpiderWeb]
+type=misc
+Cost=0
+SellPrice=10
+Desc=A bundle of spider web. It's sticky. Looks like it might be useful for crafting StrongThread.
+
+[QuadavShell]
+Type=misc
+Cost=0
+SellPrice=10
+Desc=A shell from a Quadav
+ShopNPC=TravelMerchant
+Currency=AlliedNotes
+
+[BeetleJaw]
+Type=misc
+Cost=0
+SellPrice=10
+Desc=A jaw from a beetle
+
+[MimicCore]
+Type=misc
+Cost=0
+SellPrice=5000
+Desc=A pulsing core from a Mimic.
+
+[AntlionMandible]
+Type=misc
+Cost=0
+SellPrice=10
+Desc=An oversized mandible from an Antlion
+Exclusive=yes
+
+[CutlassHandle]
+type=misc
+Cost=0
+SellPrice=500
+Desc=A cutlass sword handle. The blade is missing
+Exclusive=yes
+
+[Milk]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=A bottle of milk.
+
+[GibdoBandage]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=A rotting piece of mummy bandage from a gibdo.
+
+[RedeadAsh]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=The ash taken from a Redead Knight.
+
+[GremlinSkin]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=The skin taken from a gremlin.
+
+[GreenKinstone]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=A green Kinstone piece. Collecting these is said to bring a lot of luck.
+
+[BlueKinstone]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=A blue Kinstone piece. Collecting these is said to bring a lot of luck.
+
+[SmallEgg]
+Type=misc
+Desc=A small white egg.
+Cost=$iif($shopnpc.present.check(EasterBunny) = true, 500, 0)
+SellPrice=100
+ShopNPC=EasterBunny
+Exclusive=yes
+Currency=AlliedNotes
+
+[HardBoiledEgg]
+Type=misc
+Desc=A hard boiled egg.
+Cost=$iif($shopnpc.present.check(EasterBunny) = true, 1000, 0)
+SellPrice=100
+ShopNPC=EasterBunny
+Exclusive=yes
+Currency=AlliedNotes
+
+[StrongThread]
+type=misc
+Cost=0
+SellPrice=10
+Desc=A spool of strong thread.
+
+[AtlantianThreadSpool]
+Type=misc
+Desc=A spool of thread from Atlantis. It glows with an ancient power.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+Currency=AlliedNotes
+
+[ShadowSpool]
+Type=misc
+Desc=A spool of shadow thread. It's glowing with an ancient shadow power.
+Cost=0
+SellPrice=1000
+Exclusive=yes
+Currency=AlliedNotes
+
+[E-Tank]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=a small tank of energy that is usually used for mechs though occasionally it has other uses.
+Currency=AlliedNotes
+Amount=200
+MechType=RestoreEnergy
+Exclusive=yes
+
+[MetalScrap]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A piece of metal scrap, used to repair mechs.
+Currency=AlliedNotes
+Amount=200
+MechType=RestoreHP
+Exclusive=yes
+
+[E-TankA]
+Type=misc
+Cost=100
+SellPrice=40
+Desc=a tank of energy for use by mechs.
+Currency=AlliedNotes
+Amount=400
+MechType=RestoreEnergy
+ConquestItem=true
+Exclusive=yes
+
+[E-TankB]
+Type=misc
+Cost=200
+SellPrice=80
+Desc=a tank of energy for use by mechs.
+Currency=AlliedNotes
+Amount=600
+MechType=RestoreEnergy
+ConquestItem=true
+Exclusive=yes
+
+[E-TankT]
+Type=misc
+Cost=400
+SellPrice=100
+Desc=a medium tank of energy for use by mechs.
+Currency=AlliedNotes
+Amount=800
+MechType=RestoreEnergy
+ConquestItem=true
+Exclusive=yes
+
+[E-TankZ]
+Type=misc
+Cost=800
+SellPrice=300
+Desc=a large tank of energy for use by mechs.
+Currency=AlliedNotes
+Amount=1000
+MechType=RestoreEnergy
+ConquestItem=true
+Exclusive=yes
+
+[FrameRepairA]
+type=misc
+cost=100
+SellPrice=40
+Desc=A set of tools used to repair mechs.
+Currency=AlliedNotes
+Amount=400
+MechType=RestoreHP
+ConquestItem=true
+Exclusive=yes
+
+[FrameRepairB]
+type=misc
+cost=200
+SellPrice=80
+Desc=A set of tools used to repair mechs.
+Currency=AlliedNotes
+Amount=600
+MechType=RestoreHP
+ConquestItem=true
+Exclusive=yes
+
+[FrameRepairE]
+type=misc
+cost=400
+SellPrice=100
+Desc=A set of tools used to repair mechs.
+Currency=AlliedNotes
+Amount=800
+MechType=RestoreHP
+ConquestItem=true
+Exclusive=yes
+
+[FrameRepairZ]
+type=misc
+cost=800
+SellPrice=300
+Desc=A set of advanced tools used to repair mechs.
+Currency=AlliedNotes
+Amount=1000
+MechType=RestoreHP
+ConquestItem=true
+Exclusive=yes
+
+[JungleThorn]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=A sharp thorn from an evil Jungle monster
+Currency=AlliedNotes
+GardenXP=-10
+
+[JungleRose]
+Type=misc
+Cost=0
+SellPrice=100
+Desc=A beautiful rose won from an evil Jungle monster
+Currency=AlliedNotes
+GardenXP=100
+GardenType=Plant
+
+[DragonScale]
+type=misc
+Cost=0
+SellPrice=1000
+Desc=A scale from a dragon
+Currency=AlliedNotes
+
+[DragonFang]
+type=misc
+Cost=0
+SellPrice=1000
+Desc=A fang from a dragon
+Currency=AlliedNotes
+
+[DragonEgg]
+type=misc
+Cost=0
+SellPrice=1000
+Desc=A small dragon egg
+Currency=AlliedNotes
+
+[Ink]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A small tube of black ink.
+Currency=AlliedNotes
+
+[PrimalToken]
+type=misc
+Cost=0
+SellPrice=10000
+Desc=A coin pulsing with primal aetheric energy. Only obtained by defeating a primal of great power.
+Currency=none
+
+[Paper]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A blank piece of paper.
+Currency=AlliedNotes
+
+[AshLog]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A log from an ash tree.
+Currency=AlliedNotes
+
+[Hatchet]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A rusted hatchet.
+Currency=AlliedNotes
+
+[IronOre]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A chunk of iron ore.
+Currency=AlliedNotes
+
+[LunarOre]
+Type=misc
+Cost=0
+SellPrice=20000
+Desc=A chunk of ore from the moon.
+
+[BrokenLance]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A splintered lance that is no use as a weapon in its current state.
+Currency=AlliedNotes
+
+[Ectoplasm]
+Type=misc
+Cost=200
+SellPrice=80
+Desc=The gooey remains of a ghost. It's slimey to the touch.
+Currency=AlliedNotes
+
+[EtherealChain]
+Type=misc
+Cost=0
+SellPrice=500
+Desc=A chain forged by a demon
+Currency=AlliedNotes
+
+[SilverChain]
+Type=misc
+Cost=50
+SellPrice=20
+Desc=A chain made of silver.
+Currency=AlliedNotes
+
+[FireGem]
+Type=misc
+Cost=100
+SellPrice=40
+Desc=A small glowing red rock.
+Currency=AlliedNotes
+
+[IceStone]
+Type=misc
+Cost=100
+SellPrice=40
+Desc=A frozen stone pulsing with magical energy.
+Currency=AlliedNotes
+
+[WindRock]
+Type=misc
+Cost=100
+SellPrice=40
+Desc=A green rock that seems to carry the power of the wind inside it.
+Currency=AlliedNotes
+
+[WaterJewel]
+Type=misc
+Cost=100
+SellPrice=40
+Desc=A bright blue jewel that has a tiny waterfall inside it.
+Currency=AlliedNotes
+
+[EarthSphere]
+Type=misc
+Cost=100
+SellPrice=40
+Desc=A perfectly round brown sphere that's pulsing with energy.
+Currency=AlliedNotes
+
+[Sand]
+Type=misc
+Cost=20
+SellPrice=5
+Desc=Some sand. Watch out, it gets everywhere.
+Currency=none
+
+[Glass]
+Type=misc
+Cost=20
+SellPrice=5
+Desc=A piece of glass.
+Currency=AlliedNotes
+
+[Cloth]
+type=misc
+Cost=20
+SellPrice=10
+Desc=a piece of cloth
+Currency=AlliedNotes
+
+[RepairHammer]
+type=misc
+Cost=100
+SellPrice=50
+Desc=a hammer used to repair armor
+Currency=AlliedNotes
+
+[GoldOre]
+type=misc
+Cost=100
+SellPrice=50
+Desc=a chunk of gold ore
+Currency=AlliedNotes
+
+[GoldIngot]
+type=misc
+Cost=100
+SellPrice=50
+Desc=an ingot made from gold ore
+Currency=AlliedNotes
+
+[SilverOre]
+type=misc
+Cost=100
+SellPrice=50
+Desc=a chunk of silver ore
+Currency=AlliedNotes
+
+[DarksteelOre]
+type=misc
+Cost=0
+SellPrice=80
+Desc=a chunk of darksteel ore
+Currency=None
+
+[BrokenShield]
+type=misc
+Cost=0
+SellPrice=500
+Desc=a broken shield. In this state it is useless. It can be repaired with darksteel ore
+currency=none
+
+[TigerFang]
+Type=misc
+Cost=0
+SellPrice=50
+Desc=A fang from a tiger
+Currency=AlliedNotes
+
+[IronBowl]
+Type=misc
+Cost=5000
+SellPrice=100
+Currency=AlliedNotes
+Desc=A large iron bowl
+
+[AetherialFragment]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a fragment of the Aetherial accessories from the Haukke Manor.
+Exclusive=yes
+
+[ForbiddenFragment]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a fragment of the Forbidden accessories from the Tomb of Terror.
+Exclusive=yes
+
+[OsirisFragment]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a fragment of the Osiris charm from the Kan-Ra pyramid.
+Exclusive=yes
+
+[Kan-raFragment]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a fragment of the Kan-Ra charm from the Kan-Ra pyramid.
+Exclusive=yes
+
+[CultistFragment]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a fragment of the Cultist Rosary from the Tam-Tara Deepcroft.
+Exclusive=yes
+
+[SpicedRum]
+Type=misc
+Cost=100
+SellPrice=25
+Desc=Spiced rum used to make eggnog.
+Currency=none
+
+[LifeShard]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a pulsing white shard from the Mother Crystal.
+Exclusive=yes
+TormentReward=true
+
+[ArcaneDust]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a bottle full of arcane dust. This is a powerful crafting ingredient 
+Exclusive=yes
+TormentReward=true
+
+[ForgottenSoul]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a small chunk of glowing black and orange ore that can be used to craft legendary equipment
+Exclusive=yes
+TormentReward=true
+
+[ReusablePart]
+Type=misc
+cost=0
+SellPrice=1
+Desc=a part of a salvaged piece of equipment
+Exclusive=yes
+TormentReward=true
+
+[TitaniteShard]
+Type=increaseWeaponLevel
+IncreaseAmount=1
+Desc=takes out a shard of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=50000
+SellPrice=2000
+Exclusive=yes
+ShopNPC=BattleMerchant
+ConquestItem=true
+
+[TitaniteChunk]
+Type=increaseWeaponLevel
+IncreaseAmount=5
+Desc=takes out a chunk of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=100000
+SellPrice=2000
+Exclusive=yes
+ShopNPC=BattleMerchant
+ConquestItem=true
+
+[LargeTitaniteChunk]
+Type=increaseWeaponLevel
+IncreaseAmount=15
+Desc=takes out a large chunk of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[TitaniteSlab]
+Type=increaseWeaponLevel
+IncreaseAmount=25
+Desc=takes out a slab of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[LargeTitaniteSlab]
+Type=increaseWeaponLevel
+IncreaseAmount=100
+Desc=takes out a large slab of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[StrangeTitaniteSlab]
+Type=increaseWeaponLevel
+ShopNPC=TravelMerchant
+IncreaseAmount=200
+Desc=takes out a strage blue slab of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=2500000
+SellPrice=2000
+Exclusive=yes
+
+[ExtremeTitaniteSlab]
+Type=increaseWeaponLevel
+IncreaseAmount=150
+Desc=takes out a giganitc blue slab of titanite, setting the weapon on the anvil. %real.name then applies blacksmith techniques to the weapon to strengthen it.
+Cost=0
+SellPrice=2000
+Exclusive=yes
+
+[Clom'sTale-01]
+Type=misc
+cost=0
+SellPrice=1
+Desc=The first chapter of six in the saga of the ancient and powerful wizard Clom. In this chapter he discusses at length the benefits of always wearing a helmet.
+Exclusive=yes
+Legendary=true
+
+[Clom'sTale-02]
+Type=misc
+cost=0
+SellPrice=1
+Desc=The second chapter of six in the saga of the ancient and powerful wizard Clom. This chapter seems to be all about the latest body armor fashions.
+Exclusive=yes
+Legendary=true
+
+[Clom'sTale-03]
+Type=misc
+cost=0
+SellPrice=1
+Desc=The third chapter of six in the saga of the ancient and powerful wizard Clom. Clom talks about all the times he had a leg to stand on in this chapter.
+Exclusive=yes
+Legendary=true
+
+[Clom'sTale-04]
+Type=misc
+cost=0
+SellPrice=1
+Desc=The fourth chapter of six in the saga of the ancient and powerful wizard Clom. In this chapter Clom rambles on about something called Safe Tea Boots.
+Exclusive=yes
+Legendary=true
+
+[Clom'sTale-05]
+Type=misc
+cost=0
+SellPrice=1
+Desc=The fifth chapter of six in the saga of the ancient and powerful wizard Clom. This chapter talks about all the times he gave a helping hand to people.
+Exclusive=yes
+Legendary=true
+
+[Clom'sTale-06]
+Type=misc
+cost=0
+SellPrice=1
+Desc=The final chapter in the saga of the ancient and powerful wizard Clom. It is titled "You Are Not Your Jewelry--Until You Are." It seems to be about the accessories Clom wore.
+Exclusive=yes
+Legendary=true
+
+[BeastmenSeal]
+type=trade
+cost=50
+Desc=Monsters use this seal as a checkpoint pass. It is used by pressing its surface onto a piece of clay.  Rumor has it that there's a strange man willing to trade these for portal items.
+Currency=AlliedNotes
+
+[KindredSeal]
+type=trade
+cost=100
+Desc=A rare seal believed to be used by the Kindred Demons as a checkpoint pass. It is used by pressing its surface onto a piece of clay.  Rumor has it there's a strange man willing to trade these for strong portal items.
+Currency=AlliedNotes
+
+[KirinSeal]
+type=misc
+cost=0
+Desc=A glowing seal that proves that Kirin, god of the sky, has been defeated.
+Currency=none
+
+[ByakkoSeal]
+type=misc
+cost=0
+Desc=A glowing seal that proves that Byakko has been defeated.
+Currency=none
+
+[GenbuSeal]
+type=misc
+cost=0
+Desc=A glowing seal that proves that Genbu has been defeated.
+Currency=none
+
+[SeiryuSeal]
+type=misc
+cost=0
+Desc=A glowing seal that proves that Seiryu has been defeated.
+Currency=none
+
+[SuzakuSeal]
+type=misc
+cost=0
+Desc=A glowing seal that proves that Suzaku has been defeated.
+Currency=none
+
+[KindredCrest]
+type=trade
+cost=100
+Desc=An elaborate crest belonging to the uppermost nobility of the Kindred. Rumor has it that there's a strange man willing to trade these for portal items.
+Currency=AlliedNotes
+
+[HighKindredCrest]
+type=trade
+cost=100
+Desc=Surreal, nightmarish patterns adorn this crest, symbolizing a Kindred house of the purest lineage. Rumor has it that there's a strange man willing to trade these for portal items.
+Currency=AlliedNotes
+ConquestItem=true
+
+[SacredKindredCrest]
+type=trade
+cost=1000
+Desc=The demonically frightful patterns etched into this crest skillfully convey the power possessed by the unholiest of Kindred houses. Rumor has it that there's a strange man willing to trade these for portal items.
+Currency=AlliedNotes
+
+[AncientBeastcoin]
+type=misc
+cost=200
+SellPrice=80
+Desc=A gold coin Minted by the Quadav long ago. Far more ornate than modern currency, it consists of nearly pure gold, and a diamond fitted into its center.
+Currency=AlliedNotes
+ConquestItem=true
+
+[CardinalCloth]
+type=misc
+cost=200
+SellPrice=80
+Desc=This red cloth was woven in ancient times.
+Currency=AlliedNotes
+
+[Kurogane]
+type=misc
+cost=200
+SellPrice=80
+Desc=A sheet of darksteel forged in the Far East.
+Currency=AlliedNotes
+
+[DiabolicSilk]
+type=misc
+cost=200
+SellPrice=80
+Desc=Origins shrouded in mystery, this silk cloth has been dubbed as vile due to the fact that those who gaze upon one wearing a garment woven from it are charmed.
+Currency=AlliedNotes
+
+[DarkOrichalcumIngot]
+type=misc
+cost=200
+SellPrice=80
+Desc=This orichalcum ingot from the Near East is deep brown in color.
+Currency=AlliedNotes
+ConquestItem=true
+
+[Mythril]
+type=misc
+cost=0
+SellPrice=5000
+Desc=A small chunk of glowing mythril.
+
+[JewelOfArdor]
+type=misc
+cost=1500
+SellPrice=500
+Desc=The red hues of this jewel blaze and surge like the flames of passion.
+Currency=AlliedNotes
+ConquestItem=true
+
+[JewelOfWieldance]
+type=misc
+cost=1500
+SellPrice=500
+Desc=Taking this jewel into hand, you can feel your arm move more freely.
+Currency=AlliedNotes
+ConquestItem=true
+
+[StoneOfWieldance]
+type=misc
+cost=0
+SellPrice=500
+Desc=Taking this stone into hand, you can feel your arm move more freely.
+Currency=AlliedNotes
+ConquestItem=true
+
+[UtopianGoldThread]
+type=misc
+cost=200
+SellPrice=80
+Desc=This Far Eastern gold thread is of the utmost quality.
+Currency=AlliedNotes
+ConquestItem=true
+
+[SnowyCerment]
+type=misc
+cost=200
+SellPrice=80
+Desc=This chunk of cermit from the Near East is as white as snow.
+Currency=AlliedNotes
+ConquestItem=true
+
+[ChameleonYarn]
+type=misc
+cost=200
+SellPrice=80
+Desc=This peculiar spool of yarn changes color to match the surrounding enviroment.
+Currency=AlliedNotes
+
+[GlitteringYarn]
+type=misc
+cost=200
+SellPrice=80
+Desc=This thread glitters when touched by light.
+Currency=AlliedNotes
+
+[BenedictSilk]
+type=misc
+cost=200
+SellPrice=80
+Desc=Blesses by a saint in ancient times, this silk cloth gleams with an awe-inspiring light.
+Currency=AlliedNotes
+
+[CoinOfBalance]
+type=misc
+cost=300
+SellPrice=90
+Desc=A peculiar coin that, when flipped. will always alternate heads and tails.
+Currency=AlliedNotes
+ConquestItem=true
+
+[Demonite_Ore]
+Type=misc
+Desc=An ore of metal which glows with a purple aura.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[Shadow_Scale]
+Type=misc
+Desc=A shadowy scale that was taken from the Eater of Worlds.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[Crimtane_Ore]
+Type=misc
+Desc=An ore of metal which glows with a crimson aura.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[SoulOfSight]
+Type=misc
+Desc=The essence of omniscient watchers.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[SoulOfMight]
+Type=misc
+Desc=The essence of the destroyer.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[SoulOfFright]
+Type=misc
+Desc=The essence of pure terror.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[Chlorophyte_Ore]
+Type=misc
+Desc=An ore of metal which glows with a deep green aura.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[EyeOfTheGolem]
+Type=misc
+Desc=An eye taken from the Lihzahrd Golem.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[Titanium_Ore]
+Type=misc
+Desc=An ore of metal which is sparkling dark gray with miniscule spots of green and pink.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[HeavyMetalPlate]
+Type=misc
+Desc=A metallic plate that seems disproportionately weighty for its compact size.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[UnkaiSeal]
+Type=misc
+Desc=A musty slip of parchment, worn and faded with the years. Faintly visible is the image of a piece of armor, annotated with elaborately scribed glyphs of a long-lost tongue.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[EstoqueurSeal]
+Type=misc
+Desc=A musty slip of parchment, worn and faded with the years. Faintly visible is the image of a piece of armor, annotated with elaborately scribed glyphs of a long-lost tongue.
+Cost=0
+SellPrice=100
+Currency=AlliedNotes
+
+[UnkaiArmorPiece]
+Type=misc
+Desc=A piece ornately decorated armor for use by Samurai. Once used by a great Hero of Abyssea, the true potential of this Empyrean armor is currently sealed.
+Cost=0
+SellPrice=100
+Exclusive=yes
+Currency=AlliedNotes
+
+[EstoqueurArmorPiece]
+Type=misc
+Desc=A piece of ornately decorated armor in scarlet and gold for use by Red Mages. Once used by a great Hero of Abyssea, the true potential of this Empyrean armor is currently sealed.
+Cost=0
+SellPrice=100
+Exclusive=yes
+Currency=AlliedNotes
+
+[Vanadium]
+Type=misc
+cost=0
+SellPrice=1
+Desc=A rare ore that can be used to give new power to weapons or to make a unique stone.
+Exclusive=yes
+
+[SilverSwordParts]
+Type=misc
+Desc=Parts for a mysterious and powerful sword.
+Cost=0
+SellPrice=2500
+Exclusive=yes
+Currency=AlliedNotes
+
+[Mega_Stone-Prototype]
+type=misc
+cost=0
+SellPrice=10000
+Desc=A prototype version of the Mega Stone designed to work with all Pokémon.
+Currency=none
+Exclusive=yes
+
+[AdvancedFusionEngine]
+Type=misc
+Desc=An advanced fusion engine for use by mechs, though requires just a few more materials before proper installation.
+Cost=10000
+SellPrice=100
+Exclusive=yes
+Currency=AlliedNotes
+
+[AlphaWeltallCore]
+Type=misc
+Desc=The mech core retrieved from the Alpha Weltall gear. Requires repairs before it can be used.
+Cost=$iif($readini($char($1), dungeons, Zohar_Cave) == true, 10000, 0)
+SellPrice=100
+Exclusive=yes
+Currency=AlliedNotes
+
+[SilverPointsCard]
+type=misc
+cost=0
+SellPrice=1
+Desc=A card that contains 15 Silver Points.
+Currency=none
+Exclusive=yes
+
+[SilverSeal]
+type=misc
+cost=0
+SellPrice=1
+Desc=A silver seal made from silver points.
+Currency=none
+Exclusive=yes
+
+[HippogryphFeather]
+type=misc
+cost=0
+SellPrice=300
+Desc=A feather from a Hippogryph.
+Currency=none
+Exclusive=no
+; Armor and Blueprint Vouchers
+
+[BronzeVoucher]
+type=misc
+cost=0
+SellPrice=100
+Desc=A bronze voucher that can be used to exchange for armor and blueprints
+Currency=none
+Exclusive=yes
+
+[SilverVoucher]
+type=misc
+cost=0
+SellPrice=100
+Desc=A silver voucher that can be used to exchange for armor and blueprints
+Currency=none
+Exclusive=yes
+
+[GoldVoucher]
+type=misc
+cost=0
+SellPrice=100
+Desc=A gold voucher that can be used to exchange for armor and blueprints
+Currency=none
+Exclusive=yes
+; Monster Fair items
+
+[MonsterFairTicket]
+type=MonsterFair
+Cost=500
+SellPrice=10
+ViewDesc=A ticket to enter the Monster Fair. Using this item outside of battle will cause the daily Monster Fair battle set to start. This item will be consumed upon use.
+Desc=pulls out a glowing ticket to the Monster Fair.  In a flash a portal opens and several gentle-looking monsters wave the heroes on in  Those who wish to test their strength may now enter the fair.
+Currency=AlliedNotes
+Exclusive=yes 
+
+[PrizeTicket]
+type=misc
+cost=0
+SellPrice=100
+Desc=A ticket won from the Monster Fair. This can be used to exchange for items.
+Currency=none
+Exclusive=yes
+; Tech increase items
+
+[CodexOfBooetics]
+Type=increaseTechLevel
+IncreaseAmount=1
+Desc=takes out a codex of "booetics" and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=1
+Exclusive=yes
+ConquestItem=false
+
+[CodexOfPoetics]
+Type=increaseTechLevel
+IncreaseAmount=1
+Desc=takes out a codex of poetics and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=100000
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+ShopNPC=BattleMerchant
+
+[CodexOfLore]
+Type=increaseTechLevel
+IncreaseAmount=5
+Desc=takes out a codex of lore and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[CodexOfScripture]
+Type=increaseTechLevel
+IncreaseAmount=10
+Desc=takes out a codex of scripture and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[CodexOfVerity]
+Type=increaseTechLevel
+IncreaseAmount=20
+Desc=takes out a codex of verity and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[CodexOfCreation]
+Type=increaseTechLevel
+IncreaseAmount=50
+Desc=takes out a codex of creation and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[CodexOfTheHoradric]
+Type=increaseTechLevel
+IncreaseAmount=75
+Desc=takes out a codex of the Horadric and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[CodexOfMythology]
+Type=increaseTechLevel
+IncreaseAmount=100
+Desc=takes out a codex of mythology and studies it. Suddenly %real.name knows how to perform the technique better!
+Cost=0
+SellPrice=2000
+Exclusive=yes
+ConquestItem=true
+
+[EthRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=HurtEthereal
+Desc=This rune will infuse a weapon with the ability to hurt Ethereal monsters.
+
+[MtlRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=IgnoreMetalDefense
+Desc=This rune will infuse a weapon with the ability to cut through the defense of strong "Metal Defense" type monsters (such as Metal Slimes).
+
+[RenRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=RenkeiBonus
+Desc=This rune will infuse a weapon with Enhanced Renkei points when a tech is done with that weapon.
+
+[MeRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=MeleeBonus
+Desc=This rune will infuse a weapon with a melee bonus when melee attacks are done with that weapon.
+
+[TeRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=TechBonus
+Desc=This rune will infuse a weapon with a tech damage bonus when techs are done with that weapon.
+
+[MaRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=MagicBonus
+Desc=This rune will infuse a weapon with a magic damage bonus when magic techs are done with that weapon.
+
+[HiRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=AdditionalHit
+Desc=This rune will infuse a weapon with the ability to do one extra hit per melee attack.
+
+[GeRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=GemConvert
+Desc=This rune will infuse a weapon with the ability to convert monsters into gems upon their deaths.
+
+[SmnRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=EnhanceSummons
+Desc=This rune will infuse a weapon with the ability to enhance summons while the augmented weapon is equipped when using a summon.
+
+[DrnRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=Drain
+Desc=This rune will infuse a weapon with the Drain status. Attacks done with the Drain status on will allow you to absorb some HP back.
+
+[ItmRune]
+Type=rune
+Cost=0
+SellPrice=150
+Augment=EnhanceItems
+Desc=This rune will infuse a weapon with the ability to enhance items when the augmented weapon is equipped while using items.
+
+[NinRune]
+Type=rune
+Cost=0
+SellPrice=300
+Augment=UtsusemiBonus
+Desc=This rune will infuse a weapon with the ability to enhance the Utsusemi skill when the augmented weapon is equipped while using the skill.
+
+[IgDef]
+type=rune
+Cost=0
+SellPrice=300
+Augment=IgnoreDefense
+Desc=This rune will infuse a weapon with the ability to ignore some of a target's defense. 
+
+[IgDefRune]
+type=rune
+Cost=0
+SellPrice=300
+Augment=IgnoreDefense
+Desc=This rune will infuse a weapon with the ability to ignore some of a target's defense. 
+
+[TurtleRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=EnhanceDefender
+Desc=This rune will infuse a weapon with the ability to enhance the skill "Defender" while the augmented weapon is equipped when using the skill. 
+
+[DragonRune]
+Type=rune
+Cost=0
+SellPrice=200
+Augment=EnhanceAggressor
+Desc=This rune will infuse a weapon with the ability to enhance the skill "Aggressor" while the augmented weapon is equipped when using the skill. 
+
+[EleRune]
+type=rune
+Cost=0
+SellPrice=200
+Augment=EnhanceElementalDefense
+Desc=This rune will infuse a weapon with the ability to help enhance the user's elemental defense while the augmented weapon is equipped when hit by an elemental attack.
+
+[RngRune]
+type=rune
+Cost=0
+SellPrice=200
+Augment=EnhanceRanged
+Desc=This rune will infuse a weapon with the ability to help enhance a user's ranged weapon, such as a bow, while the augmented weapon is equipped.
+; Beastmen Seal Portal Items
+
+[AlliedTrainingPaper]
+type=portal
+cost=5
+currency=BeastmenSeal
+battlefield=Allied Training Field
+Weather=calm
+Monster=Allied_Scrub
+Desc=visits the Allied Forces and hands the guard the training paper. "You must be here to train the new guy," he says to them before leading them to the training field.
+AlliedNotes=500
+Exclusive=yes
+PortalLevel=10
+Victory=$chr(2) $+ The Allied Scrub has learned a valuable lesson and will use that lesson to grow stronger!
+Defeat=$chr(2) $+ The Allied Scrub does a dance to celebrate the fact that he has bested the heroes in combat! "See? I don't need any training! I'm already the best!"
+RecommendedPartySize=1
+
+[MillennialFairPass]
+Type=portal
+Cost=10
+Currency=BeastmenSeal
+Battlefield=Leene Square
+Weather=calm
+Monster=Gato
+Desc=takes out the fair pass, which allows everyone to enter. The heroes take a look around, enjoying the sights. Eventually they come up to an area with a strange robot. The robot sees the heroes and goes to speak into the microphone in its hand.
+AlliedNotes=1000
+Exclusive=yes
+PortalLevel=10
+RecommendedPartySize=1
+
+[WormFood]
+type=portal
+cost=5
+currency=BeastmenSeal
+battlefield=Korroloka Tunnel
+Weather=gloomy
+Monster=Morion_Worm
+Desc=travels to the Korroloka Tunnel and takes out the worm food.  After opening it, %real.name sprinkles the food out on the cavern floor.  A large worm pops out of the side of the cavern wall and looks at the heroes..
+AlliedNotes=500
+Exclusive=yes
+PortalLevel=25
+RecommendedPartySize=1
+
+[DemonBell]
+type=portal
+Cost=10
+Currency=BeastmenSeal
+Battlefield=Jester's Lair
+Weather=gloomy
+Monster=Crazy_Jester
+Desc=rings a demonic bell that opens a portal. Upon entering they are greeted with Jester, the insane clown.
+AlliedNotes=1000
+Exclusive=yes
+PortalLevel=30
+RecommendedPartySize=1
+
+[BombShard]
+type=portal
+cost=10
+currency=BeastmenSeal
+battlefield=Waughroon Shrine
+Weather=hot
+Monster=Time_Bomb
+Desc=travels to Waughroon Shrine and takes out the bomb shard.  After placing it down into the center of the shrine a large and powerful bomb is lured out and floats onto the battlefield
+AlliedNotes=1000
+Exclusive=yes
+PortalLevel=30
+DarknessTurns=7
+RecommendedPartySize=2
+
+[ArmosMedallian]
+type=portal
+Cost=15
+Currency=BeastmenSeal
+Battlefield=Eastern Palace
+Weather=gloomy
+Monster=Armos_Knight.Small_Armos
+Desc=pulls out a an ancient Armos Medallian that leads the heroes to an old palace on the eastern border.  Inside they overcome many puzzles and dangers to finally reach a boss room.
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=30
+
+[BookOfMudora]
+type=portal
+cost=15
+Currency=BeastmenSeal
+Battlefield=Desert Palace
+weather=dry
+Monster=Red_Lanmola.Green_Lanmola.Blue_Lanmola
+Desc=pulls out an ancient book that leads the heroes to an old palace in the desert.  Inside they overcome many puzzles and dangers before finally reaching a large room full of sand.  The sand seems to be moving.. prepare yourselves!
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=30
+
+[HeraKey]
+type=portal
+cost=15
+Currency=BeastmenSeal
+Battlefield=Tower of Hera
+weather=dry
+Monster=Moldorm.MoldormTail
+Desc=takes a special key made to enter the Tower of Hera.  After a climb up a mountain, the heroes enter and climb the tower to the top floor where they're greeted by a massive yellow centipede-snake creature.
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=30
+
+[SuspiciousLookingEye]
+type=portal
+Cost=15
+Currency=BeastmenSeal
+Battlefield=Overworld - Night
+Weather=calm
+Monster=Eye_of_Cthulhu
+Desc=takes out a small item that resembles an eye and tosses it into the air. A loud roar is heard as the item suddenly vanishes. [Eye of Cthulhu has awoken!]
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=50
+
+[CorruptWormFood]
+type=portal
+Cost=15
+Currency=BeastmenSeal
+Battlefield=Overworld - The Corruption
+Weather=gloomy
+Monster=Eater_of_Worlds
+Desc=travels to the Corruption. %real.name takes out some rotten meat attached to a bone and tosses it into a deep pit. A loud roar is heard a moment later as a massive worm rises out of the pit. [Eater of Worlds has awoken!]
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=75
+
+[BloodySpine]
+type=portal
+Cost=15
+Currency=BeastmenSeal
+Battlefield=Overworld - The Crimson
+Weather=gloomy
+Monster=Brain_of_Cthulhu
+Desc=travels to the Crimson. %real.name takes out a small item that resembles a spine, which somehow drips blood and tosses it into the air. A loud roar is heard as the item suddenly vanishes. [Brain of Cthulhu has awoken!]
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=75
+
+[DungeonMap]
+type=portal
+Cost=15
+Currency=BeastmenSeal
+Battlefield=Overworld - The Dungeon
+Weather=calm
+Monster=Skeletron.Skeletron_LeftArm.Skeletron_RightArm
+Desc=takes out a map which leads to a dungeon. After descending into the dungeon, a loud roar is heard. [Skeletron has awoken!]
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=100
+
+[MayanMap]
+type=portal
+cost=20
+Currency=BeastmenSeal
+Battlefield=Ancient Mayan Ruins
+weather=hot
+Monster=Mazaal.MazaalRHand.MazaalLHand
+Desc=takes the ancient Mayan Map and uses it to locate the remains of ancient Mayan ruins. After much effort, the heroes enter and climb through the ruins to a special chamber where they're greeted by a large Mayan-looking head statue and two large Mayan-looking hand statues.
+AlliedNotes=2000
+Exclusive=yes
+PortalLevel=30
+
+[VirilityCan]
+type=portal
+Cost=15
+Currency=BeastmenSeal
+Battlefield=Slurm Factory
+Weather=gloomy
+Monster=Poison
+Desc=pulls out a special can of Virility. It sure does look an awful lot like a can of Slurm.  After drinking it, the heroes are pulled into Limbo where they can venture deep into the Virility factory.  After a little bit of exploring, they discover the horror: the secret ingrident comes from the behind of one awfully large demon slug named Poison. Yuck!
+AlliedNotes=1500
+Exclusive=yes
+PortalLevel=50
+; Season orb is still under construction and is not live in the game yet.
+
+[SeasonOrb]
+type=portal
+Cost=100
+Currency=BeastmenSeal
+Battlefield=The Field of Seasons
+Weather=normal
+Monster=$readini($dbfile(items.db), SeasonOrb, $left($adate,2))
+Desc=holds up the orb which glows and teleports the party into the Field of Seasons where they will be faced with a different challenge each month.
+AlliedNotes=200
+Exclusive=yes
+PortalLevel=100
+01=
+02=
+03=
+04=CloudOfDarkness
+05=
+06=
+07=Ultros
+08=
+09=
+10=Wrexsoul
+11=
+12=
+; Kindred Seal Portal Items
+
+[EnergyElements]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Dr. Wily's Castle
+Weather=Gloomy
+Monster=Gamma.GammaLeftArm.GammaRightArm
+Desc=manages to gather the eight energy elements only to be stolen by the nefarious Dr. Wily! The heroes travel to Dr. Wily's castle in an attempt to defeat him.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[IgnisFatuus]
+type=portal
+cost=20
+currency=KindredSeal
+battlefield=Levithan's Heartcore
+Weather=calm
+Monster=LeviathanLeftHeart.LeviathanCenterHeart.LeviathanRightHeart
+Desc=is swallowed whole by the great and powerful flying demon known as Leviathan.  Once inside, the heroes take the Ignis Fatuus (a small object composed of souls of the fallen) to the demon's heartcore chamber.  The three hearts are protected by a membrane. Suddenly the Ignis Fatuus releases the souls it has collected and the membrane disappears, exposing the three hearts and the only way the beast can be defeated.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=55
+
+[NewsOrb]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Raptor News Network Studio
+Weather=calm
+Monster=Bob_Barbas
+Desc=takes out a small glowing orb that has the initials R.N.N. on it. %real.name then tosses the orb onto the ground. It shatters and the players are teleported into the Raptor News Network.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=60
+
+[BanishingCharm]
+type=portal
+cost=20
+currency=KindredSeal
+battlefield=Waughroon Shrine
+Weather=calm
+Monster=Gaki.Onki.Rasetsu
+Desc=takes out the banishing charm; a powerful charm used to banish demons. It begins to glow and creates a portal that teleports the heroes into a demonic shrine where three demons await.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=50
+
+[RottingOrb]
+type=portal
+cost=25
+currency=KindredSeal
+battlefield=Smelly Dungeon
+Weather=gloomy
+Monster=Legion
+Desc=takes out the rotting orb and shatters it.  Suddenly the heroes find themselves in a smelly dungeon where there's hundreds of rotting bodies laying everywhere. Floating in the air is Legion.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=100
+
+[GemOfTheWest]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Byakko's Chamber
+Weather=stormy
+Monster=Byakko
+Desc=takes out the Gem of the West, a pulsing green gem. It glows brightly before shattering.  A green light shoots out of the sky and down onto the heroes, who are teleported up into Byakko's Chamber.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=110
+
+[GemOfTheNorth]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Genbu's Chamber
+Weather=dry
+Monster=Genbu
+Desc=takes out the Gem of the North, a pulsing brown gem. It glows brightly before shattering.  A brown light shoots out of the sky and down onto the heroes, who are teleported up into Genbu's Chamber.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=110
+
+[GemOfTheEast]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Seiryu's Chamber
+Weather=hot
+Monster=Seiryu
+Desc=takes out the Gem of the East, a pulsing red gem. It glows brightly before shattering.  A red light shoots out of the sky and down onto the heroes, who are teleported up into Seiryu's Chamber.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=110
+
+[GemOfTheSouth]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Suzaku's Chamber
+Weather=snowy
+Monster=Suzaku
+Desc=takes out the Gem of the South, a pulsing white gem. It glows brightly before shattering.  A white light shoots out of the sky and down onto the heroes, who are teleported up into Suzaku's Chamber.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=110
+
+[GodSeal]
+type=portal
+Cost=0
+Currency=KindredSeal
+Battlefield=The Shrine of Ru'Avitau
+Weather=light
+Monster=Kirin
+Desc=takes out the small glowing orb, which shatters and creates a large portal that leads up into the sky.  After entering, the heroes find themselves inside an ancient shrine of the sky gods, The Shrine of Ru'Avitau.  
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=120
+
+[UnknownPowerSource]
+type=portal
+cost=20
+currency=KindredCrest
+Battlefield=ShadowMosesIsland
+Weather=gloomy
+Monster=GearRex.GearRay
+Desc=pulls out an unknown source of power, which suddenly covers the heroes in darkness. Once the darkness fades, they appear to be standing in secret chamber inside a military base that is covered in snow. They also see Metal Gear Rex and Metal Gear Ray standing before them...
+AlliedNotes=5000
+Exclusive=yes
+PortalLevel=300
+
+[ShinraKeycard]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=ShinraTestingLab
+Weather=calm
+Monster=AirBuster
+Desc=enters the Shinra Headquarters and walks up to a locked elevator. %real.name takes out the Shinra keycard and inserts it into the card reader, which unlocks the elevator which leads to the Shinra Testing Lab.
+AlliedNotes=5000
+Exclusive=yes
+PortalLevel=777
+
+[BowlOfEmbers]
+type=portal
+Cost=0
+Battlefield=Infernal Arena
+Weather=Hot
+Monster=Ifrit_Prime
+Desc=offers the Bowl of Embers to the gods. The offering is accepted and the heroes find themselves being transported to a large circular arena. Within seconds the outer rim of the arena roars in flames, trapping the heroes inside before a demonic presence approaches. 
+AlliedNotes=8000
+Exclusive=yes
+PortalLevel=5000
+Victory=$chr(2) $+ Ifrit Prime has left behind a Clom's Tale tome so that his secrets may be passed on.
+Defeat=$chr(2) $+ Ifrit Prime gives off a laugh and says "Thou are not worthy of my boon!" before vanishing.
+StatWeight=.95
+
+[FortunaCrest]
+Type=portal
+Cost=0
+Battlefield=Fortuna Courtyard
+Weather=Snowy
+Monster=Blue_Rusalka.Red_Rusalka
+Desc=uses the crest to open the gates of the Fortuna Castle and together the heroes venture into the courtyard where they see, through thick snow and shadows, that there are two beautiful naked women glowing blue and red waiting for them. They giggle upon seeing the heroes.
+AlliedNotes=8000
+Exclusive=yes
+PortalLevel=5000
+StatWeight=.95
+
+[AntiDollCharm]
+type=portal
+Cost=0
+Battlefield=Dwarven Castle - Crystal Room
+Weather=none
+Monster=Calca.Brina.Calca.Brina.Calca.Brina
+Desc=uses the anti-doll charm to break through the power barrier the dolls have placed in the Dwarven crystal room. There they see six dolls dancing playfully. Noticing the heroes they stop and give a light laugh. "Come play with us!"
+AlliedNotes=8000
+Exclusive=yes
+PortalLevel=5000
+Victory=$chr(2) $+ The Vicious Calcabrina has been defeated and the Dwarven King rewards the heroes with a Clom's Tale tome for their help in this matter.
+Defeat=$chr(2) $+ The dolls giggle and say "That was fun! Come back and play with us again some time!" before restoring the powerful barrier
+StatWeight=.95
+
+[MechanicalEye]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Overworld - Night
+Weather=calm
+Monster=Retinazer.Spazmatism
+Desc=takes out a small item that resembles a mechanical eye and tosses it into the air. A loud roar is heard as the item suddenly vanishes. [The Twins have awoken!]
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=200
+
+[MechanicalWorm]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Overworld - Night
+Weather=calm
+Monster=The_Destroyer
+Desc=takes out a small item that resembles a mechanical worm and tosses it into the air. A loud roar is heard as the item suddenly vanishes. [The Destroyer has awoken!]
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=200
+
+[MechanicalSkull]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Overworld - Night
+Weather=calm
+Monster=Skeletron_Prime.Prime_Cannon.Prime_Laser.Prime_Saw.Prime_Vice
+Desc=takes out a small item that resembles a mechanical skull and tosses it into the air. A loud roar is heard as the item suddenly vanishes. [Skeletron Prime has awoken!]
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=225
+
+[Plantera'sBulb]
+type=portal
+Cost=15
+Currency=KindredSeal
+Battlefield=Underground Jungle
+Weather=calm
+Monster=Plantera
+Desc=comes across a cave while exploring the jungle. %real.name stumbles over a small, pink bulb while exploring the cave. %real.name decides to destroy it, and upon doing so, a loud roar is heard. [Plantera has awoken!]
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=250
+
+[HyruleOrb]
+type=portal
+Cost=0
+Currency=KindredSeal
+Battlefield=Hyrule Field
+Weather=light
+Monster=HeroOfTime
+Desc=takes out the small glowing orb that has a Triforce symbol on it and watches as the battlefield is enveloped in a bright light.  When the light clears, the heroes find themselves standing in ancient Hyrule, facing an ancient hero.  
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=100
+
+[LachesisOrb]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Horlais Peak
+Weather=Calm
+Monster=Rainemard
+Desc=takes out a blue gem that has white light swirling inside. The blue gem shatters a moment later, transporting the players to Horlais Peak.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[TavnaziaPass]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Valkurm Dunes
+Weather=Dry
+Monster=Marchelute
+Desc=takes out the Tavnazia Pass. The paper crumbles and transports everyone to the Valkurm Dunes.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[YagudoDrink]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Castle Oztroja
+Weather=Calm
+Monster=HuuXalmo
+Desc=takes out a bottle of Yagudo Drink and sets it on the ground. A random Yagudo quickly takes it and teleports everyone to Castle Oztroja.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[SpheroidPlate]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Abyssea - Misareaux Coast
+Weather=Calm
+Monster=IroncladSeverer
+Desc=takes out a spheroid plate and sets it on the ground. Everyone is then teleported to Abyssea - Misareaux Coast, appearing before the Iron Giant who begins to awaken.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[AvatarBlood]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Abyssea - Uleguerand Range
+Weather=Snowy
+Monster=Awahondo
+Desc=takes out a bottle of avatar blood and tosses it to the ground. It shatters and teleports everyone to Abyssea - Uleguerand Range.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[OldOrcBow]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Davoi
+Weather=Calm
+Monster=Prozpuz
+Desc=takes out an old bow and set it down. A random Orc takes the bow and teleports everyone to Davoi.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[SmelterDemonSoul]
+type=portal
+Cost=20
+Currency=KindredSeal
+Battlefield=Iron Keep
+Weather=Hot
+Monster=Smelter_Demon
+Desc=takes out the soul of a powerful demon and crushes it in hand, which transports everyone to a section of the Iron Keep fortress. The fortress is slowly sinking into the molten iron.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+; Kindred Crest Portal Items
+
+[LihzahrdPowerCell]
+type=portal
+Cost=15
+Currency=KindredCrest
+Battlefield=Underground Jungle - Lihzahrd Temple
+Weather=gloomy
+Monster=Golem_Controller.Lihzahrd_Golem
+Desc=ventures into a mysterious temple found in the Underground Jungle. After navigating through various traps, %real.name finds a strange altar. %real.name takes out a small power cell and places it onto the altar, which causes a loud roar to be heard. [The Golem has awoken!]
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=250
+
+[TruffleWorm]
+type=portal
+Cost=15
+Currency=KindredCrest
+Battlefield=Overworld - Ocean
+Weather=rainy
+Monster=Duke_Fishron
+Desc=travels to the ocean. %real.name takes out a fishing rod and attaches the truffle worm onto the hook, casting the line into the ocean. After a bit of time, %real.name feels a bite on the line and quickly reels in.. [Duke Fishron has awoken!]
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=275
+
+[OldOrcSword]
+type=portal
+Cost=20
+Currency=KindredCrest
+Battlefield=Davoi
+Weather=Rainy
+Monster=Gwajboj
+Desc=takes out an old sword and places it into the ground. A random Orc takes the sword and teleports everyone to Davoi.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[TimeOrb]
+type=portal
+Cost=20
+Currency=KindredCrest
+Battlefield=Underground Arena
+Weather=gloomy
+Monster=Geryon
+Desc=takes out a small glowing orb that has an engraving of an hourglass on it. %real.name then tosses the orb onto the ground. It shatters and the players feel time slowing down as they are teleported into an underground arena.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[JungleOrb]
+type=portal
+Cost=$iif($readini(garden.dat, gardenstats, level) >= 5, 15, 20)
+Currency=KindredCrest
+Battlefield=Deep Jungle
+Weather=calm
+Monster=$iif($rand(1,2) = 1, Echidna, EccentricEve)
+Desc=takes out a small glowing green orb. %real.name then tosses the orb onto the ground. It shatters and the players find themselves in a deep jungle ready to face one of the masters of the jungle.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=150
+
+[CrimsonTraverserStone]
+type=portal
+Cost=20
+Currency=KindredCrest
+Battlefield=Abyssea - Empyreal Paradox
+Weather=calm
+Monster=ShinryuVerus
+Desc=takes out a stone that is a deep crimson in color. %real.name then tosses the stone onto the ground. It shatters and the players are teleported to the Empyreal Paradox.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=275
+
+[EvilGuitar]
+type=portal
+cost=20
+currency=KindredCrest
+battlefield=The Midnight Carnival
+Weather=gloomy
+Monster=I-No
+Desc=pulls out a curious guitar and plays a few strings. Suddenly %real.name and everyone else is teleported to the sky with dark red clouds everywhere.
+AlliedNotes=3000
+Exclusive=yes
+PortalLevel=200
+
+[StrangeMask]
+Type=portal
+Cost=20
+Currency=KindredCrest
+Battlefield=Land of Lightning
+Weather=calm
+Monster=Obito_Uchiha
+Desc=takes out an orange mask with a swirl design, which is quickly taken out of hand as the heroes are now standing before a man in a black robe.
+AlliedNotes=4000
+Exclusive=yes
+PortalLevel=300
+DarknessTurns=25
+; High Kindred Crest Portal Items
+
+[GoddessOrb]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Asgard
+Weather=Light
+Monster=Freya.Sif
+Desc=takes out an orb that has a bright white glow. %real.name then tosses the orb to the ground. The orb shatters and transports all players to a realm that few mortals have seen.
+AlliedNotes=7000
+Exclusive=yes
+PortalLevel=300
+DarknessTurns=25
+
+[AtlantianCrystal]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Atlantis
+Weather=Dark
+Monster=AshiAtora
+Desc=takes out an ancient crystal from Atlantis. It begins to pulse then glows bright, covering everyone and the battlefield.  When the glow fades they find themselves in Atlantis.. 
+AlliedNotes=7000
+PortalLevel=300
+DarknessTurns=35
+StatWeight=.95
+
+[OldKingSoul]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Iron Keep
+Weather=Hot
+Monster=Old_Iron_King
+Desc=takes out the soul of a powerful demon and crushes it in hand, which transports everyone to a section of the Iron Keep fortress, which has an open area near the molten iron where a massive fire demon is standing in.
+AlliedNotes=7000
+Exclusive=yes
+PortalLevel=400
+
+[Gunbai]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Land of Lightning
+Weather=Calm
+Monster=Madara_Uchiha
+Desc=takes out a large non-folding fan that is black on the edge, light brown on the inside, and has six tomoe on both sides, red in color. The instant it is placed on the ground, a man with long hair and red armor takes it in hand.
+AlliedNotes=7000
+PortalLevel=500
+DarknessTurns=35
+
+[StrangeCrystal]
+Type=Portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Lunar Core
+Weather=Gloomy
+Monster=Zemus
+Desc=takes out a blue crystal and holds it in hand for a moment. It gains a bright glow and transports everyone to the Lunar Core of the Red Moon.
+AlliedNotes=7000
+PortalLevel=1000
+DarknessTurns=35
+
+[ObsoleteOrb]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=BrokenCompound
+Weather=Gloomy
+Monster=Broken_One.Obsolete_Mule
+Desc=takes out a strange orb, holding it in hand for a moment. It gains a dark glow as everyone can hear crazed laughing and "DELETE! DELETE!" coming from the orb before everyone is warped to a large wrestling ring that's in desolate compound, which is located in a forest.
+AlliedNotes=7000
+Exclusive=yes
+PortalLevel=2000
+DarknessTurns=20
+
+[DecayedOrb]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=BrokenCompound
+Weather=Gloomy
+Monster=The_Witch.The_Crazzy.The_Monster
+Desc=takes out a strange orb, holding it in hand for a moment. It gains a black glow as everyone can hear crazed laughing before everyone is warped to a large wrestling ring that's in desolate compound, which is located in a forest.
+AlliedNotes=7000
+Exclusive=yes
+PortalLevel=2000
+DarknessTurns=20
+;;;;; SHADOW VERSIONS of the portals
+;;;;; These are basically remakes of the
+;;;;; original portal battles at their original levels
+
+[ShadowDemonBell]
+type=portal
+Cost=5
+Currency=HighKindredCrest
+Battlefield=Jester's Lair
+Weather=gloomy
+Monster=Shadow_Jester
+Desc=rings a demonic bell that opens a portal. Upon entering they are greeted with Jester, the insane clown, who's back yet again to torment everyone.
+AlliedNotes=3000
+Exclusive=yes
+ShadowPortal=true
+StatWeight=.90
+
+[ShadowGodSeal]
+type=portal
+Cost=10
+Currency=HighKindredCrest
+Battlefield=The Shrine of Ru'Avitau
+Weather=Dark
+Monster=ShadowKirin
+Desc=takes out the small blackened orb, which shatters and creates a large portal that leads up into the sky.  After entering, the heroes find themselves inside a shadow version of an ancient shrine of the sky gods, The Shrine of Ru'Avitau.  
+AlliedNotes=3000
+Exclusive=yes
+ShadowPortal=true
+StatWeight=.90
+
+[ShadowAtlantianCrystal]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Atlantis
+Weather=Dark
+Monster=ShadowAshi
+Desc=takes out a blackened ancient crystal from Atlantis. It begins to pulse then all light in the room is sucked away as everyone feels themselves being teleported to an ancient shadow version of Atlantis.. 
+AlliedNotes=5000
+Exclusive=yes
+ShadowPortal=true
+StatWeight=.80
+
+[BarrierOrb]
+Type=portal
+Cost=20
+Currency=HighKindredCrest
+Battlefield=Mount Ebott - The Barrier
+Weather=Dark
+Monster=Asriel_Dreemurr
+Desc=takes out a small orb that is white in color and throws it to the ground. Everyone is transported to a strange barrier that is under a mountain. After a moment, the room is filled a rainbow of colors.
+AlliedNotes=5000
+Exclusive=yes
+ShadowPortal=true
+StatWeight=.90
+
+[BasicMechCore]
+Type=mechcore
+Cost=0
+Augment=MeleeBonus
+EnergyCost=100
+Currency=AlliedNotes
+Exclusive=yes
+
+[EtherealCore]
+Type=mechCore
+Cost=500
+SellPrice=200
+Augment=TechBonus.HurtEthereal
+EnergyCost=200
+Currency=AlliedNotes
+ConquestItem=true
+Exclusive=yes
+
+[MagicAmplifier]
+Type=mechCore
+Cost=500
+SellPrice=200
+Augment=MagicBonus
+EnergyCost=150
+Currency=AlliedNotes
+Exclusive=yes
+
+[VesselofAnima]
+Type=MechCore
+Cost=-1
+SellPrice=0
+Augment=
+EnergyCost=1000
+Currency=AlliedNotes
+Exclusive=yes
+
+[UmbranMechCore]
+Type=MechCore
+Cost=-1
+SellPrice=0
+Augment=
+EnergyCost=1000
+Currency=AlliedNotes
+Exclusive=yes
+
+[Vlar]
+Type=MechCore
+Cost=0
+SellPrice=0
+Augment=EnhanceDodge.HurtEthereal.MeleeBonus.MagicBonus.TechBonus.IgnoreDefense
+EnergyCost=500
+Currency=AlliedNotes
+Exclusive=yes
+
+[Magna]
+Type=MechCore
+Cost=0
+SellPrice=0
+Augment=EnhanceDodge.HurtEthereal.MeleeBonus.MagicBonus.IgnoreDefense.IgnoreMetalDefense
+EnergyCost=500
+Currency=AlliedNotes
+Exclusive=yes
+
+[Omni]
+Type=MechCore
+Cost=0
+SellPrice=0
+Augment=DecreaseMechEnergyCost.EnhanceDodge.HurtEthereal.EnhanceDoubleTurnChance.MeleeBonus.MagicBonus.TechBonus.IgnoreDefense.IgnoreMetalDefense.IgnoreGuardian.AdditionalHit.EnhanceCriticalHits
+EnergyCost=500
+Currency=AlliedNotes
+Exclusive=yes
+
+[Leenex]
+Type=MechCore
+Cost=0
+SellPrice=500
+Augment=GemConvert.HurtEthereal
+EnergyCost=500
+Currency=AlliedNotes
+Exclusive=yes
+
+[BoneDragonCore]
+Type=MechCore
+Cost=-1
+SellPrice=0
+Augment=
+EnergyCost=0
+Currency=AlliedNotes
+Exclusive=yes
+
+[CharacterResetPotion]
+Type=CharacterReset
+Cost=10000
+SellPrice=0
+
+[Blueprints:Valmanway+1]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Valmanway+1
+Desc=pulls out a set of blueprints for an upgraded Valmanway, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the valmanway+1 which glows with power.
+Exclusive=yes
+
+[Blueprints:Excalibur+1]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Excalibur+1
+Desc=pulls out a set of blueprints for an upgraded Excalibur, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the Excalibur+1 which glows with power.
+Exclusive=yes
+
+[Blueprints:Z-Sword+1]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Z-Sword+1
+Desc=pulls out a set of blueprints for an upgraded Z-Swordr, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the Z-Sword+1 which glows with power.
+Exclusive=yes
+
+[Blueprints:Glyphs+1]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Glyphs+1
+Desc=pulls out a set of blueprints for upgraded Glyphs, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and creates the Glyphs+1 which glow with magical power.
+Exclusive=yes
+
+[Blueprints:Aegis]
+Type=special
+Cost=0
+SellPrice=10000
+Exclusive=yes
+SpecialType=GainWeapon
+Weapon=Aegis
+Desc=pulls out a set of blueprints for the powerful Aegis shield. %real.name then gets to work and builds a beautiful and functional Aegis shield ready for use.
+
+[Blueprints:Ochain]
+Type=special
+Cost=0
+SellPrice=10000
+Exclusive=yes
+SpecialType=GainWeapon
+Weapon=Ochain
+Desc=pulls out a set of blueprints for the rare and legendary Ochain shield. %real.name then gets to work and builds a beautiful and functional Ochain shield ready for use.
+
+[Hero'sWorth]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Mjolnir
+Desc=has proven to be worthy of the power of Thor and can now wield Mjolnir! 
+Exclusive=yes
+
+[Jedi'sTreasure]
+type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Lightsaber
+Desc=has discovered an old Jedi's treasure that was left behind: his lightsaber.
+Exclusive=yes
+
+[Blueprints:X-Buster]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=X-Buster
+Desc=pulls out a set of blueprints for an X-Buster $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a beautiful and functional X-Buster ready for use.
+Exclusive=yes
+
+[Blueprints:SamuraiEdge]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=SamuraiEdge
+Desc=pulls out a set of blueprints for a Samurai Edge $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Samurai Edge ready for use.
+Exclusive=yes
+
+[Blueprints:SamuraiEdge-I]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=SamuraiEdge-I
+Desc=pulls out a set of blueprints for a Samurai Edge $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Samurai Edge ready for use.
+Exclusive=yes
+
+[Blueprints:SamuraiEdge-F]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=SamuraiEdge-F
+Desc=pulls out a set of blueprints for a Samurai Edge $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Samurai Edge ready for use.
+Exclusive=yes
+
+[Blueprints:SamuraiEdge-E]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=SamuraiEdge-E
+Desc=pulls out a set of blueprints for a Samurai Edge $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Samurai Edge ready for use.
+Exclusive=yes
+
+[Blueprints:SamuraiEdge-M]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=SamuraiEdge-M
+Desc=pulls out a set of blueprints for a Samurai Edge $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Samurai Edge ready for use.
+Exclusive=yes
+
+[Blueprints:Kikoku]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Kikoku
+Desc=pulls out a set of blueprints for a Kikoku $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Kikoku ready for use.
+Exclusive=yes
+
+[Blueprints:Kannagi]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Kannagi
+Desc=pulls out a set of blueprints for a Kannagi $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Kannagi ready for use.
+Exclusive=yes
+
+[Blueprints:Spharai+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Spharai+1
+Desc=pulls out a set of blueprints for a Spharai+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Spharai+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Apocalypse+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Apocalypse+1
+Desc=pulls out a set of blueprints for a Apocalypse+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Apocalypse+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Ragnarok+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Ragnarok+1
+Desc=pulls out a set of blueprints for a Ragnarok+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Ragnarok+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Laevatein+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Laevatein+1
+Desc=pulls out a set of blueprints for a Laevatein+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Laevatein+1 ready for use.
+Exclusive=yes
+
+[Blueprints:BahamutsStaff+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=BahamutsStaff+1
+Desc=pulls out a set of blueprints for a Bahamut's Staff+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Bahamut's Staff+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Vampire_Killer+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Vampire_Killer+1
+Desc=pulls out a set of blueprints for a Vampire Killer+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Vampire Killer+1 ready for use.
+Exclusive=yes
+
+[Blueprints:DemonWhip+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=DemonWhip+1
+Desc=pulls out a set of blueprints for a Demon Whip+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Demon Whip+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Ryunohige+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Ryunohige+1
+Desc=pulls out a set of blueprints for a Ryunohige+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Ryunohige+1 ready for use.
+Exclusive=yes
+
+[Blueprints:CompoundBow+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=CompoundBow+1
+Desc=pulls out a set of blueprints for a Compound Bow+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Compound Bow+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Bravura+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Bravura+1
+Desc=pulls out a set of blueprints for a Bravura+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Bravura+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Guttler+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Guttler+1
+Desc=pulls out a set of blueprints for a Guttler+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Guttler+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Mandau+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Mandau+1
+Desc=pulls out a set of blueprints for a Mandau+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Mandau+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Kikoku+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Kikoku+1
+Desc=pulls out a set of blueprints for a Kikoku+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Kikoku+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Kannagi+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Kannagi+1
+Desc=pulls out a set of blueprints for a Kannagi+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Kannagi+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Daedalus+1]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Daedalus+1
+Desc=pulls out a set of blueprints for a Daedalus+1 $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Daedalus+1 ready for use.
+Exclusive=yes
+
+[Blueprints:Seveneyes]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Seveneyes
+Desc=pulls out a set of blueprints for Seveneyes wand $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Seveneyes ready for use.
+Exclusive=yes
+
+[Blueprints:SilverSword]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=SilverSword
+Desc=pulls out a set of blueprints for the Silver Sword $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the beautiful and powerful Silver Sword, ready for use.
+Exclusive=yes
+
+[Blueprints:SilverSword+1]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=SilverSword+1
+Desc=pulls out a set of blueprints for the upgraded Silver Sword $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the beautiful and powerful Silver Sword+1 which glows with power.
+Exclusive=yes
+
+[Blueprints:TrueMasterSword]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=TrueMasterSword
+Desc=pulls out a set of blueprints for an upgraded Master Sword, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the True Master Sword which glows with power.
+Exclusive=yes
+
+[Blueprints:Yamato+1]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Yamato+1
+Desc=pulls out a set of blueprints for an upgraded Yamato, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the Yamato+1 which glows with power.
+Exclusive=yes
+
+[Blueprints:Genbu'sShield]
+Type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainWeapon
+Weapon=Genbu'sShield
+Desc=pulls out a set of blueprints for the $iif($2 != $1, Genbu's Shield and hands it to $set_chr_name($2) %real.name $+ , Genbu's Shield.) %real.name then gets to work and builds a beautiful and functional Genbu's Shield ready for use.
+
+[Blueprints:Xiutleato]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Xiutleato
+Desc=pulls out a set of blueprints for the Xiutleato $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Xiutleato, ready for use.
+Exclusive=yes
+
+[Blueprints:HomesteadBow]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=HomesteadBow
+Desc=pulls out a set of blueprints for the HomesteadBow $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful HomesteadBow, ready for use.
+Exclusive=yes
+
+[Blueprints:Ichimonji-Yofusa]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Ichimonji-Yofusa
+Desc=pulls out a set of blueprints for the Ichimonji-Yofusa $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Ichimonji-Yofusa, ready for use.
+Exclusive=yes
+
+[Blueprints:Upukirex]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Upukirex
+Desc=pulls out a set of blueprints for the Upukirex $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Upukirex, ready for use.
+Exclusive=yes
+
+[Blueprints:Xbalanque]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Xbalanque
+Desc=pulls out a set of blueprints for the Xbalanque $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Xbalanque, ready for use.
+Exclusive=yes
+
+[Blueprints:Macbain]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Macbain
+Desc=pulls out a set of blueprints for the Macbain $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Macbain, ready for use.
+Exclusive=yes
+
+[Blueprints:Lightreaver]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Lightreaver
+Desc=pulls out a set of blueprints for the Lightreaver $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Lightreaver, ready for use.
+Exclusive=yes
+
+[Blueprints:Kerehcatl]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Kerehcatl
+Desc=pulls out a set of blueprints for the Kerehcatl $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Kerehcatl, ready for use.
+Exclusive=yes
+
+[Blueprints:Vanir_Knife]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Vanir_Knife
+Desc=pulls out a set of blueprints for the Vanir Knife $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Vanir Knife, ready for use.
+Exclusive=yes
+
+[Blueprints:Vajra]
+Type=special
+Cost=0
+SellPrice=2500
+SpecialType=GainWeapon
+Weapon=Vajra
+Desc=pulls out a set of blueprints for the Vajra $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Vajra, ready for use.
+Exclusive=yes
+
+[Blueprints:Oatixur]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Oatixur
+Desc=pulls out a set of blueprints for the Oatixur $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Oatixur, ready for use.
+Exclusive=yes
+
+[Blueprints:Uffrat]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Uffrat
+Desc=pulls out a set of blueprints for the Uffrat $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Uffrat, ready for use.
+Exclusive=yes
+
+[Blueprints:Aedold]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=Aedold
+Desc=pulls out a set of blueprints for the Aedold $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Aedold, ready for use.
+Exclusive=yes
+
+[Blueprints:VanirRifle]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=VanirRifle
+Desc=pulls out a set of blueprints for the Vanir Rifle $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the powerful Vanir Rifle, ready for use.
+Exclusive=yes
+
+[MasterSwordMap]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=MasterSword
+Desc=$iif($2 != $1,pulls out an ancient map from Hyrule and hands it to $set_chr_name($2) %real.name $+ ., pulls out an ancient map from Hyrule.) %real.name then uses it to find the long lost hidden resting place for the ancient Master Sword.  With effort, %real.name pulls it out of its stone and readies it for use.
+Exclusive=yes
+
+[Blueprints:TacticalShotgun]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=TacticalShotgun
+Desc=pulls out a set of blueprints for a tactical shotgun $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Tactical Shotgun ready for use.
+Exclusive=yes
+
+[Blueprints:CompoundBow]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=CompoundBow
+Desc=pulls out a set of blueprints for a compound bow $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Compound Bow ready for use.
+Exclusive=yes
+
+[Blueprints:TacticalPistol]
+Type=special
+Cost=0
+SellPrice=5000
+SpecialType=GainWeapon
+Weapon=TacticalPistol
+Desc=pulls out a set of blueprints for a tactical pistol $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Tactical Pistol ready for use.
+Exclusive=yes
+
+[Blueprints:Thunderclap]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Thunderclap
+Desc=pulls out a set of blueprints for a gilded shotgun $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Thunderclap shotgun ready for use.
+Exclusive=yes
+
+[Blueprints:MasterMune]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Mastermune
+Desc=pulls out a set of blueprints for a powerful sword $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Mastermune ready for use.
+Exclusive=yes
+
+[Blueprints:RakshasaGreatBow]
+Type=special
+Cost=0
+SellPrice=1000
+SpecialType=GainWeapon
+Weapon=RakshasaGreatBow
+Desc=pulls out a set of blueprints for a legendary bow $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds a powerful Rakshasa Great Bow ready for use.
+Exclusive=yes
+
+[Blueprints:Lionheart]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Lionheart
+Desc=pulls out a set of blueprints for the Lionheart, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the Lionheart which glows with power.
+Exclusive=yes
+
+[Blueprints:Krishna]
+Type=special
+Cost=0
+SellPrice=10000
+SpecialType=GainWeapon
+Weapon=Krishna
+Desc=pulls out a set of blueprints for the Krishna, $iif($2 != $1, and hands it to $set_chr_name($2) %real.name $+ .) %real.name then gets to work and builds the Krishna which glows with power.
+Exclusive=yes
+
+[Songsheet:Knight'sMinne]
+Type=special
+Cost=10000
+ShopNPC=SongMerchant
+SellPrice=1000
+Exclusive=yes
+SpecialType=GainSong
+Song=Knight'sMinne
+Desc=pulls out a sheet of music and begins to study it. After some time passes, %real.name has learned how to perform the Knight's Minne using a flute. 
+
+[Songsheet:Army'sPaeon]
+Type=special
+Cost=15000
+ShopNPC=SongMerchant
+SellPrice=1500
+Exclusive=yes
+SpecialType=GainSong
+Song=Army'sPaeon
+Desc=pulls out a sheet of music and begins to study it. After some time passes, %real.name has learned how to perform the Army's Paeon using a lute.
+
+[Songsheet:FoeLullaby]
+Type=special
+Cost=0
+ShopNPC=SongMerchant
+SellPrice=2500
+Exclusive=yes
+SpecialType=GainSong
+Song=FoeLullaby
+Desc=pulls out a sheet of music and begins to study it. After some time passes, %real.name has learned how to perform the Foe Lullaby using a harp.
+
+[Songsheet:ToxicMelody]
+Type=special
+Cost=0
+ShopNPC=SongMerchant
+SellPrice=2500
+Exclusive=yes
+SpecialType=GainSong
+Song=ToxicMelody
+Desc=pulls out a sheet of music and begins to study it. After some time passes, %real.name has learned how to perform the Toxic Melody using a lute.
+
+[Songsheet:SongOfPeace]
+Type=special
+Cost=15000
+ShopNPC=SongMerchant
+SellPrice=2500
+Exclusive=yes
+SpecialType=GainSong
+Song=SongOfPeace
+Desc=pulls out a sheet of music and begins to study it. After some time passes, %real.name has learned how to perform the Song of Peace using an ocarina.
+
+[Songsheet:Swiftsong]
+Type=special
+Cost=0
+ShopNPC=SongMerchant
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSong
+Song=SwiftSong
+Desc=pulls out a sheet of music and begins to study it. After some time passes, %real.name has learned how to perform the Swift Song using a harp.
+
+[AncientMystery:SwiftCast]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=SwiftCast
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of Swift Cast.
+
+[AncientMystery:DoubleCast]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=DoubleCast
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of Double Cast.
+
+[AncientMystery:Invigorate]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=Invigorate
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of Invigorate.
+
+[AncientMystery:ThrillOfBattle]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=ThrillOfBattle
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient Thrill Of Battle skill.
+
+[AncientMystery:Duality]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=Duality
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of Duality.
+
+[AncientMystery:ThinAir]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=ThinAir
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of ThinAir.
+
+[AncientMystery:QuickPockets]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=QuickPockets
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of QuickPockets.
+
+[AncientMystery:Tensai]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=Tensai
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has become a tensai with weapon skill usage.
+
+[AncientMystery:LucidDreaming]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=LucidDreaming
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of LucidDreaming.
+
+[AncientMystery:SoftBlows]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=LucidDreaming
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of SoftBlows.
+
+[AncientMystery:Ricochet]
+type=special
+Cost=0
+SellPrice=5000
+Exclusive=yes
+SpecialType=GainSkill
+Skill=Ricochet
+Desc=pulls out an ancient piece of parchment and studies it. After some time passes, %real.name has learned the ancient skill of Ricochet.
+
+[Flute]
+type=instrument
+Cost=2000
+SellPrice=500
+Desc=a flute made of silver, used to perform certain songs.
+ShopNPC=SongMerchant
+
+[Harp]
+type=instrument
+Cost=5000
+SellPrice=1000
+Desc=a miniture harp, used to perform certain songs.
+ShopNPC=SongMerchant
+
+[Lute]
+type=instrument
+Cost=5000
+SellPrice=1000
+Desc=a wooden harp, used to perform certain songs.
+ShopNPC=SongMerchant
+
+[Clarinet]
+type=instrument
+Cost=5000
+SellPrice=1000
+Desc=a clarinet, used to perform certain songs.
+ShopNPC=SongMerchant
+
+[Ocarina]
+type=instrument
+Cost=5000
+SellPrice=1000
+Desc=a blue ocarina, used to perform certain songs.
+ShopNPC=SongMerchant
+
+[MoonCharter]
+type=dungeon
+cost=0
+sellprice=1
+Desc=Proof that you are ready to go explore some of the moon. 
+Dungeon=$read($lstfile(moondestinations.lst))
+Exclusive=yes
+
+[HayrideTicket]
+type=dungeon
+Cost=1
+currency=candycorn
+sellprice=0
+Desc=A ticket that allows you to enter Big Boo's Haunted Hayride during the month of October.
+Dungeon=haunted_hayride
+exclusive=yes
+
+[PrimalSigil]
+type=dungeon
+Cost=$iif($readini(battlestats.dat, BeastmenEnmity, ActivePrimal) = $null || $item.amount($1, PrimalSigil) >= 1, 0, 50)
+currency=BeastmenSeal
+Desc=A sigil infused with energy necessary to approach a primal's stronghold without losing one's senses..  It can be used once before it loses its energy.  It is only able to work when a Beastmen Primal has been summoned.
+exclusive=yes
+consumed=true
+Dungeon=beastmen_stronghold
+
+[Thief'sMap]
+type=dungeon
+cost=0
+sellprice=1
+Desc=A rolled up map that leads to a Gobbie's Treasure Vault realm portal.
+Dungeon=treasure_vault
+exclusive=yes
+Consumed=true
+
+[TamTaraKey]
+type=dungeon
+cost=50
+currency=BeastmenSeal
+sellprice=1500
+Desc=An ancient key used to unlock the dungeon Tam-Tara Deepcroft
+Dungeon=Tam-Tara
+exclusive=yes
+
+[AntlionKey]
+type=dungeon
+Cost=60
+currency=BeastmenSeal
+sellprice=1500
+Desc=A key used to unlock the Antlion's Den
+Dungeon=antlion's_den
+exclusive=yes
+
+[GrimtolMissionReport]
+type=dungeon
+Cost=100
+Currency=BeastmenSeal
+SellPrice=100
+Desc=A report instructing you to infilitrate Fort Grimtol and destroy the enemy's secret weapon before it is unleashed upon the world.
+Dungeon=fort_grimtol
+exclusive=yes
+
+[SaltyMap]
+type=dungeon
+cost=0
+sellprice=5000
+Desc=A map that reveals the location of Pirate's Cove
+Dungeon=pirate's_cove
+exclusive=yes
+
+[HaukkeManorKey]
+type=dungeon
+cost=50
+currency=KindredSeal
+sellprice=1500
+Desc=An old dusty key used to access Haukke Manor
+Dungeon=Haukke_Manor
+exclusive=yes
+
+[Kan-raHand]
+type=dungeon
+cost=75
+currency=KindredSeal
+sellprice=1500
+Desc=The ancient mummified hand of Kan-ra that grants access into its pyramid
+Dungeon=Kan-ra
+exclusive=yes
+
+[TrainTicket]
+type=dungeon
+cost=100
+currency=KindredSeal
+sellprice=1500
+Desc=A train ticket and a note that says "Please save my precious Elayne from certain death.."
+Dungeon=phantom_train
+exclusive=yes
+
+[WantedPoster]
+type=dungeon
+cost=100
+currency=KindredSeal
+sellprice=1500
+Desc=A wanted poster for the notorious bandit leader Mad Dawg.  It is said he has taken over the town of Crookhallow
+Dungeon=crookhallow
+exclusive=yes
+
+[AncientMap]
+type=dungeon
+cost=100
+currency=KindredSeal
+sellprice=1500
+Desc=An ancient map pointing to a lost city.  Who knows what secrets lay hidden there.
+Dungeon=Lost_City
+exclusive=yes
+
+[LostTowerKey-01]
+type=dungeon
+cost=0
+currency=none
+sellprice=1500
+Desc=A key found from the Lost City of the Ancients. It appears this key will unlock the first floor of The Lost Tower of the Ancients.
+Dungeon=LostTower-Fl1
+exclusive=yes
+
+[LostTowerKey-02]
+type=dungeon
+cost=$iif($readini($char($1), dungeons, LostTower-Fl1) = true, 100, 0)
+currency=KindredCrest
+sellprice=1500
+Desc=A key forged after studying the lock on the second floor of the Lost Tower of the Ancients.  This key will unlock the second floor. 
+Dungeon=LostTower-Fl2
+exclusive=yes
+
+[LostTowerKey-03]
+type=dungeon
+cost=$iif($readini($char($1), dungeons, LostTower-Fl2) = true, 100, 0)
+currency=KindredCrest
+sellprice=1500
+Desc=A key forged after studying the lock on the third floor of the Lost Tower of the Ancients.  This key will unlock the second floor. 
+Dungeon=LostTower-Fl3
+exclusive=yes
+
+[ChozoArtifacts]
+type=dungeon
+cost=100
+currency=KindredSeal
+sellprice=1500
+Desc=A set of 12 Chozo Artifacts needed to enter the Impact Crater
+Dungeon=Impact_Crater
+Exclusive=yes
+
+[DimensionXKey]
+type=dungeon
+cost=100
+currency=KindredSeal
+sellprice=1500
+Desc=A strange key that enables access to a teleporter for the Technodrome.
+Dungeon=The_Technodrome
+Exclusive=yes
+
+[TerrorKey]
+type=dungeon
+cost=100
+currency=KindredCrest
+sellprice=1500
+Desc=A rusty key used to unlock the Tomb of Terror.
+Dungeon=Tomb_Terror
+exclusive=yes
+
+[Hullbreaker_Isle-Map]
+type=dungeon
+cost=100
+currency=KindredCrest
+sellprice=1500
+Desc=A map leading to a wrecked ship that is rumored to contain a rare ore. It has gained the attention of pirates and archaeologists.
+Dungeon=Hullbreaker_Isle
+Exclusive=yes
+
+[CorruptedHullbreaker_Isle-Map]
+type=dungeon
+cost=100
+currency=KindredCrest
+sellprice=1500
+Desc=A map leading to a wrecked ship that is rumored to contain a rare ore. It has gained the attention of pirates and archaeologists.
+Dungeon=Hullbreaker_Isle_hm
+Exclusive=yes
+
+[UnknownCaveMap]
+type=dungeon
+cost=100
+currency=KindredCrest
+sellprice=1500
+Desc=A map that leads to a strange and unknown cave.
+Dungeon=Zohar_Cave
+Exclusive=yes
+
+[TreasureVaultPortal]
+type=dungeon
+Cost=0
+Currency=
+SellPrice=0
+Desc=A portal created by rare chance when a Treasure Goblin is killed.
+Dungeon=Treasure_Vault
+Exclusive=yes
+
+[RaknaPortal]
+type=dungeon
+Cost=0
+Currency=
+SellPrice=0
+Desc=A portal created by rare chance when a Treasure Goblin is killed.
+Dungeon=Rakna-Kadaki-cave
+Exclusive=yes
+
+[MirrorOfReflections]
+type=dungeon
+Cost=100
+currency=KindredCrest
+Desc=A glowing mirror designed to test your might.
+SellPrice=1000
+Dungeon=Mirror_Trial
+Exclusive=yes
+
+[PirateShipEvent]
+type=dungeon
+Cost=0
+Currency=
+SellPrice=0
+Desc=Ahoy! Pirates be attacking!
+Dungeon=Pirate's_Ship
+Exclusive=yes
+
+[CreateDungeon]
+type=dungeon
+Cost=0
+Currency=
+SellPrice=0
+Desc=A Random Dungeon
+Dungeon=CreatedDungeon
+Exclusive=yes
+
+[SpookyHat]
+type=armor
+cost=25
+currency=CandyCorn
+sellprice=0
+Desc=A spooky halloween hat. Check this using !view-info armor SpookyHat to see more information about it. 
+exclusive=yes
+
+[SpookyCostume]
+type=armor
+cost=25
+currency=CandyCorn
+sellprice=0
+Desc=A spooky halloween costume. Check this using !view-info armor SpookyCostume to see more information about it. 
+exclusive=yes
+
+[SpookyLeggings]
+type=armor
+cost=25
+currency=CandyCorn
+sellprice=0
+Desc=Spooky halloween leggings. Check this using !view-info armor SpookyLeggings to see more information about it. 
+exclusive=yes
+
+[SpookyGloves]
+type=armor
+cost=25
+currency=CandyCorn
+sellprice=0
+Desc=Spooky halloween gloves. Check this using !view-info armor SpookyGloves to see more information about it. 
+exclusive=yes
+
+[SpookyBoots]
+type=armor
+cost=25
+currency=CandyCorn
+sellprice=0
+Desc=Spooky halloween boots. Check this using !view-info armor SpookyBoots to see more information about it. 
+exclusive=yes
+
+[PumpkinPie]
+Type=heal
+cost=10
+currency=CandyCorn
+sellprice=10
+Target=single
+Amount=5
+Desc=Mmmm, some yummy pumpkin pie! %enemy gobbles it down and feels a bit healthier.
+exclusive=yes
+
+[BagOfCandy]
+Type=Status
+Target=Single
+StatusType=speedup
+Amount=0
+Cost=5
+currency=CandyCorn
+SellPrice=50
+Desc=forces %enemy to eat a whole bag of halloween candy. %enemy feels ill but is now SuPeR hYpEr from the sugar.  ZING ZING ZING ZING!
+exclusive=yes
+
+[Witch'sBrew]
+Type=Status
+Target=Single
+StatusType=drunk
+Amount=0
+Cost=10
+currency=CandyCorn
+SellPrice=50
+Desc=fills a goblet from a black cauldron and hands it to %enemy who drinks it. Hey, why not? %enemy begins to feel a bit loaded from the Witch's Brew!
+exclusive=yes
+
+[PumpkinBomb]
+Type=Damage
+Target=Single
+Amount=200
+Cost=20
+SellPrice=100
+Desc=takes out a bomb made out of a jack-o-lantern and tosses it at %enemy causing a messy explosion.
+Element=fire
+Currency=CandyCorn
+
+[BigBooCharm]
+Type=summon
+Cost=10
+SellPrice=1000
+Summon=BigBoo
+SummonName=Big Boo
+Currency=CandyCorn
+
+[Jack-o-Lantern]
+Type=food
+Target=int
+Amount=10
+Desc=pulls out a smiling Jack-o-Lantern and hands it to %enemy who eats it.  Spooky!
+Cost=50
+SellPrice=1000
+Exclusive=yes
+Currency=CandyCorn
+
+[TormentOrb1]
+Type=Torment
+TormentLevel=1
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 1] [Minimum Level: 500] 
+
+[TormentOrb2]
+Type=Torment
+TormentLevel=2
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 2] [Minimum Level: 1000] 
+
+[TormentOrb3]
+Type=Torment
+TormentLevel=3
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 3] [Minimum Level: 1500] 
+
+[TormentOrb4]
+Type=Torment
+TormentLevel=4
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 4] [Minimum Level: 2000] 
+
+[TormentOrb5]
+Type=Torment
+TormentLevel=5
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 5] [Minimum Level: 2500] 
+
+[TormentOrb6]
+Type=Torment
+TormentLevel=6
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 6] [Minimum Level: 3000] 
+
+[TormentOrb7]
+Type=Torment
+TormentLevel=7
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 7] [Minimum Level: 3500] 
+
+[TormentOrb8]
+Type=Torment
+TormentLevel=8
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 8] [Minimum Level: 4000] 
+
+[TormentOrb9]
+Type=Torment
+TormentLevel=9
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 9] [Minimum Level: 4500] 
+
+[TormentOrb10]
+Type=Torment
+TormentLevel=10
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 10] [Minimum Level: 5000] 
+
+[TormentOrb11]
+Type=Torment
+TormentLevel=11
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 11] [Minimum Level: 5500] 
+
+[TormentOrb12]
+Type=Torment
+TormentLevel=12
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 12] [Minimum Level: 6000] 
+
+[TormentOrb13]
+Type=Torment
+TormentLevel=13
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 13] [Minimum Level: 6500] 
+
+[TormentOrb14]
+Type=Torment
+TormentLevel=14
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 14] [Minimum Level: 7000] 
+
+[TormentOrb15]
+Type=Torment
+TormentLevel=15
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 15] [Minimum Level: 7500] 
+
+[TormentOrb20]
+Type=Torment
+TormentLevel=20
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 20] [Minimum Level: 10000] 
+
+[TormentOrb25]
+Type=Torment
+TormentLevel=25
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 25] [Minimum Level: 12500] 
+
+[TormentOrb30]
+Type=Torment
+TormentLevel=30
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 30] [Minimum Level: 15000] 
+
+[TormentOrb35]
+Type=Torment
+TormentLevel=35
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 35] [Minimum Level: 17500] 
+
+[TormentOrb40]
+Type=Torment
+TormentLevel=40
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 40] [Minimum Level: 20000] 
+
+[TormentOrb50]
+Type=Torment
+TormentLevel=50
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 50] [Minimum Level: 25000]
+
+[TormentOrb60]
+Type=Torment
+TormentLevel=60
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 60] [Minimum Level: 30000]
+
+[TormentOrb70]
+Type=Torment
+TormentLevel=70
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 70] [Minimum Level: 40000]
+
+[TormentOrb80]
+Type=Torment
+TormentLevel=80
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 80] [Minimum Level: 50000]
+
+[TormentOrb90]
+Type=Torment
+TormentLevel=90
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 90] [Minimum Level: 60000]
+
+[TormentOrb100]
+Type=Torment
+TormentLevel=100
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the torment dimension where powerful versions of the monsters await. [Level: Torment 100] [Minimum Level: 70000]
+
+[AnguishOrb]
+Type=Torment
+TormentLevel=anguish
+Desc=An orb full of anguish and torment. Using this item outside of battle will open a portal to the most powerful torment dimension where powerful versions of monsters await. [Level: Torment ??] [Minimum Level: 5000]
+
+[MiseryOrb]
+Type=Torment
+TormentLevel=misery
+Desc=An orb full of misery. Using this item outside of battle will open a portal into the most powerful torment dimension where monsters of extreme levels will pummel you into oblivion. [Level: Torment ??] [Minimum Level: 5000]
+
+[CosmicOrb]
+Type=Cosmic
+Desc=An orb from the cosmos. Using this item will teleport you to a special level 500 battle where you can earn Odin Marks.
+Exclusive=yes
+SellPrice=1
+Cost=0
+
+[OdinMark]
+Type=misc
+Desc=A mark from Odin that proves your worth. It is said that the gods will trade you special weapon powers for these.
+Exclusive=yes
+SellPrice=1
+Cost=0
+Legendary=true
+
+[ValorMedal]
+Type=misc
+Desc=A medal that shows that you have survived an exceptionally difficult battle.
+Exclusive=yes
+SellPrice=1
+Cost=0
+Legendary=true
+
+[RocketAmmo]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 10000, 20000)
+SellPrice=1000
+Desc=Ammo for a rocket launcher.
+Exclusive=yes
+
+[Arrow]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 5000)
+SellPrice=250
+Desc=A common arrow for use by bows.
+Exclusive=yes
+
+[ShotgunShell]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1250, 3000)
+SellPrice=125
+Desc=Ammo for use by shotguns.
+Exclusive=yes
+
+[DragonfireShell]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1250, 3000)
+SellPrice=125
+Desc=Special shotgun shells that can ignite objects.
+Exclusive=yes
+
+[Bullet]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1250, 3000)
+SellPrice=250
+Desc=Basic bullets for use by guns or rifles.
+Exclusive=yes
+
+[IceAmmo]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 5000)
+SellPrice=250
+Desc=Ammo that is able to freeze targets.
+Exclusive=yes
+
+[FireAmmo]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 5000)
+SellPrice=250
+Desc=Ammo that is able to burn targets.
+Exclusive=yes
+
+[ElectricAmmo]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 5000)
+SellPrice=250
+Desc=Ammo that is able to shock targets.
+Exclusive=yes
+
+[ExplosionAmmo]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 2500, 5000)
+SellPrice=250
+Desc=Ammo that is able to hit more than one target.
+Exclusive=yes
+
+[Reagent]
+Type=ammo
+Cost=$iif($readini(system.dat, system, TechCurrency) = orbs, 1250, 3000)
+SellPrice=100
+Desc=Various items used in conjunction with casting spells.
+Exclusive=yes
+
+[TradingCard-001]
+Type=TradingCard
+Cost=500
+Rarity=1
+SellPrice=100
+Numbers=1.2.1.1
+Desc=A small trading card. On the front is a picture of an Orb Fountain glowing brightly.
+Currency=AlliedNotes
+ShopNPC=Cardian
+Powers=ShatteringBomb
+
+[TradingCard-002]
+Type=TradingCard
+Cost=600
+Rarity=1
+SellPrice=100
+Numbers=2.1.1.1
+Desc=A small trading card. On the front is a picture of a Lost Soul. It looks like it's in pain. Poor guy.
+Currency=AlliedNotes
+ShopNPC=Cardian
+Powers=LostSoulShatter
+
+[TradingCard-003]
+Type=TradingCard
+Cost=700
+Rarity=1
+SellPrice=100
+Numbers=4.4.2.3
+Desc=A small trading card. On the front is a picture of the bird-like Yagudo ready for battle.
+Currency=AlliedNotes
+ShopNPC=Cardian
+Powers=Sweep.DoubleKick.FeatherStorm
+
+[TradingCard-004]
+Type=TradingCard
+Cost=800
+Rarity=1
+SellPrice=100
+Numbers=2.2.2.7
+Desc=A small trading card. On the front is a picture of a green Orc posing with his axe.
+Currency=AlliedNotes
+ShopNPC=Cardian
+Powers=ShoulderTackle.BattleDance
+
+[TradingCard-005]
+Type=TradingCard
+Cost=1000
+Rarity=1
+SellPrice=100
+Numbers=3.4.3.3
+Desc=A small trading card. On the front is a picture of a shelled Quadav holding a staff ready to cast a spell.
+Currency=AlliedNotes
+ShopNPC=Cardian
+
+[TradingCard-006]
+Type=TradingCard
+Cost=0
+Rarity=1
+SellPrice=100
+Numbers=4.2.3.4
+Desc=A small trading card. On the front is a picture of half-rotting zombie. Mmmm brains!
+Powers=Headbutt
+
+[TradingCard-007]
+Type=TradingCard
+Cost=0
+Rarity=2
+SellPrice=100
+Numbers=5.2.4.3
+Desc=A small trading card. On the front is a picture of a large dirt eating worm as it pops out of the ground.
+Powers=Tremors.FullForceBlow
+
+[TradingCard-008]
+Type=TradingCard
+Cost=0
+Rarity=2
+SellPrice=100
+Numbers=3.5.3.4
+Desc=A small trading card. On the front is a picture of a succubus blowing a kiss.
+Powers=VampireBite.Temptation.Fire
+
+[TradingCard-009]
+Type=TradingCard
+Cost=0
+Rarity=1
+SellPrice=100
+Numbers=3.3.4.3
+Desc=A small trading card. On the front is a picture of a Creeper about to blow up and destroy a house.
+Powers=CreeperExplode.Headbutt
+
+[TradingCard-010]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=3.4.2.5
+Desc=A small trading card. On the front is a picture of a bee posing with a large pot of honey
+Powers=FinalSting.SharpSting.FrenzySting
+
+[TradingCard-011]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=4.3.3.3
+Desc=A small trading card. On the front is a picture of a Combat doing a crazy spin in the air
+Powers=SonicBoom.BatBite.BatDrill
+
+[TradingCard-012]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=2.5.2.5
+Desc=A small trading card. On the front is a picture of a Dalek yelling EXTERMINATE! to a blue telephone booth
+Powers=DalekParalyze.DalekExterminate.DalekLaser
+
+[TradingCard-013]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=5.2.5.2
+Desc=A small trading card. On the front is a picture of a swarm of Cuccos in mid-attack against an elf wearing green
+Powers=SwarmAttack
+
+[TradingCard-014]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=2.2.5.5
+Desc=A small trading card. On the front is a picture of a Gremlin trying to force feed a small fuzzy Mogwai some food
+Powers=GremlinBite
+
+[TradingCard-015]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=1.3.7.2
+Desc=A small trading card. On the front is a picture of a metal slime who is smiling as a warrior is holding his hand in pain next to it
+Powers=SlimeRam.SlimeStomp.FireII.IceII
+
+[TradingCard-016]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=1.1.4.7
+Desc=A small trading card. On the front is a picture of a mosquito and its million brothers floating above a lake
+Powers=MosquitoBite
+
+[TradingCard-017]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=4.6.1.3
+Desc=A small trading card. On the front is a picture of a Metroid floating on an alien planet
+Powers=MetroidRam.MetroidDrain
+
+[TradingCard-018]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=4.2.4.5
+Desc=A small trading card. On the front is a picture of a Treant handing an apple to an unsuspecting boy
+Powers=Leafstorm.DrillBranch.PineconeBomb.Entangle.SproutSmack.SproutSpin
+
+[TradingCard-019]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=6.2.2.4
+Desc=A small trading card. On the front is a picture of an Ancient Mummy in the middle of changing its bandages
+Powers=MummyCurse.MummyBandage
+
+[TradingCard-020]
+Type=TradingCard
+Cost=0
+Rarity=2
+SellPrice=100
+Numbers=2.3.6.7
+Desc=A small trading card. On the front is a picture of a Cerberus covered in ice in mid-roar.
+Powers=IceRain.Roar.ShoulderTackle
+
+[TradingCard-021]
+Type=TradingCard
+Cost=0
+Rarity=3
+SellPrice=100
+Numbers=7.2.3.6
+Desc=A small trading card. On the front is a picture of Perfect Cell charging his ki.
+Powers=CellExplode.PerfectForm.Kamehameha
+
+[TradingCard-022]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=3.6.7.2
+Desc=A small trading card. On the front is a picture of Gobbles, the demented and evil turkey, holding a knife in one hand, a fork in the other with a large red bandana over his head
+Powers=Gobble
+
+[TradingCard-023]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=4.5.6.3
+Desc=A small trading card. On the front is a picture of a hippogryph chasing after a small rabbit.
+Powers=Jettatura.ChokeBreath.BackHeel
+
+[TradingCard-024]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=2
+Numbers=5.7.2.2
+Desc=A small trading card. On the front is a picture of a butcher holding up a bloody chainsaw
+Powers=DefenseRip.ChainsawSlash.DefenseDestroy.BuzzsawSlash
+
+[TradingCard-025]
+Type=TradingCard
+Cost=0
+SellPrice=100
+Rarity=1
+Numbers=2.4.3.2
+Desc=A small trading card. On the front is a picture of a spider spinning a large web in a tree
+Powers=SpiderWeb.SickleSlash
+
+[TradingCard-030]
+Type=TradingCard
+Cost=0
+Rarity=4
+SellPrice=100
+Numbers=8.3.3.6
+Desc=A small trading card. On the front is a picture of the puppet master controlling many dolls to drink tea.
+Powers=FrenchDollAttack.PuppetControl.IronMaiden.MetalStrings
+
+[TradingCard-035]
+Type=TradingCard
+Cost=0
+Rarity=4
+SellPrice=100
+Numbers=7.2.5.4
+Desc=A small trading card. On the front is a picture of the phantom train with many undead passengers posing.
+Powers=DiabolicWhistle.WheelToss
+
+[TradingCard-042]
+Type=TradingCard
+Cost=0
+Rarity=5
+SellPrice=100
+Numbers=12.12.12.12
+Desc=A small trading card. On the front is a picture of Lirarian floating in the air, wielding both a silver sword and black staff.
+Powers=Twin_Slice.LightningStrike.BladeBeamII.Guruthos.Medui

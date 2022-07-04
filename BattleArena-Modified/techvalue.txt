@@ -1,0 +1,19 @@
+4var1 stands for the Level and must replaced by a number
+4var2 stands for the Type of the Techniq and must replaced by the following: 7 SINGLE, AOE, SUICIDE, SUICIDE-AOE, HEAL, STEALPOWER, BUFF, DEATH, DEATH-AOE
+4var3 stands for the Cost if the technique is buyable for players set a number to it.
+4var4 stands for the TP These are the Technicpoints that the technique uses to take effect set a number to it
+4var5 stands for the Element Element is the elemental property of the Technique. Set to none if you don't want the technique to have any. Valid elements: earth, fire, ice, lightning, water, wind, none if you want "none" replace it with none
+4var6 stands for the Hits The Hits of the techique when using the tech. you must replace ist by a numer or a range by $rand(num1,num2
+4var7 stands for the BasePower and is the Starting damage value of the techique and must be setted up. 
+4var8 stands for the Magicmust replace with yes or no if you want that the tech take magical damage. 
+4var9 stands for the StatusType and can be setup by the following type chose one of this: Poison, Stop, Blind, Virus, Amnesia, Paralysis, Zombie, Slow, Stun, Intimidate, DefenseDown, StrengthDown, IntDown, Petrify, Bored, Charm, Confuse, Curse, RemoveBoost
+4var10 stands for the SelfStatus is used to inflict the user with a status type after the tech has been used. See the previous flag for the list of valid status effects.
+4var11 stands for the IgnoreDefense and is optional to set up its a percentage value betwee 0 - 100.
+4var12 stands for the HurtEtherieal and is optional to set up replace it with true or false
+4var13 stands for the EnergyCost  and must replace with a number if you want to use this in a mech.
+4var14 stands for the Stat and is the primary stat for determining the power of the tech. Usually set to str or int. Defaults to int if blank. Valid stats: str, int, def, spd. replace it with one of them
+4var15 stands for the Renkei is the rekaivalue of the tech.
+4var16 stands for the CanDodge and must replace with true or false. 
+4var17 stands for the DeathChance Used for Death or Death-AOE techs. This works as a percent, from 1 up to 100.
+4var18 stands for the Spell This is used to mark spells for the DoubleCast and SwiftCast skills.
+

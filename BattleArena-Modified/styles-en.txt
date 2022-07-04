@@ -1,0 +1,10 @@
+﻿Combat styles give you additional bonuses in combat and can be changed at any time.
+They have a max level and experience that can increase the level up to max level 10.
+In the beginning each player has 3 styles Trickster, Guardian and Weaponmaster.
+You can read about what these styles and others do here:
+https://game-igame--rpg-de.translate.goog/docu/index.php?title=Spieler_Styles&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp
+Switch or buy a new style (Payable with BlackOrbs):
+7 1. Write to change style !mystyle change stylename
+7 2.To buy a style write first !ishop list styles and than !ishop buy style stylename
+You should now be armed with the basics ready for the final part?
+Then write 7!tut-en-battle
