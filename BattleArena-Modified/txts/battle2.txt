@@ -1,2 +1,0 @@
-[BattleInfo]
-PortalOpened=Mon Jul 04 21:49:48 2022

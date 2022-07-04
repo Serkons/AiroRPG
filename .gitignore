@@ -4,6 +4,7 @@ characters/**/*.char
 
 # Data files
 auction_winners.txt
+*.exe
 mirc.ini
 remote.ini
 lsts/monsterdeaths.lst
