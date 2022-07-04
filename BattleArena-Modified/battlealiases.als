@@ -5601,7 +5601,7 @@ bleed_check {
       %bleed.timer = $calc(%bleed.timer + 1) | writeini $char($1) status bleed.timer %bleed.timer 
       if ($readini($char($1), Status, HeavyBleed) = yes) { $HeavyBleed($1) | return }
       set %max.hp $readini($char($1), basestats, hp)
-      set %bleed $round($calc(%max.hp * .21),0)
+      set %bleed $round($calc(%max.hp * .25),0)
       set %hp $readini($char($1), Battle, HP) | unset %max.hp
 
       if (%bleed >= %hp) { $player.status($1) | set %status.message $readini(translation.dat, battle, TurnMessage) | set %status.message2 $readini(translation.dat, battle, TurnMessage2) | set %status.message3 $readini(translation.dat, battle, TurnMessage3) | set %status.message4 $readini(translation.dat, battle, TurnMessage4) |  $display.message(%status.message, battle) | $display.message(%status.message2, battle) | $display.message(%status.message3, battle) | $display.message(%status.message4, battle) | $set_chr_name($1) | $display.message($readini(translation.dat, status, BleedKills), battle) | $randoms.redorb.reward($1,%target) | writeini $char($1) Battle HP 0 | writeini $char($1) Battle Status Dead |  $increase.death.tally($1)  | $add.style.effectdeath | $check.clone.death($1)
@@ -5630,7 +5630,7 @@ HeavyBleed
 HeavyBleed { 
   set %debug.location HeavyBleed
   set %max.hp $readini($char($1), basestats, hp)
-  set %bleed $round($calc(%max.hp * .22),0)
+  set %bleed $round($calc(%max.hp * .30),0)
   set %hp $readini($char($1), Battle, HP) | $set_chr_name($1)
   unset %max.hp
   if (%bleed >= %hp) { $player.status($1) | set %status.message $readini(translation.dat, battle, TurnMessage) | set %status.message2 $readini(translation.dat, battle, TurnMessage2) | set %status.message3 $readini(translation.dat, battle, TurnMessage3) | set %status.message4 $readini(translation.dat, battle, TurnMessage4) |  $display.message(%status.message, battle) | $display.message(%status.message2, battle) | $display.message(%status.message3, battle) | $display.message(%status.message4, battle) | $display.message($readini(translation.dat, status, BleedKills), battle) | $randoms.redorb.reward($1,%target) | writeini $char($1) Battle HP 0 | writeini $char($1) Battle Status Dead | $increase.death.tally($1) | $add.style.effectdeath | $check.clone.death($1)
