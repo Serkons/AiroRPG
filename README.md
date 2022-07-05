@@ -1,6 +1,10 @@
 # AiroRPG
 An RPG Fighting Simulator written in the Mirc language. Main and Base Scriptfiles from here: https://github.com/Iyouboushi/mIRC-BattleArena - Modified by Serkons
 
+Where can i play?
+You can Play this modified BattleArena Version on esper.net in the channel #AiroRPG
+
+
 
 ::::::::::::::::::::::::::::::::::::::
 Some Stuff that added by me (Serkons)
