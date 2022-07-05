@@ -1784,7 +1784,7 @@ generate_Zombieking {
   if (%current.battlestreak <= 0) { set %current.battlestreak 1 }
 
   if (%current.battlestreak > $return_levelCapSettingMonster(ZombieKing)) { set %current.battlestreak $return_levelCapSettingMonster(ZombieKing) } 
-  var %kingname $read(Zombienames.txt)
+  var %kingname $read($txtfile(Zombienames.txt))
   var %newkingname $replace(%kingname, $chr(32),_)
   set %monster.name Zombieking_ $+ %newkingname | set %monster.realname %kingname
 
