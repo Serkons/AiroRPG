@@ -610,7 +610,7 @@ on 3:text:@setup * usable-items *: *: {
   if (%create.mon. [ $+ [ $nick ] ] == on) {
     var %mon.name $2 $+ .char
     set %uitem $4
-    set %ubattle $read(itembattle.txt, w, * $+ %uitem $+ *)
+    set %ubattle $read($txtfile(itembattle.txt), w, * $+ %uitem $+ *)
     if (%uitem == %ubattle) {
       var %iamo $5
       writeini $mircdir $+ monsters\to_make\ $+ %mon.name Item_Amount %uitem %iamo
