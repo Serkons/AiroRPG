@@ -577,7 +577,7 @@ system.start.newbattle {
       ;writeini %dfolder $+ CreatedDungeon $+ .dungeon MonsterList 5 $remove($findfile($mon_path, *.char, $rand(1,$findfile($mon_path, *.char, 0))), $mircdir $+ monsters\, .char) $+ . $+ $remove($findfile($mon_path, *.char, $rand(1,$findfile($mon_path, *.char, 0))), $mircdir $+ monsters\, .char) $+ . $+ $remove($findfile($mon_path, *.char, $rand(1,$findfile($mon_path, *.char, 0))), $mircdir $+ monsters\, .char)
       var %x 1
       while (%x <= %froom) {
-        writeini %dfolder $+ CreatedDungeon $+ .dungeon %x Desc 2[Room: 7 %x 2] $read(desc.txt)
+        writeini %dfolder $+ CreatedDungeon $+ .dungeon %x Desc 2[Room: 7 %x 2] $read($txtfile(desc.txt))
         writeini %dfolder $+ CreatedDungeon $+ .dungeon %x Battlefield %dname
         set %rand.chance $rand(1,100)
         set %restorechance $rand(1,100)
