@@ -276,15 +276,15 @@ alias get.mid.vert2 {
 }
 
 alias set_item_names1 {
-  var %prefixline $lines(prefix.txt)
-  var %suffixline $lines(suffix.txt)
-  set %equipmentprefix1 $replace($read(suffix.txt, $rand(1,%suffixline)),$chr(32),_) $+ _ $+ $replace($read(prefix.txt, $rand(1,%prefixline)),$chr(32),_)
+  var %prefixline $lines($txtfile(prefix.txt))
+  var %suffixline $lines($txtfile(suffix.txt))
+  set %equipmentprefix1 $replace($read($txtfile(suffix.txt), $rand(1,%suffixline)),$chr(32),_) $+ _ $+ $replace($read($txtfile(prefix.txt), $rand(1,%prefixline)),$chr(32),_)
   var %equipmentprefix1
 }
 
 alias set_item_names2 {
-  var %prefixline $lines(prefix.txt)
-  var %suffixline $lines(suffix.txt)
-  set %equipmentprefix2 $replace($read(suffix.txt, $rand(1,%suffixline)),$chr(32),_) $+ _ $+ $replace($read(prefix.txt, $rand(1,%prefixline)),$chr(32),_)
+  var %prefixline $lines($txtfile(prefix.txt))
+  var %suffixline $lines($txtfile(suffix.txt))
+  set %equipmentprefix2 $replace($read($txtfile(suffix.txt), $rand(1,%suffixline)),$chr(32),_) $+ _ $+ $replace($read($txtfile(prefix.txt), $rand(1,%prefixline)),$chr(32),_)
   var %equipmentprefix2
 }
