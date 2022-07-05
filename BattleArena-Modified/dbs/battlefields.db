@@ -4,8 +4,8 @@ list=calm.bright.gloomy.rainy.stormy.snowy.windy.hot.dry
 boost=.25
 
 [MoonPhase]
-CurrentMoonPhase=Full
-currentMoonTurn=1
+CurrentMoonPhase=Gibbous
+CurrentMoonTurn=2
 
 [MoonPhaseTime]
 full=3
@@ -18,7 +18,7 @@ BloodMoonChance=60
 
 [TimeOfDay]
 Currenttimeofday=Day
-currentTimeOfDayTurn=1
+CurrentTimeOfDayTurn=2
 
 [TimeOfDayTime]
 morning=2

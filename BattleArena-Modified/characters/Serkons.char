@@ -1,9 +1,9 @@
 [BaseStats]
 hp=600
 tp=70
-str=54
-def=59
-int=40
+str=56
+def=62
+int=41
 spd=19
 IgnitionGauge=0
 Name=Serkons
@@ -11,14 +11,14 @@ Name=Serkons
 [Battle]
 Hp=600
 Tp=70
-Str=54
-Def=59
-Int=40
+Str=56
+Def=62
+Int=41
 Spd=19
 IgnitionGauge=0
 Status=alive
 LimitBreakPercent=400
-CurrentAction=2
+CurrentAction=3
 
 [Rage]
 RageBar=0
@@ -30,7 +30,7 @@ Rage=needs to set a rage desc by typing !ragedesc <desc>
 
 [Stuff]
 ; currencies
-redorbs=70236
+redorbs=70643
 BlackOrbs=2
 shoplevel=5.1
 RedOrbsSpent=79150
@@ -40,11 +40,11 @@ DoubleDollars=100
 CapacityPoints=0
 EnhancementPoints=0
 LoginPoints=30
-killcoins=939
+killcoins=967
 ; misc stats
 EnhancementPointsSpent=0
-TotalDeaths=60
-MonsterKills=96
+TotalDeaths=64
+MonsterKills=102
 DiscountsUsed=0
 ItemsSold=0
 TimesFled=2
@@ -53,7 +53,7 @@ ChestsOpened=0
 TotalNumberOfKeys=0
 RevivedTimes=0
 MonstersToGems=0
-TotalBattles=231
+TotalBattles=242
 TimesHitByBattlefieldEvent=0
 NumberOfResets=0
 LightSpellsCasted=0
@@ -66,7 +66,7 @@ IceSpellsCasted=0
 LightningSpellsCasted=0
 PortalBattlesWon=0
 TimesDodged=3
-TimesCountered=9
+TimesCountered=10
 TimesParried=0
 TimesBlocked=0
 TotalBets=0
@@ -77,22 +77,22 @@ IgnitionsUsed=0
 GardenItemsPlanted=0
 WheelsSpun=0
 TrustsUsed=0
-DropsRewarded=17
+DropsRewarded=18
 DungeonsCleared=0
-totalDmg.melee=6219
-meleeHits=335
-totalDmg.tech=4285
-techHits=221
+totalDmg.melee=6852
+meleeHits=353
+totalDmg.tech=4501
+techHits=231
 LimitBreaksPerformed=0
 LostSoulsKilled=10
-StolenOrbs=45756
+StolenOrbs=54997
 
 [Info]
 Gender=his
 Gender2=him
 password=e1d659603cefa6b0f8c600a512954f06de432e31
 passhurt=0
-LastSeen=Mon Jul 04 21:42:39 2022
+LastSeen=Mon Jul 04 22:34:10 2022
 lastIP=dynamic-046-114-203-205.46.114.pool.telefonica.de
 Created=Mon Jun 20 23:53:37 2022
 ShowTutorial=true
@@ -102,9 +102,9 @@ lastloginpoint=1656925985
 NeedsFulls=no
 LastDailyLogin=07/04/2022
 DailyLoginNumber=6
-SkippedTurns=1
-TimesToDefeat=-59
-LastBattleTime=1656961353
+SkippedTurns=0
+TimesToDefeat=-63
+LastBattleTime=1656972502
 
 [Status]
 poison=no
@@ -266,7 +266,7 @@ CriticalCut=1
 [Styles]
 Equipped=Trickster
 Trickster=1
-TricksterXP=383
+TricksterXP=406
 WeaponMaster=1
 WeaponMasterXP=0
 Guardian=1
@@ -275,7 +275,7 @@ GuardianXP=0
 [Techniques]
 DoublePunch=1
 Waspsting=2
-WaspSting.points=41
+WaspSting.points=56
 
 [Ignitions]
 
@@ -283,7 +283,7 @@ WaspSting.points=41
 
 [Item_Amount]
 WelcomeBox=1
-Potion=8
+Potion=11
 MiniDiscountCard=2
 X-Potion=2
 Sapphire=8
@@ -306,6 +306,7 @@ Fortified_Measure=1
 Swallower_Nose=1
 Drunken_Whale=1
 Shocking_Gore=1
+Coral_Brilliance=1
 
 [scoreboard]
 score=0
@@ -321,9 +322,9 @@ Hands=nothing
 [dungeons]
 
 [StatXP]
-str=4
-int=4
-def=3
+str=9
+int=9
+def=0
 
 [DCCchat]
 Room=Lobby

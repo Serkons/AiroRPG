@@ -5485,3 +5485,12 @@ Cost=0
 SellPrice=1773
 LevelRequirement=6
 Protection=5.9
+
+[Marshall's_Storms]
+Name=Marshall's_Storms
+Hp=1068
+Tp=747
+Str=641
+Def=1922
+Int=641
+Spd=1922
