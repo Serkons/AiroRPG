@@ -393,7 +393,9 @@ on 3:text:@setup * Monster *: *: {
     msg $nick now you can setup a monsterweapon quickly by following the command Syntax:
     msg $nick 7@setup monname monweapon nameoftheweapon level var1 var2 var3 var4 var5 var6 var7 var8 var9 var10 var11 var12 var13 var14 var15 var16 var17 var18 var19 var20
     msg $nick each placeholder replaced an value see below
-    /play $nick valuedec.txt  
+    var %nick $nick
+    set %xfile
+    $showfile(%xfile)
   }
 }
 
